@@ -1,0 +1,15 @@
+flowchart TB
+  browserInput["浏览器：简历文本或 PDF 与 JD"] --> localPdf["后端：提取 PDF 文字、脱敏、组装请求"]
+  localPdf --> modelParse["DeepSeek 与 v21 Prompt：结构化解析"]
+  modelParse --> parseGuard["程序：结构、原文范围与经历边界校验"]
+  parseGuard --> humanReview["用户：纠正并确认校对"]
+  humanReview --> analyzeContext["后端：经历来源、条件来源、回答与确认状态"]
+  analyzeContext --> modelAnalyze["DeepSeek：关联判断与必要补问"]
+  modelAnalyze --> analyzeGuard["程序：来源归属、状态和补问契约校验"]
+  analyzeGuard --> humanAnswer["用户：回答或跳过，确认补充事实"]
+  humanAnswer -->|"需要刷新关联"| analyzeContext
+  humanAnswer --> rewriteContext["后端：所选经历原文与已确认事实"]
+  rewriteContext --> modelRewrite["DeepSeek：逐条改写候选"]
+  modelRewrite --> rewriteGuard["程序：来源、数字、工具与职责边界校验"]
+  rewriteGuard --> humanEdit["用户：核对、编辑、接受或保留"]
+  humanEdit --> browserStore["浏览器本机：草稿与岗位版本"]

@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+  "promptVersion": "precise-followup-v21",
+  "scope": "当前展示包的离线程序回归；不等于真实模型效果评分或网页端到端验证。",
+  "fixtures": "全部为合成材料。历史响应只用于重放校验规则；测试里构造的正确/错误控制样本均不作为实际模型复测结果。",
+  "excluded": "不打包内部费用账本、检查点恢复、历史批次执行工具、冻结评分模板或仅比较旧Prompt快照的测试。没有通过删改当前行为断言来使测试通过。",
+  "files": [
+    {
+      "path": "tests/ai-pipeline.test.mjs",
+      "purpose": "解析原文覆盖、证据与补问校验、过期响应保护及模型客户端错误处理。",
+      "sourcePath": "tests/ai-pipeline.test.mjs",
+      "sourceSHA256": "ecfc54fb098f471ac404f3b5251b0a4b762e7905278479acb22bcebd196cabfd",
+      "bundledSHA256": "ecfc54fb098f471ac404f3b5251b0a4b762e7905278479acb22bcebd196cabfd",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/analysis-model.test.js",
+      "purpose": "岗位要求判断、关联证据和改写清单的派生规则。",
+      "sourcePath": "tests/analysis-model.test.js",
+      "sourceSHA256": "ebb417f843b3f384eb7f16cbc4e5ecec922c2eaaedce5c42ee1852f7a4b63f77",
+      "bundledSHA256": "ebb417f843b3f384eb7f16cbc4e5ecec922c2eaaedce5c42ee1852f7a4b63f77",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/comparison-view.test.js",
+      "purpose": "岗位对照、补问表单、用户文本转义与展示。",
+      "sourcePath": "tests/comparison-view.test.js",
+      "sourceSHA256": "fab09d8b6dcab6559d09a15cca231f58d839972235f67883bc9b3b8a7ae39754",
+      "bundledSHA256": "fab09d8b6dcab6559d09a15cca231f58d839972235f67883bc9b3b8a7ae39754",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/domain.test.js",
+      "purpose": "材料拆分、事实冲突、模拟候选、最终稿组合与保存前检查。",
+      "sourcePath": "tests/domain.test.js",
+      "sourceSHA256": "1998578a4a78cef44150ca645067fcd00112ca4a12bfbca70734594a0f178b81",
+      "bundledSHA256": "1998578a4a78cef44150ca645067fcd00112ca4a12bfbca70734594a0f178b81",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/education-condition.test.mjs",
+      "purpose": "学历分类与优先强度分离，混合要求不被机械重分类。",
+      "sourcePath": "tests/education-condition.test.mjs",
+      "sourceSHA256": "5baf5eea5c3c98c80948b01e2ad0e5b360b6384978f06a6beb4254173b04a1fa",
+      "bundledSHA256": "5baf5eea5c3c98c80948b01e2ad0e5b360b6384978f06a6beb4254173b04a1fa",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/evidence-scope-retry.test.mjs",
+      "purpose": "跨经历证据仅纠错一次并完整重校验；JD标题与真实要求的边界。",
+      "sourcePath": "tests/evidence-scope-retry.test.mjs",
+      "sourceSHA256": "00d9e189c80a073fae0d7d38a1eb3225859230871924319548e3e2d61de1f36a",
+      "bundledSHA256": "00d9e189c80a073fae0d7d38a1eb3225859230871924319548e3e2d61de1f36a",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/experience-boundaries.test.mjs",
+      "purpose": "独立经历拆分、来源ID与原文完整性，同项目多阶段不机械拆分。",
+      "sourcePath": "tests/experience-boundaries.test.mjs",
+      "sourceSHA256": "d236d5f2710d1415fa528fd25141c2d5e1e7cbe1409a1a5708b34a458cb0cdd0",
+      "bundledSHA256": "d236d5f2710d1415fa528fd25141c2d5e1e7cbe1409a1a5708b34a458cb0cdd0",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/followup-state.test.js",
+      "purpose": "补问编辑、取消、替换、确认状态及事实与来源保留。",
+      "sourcePath": "tests/followup-state.test.js",
+      "sourceSHA256": "e104db281bacde0112adb85765a2f1c2d57974fa5e8c8d41305a71c558753e8f",
+      "bundledSHA256": "e104db281bacde0112adb85765a2f1c2d57974fa5e8c8d41305a71c558753e8f",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/manual-followup-payload.test.mjs",
+      "purpose": "手动关联及已回答状态向后端传递，旧响应不覆盖新修改。",
+      "sourcePath": "tests/manual-followup-payload.test.mjs",
+      "sourceSHA256": "bdbde5b46d31c43daa08bb6b4e7b43e1e1560a2618e85c097c5744160f88d551",
+      "bundledSHA256": "bdbde5b46d31c43daa08bb6b4e7b43e1e1560a2618e85c097c5744160f88d551",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/pdf-evidence-quote.test.mjs",
+      "purpose": "中文PDF换行等价匹配，不放宽数字、否定和来源归属。",
+      "sourcePath": "tests/pdf-evidence-quote.test.mjs",
+      "sourceSHA256": "afdf95456dbfb86457397b10e71967e0664ddaf81bb6c474e0997c3441f26e04",
+      "bundledSHA256": "afdf95456dbfb86457397b10e71967e0664ddaf81bb6c474e0997c3441f26e04",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/pdf-tool-spacing.test.mjs",
+      "purpose": "MATLAB限定空格匹配，其他无来源工具和跨来源拼接仍拒绝。",
+      "sourcePath": "tests/pdf-tool-spacing.test.mjs",
+      "sourceSHA256": "a8b2c30a0ef07443b0de0153816c341a38d1cad297dba897a938a7b9f2cd78e0",
+      "bundledSHA256": "a8b2c30a0ef07443b0de0153816c341a38d1cad297dba897a938a7b9f2cd78e0",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/review-presentation.test.js",
+      "purpose": "校对页面分组、要求类别与文本变化显示。",
+      "sourcePath": "tests/review-presentation.test.js",
+      "sourceSHA256": "5806f756c6b77fe2fbab11e942fce1ec6334e9bd7f880949dbf4729df784b7ab",
+      "bundledSHA256": "5806f756c6b77fe2fbab11e942fce1ec6334e9bd7f880949dbf4729df784b7ab",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/review-state.test.js",
+      "purpose": "材料校对草稿、格式变化、事实确认和结果失效处理。",
+      "sourcePath": "tests/review-state.test.js",
+      "sourceSHA256": "83454036fc90cdba11dcbbe5d263c873b365bad92a1e26c4ee5ea75262bfa883",
+      "bundledSHA256": "83454036fc90cdba11dcbbe5d263c873b365bad92a1e26c4ee5ea75262bfa883",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/rewrite-editor.test.js",
+      "purpose": "原文、建议与手动编辑差异的呈现与文本保护。",
+      "sourcePath": "tests/rewrite-editor.test.js",
+      "sourceSHA256": "3aef6ac96302a36413726bda485b7a63dd3efcd1ac9a957c8b2fc8622c2b6d0b",
+      "bundledSHA256": "3aef6ac96302a36413726bda485b7a63dd3efcd1ac9a957c8b2fc8622c2b6d0b",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/role-attribution.test.js",
+      "purpose": "区分第三方负责人主导与本人主导，保留其他事实限制。",
+      "sourcePath": "tests/role-attribution.test.js",
+      "sourceSHA256": "c802696be545e32204fcc0b20a7cac26b5347ab13e9397e923565a28fab9ab71",
+      "bundledSHA256": "c802696be545e32204fcc0b20a7cac26b5347ab13e9397e923565a28fab9ab71",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/server.test.mjs",
+      "purpose": "本机HTTP接口、授权、隐私、并发、错误响应及PDF提取与静态资源。",
+      "sourcePath": "tests/server.test.mjs",
+      "sourceSHA256": "d94cc658f2238f7ef0cff7c0f26023045e0148e6bc21be9b6af53a83c7dc4527",
+      "bundledSHA256": "d94cc658f2238f7ef0cff7c0f26023045e0148e6bc21be9b6af53a83c7dc4527",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/unit-presentation.test.js",
+      "purpose": "经历显示标题、日期、章节与正文保留。",
+      "sourcePath": "tests/unit-presentation.test.js",
+      "sourceSHA256": "22f76841f364c785c0d4522c4c1471504efaf599257e318f355de7bd27b9112d",
+      "bundledSHA256": "22f76841f364c785c0d4522c4c1471504efaf599257e318f355de7bd27b9112d",
+      "changes": [
+        "原测试逻辑不变，仅统一LF换行。"
+      ]
+    },
+    {
+      "path": "tests/condition-contract.test.mjs",
+      "purpose": "明确条件与能力证据状态分离，确定判断必须有对应证据。",
+      "sourcePath": "tests/condition-contract.test.mjs",
+      "sourceSHA256": "c7b114dc1c04e1947a8ab32c1efe0887ec9af46b91760f2f57238299a20b4e06",
+      "bundledSHA256": "63c7bf37b7945111e23559c97601db860bd67ff74b9c67eac8036bcd87746038",
+      "changes": [
+        "不打包仅比较旧Prompt快照的历史测试：Prompt v3 changes analysis only and contains both contract examples；所有当前程序行为断言原样保留。"
+      ]
+    },
+    {
+      "path": "tests/none-authorization.test.mjs",
+      "purpose": "未提供、未知或跳过不等于未做过；否定授权限制到原配对。",
+      "sourcePath": "tests/none-authorization.test.mjs",
+      "sourceSHA256": "53e5ad3f891494bfe893a72540713eab26bb12185100ac39345cb97344d76ca1",
+      "bundledSHA256": "bf6e2423e1e5cb144c039005caa6ed9d81a94eb3229f1cad02ff5ef004891aa3",
+      "changes": [
+        "不打包仅比较旧Prompt快照的历史测试：Prompt v5 narrows none instruction without changing parsing, rewriting or shared factual rules；所有当前程序行为断言原样保留。"
+      ]
+    },
+    {
+      "path": "tests/resolved-questions.test.mjs",
+      "purpose": "已回答、未知、未做过、跳过及归档状态阻止重复补问。",
+      "sourcePath": "tests/resolved-questions.test.mjs",
+      "sourceSHA256": "40cd8dfcc66a869ff1c6d6e4fd15f214f326507cb3ddd1ff0e265c101714c3c7",
+      "bundledSHA256": "fbe04f9859a1f414faed502a846d0f33eff4c6e97b67820e6e4cedac74716cef",
+      "changes": [
+        "不打包仅比较旧Prompt快照的历史测试：Prompt v4 changes classification and resolved-pair guidance, retaining shared and rewrite constraints；所有当前程序行为断言原样保留。"
+      ]
+    },
+    {
+      "path": "tests/parse-identity.test.mjs",
+      "purpose": "身份占位符与原文偏移保留，关键事实缺失仍拒绝。",
+      "sourcePath": "tests/parse-identity.test.mjs",
+      "sourceSHA256": "5b3a8fd92a567f7df4d26260687fe7f496125727f454e491ee0177e808da4334",
+      "bundledSHA256": "5b2aea29209429ccdbd6f0c460cc944ff85e8a2c61291178cc4748224feb084a",
+      "changes": [
+        "不打包仅比较旧Prompt快照的历史测试：AI-BC-0005 Prompt v2 changes only parsing constraints and retains v1 snapshot；所有当前程序行为断言原样保留。",
+        "合成输入迁到tests/fixtures/parse-identity.json，仅调整引用路径。"
+      ]
+    },
+    {
+      "path": "tests/factual-boundary.test.mjs",
+      "purpose": "团队成果、未上线及未访谈事实保护，非事实指令不作证据。",
+      "sourcePath": "tests/factual-boundary.test.mjs",
+      "sourceSHA256": "ad5e096e599164cc95bf8e13fce7b91cebd2d7dcda6bc09f9b4ccb5101e69be2",
+      "bundledSHA256": "7cd36b663160225aee44cf4f065223de68eeb2f728b1df1f4f110ec3b1415ccc",
+      "changes": [
+        "合成输入迁到tests/fixtures/factual-boundary.json，仅调整引用路径。"
+      ]
+    },
+    {
+      "path": "tests/precise-followup.test.mjs",
+      "purpose": "v21补问契约、同经历缺口合并、草稿保护及确认范围。",
+      "sourcePath": "tests/precise-followup.test.mjs",
+      "sourceSHA256": "db3082297d272d41a0b8f8b266e422a02c79a11bec8bb7f14669a3dbba08738b",
+      "bundledSHA256": "f528b9bd33d9d9c1f0bea263632bcd6c42b17c1aea07a9fda6291f7ff01bc99b",
+      "changes": [
+        "保留v21版本与当前约束断言；不打包v14历史Prompt逐字对照。"
+      ]
+    },
+    {
+      "path": "tests/job-targeting.test.mjs",
+      "purpose": "不同JD的来源和重点组装、推荐顺序、保留原文及事实边界。",
+      "sourcePath": "tests/job-targeting.test.mjs",
+      "sourceSHA256": "47e59e0d051d7735747a4d38a13d358beef20a23e0e18a0f86c1221e818eeaf1",
+      "bundledSHA256": "b2a09f70b3c669dd1a32327d20757edd4592920d1aee33180a7217e844bcd43b",
+      "changes": [
+        "不打包仅比较旧Prompt快照的历史测试：v9 only extends analyze/rewrite instructions, preserves historical parsing and facts contract；所有当前程序行为断言原样保留。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/ai-bc-0006.json",
+      "purpose": "条件状态误用的合成请求与历史响应。",
+      "sourcePath": "tests/fixtures/ai-bc-0006.json",
+      "sourceSHA256": "f525de2589098030cd977fc18036f345c95dc4f65d65ac6229c01cfca3f3a0c6",
+      "bundledSHA256": "f525de2589098030cd977fc18036f345c95dc4f65d65ac6229c01cfca3f3a0c6",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/ai-bc-0007-0008.json",
+      "purpose": "学历误分类、确认后重复补问的合成输入与状态。",
+      "sourcePath": "tests/fixtures/ai-bc-0007-0008.json",
+      "sourceSHA256": "8d673a97993645db484579fe0def0490515681ee3244af19a451678ead66c60f",
+      "bundledSHA256": "8d673a97993645db484579fe0def0490515681ee3244af19a451678ead66c60f",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/ai-bc-0011.json",
+      "purpose": "把未提供误判为没有经历的合成任务与响应。",
+      "sourcePath": "tests/fixtures/ai-bc-0011.json",
+      "sourceSHA256": "18f8dcb56693b8c6a1db32627408248b6bd5e0ad6d6d8e9efbd39fc8ad88672f",
+      "bundledSHA256": "a38e07f1c1f63928104bdabc3170164ecb4b3edf1da488a3a6592db250fa1846",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/precise-followup-v18-duplicate.json",
+      "purpose": "补问覆盖重复的合成任务与历史响应。",
+      "sourcePath": "tests/fixtures/precise-followup-v18-duplicate.json",
+      "sourceSHA256": "09bed49923043c32a4870fd8586efced4ec5eec6b590725f058bcbe667cb5e51",
+      "bundledSHA256": "789f6ea38bebaf89d36b4c84364eb380cb7a869c774d750e3440d2b0fde99134",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/precise-followup-v18.json",
+      "purpose": "相近与不同补问缺口的合成任务和固定响应。",
+      "sourcePath": "tests/fixtures/precise-followup-v18.json",
+      "sourceSHA256": "a2961b4fb530a6059b622141442ddecb5f47e0ac62aec5d5caff1f8623abd8b9",
+      "bundledSHA256": "0954aefe590f6b6669a498483286e0d5f1e29f5dcb3f1ad3dfbd2bb9dc48c3bd",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/precise-followup-v20-rejections.json",
+      "purpose": "明确条件错误绑定与冲突经历补问的拒绝样本。",
+      "sourcePath": "tests/fixtures/precise-followup-v20-rejections.json",
+      "sourceSHA256": "c36c9abdd37164d765327958fa0283bd050c5ab2033ea1e01abc0aae523b5cad",
+      "bundledSHA256": "9e29887b64afd5fe6bcbb7081e2724c26bc2e5da806fc0086ad80569a166c62c",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/job-targeting-v9.json",
+      "purpose": "同份合成简历匹配两个JD的历史固定响应与来源哈希；用于当前规则回放。",
+      "sourcePath": "tests/fixtures/job-targeting-v9.json",
+      "sourceSHA256": "c2fc9b4c3e9ab9d3bfdb97ad0c29a72709632b478bd2cb0d13e0651cccdd20da",
+      "bundledSHA256": "06ff76ccb58dc21ced28529608a89407ba3a9b9e6d25dfb1b11d6c764329b788",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/parse-identity.json",
+      "purpose": "身份占位符与原文保真检查的虚构简历和JD。",
+      "sourcePath": "docs/testing/phase2/cases/AI-CASE-0001-v1.json",
+      "sourceSHA256": "c747b73a14ee3bdcd7d0682e3ef42592edc03c1cad206e2e9d83f13450e690ed",
+      "bundledSHA256": "b859827c121fc16aad7db08a95bfe9646e46e0c2d07a1df201fdb366aa20bb97",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    },
+    {
+      "path": "tests/fixtures/factual-boundary.json",
+      "purpose": "团队成果、否定事实及非事实指令边界的虚构材料。",
+      "sourcePath": "docs/testing/phase2/cases/AI-CASE-0003-v1.json",
+      "sourceSHA256": "e0fb919e22ae3701cd3c760afcccd473b73bd6752fc762db1df378d9cd7deba9",
+      "bundledSHA256": "5a42d1e24c86d76162cb2e95271181e3659a099966b255cbe256a0acd0dbb8e9",
+      "changes": [
+        "仅提取测试实际使用的合成输入、状态及响应；字段值不修改，不包含无依赖的内部文件路径与完整评测元数据。"
+      ]
+    }
+  ]
+}

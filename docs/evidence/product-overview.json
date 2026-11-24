@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "artifact": "../images/product-overview.png",
+  "purpose": "GitHub首页的产品流程长图",
+  "image": {
+    "width": 1440,
+    "height": 5461,
+    "bytes": 1390600,
+    "sha256": "000f64fa65f5efbaf7706051a2b86553b654496ae128ba1ccdd94fe651f9f573"
+  },
+  "runtimeSourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+  "promptFileVersion": "precise-followup-v21",
+  "executionMode": "mock",
+  "paidModelCalls": 0,
+  "modelUsed": null,
+  "materialSource": "public/domain.js中的内置虚构简历与JD；补问回答为本次制作的虚构补充",
+  "composition": "实际页面截图裁切、等比缩放与排版；说明标题在截图外。没有重绘界面文字或替换模型输出。",
+  "scope": "仅展示界面与交互，不代表真实模型输出质量、人工评分或真实用户内测。",
+  "uiChecks": {
+    "materialInput": true,
+    "reviewConfirmation": true,
+    "followupAnswerAndFactConfirmation": true,
+    "mockRewrite": true,
+    "acceptAndKeepOriginal": true,
+    "saveIndependentVersion": true,
+    "reopenSameText": true,
+    "reopenSameFacts": true,
+    "browserErrors": 0
+  },
+  "sourceCaptures": [
+    {
+      "name": "01-materials.png",
+      "width": 2880,
+      "height": 2040,
+      "sha256": "576abc00377db52dd95acc8681246f8e0cd7ffecb806da389e05d16211ef04a3"
+    },
+    {
+      "name": "detail-matching.png",
+      "width": 2336,
+      "height": 1340,
+      "sha256": "44391efaf9409eca054a22a5e2b9fd3c6df6705b1e709ac2e3edef32d7f0fee7"
+    },
+    {
+      "name": "detail-followup.png",
+      "width": 1518,
+      "height": 680,
+      "sha256": "8df646bfed7cb47b8ee64a480d4514afc48b5535684175e8c23151ec89b9aecc"
+    },
+    {
+      "name": "detail-rewrite.png",
+      "width": 2336,
+      "height": 1696,
+      "sha256": "85954da6ceb686f848a815d580252a6979c231eb9ca538be23bb19c8e9efbed0"
+    },
+    {
+      "name": "detail-saved.png",
+      "width": 2336,
+      "height": 1984,
+      "sha256": "438f29a2b8f89b07ba206ad73f762c3fd8260a5dc6eb619e269c45db671b126d"
+    },
+    {
+      "name": "detail-version-card.png",
+      "width": 2336,
+      "height": 206,
+      "sha256": "cca2684af431039dfc9ce01df4c8a0348c520587b336d4fef8732fa7e8c47934"
+    }
+  ]
+}

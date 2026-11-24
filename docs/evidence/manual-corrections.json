@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "recordType": "负责人提供的人工修正次数与计数范围",
+  "metric": "单份简历人工修正量",
+  "definition": "从基础简历输入到最后得到最终版，中间需要人工修正的次数。",
+  "unit": "次 / 份简历",
+  "scope": "同一套10组固定合成开发案例，按负责人提供顺序记录；不混入另五组案例。",
+  "collectionMethod": "负责人手工记录，非系统自动统计",
+  "sourceId": "S40",
+  "sourceDescription": "负责人在本次对话中提供两版各10个次数，并提供人工修正计数规则截图。",
+  "versionLabels": {
+    "baseline": "v6",
+    "candidate": "v21"
+  },
+  "exactManualSessionRunIds": null,
+  "cases": [
+    {
+      "caseOrder": 1,
+      "v6": 5,
+      "v21": 4
+    },
+    {
+      "caseOrder": 2,
+      "v6": 3,
+      "v21": 1
+    },
+    {
+      "caseOrder": 3,
+      "v6": 4,
+      "v21": 1
+    },
+    {
+      "caseOrder": 4,
+      "v6": 2,
+      "v21": 1
+    },
+    {
+      "caseOrder": 5,
+      "v6": 3,
+      "v21": 2
+    },
+    {
+      "caseOrder": 6,
+      "v6": 1,
+      "v21": 1
+    },
+    {
+      "caseOrder": 7,
+      "v6": 6,
+      "v21": 3
+    },
+    {
+      "caseOrder": 8,
+      "v6": 5,
+      "v21": 3
+    },
+    {
+      "caseOrder": 9,
+      "v6": 4,
+      "v21": 2
+    },
+    {
+      "caseOrder": 10,
+      "v6": 5,
+      "v21": 2
+    }
+  ],
+  "summary": {
+    "v6": {
+      "cases": 10,
+      "total": 38,
+      "mean": 3.8
+    },
+    "v21": {
+      "cases": 10,
+      "total": 20,
+      "mean": 2
+    },
+    "meanReduction": 1.8,
+    "relativeReductionPercent": 47.368421052631575,
+    "formula": "(3.8 - 2.0) / 3.8 × 100%",
+    "display": "约47%"
+  },
+  "countingRules": [
+    {
+      "stageNumber": 1,
+      "stage": "材料输入与解析校对",
+      "operation": "修正PDF提取错误，以及AI识别错误的项目名称、日期、职责",
+      "included": true,
+      "classification": "计入，归为解析修正"
+    },
+    {
+      "stageNumber": 2,
+      "stage": "岗位要求与经历关联",
+      "operation": "纠正不相关经历被判断为相关等关联或判断错误",
+      "included": true,
+      "classification": "计入，归为关联修正"
+    },
+    {
+      "stageNumber": 3,
+      "stage": "动态补问与事实确认",
+      "operation": "正常回答AI问题、补充真实经历",
+      "included": false,
+      "classification": "不计入，属于必要信息补充"
+    },
+    {
+      "stageNumber": 4,
+      "stage": "AI改写与核对",
+      "operation": "纠正事实错误、遗漏信息、不准确措辞或表达不清",
+      "included": true,
+      "classification": "计入，归为改写修正"
+    },
+    {
+      "stageNumber": 5,
+      "stage": "最终版本编辑",
+      "operation": "进一步修改AI生成稿，使内容准确、清晰、符合岗位",
+      "included": true,
+      "classification": "计入；区分纠错与个人偏好调整",
+      "distinguish": [
+        "纠错",
+        "个人偏好调整"
+      ]
+    }
+  ],
+  "evidenceBoundaries": {
+    "systemTelemetry": false,
+    "eventLogsProvided": false,
+    "stageBreakdownProvided": false,
+    "correctionVsPreferenceBreakdownProvided": false,
+    "repeatedEditsCountingConvention": null,
+    "independentBlindReview": false,
+    "localVerification": "仅核对已提供的逐例数值、合计、均值与降幅；未重新观察或重放人工操作。",
+    "notes": [
+      "最终版本编辑按提供规则计入，但现有汇总不能拆出纠错和个人偏好各占多少次。",
+      "未提供逐次修改日志、连续编辑同一问题的合并方式或具体Run ID，不反推事件明细。",
+      "人工修正次数独立于建议生成成功比例，不据此补写基线阻塞步骤或缺失模型输出。",
+      "次数变化不换算成人工耗时降低、模型正文错误率或真实用户满意度。"
+    ]
+  }
+}

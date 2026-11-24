@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "scope": "固定 v2 开发集主流程；不含留出集或五组合成案例的混合版本结果",
+  "model": "deepseek-flash",
+  "thinking": "disabled",
+  "rule": "AE-RUBRIC-v2",
+  "reviewLabel": "v21为经AI辅助复核后负责人确认的人工评分；v6采用负责人确认的汇总评分",
+  "independentBlindReview": false,
+  "evaluatedVersions": {
+    "v6": {
+      "code": "ca08ce659696d133fef9a950b65ea4ac4bf95a67",
+      "prompt": "phase2-v6",
+      "sourceIds": [
+        "S33",
+        "S34"
+      ],
+      "scoreSource": "负责人确认的汇总评分"
+    },
+    "v21": {
+      "code": "ec6dff9908e5227af2354ff53d6e0d27c5866006",
+      "prompt": "precise-followup-v21",
+      "sourceIds": [
+        "S04",
+        "S05",
+        "S06"
+      ]
+    }
+  },
+  "showcaseVersion": {
+    "code": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "prompt": "precise-followup-v21",
+    "scopeNote": "展示代码与历史评测代码分别记录；整理展示材料没有重新执行评测。"
+  },
+  "generation": {
+    "v6": {
+      "completed": 8,
+      "planned": 10
+    },
+    "v21": {
+      "completed": 10,
+      "planned": 10
+    }
+  },
+  "expressionAll": {
+    "v6": {
+      "mean": 5.41,
+      "approximate": true,
+      "source": "S33",
+      "scoredUnits": null,
+      "scoreDetailsAvailable": false
+    },
+    "v21": {
+      "total": 85,
+      "scoredUnits": 13,
+      "blockedUnits": 0,
+      "mean": 6.538461538461538
+    }
+  },
+  "expressionPaired": {
+    "available": false,
+    "reason": "v6汇总未附逐单元评分，不据均值反推配对结果"
+  },
+  "facts": {
+    "scope": "仅改写正文与当时允许来源的一致性",
+    "v6": {
+      "reported": false,
+      "reason": "本摘要未纳入基线逐单元事实裁决"
+    },
+    "v21": {
+      "passed": 13,
+      "completedChecks": 13,
+      "plannedUnits": 13,
+      "blocked": 0,
+      "unreviewed": 0
+    }
+  },
+  "followups": {
+    "passed": 6,
+    "checked": 7,
+    "actualAnswers": 7,
+    "efficiencyImprovementProven": false
+  },
+  "newApiCalls": 0,
+  "newHumanRatings": 0,
+  "metricDefinitions": [
+    {
+      "key": "manualCorrectionsPerResume",
+      "name": "单份简历人工修正量",
+      "definition": "从基础简历输入到最后得到最终版，中间需要人工修正的次数。",
+      "unit": "次 / 份简历",
+      "collectionMethod": "人工记录",
+      "scope": "从基础简历输入到最终版的全过程",
+      "resultsIncluded": true,
+      "resultSource": "S40",
+      "countingRulesSource": "manual-corrections.json"
+    }
+  ],
+  "expressionAggregateComparison": {
+    "baselineMeanApprox": 5.41,
+    "candidateMeanRounded": 6.54,
+    "absoluteChangeApprox": 1.13,
+    "relativeChangePercentApprox": 20.887245841035117,
+    "display": "约21%",
+    "method": "按负责人本次确认的汇总均值估算；非逐单元配对比较"
+  },
+  "manualCorrectionsPerResume": {
+    "sourceId": "S40",
+    "record": "manual-corrections.json",
+    "collectionMethod": "负责人手工记录，非系统自动统计",
+    "v6": {
+      "cases": 10,
+      "total": 38,
+      "mean": 3.8,
+      "counts": [
+        5,
+        3,
+        4,
+        2,
+        3,
+        1,
+        6,
+        5,
+        4,
+        5
+      ]
+    },
+    "v21": {
+      "cases": 10,
+      "total": 20,
+      "mean": 2,
+      "counts": [
+        4,
+        1,
+        1,
+        1,
+        2,
+        1,
+        3,
+        3,
+        2,
+        2
+      ]
+    },
+    "relativeReductionPercent": 47.368421052631575,
+    "display": "约47%",
+    "auditScope": "负责人提供逐例次数；本次仅核对算术，无系统埋点或逐次操作日志。",
+    "scopeNote": "全流程人工修正，不是仅针对AI正文的错误计数；最终编辑包含需另行区分的个人偏好调整。"
+  }
+}

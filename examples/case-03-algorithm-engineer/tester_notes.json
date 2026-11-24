@@ -1,0 +1,148 @@
+{
+  "synthetic": true,
+  "testerOnly": true,
+  "inputProtocol": "本示例仅用resume.txt和job_description.txt；参考事实及预设答案不得提前发送给模型。实际提问后才按匹配主题回答和确认，没有依据则跳过/未知。",
+  "sourceFiles": {
+    "facts.json": "b5f16bccd338520a8581320085c41d2db6c704fbf2b514dcd4ebf3ca976b60f0",
+    "followup_answers.json": "fe5221909ed9d266c4d62668d8a8a4a4b5d922ac11231d7cc4e12095b0aa4997"
+  },
+  "facts": {
+    "case_id": "case-03-algorithm-engineer",
+    "synthetic": true,
+    "tester_only": true,
+    "initial_facts": [
+      {
+        "fact_id": "F01",
+        "scope": "vision",
+        "content": "团队固定验证集AP50 0.78→0.83；个人参与数据、训练日志工作，未写清模型改动归属。",
+        "visible_from": "initial_resume"
+      },
+      {
+        "fact_id": "F02",
+        "scope": "size",
+        "content": "项目整理约3200幅图像。",
+        "visible_from": "initial_resume"
+      },
+      {
+        "fact_id": "F03",
+        "scope": "retrieval",
+        "content": "课程问答原型仅本地演示。",
+        "visible_from": "initial_resume"
+      }
+    ],
+    "after_confirmation": [
+      {
+        "fact_id": "S01",
+        "scope": "role",
+        "content": "本人负责清洗标注、检查训练脚本的参数记录、整理3组消融结果；主干结构改进由导师和另一名同学负责。",
+        "visible_from": "user_confirmation_only"
+      },
+      {
+        "fact_id": "S02",
+        "scope": "metric",
+        "content": "AP50数值来自同一固定验证集的团队对照，差值0.05（5个百分点），不能直接写成独立测试集结果。",
+        "visible_from": "user_confirmation_only"
+      },
+      {
+        "fact_id": "S03",
+        "scope": "prototype",
+        "content": "问答原型只对160篇课程材料进行离线检索；未部署线上，也未使用TensorRT。",
+        "visible_from": "user_confirmation_only"
+      }
+    ],
+    "negative_after_confirmation": [
+      "没有独立提出主要网络结构改进",
+      "没有完成生产环境模型部署",
+      "没有使用TensorRT进行部署加速"
+    ],
+    "still_unknown": [
+      "模型推理时延具体值",
+      "实际道路巡检业务的漏检率改善"
+    ],
+    "confidence_note": "模拟用户陈述只代表案例内部设定，不代表现实真值或第三方核实。"
+  },
+  "presetAnswers": [
+    {
+      "topic": "个人分工",
+      "possible_question": "AP50提升对应的算法和实验中，你个人具体负责哪些环节？",
+      "simulated_user_answer": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+      "suggested_action": "confirm",
+      "release_after": "user_is_asked_and_explicitly_confirms"
+    },
+    {
+      "topic": "指标口径",
+      "possible_question": "0.78到0.83是什么指标、在哪个数据集上？",
+      "simulated_user_answer": "是同一固定验证集的AP50，差值是0.05即5个百分点；不是独立测试集，也不代表业务准确率。",
+      "suggested_action": "confirm",
+      "release_after": "user_is_asked_and_explicitly_confirms"
+    },
+    {
+      "topic": "部署能力",
+      "possible_question": "模型是否上线？使用过TensorRT或线上监控吗？",
+      "simulated_user_answer": "路面病害模型没有上线；我没有使用TensorRT做过部署加速。",
+      "suggested_action": "confirm",
+      "release_after": "user_is_asked_and_explicitly_confirms"
+    },
+    {
+      "topic": "推理时延",
+      "possible_question": "是否记录了推理时延改善数值？",
+      "simulated_user_answer": "没有可确认的数值，暂不提供。",
+      "suggested_action": "unknown",
+      "release_after": "when_asked_only"
+    }
+  ],
+  "actualQuestions": [
+    {
+      "id": "q_req_521a2dc41613_0_exp_a7e1c0e10774_4_part2",
+      "requirementId": "req_521a2dc41613_0",
+      "experienceId": "exp_a7e1c0e10774_4_part2",
+      "text": "结合「课程文档问答检索原型」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+      "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    },
+    {
+      "id": "q_req_9284c2a996b0_1_exp_43856b2fdeaf_4_part1",
+      "requirementId": "req_9284c2a996b0_1",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "text": "结合「路面病害视觉检测实验」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+      "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    },
+    {
+      "id": "q_req_7c2ac52c535d_2_exp_8ebc49e01c88_4_part3",
+      "requirementId": "req_7c2ac52c535d_2",
+      "experienceId": "exp_8ebc49e01c88_4_part3",
+      "text": "结合「图片分类课程实验」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+      "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    },
+    {
+      "id": "q_req_bd00e37ead0d_3_exp_43856b2fdeaf_4_part1",
+      "requirementId": "req_bd00e37ead0d_3",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "text": "在路面病害视觉检测实验中，本人是否参与过模型离线推理验证？如有，具体做了什么；另外本人是否整理过实验报告或技术文档，交付了什么？",
+      "purpose": "补充离线推理验证的个人参与情况，以及实验报告或技术文档的整理与交付情况，用于改写该经历中对应职责和产出。",
+      "status": "confirmed",
+      "answer": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。"
+    }
+  ],
+  "actualConfirmedFacts": [
+    {
+      "id": "916ee2b7-9554-46e9-befa-5ce64fa8aa57",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "text": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+      "status": "confirmed",
+      "source": "用户补充",
+      "questionId": "q_req_bd00e37ead0d_3_exp_43856b2fdeaf_4_part1",
+      "requirementId": "req_bd00e37ead0d_3",
+      "confirmedAt": "2026-11-24T06:08:49.531Z"
+    }
+  ],
+  "actualAction": "补问本人参与及产出，使用预设答案中的标注清洗、参数记录和3组消融结果整理并明确确认；离线推理验证继续未说明。"
+}

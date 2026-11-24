@@ -1,0 +1,126 @@
+{
+  "input": {
+    "resume": "姓名：虚构乙\n教育背景\n云岭示例大学 工商管理 本科在读\n课程项目：社团物资登记改进\n2025.04—2025.05 项目成员\n参与物资登记整理，协助团队改进流程。\n技能与优势\n了解表格软件。",
+    "jd": "岗位：运营产品实习生（虚构公司）\n梳理业务流程并记录问题。\n整理数据，说明本人采用的方法与交付物。\n本科在读优先。"
+  },
+  "parse": {
+    "units": [
+      {
+        "startLine": 1,
+        "endLine": 1,
+        "kind": "context"
+      },
+      {
+        "startLine": 2,
+        "endLine": 3,
+        "kind": "context"
+      },
+      {
+        "startLine": 4,
+        "endLine": 6,
+        "kind": "experience"
+      },
+      {
+        "startLine": 7,
+        "endLine": 8,
+        "kind": "context"
+      }
+    ],
+    "requirements": [
+      {
+        "line": 2,
+        "category": "工作任务与能力"
+      },
+      {
+        "line": 3,
+        "category": "工作任务与能力"
+      },
+      {
+        "line": 4,
+        "category": "加分项"
+      }
+    ],
+    "ignoredJdLines": [
+      1
+    ]
+  },
+  "analyzeAfterConfirmation": {
+    "associations": [
+      {
+        "requirementId": "req_3fc8a0216e26_0",
+        "experienceId": "exp_3d3f2cacc30f_2",
+        "status": "表达不足",
+        "reason": "原文仅说明参与物资登记整理并协助改进流程，未说明本人如何梳理业务流程及记录问题",
+        "evidence": [
+          {
+            "sourceId": "exp_3d3f2cacc30f_2",
+            "quote": "参与物资登记整理，协助团队改进流程。"
+          }
+        ]
+      },
+      {
+        "requirementId": "req_8351862d8145_1",
+        "experienceId": "exp_3d3f2cacc30f_2",
+        "status": "已有明确证据",
+        "reason": "已确认补充说明本人使用Excel对照登记表整理问题清单，并向组内说明核对步骤，方法与交付物明确",
+        "evidence": [
+          {
+            "sourceId": "fictional-fact-0",
+            "quote": "我使用 Excel 对照12份登记表，整理重复登记的问题清单，并向组内说明核对步骤。"
+          }
+        ]
+      },
+      {
+        "requirementId": "req_6f1eb0aa5363_2",
+        "experienceId": "exp_b125bae4b45b_1",
+        "status": "已有明确证据",
+        "reason": "原文明确为本科在读，符合优先条件",
+        "evidence": [
+          {
+            "sourceId": "exp_b125bae4b45b_1",
+            "quote": "云岭示例大学 工商管理 本科在读"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "requirementId": "req_3fc8a0216e26_0",
+        "experienceId": "exp_3d3f2cacc30f_2",
+        "text": "你在该项目中具体如何梳理业务流程、记录问题？交付了什么？",
+        "purpose": "核实本人梳理流程和记录问题的具体做法与交付物"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "fictional-fact-0",
+      "experienceId": "exp_3d3f2cacc30f_2",
+      "questionId": "q_req_3fc8a0216e26_0_exp_3d3f2cacc30f_2",
+      "text": "我使用 Excel 对照12份登记表，整理重复登记的问题清单，并向组内说明核对步骤。项目尚未上线，没有统计效率提升。",
+      "status": "confirmed",
+      "confirmedAt": "2026-11-21T12:31:42.871Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_req_3fc8a0216e26_0_exp_3d3f2cacc30f_2",
+      "requirementId": "req_3fc8a0216e26_0",
+      "experienceId": "exp_3d3f2cacc30f_2",
+      "text": "在社团物资登记改进项目中，你具体如何梳理业务流程、记录了哪些问题？",
+      "purpose": "核实本人梳理流程和记录问题的具体做法",
+      "status": "confirmed",
+      "answer": "我使用 Excel 对照12份登记表，整理重复登记的问题清单，并向组内说明核对步骤。项目尚未上线，没有统计效率提升。"
+    },
+    {
+      "id": "q_req_8351862d8145_1_exp_3d3f2cacc30f_2",
+      "requirementId": "req_8351862d8145_1",
+      "experienceId": "exp_3d3f2cacc30f_2",
+      "text": "你整理数据时具体采用了什么方法，最终交付了什么？",
+      "purpose": "核实数据整理方法与交付物",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    }
+  ]
+}

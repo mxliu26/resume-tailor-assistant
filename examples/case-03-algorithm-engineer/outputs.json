@@ -1,0 +1,866 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "SYN3-SHOWCASE-20261124-01",
+  "caseId": "case-03",
+  "caseDirectory": "case-03-algorithm-engineer",
+  "synthetic": true,
+  "testType": "真实浏览器前端自动化；AI代理模拟用户，非真实用户内测",
+  "status": "端到端操作通过",
+  "version": {
+    "codeSHA": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "prompt": "precise-followup-v21",
+    "promptSHA256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+    "model": "deepseek-flash",
+    "returnedModel": "deepseek-flash",
+    "thinking": "disabled",
+    "temperature": 0.2,
+    "maxTokens": 4096,
+    "systemFingerprints": [
+      "bc19ba97cbe016479903222bb1578db6"
+    ]
+  },
+  "inputFiles": {
+    "resume.txt": "04a3fb7a5a2671b753d76de71e49345e4693b84c24fe467626a13f37259e0ae8",
+    "job_description.txt": "56b055aa3e2edb3c86747c406fd40fd673feb66b96b86b3900e2d4ade34972a0",
+    "facts.json": "b5f16bccd338520a8581320085c41d2db6c704fbf2b514dcd4ebf3ca976b60f0",
+    "followup_answers.json": "fe5221909ed9d266c4d62668d8a8a4a4b5d922ac11231d7cc4e12095b0aa4997",
+    "expected_behavior.md": "f52204e88ee0278b8866992e676e0b4f8c13d74ecf379255fb16e34da2b0a1a1"
+  },
+  "taskId": "09df310e-924c-462f-9ef1-146a35d7bcf2",
+  "initialModelInput": "仅resume.txt和job_description.txt；未提前发送facts/预设回答/期望行为",
+  "workflow": {
+    "parse": "完成，未人工修改解析",
+    "associate": "首次完成",
+    "followup": "补问本人参与及产出，使用预设答案中的标注清洗、参数记录和3组消融结果整理并明确确认；离线推理验证继续未说明。",
+    "questions": [
+      {
+        "id": "q_req_521a2dc41613_0_exp_a7e1c0e10774_4_part2",
+        "requirementId": "req_521a2dc41613_0",
+        "experienceId": "exp_a7e1c0e10774_4_part2",
+        "text": "结合「课程文档问答检索原型」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+        "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+        "status": "archived",
+        "answer": "",
+        "previousStatus": "pending"
+      },
+      {
+        "id": "q_req_9284c2a996b0_1_exp_43856b2fdeaf_4_part1",
+        "requirementId": "req_9284c2a996b0_1",
+        "experienceId": "exp_43856b2fdeaf_4_part1",
+        "text": "结合「路面病害视觉检测实验」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+        "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+        "status": "archived",
+        "answer": "",
+        "previousStatus": "pending"
+      },
+      {
+        "id": "q_req_7c2ac52c535d_2_exp_8ebc49e01c88_4_part3",
+        "requirementId": "req_7c2ac52c535d_2",
+        "experienceId": "exp_8ebc49e01c88_4_part3",
+        "text": "结合「图片分类课程实验」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+        "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+        "status": "archived",
+        "answer": "",
+        "previousStatus": "pending"
+      },
+      {
+        "id": "q_req_bd00e37ead0d_3_exp_43856b2fdeaf_4_part1",
+        "requirementId": "req_bd00e37ead0d_3",
+        "experienceId": "exp_43856b2fdeaf_4_part1",
+        "text": "在路面病害视觉检测实验中，本人是否参与过模型离线推理验证？如有，具体做了什么；另外本人是否整理过实验报告或技术文档，交付了什么？",
+        "purpose": "补充离线推理验证的个人参与情况，以及实验报告或技术文档的整理与交付情况，用于改写该经历中对应职责和产出。",
+        "status": "confirmed",
+        "answer": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。"
+      }
+    ],
+    "confirmedFacts": [
+      {
+        "id": "916ee2b7-9554-46e9-befa-5ce64fa8aa57",
+        "experienceId": "exp_43856b2fdeaf_4_part1",
+        "text": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+        "status": "confirmed",
+        "source": "用户补充",
+        "questionId": "q_req_bd00e37ead0d_3_exp_43856b2fdeaf_4_part1",
+        "requirementId": "req_bd00e37ead0d_3",
+        "confirmedAt": "2026-11-24T06:08:49.531Z"
+      }
+    ],
+    "selectedExperienceIds": [
+      "exp_43856b2fdeaf_4_part1"
+    ],
+    "rewrite": "完成",
+    "save": "完成",
+    "reopen": {
+      "versionTextUnchanged": true,
+      "factsUnchanged": true,
+      "suggestionsUnchanged": true,
+      "savedTextVisible": true
+    }
+  },
+  "parsedUnits": [
+    {
+      "id": "exp_d20c00644199_0",
+      "title": "程以安",
+      "kind": "context",
+      "text": "程以安",
+      "sourceText": "程以安",
+      "original": "程以安",
+      "start": 0,
+      "end": 3
+    },
+    {
+      "id": "exp_cb54934d656c_1",
+      "title": "求职方向：计算机视觉算法实习",
+      "kind": "context",
+      "text": "求职方向：计算机视觉算法实习",
+      "sourceText": "求职方向：计算机视觉算法实习",
+      "original": "求职方向：计算机视觉算法实习",
+      "start": 4,
+      "end": 18
+    },
+    {
+      "id": "exp_bc5818cc398b_2",
+      "title": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "kind": "context",
+      "text": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "sourceText": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "original": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "start": 19,
+      "end": 63
+    },
+    {
+      "id": "exp_03610441bbfe_3",
+      "title": "教育背景",
+      "kind": "context",
+      "text": "教育背景\n2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n研究方向：视觉检测与模型评估；主修：机器学习、深度学习、数字图像处理、计算机视觉。\n研究生阶段定期阅读检测算法论文，记录训练设置、评测数据版本及与基线方法的可比条件。\n2021.09—2025.06  华北某高校  软件工程（本科）\n课程：Python、数据结构、算法设计、计算机网络、数据库系统。",
+      "sourceText": "教育背景\n2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n研究方向：视觉检测与模型评估；主修：机器学习、深度学习、数字图像处理、计算机视觉。\n研究生阶段定期阅读检测算法论文，记录训练设置、评测数据版本及与基线方法的可比条件。\n2021.09—2025.06  华北某高校  软件工程（本科）\n课程：Python、数据结构、算法设计、计算机网络、数据库系统。",
+      "original": "教育背景\n2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n研究方向：视觉检测与模型评估；主修：机器学习、深度学习、数字图像处理、计算机视觉。\n研究生阶段定期阅读检测算法论文，记录训练设置、评测数据版本及与基线方法的可比条件。\n2021.09—2025.06  华北某高校  软件工程（本科）\n课程：Python、数据结构、算法设计、计算机网络、数据库系统。",
+      "start": 64,
+      "end": 254
+    },
+    {
+      "id": "exp_43856b2fdeaf_4_part1",
+      "title": "2026.02—2026.11  路面病害视觉检测实验  实验室项目成员",
+      "kind": "experience",
+      "text": "科研与项目\n2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。",
+      "sourceText": "科研与项目\n2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。",
+      "original": "科研与项目\n2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。",
+      "start": 255,
+      "end": 594
+    },
+    {
+      "id": "exp_a7e1c0e10774_4_part2",
+      "title": "2025.10—2026.03  课程文档问答检索原型  独立课程作业",
+      "kind": "experience",
+      "text": "2025.10—2026.03  课程文档问答检索原型  独立课程作业\n• 技术实现：整理约160篇课程材料，使用向量检索和语言模型接口制作问答演示，展示关联片段及回答。\n• 分析与验证：设计20条课程问题检查检索结果是否相关，并记录无法回答的条目；材料范围仅限课程知识。\n• 边界：交付本地运行的演示原型，未实现多用户权限或线上监控，也未对真实业务用户开展A/B测试。\n• 系统流程：按“文档整理—切分—检索—模型回答—来源展示”的顺序组织脚本，遇到缺乏支持材料的问题时保留无法确认的状态。\n• 输出检查：对20条课程问题保存命中文档片段与回答，记录来源不相关、回答过长或材料不足等问题，并在演示报告中说明不足。",
+      "sourceText": "2025.10—2026.03  课程文档问答检索原型  独立课程作业\n• 技术实现：整理约160篇课程材料，使用向量检索和语言模型接口制作问答演示，展示关联片段及回答。\n• 分析与验证：设计20条课程问题检查检索结果是否相关，并记录无法回答的条目；材料范围仅限课程知识。\n• 边界：交付本地运行的演示原型，未实现多用户权限或线上监控，也未对真实业务用户开展A/B测试。\n• 系统流程：按“文档整理—切分—检索—模型回答—来源展示”的顺序组织脚本，遇到缺乏支持材料的问题时保留无法确认的状态。\n• 输出检查：对20条课程问题保存命中文档片段与回答，记录来源不相关、回答过长或材料不足等问题，并在演示报告中说明不足。",
+      "original": "2025.10—2026.03  课程文档问答检索原型  独立课程作业\n• 技术实现：整理约160篇课程材料，使用向量检索和语言模型接口制作问答演示，展示关联片段及回答。\n• 分析与验证：设计20条课程问题检查检索结果是否相关，并记录无法回答的条目；材料范围仅限课程知识。\n• 边界：交付本地运行的演示原型，未实现多用户权限或线上监控，也未对真实业务用户开展A/B测试。\n• 系统流程：按“文档整理—切分—检索—模型回答—来源展示”的顺序组织脚本，遇到缺乏支持材料的问题时保留无法确认的状态。\n• 输出检查：对20条课程问题保存命中文档片段与回答，记录来源不相关、回答过长或材料不足等问题，并在演示报告中说明不足。",
+      "start": 595,
+      "end": 902
+    },
+    {
+      "id": "exp_8ebc49e01c88_4_part3",
+      "title": "2024.11—2025.01  图片分类课程实验  小组成员",
+      "kind": "experience",
+      "text": "2024.11—2025.01  图片分类课程实验  小组成员\n• 实验任务：完成数据增强、训练曲线与混淆矩阵分析，整理不同学习率对模型训练稳定性的影响。\n• 比较方法：在相同数据划分下整理训练损失、验证集指标和混淆矩阵，对比不同配置，不把测试波动直接解释为稳定提升。\n• 分工：负责汇总实验表格和错误图片；组内还包括数据收集、模型训练与课堂汇报等其他分工。",
+      "sourceText": "2024.11—2025.01  图片分类课程实验  小组成员\n• 实验任务：完成数据增强、训练曲线与混淆矩阵分析，整理不同学习率对模型训练稳定性的影响。\n• 比较方法：在相同数据划分下整理训练损失、验证集指标和混淆矩阵，对比不同配置，不把测试波动直接解释为稳定提升。\n• 分工：负责汇总实验表格和错误图片；组内还包括数据收集、模型训练与课堂汇报等其他分工。",
+      "original": "2024.11—2025.01  图片分类课程实验  小组成员\n• 实验任务：完成数据增强、训练曲线与混淆矩阵分析，整理不同学习率对模型训练稳定性的影响。\n• 比较方法：在相同数据划分下整理训练损失、验证集指标和混淆矩阵，对比不同配置，不把测试波动直接解释为稳定提升。\n• 分工：负责汇总实验表格和错误图片；组内还包括数据收集、模型训练与课堂汇报等其他分工。",
+      "start": 903,
+      "end": 1082
+    },
+    {
+      "id": "exp_f0ce4b888033_5",
+      "title": "团队与展示",
+      "kind": "experience",
+      "text": "团队与展示\n2025.09—2026.06  研究组例会与资料整理  汇报成员\n• 协作：整理复现实验步骤、表格和错误图像，参与每两周一次的组内研究讨论；报告明确区分个人工作与团队指标。\n• 协作方式：维护复现步骤中的环境信息、输入数据版本及参数差异，提醒组员把个人操作记录与实验室共同结果区分。",
+      "sourceText": "团队与展示\n2025.09—2026.06  研究组例会与资料整理  汇报成员\n• 协作：整理复现实验步骤、表格和错误图像，参与每两周一次的组内研究讨论；报告明确区分个人工作与团队指标。\n• 协作方式：维护复现步骤中的环境信息、输入数据版本及参数差异，提醒组员把个人操作记录与实验室共同结果区分。",
+      "original": "团队与展示\n2025.09—2026.06  研究组例会与资料整理  汇报成员\n• 协作：整理复现实验步骤、表格和错误图像，参与每两周一次的组内研究讨论；报告明确区分个人工作与团队指标。\n• 协作方式：维护复现步骤中的环境信息、输入数据版本及参数差异，提醒组员把个人操作记录与实验室共同结果区分。",
+      "start": 1083,
+      "end": 1231
+    },
+    {
+      "id": "exp_315442bca850_6",
+      "title": "技能与优势",
+      "kind": "context",
+      "text": "技能与优势\n• 算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n• 工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。\n• 研究：能够进行错误样本分类、数据划分检查和消融结果整理；阅读英文技术文档。\n• 质量意识：理解数据泄漏、验证集反复调参与成果归属等实验风险；能够按相同口径解释模型对比的局限。",
+      "sourceText": "技能与优势\n• 算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n• 工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。\n• 研究：能够进行错误样本分类、数据划分检查和消融结果整理；阅读英文技术文档。\n• 质量意识：理解数据泄漏、验证集反复调参与成果归属等实验风险；能够按相同口径解释模型对比的局限。",
+      "original": "技能与优势\n• 算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n• 工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。\n• 研究：能够进行错误样本分类、数据划分检查和消融结果整理；阅读英文技术文档。\n• 质量意识：理解数据泄漏、验证集反复调参与成果归属等实验风险；能够按相同口径解释模型对比的局限。",
+      "start": 1232,
+      "end": 1439
+    }
+  ],
+  "requirements": [
+    {
+      "id": "req_521a2dc41613_0",
+      "text": "1. 参与图像检测模型的训练与评估，分析复杂场景的漏检、误检。",
+      "original": "1. 参与图像检测模型的训练与评估，分析复杂场景的漏检、误检。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_9284c2a996b0_1",
+      "text": "2. 维护数据集标注与训练流程，确保评测指标及数据划分可追溯。",
+      "original": "2. 维护数据集标注与训练流程，确保评测指标及数据划分可追溯。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_7c2ac52c535d_2",
+      "text": "3. 协助算法工程师开展消融实验、误差分析与模型性能改进。",
+      "original": "3. 协助算法工程师开展消融实验、误差分析与模型性能改进。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_bd00e37ead0d_3",
+      "text": "4. 参与模型离线推理验证，整理实验报告和技术文档。",
+      "original": "4. 参与模型离线推理验证，整理实验报告和技术文档。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_2f2b36553a63_4",
+      "text": "1. 计算机、人工智能、自动化或相关专业在读。",
+      "original": "1. 计算机、人工智能、自动化或相关专业在读。",
+      "category": "明确条件",
+      "strength": "原文未强调强制",
+      "logic": "或（满足其中一项）"
+    },
+    {
+      "id": "req_075be98dde3a_5",
+      "text": "2. 掌握Python与PyTorch，理解目标检测常见指标。",
+      "original": "2. 掌握Python与PyTorch，理解目标检测常见指标。",
+      "category": "工具或方法",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_70fb899a2729_6",
+      "text": "3. 具备数据集处理、实验设计和结果复现能力。",
+      "original": "3. 具备数据集处理、实验设计和结果复现能力。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_4cfa2995dbd1_7",
+      "text": "4. 可以每周工作4天及以上。",
+      "original": "4. 可以每周工作4天及以上。",
+      "category": "明确条件",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_145d3d3bf596_8",
+      "text": "5. 有TensorRT、ONNX部署或实际生产应用经验者优先。",
+      "original": "5. 有TensorRT、ONNX部署或实际生产应用经验者优先。",
+      "category": "加分项",
+      "strength": "优先／加分",
+      "logic": "或（满足其中一项）"
+    }
+  ],
+  "associations": [
+    {
+      "requirementId": "req_521a2dc41613_0",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "status": "已有明确证据",
+      "reason": "路面病害视觉检测实验直接对应图像检测模型的训练与评估；原文记录了固定验证集评估、漏检图像与不同缺陷类型错误样本的整理，以及团队AP50提升和消融表、错误案例汇总。",
+      "evidence": "研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_43856b2fdeaf_4_part1"
+      ],
+      "links": [
+        {
+          "requirementId": "req_521a2dc41613_0",
+          "experienceId": "exp_43856b2fdeaf_4_part1",
+          "status": "已有明确证据",
+          "reason": "路面病害视觉检测实验直接对应图像检测模型的训练与评估；原文记录了固定验证集评估、漏检图像与不同缺陷类型错误样本的整理，以及团队AP50提升和消融表、错误案例汇总。",
+          "evidence": "研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_9284c2a996b0_1",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "status": "已有明确证据",
+      "reason": "原文记录了整理图像及标注文件、参与PyTorch训练脚本与实验日志维护、使用固定数据划分评估，并保存配置、随机种子、训练日志与结果表以区分参数变化和数据划分变化对指标解释的影响。",
+      "evidence": "整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。\n我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_43856b2fdeaf_4_part1"
+      ],
+      "links": [
+        {
+          "requirementId": "req_9284c2a996b0_1",
+          "experienceId": "exp_43856b2fdeaf_4_part1",
+          "status": "已有明确证据",
+          "reason": "原文记录了整理图像及标注文件、参与PyTorch训练脚本与实验日志维护、使用固定数据划分评估，并保存配置、随机种子、训练日志与结果表以区分参数变化和数据划分变化对指标解释的影响。",
+          "evidence": "整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。\n我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_7c2ac52c535d_2",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "status": "已有明确证据",
+      "reason": "本人确认负责3组消融结果整理，项目形成消融表及错误案例汇总；主干网络结构改进由导师和另一位同学完成，原文未将模型性能改进归为本人。",
+      "evidence": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。\n团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_43856b2fdeaf_4_part1"
+      ],
+      "links": [
+        {
+          "requirementId": "req_7c2ac52c535d_2",
+          "experienceId": "exp_43856b2fdeaf_4_part1",
+          "status": "已有明确证据",
+          "reason": "本人确认负责3组消融结果整理，项目形成消融表及错误案例汇总；主干网络结构改进由导师和另一位同学完成，原文未将模型性能改进归为本人。",
+          "evidence": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。\n团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_bd00e37ead0d_3",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "status": "表达不足",
+      "reason": "已确认来源仅说明本人负责标注清洗、训练参数记录和3组消融结果整理，未提及离线推理验证或实验报告、技术文档的整理；该字段已提问且不可重问，保持表达不足。",
+      "evidence": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": true,
+      "missing": [],
+      "experienceIds": [
+        "exp_43856b2fdeaf_4_part1"
+      ],
+      "links": [
+        {
+          "requirementId": "req_bd00e37ead0d_3",
+          "experienceId": "exp_43856b2fdeaf_4_part1",
+          "status": "表达不足",
+          "reason": "已确认来源仅说明本人负责标注清洗、训练参数记录和3组消融结果整理，未提及离线推理验证或实验报告、技术文档的整理；该字段已提问且不可重问，保持表达不足。",
+          "evidence": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": true,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_2f2b36553a63_4",
+      "experienceId": "",
+      "status": "按已提供信息符合",
+      "reason": "教育背景显示计算机技术硕士在读，本科为软件工程，属于计算机相关专业在读。",
+      "evidence": "2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n2021.09—2025.06  华北某高校  软件工程（本科）",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [],
+      "links": []
+    },
+    {
+      "requirementId": "req_075be98dde3a_5",
+      "experienceId": "exp_315442bca850_6",
+      "status": "已有明确证据",
+      "reason": "技能段明确列出Python、PyTorch及对目标检测IoU、Precision/Recall、AP等指标的理解，并有基础模型训练和评估脚本编写经验。",
+      "evidence": "算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_315442bca850_6"
+      ],
+      "links": [
+        {
+          "requirementId": "req_075be98dde3a_5",
+          "experienceId": "exp_315442bca850_6",
+          "status": "已有明确证据",
+          "reason": "技能段明确列出Python、PyTorch及对目标检测IoU、Precision/Recall、AP等指标的理解，并有基础模型训练和评估脚本编写经验。",
+          "evidence": "算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_70fb899a2729_6",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "status": "已有明确证据",
+      "reason": "路面病害实验记录了数据集整理与标注清洗、固定数据划分评估、消融结果整理，以及保存配置、随机种子和日志以支持复现；技能段也提到数据划分检查和消融结果整理。",
+      "evidence": "整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。\n我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_43856b2fdeaf_4_part1"
+      ],
+      "links": [
+        {
+          "requirementId": "req_70fb899a2729_6",
+          "experienceId": "exp_43856b2fdeaf_4_part1",
+          "status": "已有明确证据",
+          "reason": "路面病害实验记录了数据集整理与标注清洗、固定数据划分评估、消融结果整理，以及保存配置、随机种子和日志以支持复现；技能段也提到数据划分检查和消融结果整理。",
+          "evidence": "整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。\n我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_4cfa2995dbd1_7",
+      "experienceId": "",
+      "status": "待确认",
+      "reason": "条件来源仅说明可实习5个月，未说明每周可工作天数，无法判断是否达到每周4天及以上。",
+      "evidence": "[个人信息已移除]，可实习5个月",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [],
+      "links": []
+    },
+    {
+      "requirementId": "req_145d3d3bf596_8",
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "status": "相关但不等价",
+      "reason": "路面病害实验明确未在道路巡检业务系统部署，原文未提及TensorRT或ONNX部署经验；仅有检测模型实验，不能等同于部署或生产应用经验。",
+      "evidence": "团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_43856b2fdeaf_4_part1"
+      ],
+      "links": [
+        {
+          "requirementId": "req_145d3d3bf596_8",
+          "experienceId": "exp_43856b2fdeaf_4_part1",
+          "status": "相关但不等价",
+          "reason": "路面病害实验明确未在道路巡检业务系统部署，原文未提及TensorRT或ONNX部署经验；仅有检测模型实验，不能等同于部署或生产应用经验。",
+          "evidence": "团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "experienceId": "exp_d20c00644199_0",
+      "title": "程以安",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "程以安",
+      "T1": null,
+      "T2": "程以安",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_cb54934d656c_1",
+      "title": "求职方向：计算机视觉算法实习",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "求职方向：计算机视觉算法实习",
+      "T1": null,
+      "T2": "求职方向：计算机视觉算法实习",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_bc5818cc398b_2",
+      "title": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "T1": null,
+      "T2": "邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_03610441bbfe_3",
+      "title": "教育背景",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "教育背景\n2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n研究方向：视觉检测与模型评估；主修：机器学习、深度学习、数字图像处理、计算机视觉。\n研究生阶段定期阅读检测算法论文，记录训练设置、评测数据版本及与基线方法的可比条件。\n2021.09—2025.06  华北某高校  软件工程（本科）\n课程：Python、数据结构、算法设计、计算机网络、数据库系统。",
+      "T1": null,
+      "T2": "教育背景\n2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n研究方向：视觉检测与模型评估；主修：机器学习、深度学习、数字图像处理、计算机视觉。\n研究生阶段定期阅读检测算法论文，记录训练设置、评测数据版本及与基线方法的可比条件。\n2021.09—2025.06  华北某高校  软件工程（本科）\n课程：Python、数据结构、算法设计、计算机网络、数据库系统。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_43856b2fdeaf_4_part1",
+      "title": "2026.02—2026.11  路面病害视觉检测实验  实验室项目成员",
+      "kind": "experience",
+      "selectedForRewrite": true,
+      "T0": "科研与项目\n2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。",
+      "T1": "2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估；本人负责标注清洗、训练参数记录和3组消融结果整理。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。主干网络结构改进由导师和另一位同学完成。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。",
+      "T2": "2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估；本人负责标注清洗、训练参数记录和3组消融结果整理。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。主干网络结构改进由导师和另一位同学完成。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。",
+      "T1Status": "首次未经编辑的真实AI建议",
+      "T2Status": "AI代理核对后接受原建议",
+      "T1ToT2Edits": [],
+      "reason": "保留原文标题、时间与团队分工；将已确认的本人负责标注清洗、训练参数记录和3组消融结果整理并入数据与实验部分，并保留主干网络结构改进由导师和另一位同学完成的边界。原文未说明本人参与模型离线推理验证或整理实验报告、技术文档，故不补写。",
+      "sourceIds": [
+        "exp_43856b2fdeaf_4_part1",
+        "916ee2b7-9554-46e9-befa-5ce64fa8aa57"
+      ],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_a7e1c0e10774_4_part2",
+      "title": "2025.10—2026.03  课程文档问答检索原型  独立课程作业",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "2025.10—2026.03  课程文档问答检索原型  独立课程作业\n• 技术实现：整理约160篇课程材料，使用向量检索和语言模型接口制作问答演示，展示关联片段及回答。\n• 分析与验证：设计20条课程问题检查检索结果是否相关，并记录无法回答的条目；材料范围仅限课程知识。\n• 边界：交付本地运行的演示原型，未实现多用户权限或线上监控，也未对真实业务用户开展A/B测试。\n• 系统流程：按“文档整理—切分—检索—模型回答—来源展示”的顺序组织脚本，遇到缺乏支持材料的问题时保留无法确认的状态。\n• 输出检查：对20条课程问题保存命中文档片段与回答，记录来源不相关、回答过长或材料不足等问题，并在演示报告中说明不足。",
+      "T1": null,
+      "T2": "2025.10—2026.03  课程文档问答检索原型  独立课程作业\n• 技术实现：整理约160篇课程材料，使用向量检索和语言模型接口制作问答演示，展示关联片段及回答。\n• 分析与验证：设计20条课程问题检查检索结果是否相关，并记录无法回答的条目；材料范围仅限课程知识。\n• 边界：交付本地运行的演示原型，未实现多用户权限或线上监控，也未对真实业务用户开展A/B测试。\n• 系统流程：按“文档整理—切分—检索—模型回答—来源展示”的顺序组织脚本，遇到缺乏支持材料的问题时保留无法确认的状态。\n• 输出检查：对20条课程问题保存命中文档片段与回答，记录来源不相关、回答过长或材料不足等问题，并在演示报告中说明不足。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_8ebc49e01c88_4_part3",
+      "title": "2024.11—2025.01  图片分类课程实验  小组成员",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "2024.11—2025.01  图片分类课程实验  小组成员\n• 实验任务：完成数据增强、训练曲线与混淆矩阵分析，整理不同学习率对模型训练稳定性的影响。\n• 比较方法：在相同数据划分下整理训练损失、验证集指标和混淆矩阵，对比不同配置，不把测试波动直接解释为稳定提升。\n• 分工：负责汇总实验表格和错误图片；组内还包括数据收集、模型训练与课堂汇报等其他分工。",
+      "T1": null,
+      "T2": "2024.11—2025.01  图片分类课程实验  小组成员\n• 实验任务：完成数据增强、训练曲线与混淆矩阵分析，整理不同学习率对模型训练稳定性的影响。\n• 比较方法：在相同数据划分下整理训练损失、验证集指标和混淆矩阵，对比不同配置，不把测试波动直接解释为稳定提升。\n• 分工：负责汇总实验表格和错误图片；组内还包括数据收集、模型训练与课堂汇报等其他分工。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_f0ce4b888033_5",
+      "title": "团队与展示",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "团队与展示\n2025.09—2026.06  研究组例会与资料整理  汇报成员\n• 协作：整理复现实验步骤、表格和错误图像，参与每两周一次的组内研究讨论；报告明确区分个人工作与团队指标。\n• 协作方式：维护复现步骤中的环境信息、输入数据版本及参数差异，提醒组员把个人操作记录与实验室共同结果区分。",
+      "T1": null,
+      "T2": "团队与展示\n2025.09—2026.06  研究组例会与资料整理  汇报成员\n• 协作：整理复现实验步骤、表格和错误图像，参与每两周一次的组内研究讨论；报告明确区分个人工作与团队指标。\n• 协作方式：维护复现步骤中的环境信息、输入数据版本及参数差异，提醒组员把个人操作记录与实验室共同结果区分。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_315442bca850_6",
+      "title": "技能与优势",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "技能与优势\n• 算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n• 工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。\n• 研究：能够进行错误样本分类、数据划分检查和消融结果整理；阅读英文技术文档。\n• 质量意识：理解数据泄漏、验证集反复调参与成果归属等实验风险；能够按相同口径解释模型对比的局限。",
+      "T1": null,
+      "T2": "技能与优势\n• 算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n• 工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。\n• 研究：能够进行错误样本分类、数据划分检查和消融结果整理；阅读英文技术文档。\n• 质量意识：理解数据泄漏、验证集反复调参与成果归属等实验风险；能够按相同口径解释模型对比的局限。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    }
+  ],
+  "finalSavedVersion": {
+    "id": "55184d8e-0f71-4692-a697-46bc4a616536",
+    "number": 1,
+    "text": "程以安\n求职方向：计算机视觉算法实习\n邮箱：candidate-c@example.com  实习安排：每周4天，可实习5个月\n教育背景\n2025.09—2028.06  北方某高校  计算机技术（硕士在读）\n研究方向：视觉检测与模型评估；主修：机器学习、深度学习、数字图像处理、计算机视觉。\n研究生阶段定期阅读检测算法论文，记录训练设置、评测数据版本及与基线方法的可比条件。\n2021.09—2025.06  华北某高校  软件工程（本科）\n课程：Python、数据结构、算法设计、计算机网络、数据库系统。\n2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估；本人负责标注清洗、训练参数记录和3组消融结果整理。\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。主干网络结构改进由导师和另一位同学完成。\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。\n2025.10—2026.03  课程文档问答检索原型  独立课程作业\n• 技术实现：整理约160篇课程材料，使用向量检索和语言模型接口制作问答演示，展示关联片段及回答。\n• 分析与验证：设计20条课程问题检查检索结果是否相关，并记录无法回答的条目；材料范围仅限课程知识。\n• 边界：交付本地运行的演示原型，未实现多用户权限或线上监控，也未对真实业务用户开展A/B测试。\n• 系统流程：按“文档整理—切分—检索—模型回答—来源展示”的顺序组织脚本，遇到缺乏支持材料的问题时保留无法确认的状态。\n• 输出检查：对20条课程问题保存命中文档片段与回答，记录来源不相关、回答过长或材料不足等问题，并在演示报告中说明不足。\n2024.11—2025.01  图片分类课程实验  小组成员\n• 实验任务：完成数据增强、训练曲线与混淆矩阵分析，整理不同学习率对模型训练稳定性的影响。\n• 比较方法：在相同数据划分下整理训练损失、验证集指标和混淆矩阵，对比不同配置，不把测试波动直接解释为稳定提升。\n• 分工：负责汇总实验表格和错误图片；组内还包括数据收集、模型训练与课堂汇报等其他分工。\n团队与展示\n2025.09—2026.06  研究组例会与资料整理  汇报成员\n• 协作：整理复现实验步骤、表格和错误图像，参与每两周一次的组内研究讨论；报告明确区分个人工作与团队指标。\n• 协作方式：维护复现步骤中的环境信息、输入数据版本及参数差异，提醒组员把个人操作记录与实验室共同结果区分。\n技能与优势\n• 算法：Python、PyTorch、OpenCV、NumPy；了解目标检测训练、IoU、Precision/Recall、AP等指标。\n• 工程：Linux命令行、Git、实验记录；具备基础模型训练和评估脚本编写经验。\n• 研究：能够进行错误样本分类、数据划分检查和消融结果整理；阅读英文技术文档。\n• 质量意识：理解数据泄漏、验证集反复调参与成果归属等实验风险；能够按相同口径解释模型对比的局限。\n",
+    "textSHA256": "9d3be5067d371a4bbcf991f71aeff7b82114e9af56a0bcbb466c24467a8872c1",
+    "savedBy": "AI代理在网页确认保存",
+    "createdAt": "2026-11-24T06:10:59.650Z"
+  },
+  "factReview": {
+    "nature": "AI辅助核查，待人工复核；不等同正式人工评分",
+    "checks": [
+      {
+        "scope": "路面病害视觉检测实验",
+        "check": "团队指标及数字口径",
+        "source": "团队实验在固定验证集上的AP50由0.78提升至0.83。",
+        "result": "T1保留团队、固定验证集与AP50，未写成本人独立提升或生产业务准确率。"
+      },
+      {
+        "scope": "路面病害视觉检测实验",
+        "check": "本人职责与已确认事实",
+        "source": "我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。",
+        "result": "网页回答后确认，再按同一经历来源整合；未追加本人负责网络结构改进。"
+      },
+      {
+        "scope": "路面病害视觉检测实验",
+        "check": "部署与未知能力",
+        "source": "未在道路巡检业务系统部署；未提供本人离线推理验证的明确材料。",
+        "result": "T1保留未部署，未补写TensorRT/ONNX部署、推理时延或本人参与离线推理验证。"
+      }
+    ],
+    "formalHumanScore": null
+  },
+  "rawRewrite": {
+    "runId": "SYN3-SHOWCASE-20261124-01-12-case-03-rewrite",
+    "content": "{\"suggestions\":[{\"experienceId\":\"exp_43856b2fdeaf_4_part1\",\"text\":\"2026.02—2026.11  路面病害视觉检测实验  实验室项目成员\\n• 研究任务：针对路面裂缝、坑槽和修补区域在光照、遮挡条件下识别不稳定的问题，团队开展检测模型实验。\\n• 数据与实验：整理约3,200幅拍摄图像及标注文件，参与PyTorch训练脚本与实验日志维护，使用固定数据划分开展模型评估；本人负责标注清洗、训练参数记录和3组消融结果整理。\\n• 阶段结果：团队实验在固定验证集上的AP50由0.78提升至0.83，形成消融表及错误案例汇总；未在道路巡检业务系统部署。主干网络结构改进由导师和另一位同学完成。\\n• 评测记录：使用固定验证集记录Precision、Recall和AP50，整理漏检图像及不同缺陷类型的错误样本，便于小组复查。\\n• 实验管理：保存各次运行的配置、随机种子、训练日志与结果表，区分参数变化和数据划分变化对指标解释的影响。\",\"reason\":\"保留原文标题、时间与团队分工；将已确认的本人负责标注清洗、训练参数记录和3组消融结果整理并入数据与实验部分，并保留主干网络结构改进由导师和另一位同学完成的边界。原文未说明本人参与模型离线推理验证或整理实验报告、技术文档，故不补写。\",\"sourceIds\":[\"exp_43856b2fdeaf_4_part1\",\"916ee2b7-9554-46e9-befa-5ce64fa8aa57\"]}]}",
+    "usage": {
+      "prompt_tokens": 3188,
+      "completion_tokens": 369,
+      "total_tokens": 3557,
+      "prompt_tokens_details": {
+        "cached_tokens": 1920
+      },
+      "prompt_cache_hit_tokens": 1920,
+      "prompt_cache_miss_tokens": 1268
+    },
+    "requestSHA256": "a89a16af720edb362cd7b6f2ff27eaee417d12d688ed088f88c0c5b2e0742f68",
+    "responseSHA256": "8849a8892568828c7351cb2fa0aa849a7b91aca84482733c02c4e868ffe42125"
+  },
+  "usage": {
+    "calls": 4,
+    "promptTokens": 13110,
+    "completionTokens": 3574,
+    "totalTokens": 16684,
+    "estimatedMicroCny": 54812,
+    "unknownUsageCalls": 0,
+    "providerResponseMs": 15697,
+    "price": {
+      "inputPerMillion": 2,
+      "outputPerMillion": 8,
+      "conservative": true,
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "checkedAt": "2026-11-24T05:38:33.615Z"
+    },
+    "actualBillCny": null
+  },
+  "interaction": {
+    "journalClickCount": 13,
+    "explicitModelConsentDialogs": 2,
+    "simulatedAnswers": 1,
+    "confirmedFacts": 1,
+    "skippedQuestions": 0,
+    "agentTextEdits": 0,
+    "actualHumanTextEdits": null,
+    "elapsedWallMs": 290334,
+    "timingNote": "自动化墙钟时间含代理核对和等待；click仅统计操作日志中的点击，不含fill/check、滚动等；不得当作真人操作数或人工耗时。"
+  },
+  "calls": [
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-09-case-03-parse",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-03",
+      "stage": "parse",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 10136,
+      "outputLimit": 4096,
+      "webId": 9,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 1820,
+        "completionTokens": 220,
+        "totalTokens": 2040,
+        "cacheHitTokens": 1664,
+        "cacheMissTokens": 156
+      },
+      "estimatedMicroCny": 5400,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 1692,
+      "requestSHA256": "970e1cad935ed0eaa266b7688f4fb36ffaf29fa16e2556510b57f60ad7e45013",
+      "responseSHA256": "801fbd73ddda2076f68f54578b918b5bf43b2b4bf1c9b7df56eb11e1f0b6a0bf",
+      "at": "2026-11-24T06:06:18.390Z"
+    },
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-10-case-03-analyze",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-03",
+      "stage": "analyze",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 18729,
+      "outputLimit": 4096,
+      "webId": 10,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 3938,
+        "completionTokens": 1376,
+        "totalTokens": 5314,
+        "cacheHitTokens": 2048,
+        "cacheMissTokens": 1890
+      },
+      "estimatedMicroCny": 18884,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 5315,
+      "requestSHA256": "c7796b3c6934e5e94ed7e427a07f8c0908cc19f1048da1040359b88e54f03ee1",
+      "responseSHA256": "4b0c9deceb966b17f4d328f92a9a16bc3b2ba9383280e67eba9b0a4583c0733d",
+      "at": "2026-11-24T06:07:28.639Z"
+    },
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-11-case-03-analyze",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-03",
+      "stage": "analyze",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 19496,
+      "outputLimit": 4096,
+      "webId": 11,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 4164,
+        "completionTokens": 1609,
+        "totalTokens": 5773,
+        "cacheHitTokens": 2048,
+        "cacheMissTokens": 2116
+      },
+      "estimatedMicroCny": 21200,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 6458,
+      "requestSHA256": "42e12c797d8ff9b53bca3729a80c4c3539bae461ba2cd8498e8c103f4bc1e2c1",
+      "responseSHA256": "39dffb87440f292f1639ec31817fb75607eb4735cabcf1da4bbc880d83785eea",
+      "at": "2026-11-24T06:09:14.678Z"
+    },
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-12-case-03-rewrite",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-03",
+      "stage": "rewrite",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 16659,
+      "outputLimit": 4096,
+      "webId": 12,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 3188,
+        "completionTokens": 369,
+        "totalTokens": 3557,
+        "cacheHitTokens": 1920,
+        "cacheMissTokens": 1268
+      },
+      "estimatedMicroCny": 9328,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 2232,
+      "requestSHA256": "a89a16af720edb362cd7b6f2ff27eaee417d12d688ed088f88c0c5b2e0742f68",
+      "responseSHA256": "8849a8892568828c7351cb2fa0aa849a7b91aca84482733c02c4e868ffe42125",
+      "at": "2026-11-24T06:09:17.048Z"
+    }
+  ],
+  "evidence": {
+    "scope": "完整运行日志仅保存在本机；以下文件名及哈希供追溯，不随公开示例复制浏览器数据。",
+    "files": [
+      {
+        "name": "ui-015-case-03-start-state.json",
+        "sha256": "9496b4add17a38e1594033ceb1afcc7bb07a82e26ea38b8abcc0fd46400bc440"
+      },
+      {
+        "name": "ui-022-case-03-reopen-state.json",
+        "sha256": "bdb6dc1a95440045e1dc471a121a0808d89d134e096bf4acb30cd5adb3302a06"
+      },
+      {
+        "name": "ui-019-case-03-generate-state.json",
+        "sha256": "9e8815824157759f67d1dd712cc7a980a62fd420de31581713a369e1f3c0940b"
+      },
+      {
+        "name": "ui-022-case-03-reopen-result.json",
+        "sha256": "a53c049475e762eeb936fbfb0874eaa745ee5278876b6ae6f5d75864be74735e"
+      },
+      {
+        "name": "ui-022-case-03-reopen.png",
+        "sha256": "91f6d5801bb28fb75c1ae2fd8ec4da0ccc3232a3d25504ec9133616dd2477abe"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-09-case-03-parse-request.json",
+        "sha256": "970e1cad935ed0eaa266b7688f4fb36ffaf29fa16e2556510b57f60ad7e45013"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-09-case-03-parse-response.json",
+        "sha256": "801fbd73ddda2076f68f54578b918b5bf43b2b4bf1c9b7df56eb11e1f0b6a0bf"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-10-case-03-analyze-request.json",
+        "sha256": "c7796b3c6934e5e94ed7e427a07f8c0908cc19f1048da1040359b88e54f03ee1"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-10-case-03-analyze-response.json",
+        "sha256": "4b0c9deceb966b17f4d328f92a9a16bc3b2ba9383280e67eba9b0a4583c0733d"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-11-case-03-analyze-request.json",
+        "sha256": "42e12c797d8ff9b53bca3729a80c4c3539bae461ba2cd8498e8c103f4bc1e2c1"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-11-case-03-analyze-response.json",
+        "sha256": "39dffb87440f292f1639ec31817fb75607eb4735cabcf1da4bbc880d83785eea"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-12-case-03-rewrite-request.json",
+        "sha256": "a89a16af720edb362cd7b6f2ff27eaee417d12d688ed088f88c0c5b2e0742f68"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-12-case-03-rewrite-response.json",
+        "sha256": "8849a8892568828c7351cb2fa0aa849a7b91aca84482733c02c4e868ffe42125"
+      }
+    ]
+  }
+}

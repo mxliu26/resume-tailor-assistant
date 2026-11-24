@@ -1,0 +1,30 @@
+{
+  "recordType": "负责人确认的展示指标汇总",
+  "date": "2026-11-24",
+  "baseline": {
+    "prompt": "phase2-v6",
+    "expressionMeanApprox": 5.41,
+    "source": "负责人确认的汇总评分",
+    "unitScoreDetailsIncluded": false
+  },
+  "candidate": {
+    "prompt": "precise-followup-v21",
+    "expressionSum": 85,
+    "scoredUnits": 13,
+    "expressionMeanRounded": 6.54,
+    "reviewType": "人工评分，经AI辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  "comparison": {
+    "formula": "(6.54 - 5.41) / 5.41 × 100%",
+    "relativeChangePercentApprox": 20.887245841035117,
+    "display": "约21%",
+    "pairedUnitComparison": false
+  },
+  "manualCorrectionMetric": {
+    "name": "单份简历人工修正量",
+    "definition": "从基础简历输入到最后得到最终版，中间需要人工修正的次数。",
+    "resultsRecorded": false
+  },
+  "note": "v6汇总未附逐单元评分，不反推补填；本记录用于展示口径追溯。"
+}

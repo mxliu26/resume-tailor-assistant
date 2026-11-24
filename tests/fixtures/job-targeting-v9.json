@@ -1,0 +1,662 @@
+{
+  "fixtures": [
+    {
+      "caseId": "AE-CASE-0003",
+      "task": {
+        "id": "AE-CANDIDATE-v2-20261122-0003",
+        "revision": 1,
+        "experiences": [
+          {
+            "id": "exp_6722425356fb_0",
+            "title": "虚构候选人丙",
+            "kind": "context",
+            "text": "虚构候选人丙",
+            "sourceText": "虚构候选人丙",
+            "original": "虚构候选人丙",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "id": "exp_24e17129f828_1",
+            "title": "教育背景",
+            "kind": "context",
+            "text": "教育背景\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读",
+            "sourceText": "教育背景\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读",
+            "original": "教育背景\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读",
+            "start": 7,
+            "end": 44
+          },
+          {
+            "id": "exp_9153373dc529_2",
+            "title": "校内活动报名优化",
+            "kind": "experience",
+            "text": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "sourceText": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "original": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "start": 45,
+            "end": 268
+          },
+          {
+            "id": "exp_7f9ec86b4d2f_3",
+            "title": "校园导览卡片",
+            "kind": "experience",
+            "text": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "sourceText": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "original": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "start": 269,
+            "end": 341
+          },
+          {
+            "id": "exp_631d463724c7_4",
+            "title": "技能与优势",
+            "kind": "context",
+            "text": "技能与优势\n能整理社群问题、编写说明文案并使用Figma表达交互流程。",
+            "sourceText": "技能与优势\n能整理社群问题、编写说明文案并使用Figma表达交互流程。",
+            "original": "技能与优势\n能整理社群问题、编写说明文案并使用Figma表达交互流程。",
+            "start": 342,
+            "end": 377
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_2bac840ef211_0",
+            "text": "整理用户常见问题，维护公告与活动说明。",
+            "original": "整理用户常见问题，维护公告与活动说明。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_a128a81d3d7e_1",
+            "text": "与活动组织者协作跟进问题，并留存处理记录。",
+            "original": "与活动组织者协作跟进问题，并留存处理记录。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_b0f08c783059_2",
+            "text": "有校园活动或内容运营经历优先。",
+            "original": "有校园活动或内容运营经历优先。",
+            "category": "加分项",
+            "strength": "优先／加分",
+            "logic": "或（满足其中一项）"
+          },
+          {
+            "id": "req_9e501b5be921_3",
+            "text": "能清楚区分个人工作与团队成果。",
+            "original": "能清楚区分个人工作与团队成果。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          }
+        ],
+        "warnings": [
+          "AI 解析仍需人工校对；原文未改写。",
+          "以下 JD 行被识别为标题，请核对是否漏掉要求：岗位：社群运营实习生；岗位职责"
+        ],
+        "meta": {
+          "stage": "parse",
+          "promptVersion": "phase3-v8",
+          "promptSHA256": "f8d79ee842db5d17ecb9d89ac5f633e2f78c221393a2e2ea6ba9bff024d9d8c3",
+          "requestedModel": "deepseek-flash",
+          "thinking": "disabled",
+          "returnedModel": "deepseek-flash",
+          "usage": {
+            "prompt_tokens": 896,
+            "completion_tokens": 135,
+            "total_tokens": 1031,
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 256
+          },
+          "durationMs": 1320,
+          "inputSHA256": "43e6ebca55cceb3ca925a8cb9baedfd73b035dfbe89976a5cd5bb4d2cf13bb8e",
+          "outputSHA256": "0ae431410aacac2426e61e109e1c5a655dee7fd0fb71521b80c6ad7930974a48",
+          "restoredContextLines": []
+        },
+        "selected": [
+          "exp_9153373dc529_2",
+          "exp_7f9ec86b4d2f_3"
+        ],
+        "facts": [],
+        "questions": [],
+        "associations": [
+          {
+            "requirementId": "req_2bac840ef211_0",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确本人收集社群重复咨询，整理报名入口、地点和取消规则为置顶说明，并每周向组织者汇总未解决问题。",
+            "evidence": "收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_2bac840ef211_0",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确本人收集社群重复咨询，整理报名入口、地点和取消规则为置顶说明，并每周向组织者汇总未解决问题。",
+                "evidence": "收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          },
+          {
+            "requirementId": "req_a128a81d3d7e_1",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确本人与组织者逐项核对文案和页面状态并保留修改记录，同时每周向组织者汇总未解决问题。",
+            "evidence": "与组织者逐项核对文案和页面状态，保留修改记录。",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_a128a81d3d7e_1",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确本人与组织者逐项核对文案和页面状态并保留修改记录，同时每周向组织者汇总未解决问题。",
+                "evidence": "与组织者逐项核对文案和页面状态，保留修改记录。",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          },
+          {
+            "requirementId": "req_b0f08c783059_2",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确为校园实践内容与原型协作成员，参与校内活动报名优化，属于校园活动相关经历。",
+            "evidence": "2026.04—2026.05 校园实践 内容与原型协作成员",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_b0f08c783059_2",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确为校园实践内容与原型协作成员，参与校内活动报名优化，属于校园活动相关经历。",
+                "evidence": "2026.04—2026.05 校园实践 内容与原型协作成员",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          },
+          {
+            "requirementId": "req_9e501b5be921_3",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确区分本人工作与团队成果：本人负责整理说明、画草图、制作原型、核对文案并保留记录，另一位同学开发，活动由学生团队共同执行。",
+            "evidence": "由另一位同学开发，本人没有编写上线代码。",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_9e501b5be921_3",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确区分本人工作与团队成果：本人负责整理说明、画草图、制作原型、核对文案并保留记录，另一位同学开发，活动由学生团队共同执行。",
+                "evidence": "由另一位同学开发，本人没有编写上线代码。",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          }
+        ],
+        "suggestions": [],
+        "aiAnalysis": {
+          "associations": [
+            {
+              "requirementId": "req_2bac840ef211_0",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确本人收集社群重复咨询，整理报名入口、地点和取消规则为置顶说明，并每周向组织者汇总未解决问题。",
+              "evidence": "收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            },
+            {
+              "requirementId": "req_a128a81d3d7e_1",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确本人与组织者逐项核对文案和页面状态并保留修改记录，同时每周向组织者汇总未解决问题。",
+              "evidence": "与组织者逐项核对文案和页面状态，保留修改记录。",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            },
+            {
+              "requirementId": "req_b0f08c783059_2",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确为校园实践内容与原型协作成员，参与校内活动报名优化，属于校园活动相关经历。",
+              "evidence": "2026.04—2026.05 校园实践 内容与原型协作成员",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            },
+            {
+              "requirementId": "req_9e501b5be921_3",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确区分本人工作与团队成果：本人负责整理说明、画草图、制作原型、核对文案并保留记录，另一位同学开发，活动由学生团队共同执行。",
+              "evidence": "由另一位同学开发，本人没有编写上线代码。",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            }
+          ],
+          "questions": [],
+          "meta": {
+            "stage": "analyze",
+            "promptVersion": "phase3-v8",
+            "promptSHA256": "f8d79ee842db5d17ecb9d89ac5f633e2f78c221393a2e2ea6ba9bff024d9d8c3",
+            "requestedModel": "deepseek-flash",
+            "thinking": "disabled",
+            "returnedModel": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 2137,
+              "completion_tokens": 430,
+              "total_tokens": 2567,
+              "prompt_cache_hit_tokens": 1152,
+              "prompt_cache_miss_tokens": 985
+            },
+            "durationMs": 1927,
+            "inputSHA256": "37fc1eb6e3d0adc59520e18c08e9245c319a1d3f20b5a5d1c715eb1cfea6a6b3",
+            "outputSHA256": "efe6dce19edd3d127442e70cfc7278e82af582a60656098448d8c8bc9f4d8abf"
+          },
+          "key": "{\"experiences\":[{\"id\":\"exp_6722425356fb_0\",\"title\":\"虚构候选人丙\",\"kind\":\"context\",\"text\":\"虚构候选人丙\",\"sourceText\":\"虚构候选人丙\",\"original\":\"虚构候选人丙\",\"start\":0,\"end\":6},{\"id\":\"exp_24e17129f828_1\",\"title\":\"教育背景\",\"kind\":\"context\",\"text\":\"教育背景\\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读\",\"sourceText\":\"教育背景\\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读\",\"original\":\"教育背景\\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读\",\"start\":7,\"end\":44},{\"id\":\"exp_9153373dc529_2\",\"title\":\"校内活动报名优化\",\"kind\":\"experience\",\"text\":\"校内活动报名优化\\n2026.04—2026.05 校园实践 内容与原型协作成员\\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。\",\"sourceText\":\"校内活动报名优化\\n2026.04—2026.05 校园实践 内容与原型协作成员\\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。\",\"original\":\"校内活动报名优化\\n2026.04—2026.05 校园实践 内容与原型协作成员\\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。\",\"start\":45,\"end\":268},{\"id\":\"exp_7f9ec86b4d2f_3\",\"title\":\"校园导览卡片\",\"kind\":\"experience\",\"text\":\"校园导览卡片\\n2025.10—2025.11 个人练习\\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。\",\"sourceText\":\"校园导览卡片\\n2025.10—2025.11 个人练习\\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。\",\"original\":\"校园导览卡片\\n2025.10—2025.11 个人练习\\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。\",\"start\":269,\"end\":341},{\"id\":\"exp_631d463724c7_4\",\"title\":\"技能与优势\",\"kind\":\"context\",\"text\":\"技能与优势\\n能整理社群问题、编写说明文案并使用Figma表达交互流程。\",\"sourceText\":\"技能与优势\\n能整理社群问题、编写说明文案并使用Figma表达交互流程。\",\"original\":\"技能与优势\\n能整理社群问题、编写说明文案并使用Figma表达交互流程。\",\"start\":342,\"end\":377}],\"requirements\":[{\"id\":\"req_2bac840ef211_0\",\"text\":\"整理用户常见问题，维护公告与活动说明。\",\"original\":\"整理用户常见问题，维护公告与活动说明。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"},{\"id\":\"req_a128a81d3d7e_1\",\"text\":\"与活动组织者协作跟进问题，并留存处理记录。\",\"original\":\"与活动组织者协作跟进问题，并留存处理记录。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"},{\"id\":\"req_b0f08c783059_2\",\"text\":\"有校园活动或内容运营经历优先。\",\"original\":\"有校园活动或内容运营经历优先。\",\"category\":\"加分项\",\"strength\":\"优先／加分\",\"logic\":\"或（满足其中一项）\"},{\"id\":\"req_9e501b5be921_3\",\"text\":\"能清楚区分个人工作与团队成果。\",\"original\":\"能清楚区分个人工作与团队成果。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"}],\"facts\":[],\"answers\":[],\"manual\":[]}"
+        }
+      },
+      "response": {
+        "suggestions": [
+          {
+            "experienceId": "exp_9153373dc529_2",
+            "text": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "reason": "原文已覆盖整理常见问题、与组织者协作跟进并留存记录，且清楚区分个人工作与团队成果，按岗位重点保留原文。",
+            "sourceIds": [
+              "exp_9153373dc529_2"
+            ]
+          },
+          {
+            "experienceId": "exp_7f9ec86b4d2f_3",
+            "text": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "reason": "原文为个人练习，保留原有内容与成果范围，不补充未记录的运营或协作事实。",
+            "sourceIds": [
+              "exp_7f9ec86b4d2f_3"
+            ]
+          }
+        ]
+      },
+      "evidence": {
+        "task": {
+          "sha256": "7fe22365319a746e588bc2916aafbffead0b59b889cc1a9f0253d90e63f6b7d4"
+        },
+        "response": {
+          "sha256": "7178ea300746d9ab42a0ef654b789671d193a9f4d52ad6018498f727ddaf0422"
+        }
+      }
+    },
+    {
+      "caseId": "AE-CASE-0004",
+      "task": {
+        "id": "AE-CANDIDATE-v2-20261122-0004",
+        "revision": 1,
+        "experiences": [
+          {
+            "id": "exp_6722425356fb_0",
+            "title": "虚构候选人丙",
+            "kind": "context",
+            "text": "虚构候选人丙",
+            "sourceText": "虚构候选人丙",
+            "original": "虚构候选人丙",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "id": "exp_24e17129f828_1",
+            "title": "教育背景",
+            "kind": "context",
+            "text": "教育背景\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读",
+            "sourceText": "教育背景\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读",
+            "original": "教育背景\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读",
+            "start": 7,
+            "end": 44
+          },
+          {
+            "id": "exp_9153373dc529_2",
+            "title": "校内活动报名优化",
+            "kind": "experience",
+            "text": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "sourceText": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "original": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "start": 45,
+            "end": 268
+          },
+          {
+            "id": "exp_7f9ec86b4d2f_3",
+            "title": "校园导览卡片",
+            "kind": "experience",
+            "text": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "sourceText": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "original": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "start": 269,
+            "end": 341
+          },
+          {
+            "id": "exp_631d463724c7_4",
+            "title": "技能与优势",
+            "kind": "context",
+            "text": "技能与优势\n能整理社群问题、编写说明文案并使用Figma表达交互流程。",
+            "sourceText": "技能与优势\n能整理社群问题、编写说明文案并使用Figma表达交互流程。",
+            "original": "技能与优势\n能整理社群问题、编写说明文案并使用Figma表达交互流程。",
+            "start": 342,
+            "end": 377
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_8db2b46cf5f2_0",
+            "text": "根据反馈梳理表单流程，制作交互原型及字段说明。",
+            "original": "根据反馈梳理表单流程，制作交互原型及字段说明。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_e3c292b21896_1",
+            "text": "使用Figma或Axure表达方案。",
+            "original": "使用Figma或Axure表达方案。",
+            "category": "工具或方法",
+            "strength": "原文未强调强制",
+            "logic": "或（满足其中一项）"
+          },
+          {
+            "id": "req_628324e3b56f_2",
+            "text": "与开发或活动组织者核对页面状态，保留修改依据。",
+            "original": "与开发或活动组织者核对页面状态，保留修改依据。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "或（满足其中一项）"
+          },
+          {
+            "id": "req_4b203f2fc07f_3",
+            "text": "有线上功能发布经历优先。",
+            "original": "有线上功能发布经历优先。",
+            "category": "加分项",
+            "strength": "优先／加分",
+            "logic": "保留原文关系"
+          }
+        ],
+        "warnings": [
+          "AI 解析仍需人工校对；原文未改写。",
+          "以下 JD 行被识别为标题，请核对是否漏掉要求：岗位：交互产品实习生；岗位职责"
+        ],
+        "meta": {
+          "stage": "parse",
+          "promptVersion": "phase3-v8",
+          "promptSHA256": "f8d79ee842db5d17ecb9d89ac5f633e2f78c221393a2e2ea6ba9bff024d9d8c3",
+          "requestedModel": "deepseek-flash",
+          "thinking": "disabled",
+          "returnedModel": "deepseek-flash",
+          "usage": {
+            "prompt_tokens": 897,
+            "completion_tokens": 135,
+            "total_tokens": 1032,
+            "prompt_cache_hit_tokens": 763,
+            "prompt_cache_miss_tokens": 134
+          },
+          "durationMs": 824,
+          "inputSHA256": "a1f837bd9c8e66160394b00366b750a23af1ea3f8cb776049ae55a3669cbe6c7",
+          "outputSHA256": "3f8c0f58137993b229743d7f426a8efc795f58ce1066b2e575bb4c98a9c28c94",
+          "restoredContextLines": []
+        },
+        "selected": [
+          "exp_9153373dc529_2",
+          "exp_7f9ec86b4d2f_3"
+        ],
+        "facts": [],
+        "questions": [],
+        "associations": [
+          {
+            "requirementId": "req_8db2b46cf5f2_0",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确本人根据报名反馈画表单流程草图、在Figma制作可点击原型并整理字段说明。",
+            "evidence": "根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_8db2b46cf5f2_0",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确本人根据报名反馈画表单流程草图、在Figma制作可点击原型并整理字段说明。",
+                "evidence": "根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          },
+          {
+            "requirementId": "req_e3c292b21896_1",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确本人在Figma制作可点击原型，满足Figma或Axure其一。",
+            "evidence": "在Figma制作可点击原型并整理字段说明",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_e3c292b21896_1",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确本人在Figma制作可点击原型，满足Figma或Axure其一。",
+                "evidence": "在Figma制作可点击原型并整理字段说明",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          },
+          {
+            "requirementId": "req_628324e3b56f_2",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "已有明确证据",
+            "reason": "原文明确本人与组织者逐项核对文案和页面状态并保留修改记录。",
+            "evidence": "与组织者逐项核对文案和页面状态，保留修改记录",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_628324e3b56f_2",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "已有明确证据",
+                "reason": "原文明确本人与组织者逐项核对文案和页面状态并保留修改记录。",
+                "evidence": "与组织者逐项核对文案和页面状态，保留修改记录",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          },
+          {
+            "requirementId": "req_4b203f2fc07f_3",
+            "experienceId": "exp_9153373dc529_2",
+            "status": "相关但不等价",
+            "reason": "原文明确由另一位同学开发、本人没有编写上线代码，提醒功能也未设计开发或发布；仅有相关原型协作，不能等同线上功能发布经历。",
+            "evidence": "由另一位同学开发，本人没有编写上线代码",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": [],
+            "experienceIds": [
+              "exp_9153373dc529_2"
+            ],
+            "links": [
+              {
+                "requirementId": "req_4b203f2fc07f_3",
+                "experienceId": "exp_9153373dc529_2",
+                "status": "相关但不等价",
+                "reason": "原文明确由另一位同学开发、本人没有编写上线代码，提醒功能也未设计开发或发布；仅有相关原型协作，不能等同线上功能发布经历。",
+                "evidence": "由另一位同学开发，本人没有编写上线代码",
+                "origin": "ai",
+                "conflict": false,
+                "needsClarification": false,
+                "missing": []
+              }
+            ]
+          }
+        ],
+        "suggestions": [],
+        "aiAnalysis": {
+          "associations": [
+            {
+              "requirementId": "req_8db2b46cf5f2_0",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确本人根据报名反馈画表单流程草图、在Figma制作可点击原型并整理字段说明。",
+              "evidence": "根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            },
+            {
+              "requirementId": "req_e3c292b21896_1",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确本人在Figma制作可点击原型，满足Figma或Axure其一。",
+              "evidence": "在Figma制作可点击原型并整理字段说明",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            },
+            {
+              "requirementId": "req_628324e3b56f_2",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "已有明确证据",
+              "reason": "原文明确本人与组织者逐项核对文案和页面状态并保留修改记录。",
+              "evidence": "与组织者逐项核对文案和页面状态，保留修改记录",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            },
+            {
+              "requirementId": "req_4b203f2fc07f_3",
+              "experienceId": "exp_9153373dc529_2",
+              "status": "相关但不等价",
+              "reason": "原文明确由另一位同学开发、本人没有编写上线代码，提醒功能也未设计开发或发布；仅有相关原型协作，不能等同线上功能发布经历。",
+              "evidence": "由另一位同学开发，本人没有编写上线代码",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            }
+          ],
+          "questions": [],
+          "meta": {
+            "stage": "analyze",
+            "promptVersion": "phase3-v8",
+            "promptSHA256": "f8d79ee842db5d17ecb9d89ac5f633e2f78c221393a2e2ea6ba9bff024d9d8c3",
+            "requestedModel": "deepseek-flash",
+            "thinking": "disabled",
+            "returnedModel": "deepseek-flash",
+            "usage": {
+              "prompt_tokens": 2149,
+              "completion_tokens": 397,
+              "total_tokens": 2546,
+              "prompt_cache_hit_tokens": 1152,
+              "prompt_cache_miss_tokens": 997
+            },
+            "durationMs": 1915,
+            "inputSHA256": "1fa5661896aabbb9904f692c559a18b4f28401995914a999a63efa0e87993d19",
+            "outputSHA256": "ec5c2b8cf66fb65d4bda0c43d193d78620f2104a23dd9c51346c93b43330b941"
+          },
+          "key": "{\"experiences\":[{\"id\":\"exp_6722425356fb_0\",\"title\":\"虚构候选人丙\",\"kind\":\"context\",\"text\":\"虚构候选人丙\",\"sourceText\":\"虚构候选人丙\",\"original\":\"虚构候选人丙\",\"start\":0,\"end\":6},{\"id\":\"exp_24e17129f828_1\",\"title\":\"教育背景\",\"kind\":\"context\",\"text\":\"教育背景\\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读\",\"sourceText\":\"教育背景\\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读\",\"original\":\"教育背景\\n2023.09—2027.06 虚构北原学院 数字媒体 本科在读\",\"start\":7,\"end\":44},{\"id\":\"exp_9153373dc529_2\",\"title\":\"校内活动报名优化\",\"kind\":\"experience\",\"text\":\"校内活动报名优化\\n2026.04—2026.05 校园实践 内容与原型协作成员\\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。\",\"sourceText\":\"校内活动报名优化\\n2026.04—2026.05 校园实践 内容与原型协作成员\\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。\",\"original\":\"校内活动报名优化\\n2026.04—2026.05 校园实践 内容与原型协作成员\\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。\",\"start\":45,\"end\":268},{\"id\":\"exp_7f9ec86b4d2f_3\",\"title\":\"校园导览卡片\",\"kind\":\"experience\",\"text\":\"校园导览卡片\\n2025.10—2025.11 个人练习\\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。\",\"sourceText\":\"校园导览卡片\\n2025.10—2025.11 个人练习\\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。\",\"original\":\"校园导览卡片\\n2025.10—2025.11 个人练习\\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。\",\"start\":269,\"end\":341},{\"id\":\"exp_631d463724c7_4\",\"title\":\"技能与优势\",\"kind\":\"context\",\"text\":\"技能与优势\\n能整理社群问题、编写说明文案并使用Figma表达交互流程。\",\"sourceText\":\"技能与优势\\n能整理社群问题、编写说明文案并使用Figma表达交互流程。\",\"original\":\"技能与优势\\n能整理社群问题、编写说明文案并使用Figma表达交互流程。\",\"start\":342,\"end\":377}],\"requirements\":[{\"id\":\"req_8db2b46cf5f2_0\",\"text\":\"根据反馈梳理表单流程，制作交互原型及字段说明。\",\"original\":\"根据反馈梳理表单流程，制作交互原型及字段说明。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"},{\"id\":\"req_e3c292b21896_1\",\"text\":\"使用Figma或Axure表达方案。\",\"original\":\"使用Figma或Axure表达方案。\",\"category\":\"工具或方法\",\"strength\":\"原文未强调强制\",\"logic\":\"或（满足其中一项）\"},{\"id\":\"req_628324e3b56f_2\",\"text\":\"与开发或活动组织者核对页面状态，保留修改依据。\",\"original\":\"与开发或活动组织者核对页面状态，保留修改依据。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"或（满足其中一项）\"},{\"id\":\"req_4b203f2fc07f_3\",\"text\":\"有线上功能发布经历优先。\",\"original\":\"有线上功能发布经历优先。\",\"category\":\"加分项\",\"strength\":\"优先／加分\",\"logic\":\"保留原文关系\"}],\"facts\":[],\"answers\":[],\"manual\":[]}"
+        }
+      },
+      "response": {
+        "suggestions": [
+          {
+            "experienceId": "exp_9153373dc529_2",
+            "text": "校内活动报名优化\n2026.04—2026.05 校园实践 内容与原型协作成员\n收集社群重复咨询，把报名入口、地点和取消规则整理为置顶说明，每周向组织者汇总仍未解决的问题。\n根据报名反馈画出表单流程草图，在Figma制作可点击原型并整理字段说明；由另一位同学开发，本人没有编写上线代码。\n与组织者逐项核对文案和页面状态，保留修改记录。需求中提出自动发送提醒，但只停留在讨论，没有设计、开发或发布提醒功能。活动由学生团队共同执行，未记录报名转化率。",
+            "reason": "原文已覆盖表单流程、Figma原型、字段说明及与组织者核对页面状态并保留修改记录，按岗位重点保留原表述。",
+            "sourceIds": [
+              "exp_9153373dc529_2"
+            ]
+          },
+          {
+            "experienceId": "exp_7f9ec86b4d2f_3",
+            "text": "校园导览卡片\n2025.10—2025.11 个人练习\n整理校内公共设施位置，编写10张路线说明卡片，邀请同学检查是否容易理解；仅用于课堂展示。",
+            "reason": "原文为个人练习且仅用于课堂展示，未涉及岗位要求的表单流程、原型工具或线上发布，保留原表述。",
+            "sourceIds": [
+              "exp_7f9ec86b4d2f_3"
+            ]
+          }
+        ]
+      },
+      "evidence": {
+        "task": {
+          "sha256": "30615ea75d4e8fd45b8d1ebf22e06fa97705171e5fef753ba7c4b7b2a46dd99f"
+        },
+        "response": {
+          "sha256": "255e64be7aad4c635de70e704320541d836609774a31c4ec2c7c4452936f515f"
+        }
+      }
+    }
+  ]
+}

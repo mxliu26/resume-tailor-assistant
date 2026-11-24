@@ -1,0 +1,560 @@
+[
+  {
+    "caseId": "0005",
+    "task": {
+      "id": "AE-PRECISE-v20-20261123-0005",
+      "revision": 1,
+      "experiences": [
+        {
+          "id": "exp_c6a28f255950_0",
+          "title": "虚构候选人丁",
+          "kind": "context",
+          "text": "虚构候选人丁",
+          "sourceText": "虚构候选人丁",
+          "original": "虚构候选人丁",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "id": "exp_9d7631dd4585_1",
+          "title": "教育背景",
+          "kind": "context",
+          "text": "教育背景\n2023.09—2027.06 虚构西泽学院 软件工程 本科在读",
+          "sourceText": "教育背景\n2023.09—2027.06 虚构西泽学院 软件工程 本科在读",
+          "original": "教育背景\n2023.09—2027.06 虚构西泽学院 软件工程 本科在读",
+          "start": 7,
+          "end": 44
+        },
+        {
+          "id": "exp_a83dc21172bc_2",
+          "title": "预约系统测试",
+          "kind": "experience",
+          "text": "预约系统测试\n2026.05—2026.06 课程项目 测试负责人\n担任测试负责人，独立编写预约、取消及时间冲突场景的28条测试用例，并安排小组执行顺序。\n本人复现并提交6个缺陷，附操作步骤、预期结果和实际结果；修复由开发同学完成，本人逐项回归并更新缺陷状态。\n使用Postman核对测试环境的接口返回，保留请求参数和测试记录；没有执行线上压测。",
+          "sourceText": "预约系统测试\n2026.05—2026.06 课程项目 测试负责人\n担任测试负责人，独立编写预约、取消及时间冲突场景的28条测试用例，并安排小组执行顺序。\n本人复现并提交6个缺陷，附操作步骤、预期结果和实际结果；修复由开发同学完成，本人逐项回归并更新缺陷状态。\n使用Postman核对测试环境的接口返回，保留请求参数和测试记录；没有执行线上压测。",
+          "original": "预约系统测试\n2026.05—2026.06 课程项目 测试负责人\n担任测试负责人，独立编写预约、取消及时间冲突场景的28条测试用例，并安排小组执行顺序。\n本人复现并提交6个缺陷，附操作步骤、预期结果和实际结果；修复由开发同学完成，本人逐项回归并更新缺陷状态。\n使用Postman核对测试环境的接口返回，保留请求参数和测试记录；没有执行线上压测。",
+          "start": 45,
+          "end": 218
+        },
+        {
+          "id": "exp_84e81a647e0a_3",
+          "title": "班级文档整理",
+          "kind": "experience",
+          "text": "班级文档整理\n2025.09—2025.12 班级志愿者\n参与整理课程资料目录，维护文档命名规则。",
+          "sourceText": "班级文档整理\n2025.09—2025.12 班级志愿者\n参与整理课程资料目录，维护文档命名规则。",
+          "original": "班级文档整理\n2025.09—2025.12 班级志愿者\n参与整理课程资料目录，维护文档命名规则。",
+          "start": 219,
+          "end": 268
+        }
+      ],
+      "requirements": [
+        {
+          "id": "req_fbcec277d5bc_0",
+          "text": "计算机相关专业本科在读。",
+          "original": "计算机相关专业本科在读。",
+          "category": "明确条件",
+          "strength": "原文未强调强制",
+          "logic": "保留原文关系"
+        },
+        {
+          "id": "req_c77217be6af9_1",
+          "text": "能设计功能测试用例、复现缺陷并跟进回归。",
+          "original": "能设计功能测试用例、复现缺陷并跟进回归。",
+          "category": "工作任务与能力",
+          "strength": "原文未强调强制",
+          "logic": "保留原文关系"
+        },
+        {
+          "id": "req_a67899c9c7a7_2",
+          "text": "使用Postman或同类工具核对接口返回。",
+          "original": "使用Postman或同类工具核对接口返回。",
+          "category": "工具或方法",
+          "strength": "原文未强调强制",
+          "logic": "或（满足其中一项）"
+        },
+        {
+          "id": "req_391f6f98d639_3",
+          "text": "能清晰记录预期结果与实际结果。",
+          "original": "能清晰记录预期结果与实际结果。",
+          "category": "工作任务与能力",
+          "strength": "原文未强调强制",
+          "logic": "保留原文关系"
+        }
+      ],
+      "warnings": [
+        "AI 解析仍需人工校对；原文未改写。",
+        "以下 JD 行被识别为标题，请核对是否漏掉要求：岗位：软件测试实习生；任职要求"
+      ],
+      "meta": {
+        "stage": "parse",
+        "promptVersion": "precise-followup-v20",
+        "promptSHA256": "307f17f0133dd1aa5fbc7b3ceacd82a293c8ac9f06e3c061a83f78e0f1ea3f88",
+        "requestedModel": "deepseek-flash",
+        "thinking": "disabled",
+        "returnedModel": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 813,
+          "completion_tokens": 120,
+          "total_tokens": 933,
+          "prompt_cache_hit_tokens": 640,
+          "prompt_cache_miss_tokens": 173
+        },
+        "durationMs": 1199,
+        "inputSHA256": "850954587083d94d2d78f788f3c79e3da13ef1c8aa51346f467e97b9dbf1d4aa",
+        "outputSHA256": "bec0abbb1560cbd57549a810496459ef305c96cb4645985e4db981d28a7d76f4",
+        "restoredContextLines": []
+      },
+      "selected": [
+        "exp_a83dc21172bc_2"
+      ],
+      "facts": [],
+      "questions": [],
+      "associations": [],
+      "suggestions": []
+    },
+    "data": {
+      "type": "json_object",
+      "associations": [
+        {
+          "requirementId": "req_fbcec277d5bc_0",
+          "experienceId": "exp_9d7631dd4585_1",
+          "status": "按已提供信息符合",
+          "reason": "教育背景显示软件工程本科在读，属于计算机相关专业，时间覆盖在读状态。",
+          "evidence": [
+            {
+              "sourceId": "exp_9d7631dd4585_1",
+              "quote": "2023.09—2027.06 虚构西泽学院 软件工程 本科在读"
+            }
+          ]
+        },
+        {
+          "requirementId": "req_c77217be6af9_1",
+          "experienceId": "exp_a83dc21172bc_2",
+          "status": "已有明确证据",
+          "reason": "原文明确本人独立编写预约、取消及时间冲突场景测试用例，复现并提交缺陷，附操作步骤、预期结果和实际结果，并逐项回归更新缺陷状态。",
+          "evidence": [
+            {
+              "sourceId": "exp_a83dc21172bc_2",
+              "quote": "担任测试负责人，独立编写预约、取消及时间冲突场景的28条测试用例，并安排小组执行顺序。"
+            },
+            {
+              "sourceId": "exp_a83dc21172bc_2",
+              "quote": "本人复现并提交6个缺陷，附操作步骤、预期结果和实际结果；修复由开发同学完成，本人逐项回归并更新缺陷状态。"
+            }
+          ]
+        },
+        {
+          "requirementId": "req_a67899c9c7a7_2",
+          "experienceId": "exp_a83dc21172bc_2",
+          "status": "已有明确证据",
+          "reason": "原文明确本人使用Postman核对测试环境接口返回，并保留请求参数和测试记录。",
+          "evidence": [
+            {
+              "sourceId": "exp_a83dc21172bc_2",
+              "quote": "使用Postman核对测试环境的接口返回，保留请求参数和测试记录；没有执行线上压测。"
+            }
+          ]
+        },
+        {
+          "requirementId": "req_391f6f98d639_3",
+          "experienceId": "exp_a83dc21172bc_2",
+          "status": "已有明确证据",
+          "reason": "原文明确缺陷记录附有预期结果和实际结果，体现清晰记录两类结果。",
+          "evidence": [
+            {
+              "sourceId": "exp_a83dc21172bc_2",
+              "quote": "本人复现并提交6个缺陷，附操作步骤、预期结果和实际结果；修复由开发同学完成，本人逐项回归并更新缺陷状态。"
+            }
+          ]
+        }
+      ],
+      "questions": []
+    }
+  },
+  {
+    "caseId": "0010",
+    "task": {
+      "id": "AE-PRECISE-v20-20261123-0010",
+      "revision": 3,
+      "experiences": [
+        {
+          "id": "exp_683a9c6d277d_0",
+          "title": "虚构候选人壬",
+          "kind": "context",
+          "text": "虚构候选人壬",
+          "sourceText": "虚构候选人壬",
+          "original": "虚构候选人壬",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "id": "exp_784cd0f856e5_1",
+          "title": "教育背景",
+          "kind": "context",
+          "text": "教育背景\n2023.09—2027.06 虚构清野学院 计算机科学 本科在读",
+          "sourceText": "教育背景\n2023.09—2027.06 虚构清野学院 计算机科学 本科在读",
+          "original": "教育背景\n2023.09—2027.06 虚构清野学院 计算机科学 本科在读",
+          "start": 7,
+          "end": 45
+        },
+        {
+          "id": "exp_f0c65625070d_2",
+          "title": "图像标注质检",
+          "kind": "experience",
+          "text": "图像标注质检\n2026.03—2026.04 课程项目 质检成员\n按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。\n整理遮挡、边界模糊两类争议，提交规则说明补充；本人不负责模型训练。",
+          "sourceText": "图像标注质检\n2026.03—2026.04 课程项目 质检成员\n按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。\n整理遮挡、边界模糊两类争议，提交规则说明补充；本人不负责模型训练。",
+          "original": "图像标注质检\n2026.03—2026.04 课程项目 质检成员\n按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。\n整理遮挡、边界模糊两类争议，提交规则说明补充；本人不负责模型训练。",
+          "start": 46,
+          "end": 235
+        },
+        {
+          "id": "exp_a59368ad49c7_3",
+          "title": "术语表维护",
+          "kind": "experience",
+          "text": "术语表维护\n2025.11—2025.12 学习小组 成员\n整理常用标注术语和例图索引，与同学核对词义，提交术语表；未统计使用效果。",
+          "sourceText": "术语表维护\n2025.11—2025.12 学习小组 成员\n整理常用标注术语和例图索引，与同学核对词义，提交术语表；未统计使用效果。",
+          "original": "术语表维护\n2025.11—2025.12 学习小组 成员\n整理常用标注术语和例图索引，与同学核对词义，提交术语表；未统计使用效果。",
+          "start": 236,
+          "end": 302
+        },
+        {
+          "id": "exp_342177ea09a0_4",
+          "title": "技能与优势",
+          "kind": "context",
+          "text": "技能与优势\n能够按规则核对记录，并标记需要再次确认的条目。",
+          "sourceText": "技能与优势\n能够按规则核对记录，并标记需要再次确认的条目。",
+          "original": "技能与优势\n能够按规则核对记录，并标记需要再次确认的条目。",
+          "start": 303,
+          "end": 332
+        }
+      ],
+      "requirements": [
+        {
+          "id": "req_60edaf20fdfd_0",
+          "text": "依规则检查标注质量，准确记录抽检口径。",
+          "original": "依规则检查标注质量，准确记录抽检口径。",
+          "category": "工作任务与能力",
+          "strength": "原文未强调强制",
+          "logic": "保留原文关系"
+        },
+        {
+          "id": "req_fb6334efe370_1",
+          "text": "整理歧义案例并维护规则说明。",
+          "original": "整理歧义案例并维护规则说明。",
+          "category": "工作任务与能力",
+          "strength": "原文未强调强制",
+          "logic": "保留原文关系"
+        },
+        {
+          "id": "req_05fe5c68f13a_2",
+          "text": "能发现相互冲突的数据，并在确认后更新记录。",
+          "original": "能发现相互冲突的数据，并在确认后更新记录。",
+          "category": "工作任务与能力",
+          "strength": "原文未强调强制",
+          "logic": "保留原文关系"
+        },
+        {
+          "id": "req_75a54925d083_3",
+          "text": "有术语表维护经验优先。",
+          "original": "有术语表维护经验优先。",
+          "category": "加分项",
+          "strength": "优先／加分",
+          "logic": "保留原文关系"
+        }
+      ],
+      "warnings": [
+        "AI 解析仍需人工校对；原文未改写。",
+        "以下 JD 行被识别为标题，请核对是否漏掉要求：岗位：数据标注质检实习生；岗位职责"
+      ],
+      "meta": {
+        "stage": "parse",
+        "promptVersion": "precise-followup-v20",
+        "promptSHA256": "307f17f0133dd1aa5fbc7b3ceacd82a293c8ac9f06e3c061a83f78e0f1ea3f88",
+        "requestedModel": "deepseek-flash",
+        "thinking": "disabled",
+        "returnedModel": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 868,
+          "completion_tokens": 135,
+          "total_tokens": 1003,
+          "prompt_cache_hit_tokens": 640,
+          "prompt_cache_miss_tokens": 228
+        },
+        "durationMs": 1151,
+        "inputSHA256": "4ea61a22f21432295690b8baceafe95fc6b63afb5da38ab65104b39484f582bd",
+        "outputSHA256": "a88910500bb57f38f1603ab9fc71bae449d4864def7235fbdd1cc5a125ea6cce",
+        "restoredContextLines": []
+      },
+      "selected": [
+        "exp_f0c65625070d_2",
+        "exp_a59368ad49c7_3"
+      ],
+      "facts": [
+        {
+          "id": "AE-CASE-0010-conflict",
+          "experienceId": "exp_f0c65625070d_2",
+          "text": "我还未核实同一批50张图像是46张合格/92%，还是45张合格/90%，请保留冲突待核对。",
+          "status": "conflict",
+          "source": "用户主动补充（虚构脚本）"
+        }
+      ],
+      "questions": [
+        {
+          "id": "q_req_05fe5c68f13a_2_exp_f0c65625070d_2",
+          "requirementId": "req_05fe5c68f13a_2",
+          "experienceId": "exp_f0c65625070d_2",
+          "text": "针对批次SYN-QC-202603-A中两表对样本IMG-046判定相反的情况，你是否进行了复核或确认？如有，请说明你本人具体做了什么，以及确认后是否更新了记录、更新了哪份记录。",
+          "purpose": "明确本人是否在确认冲突后更新记录及具体行动，用于改写该经历中冲突处理与记录更新部分。",
+          "status": "unknown",
+          "answer": "暂不确认，保留未知。"
+        }
+      ],
+      "associations": [
+        {
+          "requirementId": "req_60edaf20fdfd_0",
+          "experienceId": "exp_f0c65625070d_2",
+          "status": "已有明确证据",
+          "reason": "原文记录了本人按课程规则抽查指定批次，并给出抽检数量与合格/不合格记录，符合检查标注质量并记录抽检口径。",
+          "evidence": "按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": [],
+          "experienceIds": [
+            "exp_f0c65625070d_2"
+          ],
+          "links": [
+            {
+              "requirementId": "req_60edaf20fdfd_0",
+              "experienceId": "exp_f0c65625070d_2",
+              "status": "已有明确证据",
+              "reason": "原文记录了本人按课程规则抽查指定批次，并给出抽检数量与合格/不合格记录，符合检查标注质量并记录抽检口径。",
+              "evidence": "按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            }
+          ]
+        },
+        {
+          "requirementId": "req_fb6334efe370_1",
+          "experienceId": "exp_f0c65625070d_2",
+          "status": "已有明确证据",
+          "reason": "原文明确本人整理两类争议并提交规则说明补充，符合整理歧义案例并维护规则说明。",
+          "evidence": "整理遮挡、边界模糊两类争议，提交规则说明补充",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": [],
+          "experienceIds": [
+            "exp_f0c65625070d_2"
+          ],
+          "links": [
+            {
+              "requirementId": "req_fb6334efe370_1",
+              "experienceId": "exp_f0c65625070d_2",
+              "status": "已有明确证据",
+              "reason": "原文明确本人整理两类争议并提交规则说明补充，符合整理歧义案例并维护规则说明。",
+              "evidence": "整理遮挡、边界模糊两类争议，提交规则说明补充",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            }
+          ]
+        },
+        {
+          "requirementId": "req_05fe5c68f13a_2",
+          "experienceId": "exp_f0c65625070d_2",
+          "status": "表达不足",
+          "reason": "原文显示两表对同一样本判定相反且尚未复核，能体现发现冲突数据；但本人是否在确认后更新记录、如何确认及更新结果未写明。",
+          "evidence": "两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": true,
+          "missing": [],
+          "experienceIds": [
+            "exp_f0c65625070d_2"
+          ],
+          "links": [
+            {
+              "requirementId": "req_05fe5c68f13a_2",
+              "experienceId": "exp_f0c65625070d_2",
+              "status": "表达不足",
+              "reason": "原文显示两表对同一样本判定相反且尚未复核，能体现发现冲突数据；但本人是否在确认后更新记录、如何确认及更新结果未写明。",
+              "evidence": "两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": true,
+              "missing": []
+            }
+          ]
+        },
+        {
+          "requirementId": "req_75a54925d083_3",
+          "experienceId": "exp_a59368ad49c7_3",
+          "status": "已有明确证据",
+          "reason": "原文记录本人整理标注术语与例图索引、与同学核对词义并提交术语表，属于术语表维护经验。",
+          "evidence": "整理常用标注术语和例图索引，与同学核对词义，提交术语表",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": [],
+          "experienceIds": [
+            "exp_a59368ad49c7_3"
+          ],
+          "links": [
+            {
+              "requirementId": "req_75a54925d083_3",
+              "experienceId": "exp_a59368ad49c7_3",
+              "status": "已有明确证据",
+              "reason": "原文记录本人整理标注术语与例图索引、与同学核对词义并提交术语表，属于术语表维护经验。",
+              "evidence": "整理常用标注术语和例图索引，与同学核对词义，提交术语表",
+              "origin": "ai",
+              "conflict": false,
+              "needsClarification": false,
+              "missing": []
+            }
+          ]
+        }
+      ],
+      "suggestions": [],
+      "aiAnalysis": {
+        "associations": [
+          {
+            "requirementId": "req_60edaf20fdfd_0",
+            "experienceId": "exp_f0c65625070d_2",
+            "status": "已有明确证据",
+            "reason": "原文记录了本人按课程规则抽查指定批次，并给出抽检数量与合格/不合格记录，符合检查标注质量并记录抽检口径。",
+            "evidence": "按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": []
+          },
+          {
+            "requirementId": "req_fb6334efe370_1",
+            "experienceId": "exp_f0c65625070d_2",
+            "status": "已有明确证据",
+            "reason": "原文明确本人整理两类争议并提交规则说明补充，符合整理歧义案例并维护规则说明。",
+            "evidence": "整理遮挡、边界模糊两类争议，提交规则说明补充",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": []
+          },
+          {
+            "requirementId": "req_05fe5c68f13a_2",
+            "experienceId": "exp_f0c65625070d_2",
+            "status": "表达不足",
+            "reason": "原文显示两表对同一样本判定相反且尚未复核，能体现发现冲突数据；但本人是否在确认后更新记录、如何确认及更新结果未写明。",
+            "evidence": "两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": true,
+            "missing": []
+          },
+          {
+            "requirementId": "req_75a54925d083_3",
+            "experienceId": "exp_a59368ad49c7_3",
+            "status": "已有明确证据",
+            "reason": "原文记录本人整理标注术语与例图索引、与同学核对词义并提交术语表，属于术语表维护经验。",
+            "evidence": "整理常用标注术语和例图索引，与同学核对词义，提交术语表",
+            "origin": "ai",
+            "conflict": false,
+            "needsClarification": false,
+            "missing": []
+          }
+        ],
+        "questions": [
+          {
+            "requirementId": "req_05fe5c68f13a_2",
+            "experienceId": "exp_f0c65625070d_2",
+            "text": "针对批次SYN-QC-202603-A中两表对样本IMG-046判定相反的情况，你是否进行了复核或确认？如有，请说明你本人具体做了什么，以及确认后是否更新了记录、更新了哪份记录。",
+            "purpose": "明确本人是否在确认冲突后更新记录及具体行动，用于改写该经历中冲突处理与记录更新部分。"
+          }
+        ],
+        "meta": {
+          "stage": "analyze",
+          "promptVersion": "precise-followup-v20",
+          "promptSHA256": "307f17f0133dd1aa5fbc7b3ceacd82a293c8ac9f06e3c061a83f78e0f1ea3f88",
+          "requestedModel": "deepseek-flash",
+          "thinking": "disabled",
+          "returnedModel": "deepseek-flash",
+          "usage": {
+            "prompt_tokens": 2169,
+            "completion_tokens": 592,
+            "total_tokens": 2761,
+            "prompt_cache_hit_tokens": 1024,
+            "prompt_cache_miss_tokens": 1145
+          },
+          "durationMs": 3135,
+          "inputSHA256": "d48b7e08967210689a7b6da438a8e4c5e08ce5fe89e5fcf21f75d7391f483e36",
+          "outputSHA256": "df2b95051391d34d28f4b1b67cad6d67d1f9f0c7d18373c1b2c30943ea1b5508"
+        },
+        "key": "{\"experiences\":[{\"id\":\"exp_683a9c6d277d_0\",\"title\":\"虚构候选人壬\",\"kind\":\"context\",\"text\":\"虚构候选人壬\",\"sourceText\":\"虚构候选人壬\",\"original\":\"虚构候选人壬\",\"start\":0,\"end\":6},{\"id\":\"exp_784cd0f856e5_1\",\"title\":\"教育背景\",\"kind\":\"context\",\"text\":\"教育背景\\n2023.09—2027.06 虚构清野学院 计算机科学 本科在读\",\"sourceText\":\"教育背景\\n2023.09—2027.06 虚构清野学院 计算机科学 本科在读\",\"original\":\"教育背景\\n2023.09—2027.06 虚构清野学院 计算机科学 本科在读\",\"start\":7,\"end\":45},{\"id\":\"exp_f0c65625070d_2\",\"title\":\"图像标注质检\",\"kind\":\"experience\",\"text\":\"图像标注质检\\n2026.03—2026.04 课程项目 质检成员\\n按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。\\n整理遮挡、边界模糊两类争议，提交规则说明补充；本人不负责模型训练。\",\"sourceText\":\"图像标注质检\\n2026.03—2026.04 课程项目 质检成员\\n按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。\\n整理遮挡、边界模糊两类争议，提交规则说明补充；本人不负责模型训练。\",\"original\":\"图像标注质检\\n2026.03—2026.04 课程项目 质检成员\\n按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。\\n整理遮挡、边界模糊两类争议，提交规则说明补充；本人不负责模型训练。\",\"start\":46,\"end\":235},{\"id\":\"exp_a59368ad49c7_3\",\"title\":\"术语表维护\",\"kind\":\"experience\",\"text\":\"术语表维护\\n2025.11—2025.12 学习小组 成员\\n整理常用标注术语和例图索引，与同学核对词义，提交术语表；未统计使用效果。\",\"sourceText\":\"术语表维护\\n2025.11—2025.12 学习小组 成员\\n整理常用标注术语和例图索引，与同学核对词义，提交术语表；未统计使用效果。\",\"original\":\"术语表维护\\n2025.11—2025.12 学习小组 成员\\n整理常用标注术语和例图索引，与同学核对词义，提交术语表；未统计使用效果。\",\"start\":236,\"end\":302},{\"id\":\"exp_342177ea09a0_4\",\"title\":\"技能与优势\",\"kind\":\"context\",\"text\":\"技能与优势\\n能够按规则核对记录，并标记需要再次确认的条目。\",\"sourceText\":\"技能与优势\\n能够按规则核对记录，并标记需要再次确认的条目。\",\"original\":\"技能与优势\\n能够按规则核对记录，并标记需要再次确认的条目。\",\"start\":303,\"end\":332}],\"requirements\":[{\"id\":\"req_60edaf20fdfd_0\",\"text\":\"依规则检查标注质量，准确记录抽检口径。\",\"original\":\"依规则检查标注质量，准确记录抽检口径。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"},{\"id\":\"req_fb6334efe370_1\",\"text\":\"整理歧义案例并维护规则说明。\",\"original\":\"整理歧义案例并维护规则说明。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"},{\"id\":\"req_05fe5c68f13a_2\",\"text\":\"能发现相互冲突的数据，并在确认后更新记录。\",\"original\":\"能发现相互冲突的数据，并在确认后更新记录。\",\"category\":\"工作任务与能力\",\"strength\":\"原文未强调强制\",\"logic\":\"保留原文关系\"},{\"id\":\"req_75a54925d083_3\",\"text\":\"有术语表维护经验优先。\",\"original\":\"有术语表维护经验优先。\",\"category\":\"加分项\",\"strength\":\"优先／加分\",\"logic\":\"保留原文关系\"}],\"facts\":[],\"answers\":[],\"manual\":[]}"
+      }
+    },
+    "data": {
+      "associations": [
+        {
+          "requirementId": "req_60edaf20fdfd_0",
+          "experienceId": "exp_f0c65625070d_2",
+          "status": "表达不足",
+          "reason": "原文显示本人按课程规则抽查50张图像，并记录了质检汇总A的合格/不合格数量与合格率；但抽检口径（如抽样方式、判定标准）未说明，且同批次交接表B数据与A存在未解决冲突，不能确认哪份记录准确。",
+          "evidence": [
+            {
+              "sourceId": "exp_f0c65625070d_2",
+              "quote": "按课程规则抽查批次SYN-QC-202603-A的50张标注图像。质检汇总A记录合格46张、不合格4张、合格率92%；同一批次的交接表B记录合格45张、不合格5张、合格率90%。两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。"
+            }
+          ]
+        },
+        {
+          "requirementId": "req_fb6334efe370_1",
+          "experienceId": "exp_f0c65625070d_2",
+          "status": "已有明确证据",
+          "reason": "原文明确本人整理遮挡、边界模糊两类争议，并提交规则说明补充，符合整理歧义案例并维护规则说明的要求。",
+          "evidence": [
+            {
+              "sourceId": "exp_f0c65625070d_2",
+              "quote": "整理遮挡、边界模糊两类争议，提交规则说明补充"
+            }
+          ]
+        },
+        {
+          "requirementId": "req_05fe5c68f13a_2",
+          "experienceId": "exp_f0c65625070d_2",
+          "status": "尚未确认",
+          "reason": "原文显示两表对样本IMG-046判定相反且尚未复核，不能确认哪个结果正确；本人是否发现冲突、是否进行确认及确认后是否更新记录均未说明，且该问题已标记为不可再问。",
+          "evidence": [
+            {
+              "sourceId": "exp_f0c65625070d_2",
+              "quote": "两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。"
+            }
+          ]
+        },
+        {
+          "requirementId": "req_75a54925d083_3",
+          "experienceId": "exp_a59368ad49c7_3",
+          "status": "已有明确证据",
+          "reason": "原文明确本人整理常用标注术语和例图索引，与同学核对词义并提交术语表，属于术语表维护经验。",
+          "evidence": [
+            {
+              "sourceId": "exp_a59368ad49c7_3",
+              "quote": "整理常用标注术语和例图索引，与同学核对词义，提交术语表"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "requirementId": "req_60edaf20fdfd_0",
+          "experienceId": "exp_f0c65625070d_2",
+          "text": "针对批次SYN-QC-202603-A的50张图像抽查，你本人具体采用了什么抽检口径（例如抽样方式、判定标准或记录字段）？在质检汇总A与交接表B对样本IMG-046判定相反、尚未复核的情况下，你本人如何记录或标注该抽检口径与冲突状态？",
+          "purpose": "补充抽检口径的具体内容及冲突状态下的记录方式，用于改写质检经历中抽检口径与记录准确性的表述。",
+          "relatedRequirementIds": []
+        }
+      ]
+    }
+  }
+]

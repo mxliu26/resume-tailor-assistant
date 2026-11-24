@@ -1,0 +1,113 @@
+import assert from 'node:assert/strict';
+import path from 'node:path';
+import {startQa} from './runtime.mjs';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const qa=await startQa('review-reference',{});
+const {page,context,errors,output,url}=qa;
+const remote=[];
+page.on('request',r=>{if(/^https?:/.test(r.url())&&new URL(r.url()).origin!==url)remote.push(r.url());});
+const pdfPath=path.join(output,'review-reference-fixture.pdf');
+const pdfPage=await context.newPage();
+await pdfPage.setContent(`<html lang="zh-CN"><meta charset="utf-8"><style>@page{size:A4;margin:20mm}body{font:15px/1.8 'Microsoft YaHei',sans-serif;color:#243249}h1{background:#e2ecff;color:#2753a5;padding:16px}h2{border-bottom:2px solid #4367a4}section+section{break-before:page}li{margin:12px 0}</style><section><h1>林同学 · 基础简历</h1><p>求职意向：产品实习生<br>邮箱：demo@example.test</p><h2>教育背景</h2><p>海川大学 · 信息管理 · 本科在读</p><h2>项目经历</h2><h3>产品调研项目｜成员</h3><p>2025.03—2025.06</p><ul>${Array.from({length:5},()=>'<li>参与用户访谈，整理团队讨论记录并核对用户反馈，协助完善需求文档和项目报告。</li>').join('')}</ul></section><section><h1>技能与优势 · 第二页</h1><p>熟悉 Python、SQL，使用工具整理访谈与需求记录。</p><p>参与跨团队沟通，按实际工作内容整理文档。</p><h2>校园工具项目｜开发成员</h2><p>2025.07—2025.09</p><p>独立完成校园信息工具原型，整理测试意见并修正交互流程。</p></section></html>`);
+await pdfPage.pdf({path:pdfPath,format:'A4',printBackground:true});await pdfPage.close();
+const pdfBytes=await readFile(pdfPath),hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('youju.resume.v1')));
+const task=async()=>(await state()).tasks[0];
+const open=async()=>{await page.locator('[data-view=tasks]').click();await page.locator('[data-action=open]').first().click();};
+const ready=()=>page.waitForFunction(()=>document.querySelector('#review-pdf-card')?.dataset.pdfReady==='true'&&!document.querySelector('#review-pdf-card')?.hidden);
+const jd='岗位职责：\n参与用户调研、整理需求并编写文档。\n进行数据分析，协助团队沟通。\n任职要求：\n本科及以上。\n熟悉 Python 或 SQL。\n有地图行业经验优先。';
+try{
+  await page.goto(url);
+  await page.locator('#pdf-input').setInputFiles(pdfPath);
+  await page.locator('.pdf-upload-note').waitFor({timeout:30000});
+  assert.ok((await page.locator('[name=resume]').inputValue()).includes('林同学'));
+  assert.equal((await state()).createInput.resumePdf.pages,2);
+  await page.locator('[name=jd]').fill(jd);
+  await page.locator('[data-action=create]').click();await ready();
+  const initial=await task(),reference=initial.resumePdf;
+  assert.equal(reference.id,(await state()).bases[0].resumePdf.id);
+  assert.ok(JSON.stringify(await state()).length<100000,'PDF bytes must not use localStorage quota');
+  const savedBytes=await page.evaluate(async id=>{const {readPdfSource}=await import('/pdf-source.js');return Array.from(new Uint8Array(await (await readPdfSource(id)).blob.arrayBuffer()));},reference.id);
+  assert.equal(hash(Buffer.from(savedBytes)),hash(pdfBytes));
+  const canvas=page.locator('#review-pdf-card canvas');
+  assert.ok(await canvas.evaluate(el=>{const data=el.getContext('2d').getImageData(0,0,el.width,el.height).data;let count=0;for(let i=0;i<data.length;i+=4)if(data[i]<230&&data[i+1]<240&&data[i+2]<250)count++;return count>2000;}),'the preview must contain rendered PDF pixels');
+  await page.screenshot({path:path.join(output,'review-resume-pdf.png')});
+  const firstImage=await canvas.evaluate(el=>el.toDataURL());
+  await page.locator('[data-pdf-next]').click();await ready();
+  assert.equal(await page.locator('[data-pdf-page]').innerText(),'第 2 / 2 页');
+  assert.notEqual(await canvas.evaluate(el=>el.toDataURL()),firstImage);
+  await page.screenshot({path:path.join(output,'review-pdf-second-page.png')});
+  await page.locator('[data-pdf-zoom]').selectOption('1.5');await ready();
+  assert.ok(await page.locator('.pdf-page-viewport').evaluate(el=>el.scrollWidth>el.clientWidth));
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'zoom must scroll inside the preview only');
+  await page.locator('[data-pdf-zoom]').selectOption('fit');await ready();
+
+  const requirements=page.locator('#review-requirements-card');
+  await requirements.evaluate(el=>el.scrollIntoView({block:'start'}));
+  await page.waitForFunction(()=>!document.querySelector('#review-jd-card').hidden);
+  assert.equal(await page.locator('#review-jd-card h2').innerText(),'JD 原文');
+  assert.equal(await requirements.locator('[data-action=edit-jd]').count(),0);
+  assert.equal(await requirements.locator('.review-reference-hint').isVisible(),true);
+  await page.screenshot({path:path.join(output,'review-jd-reference.png')});
+  const scrollBefore=await page.evaluate(()=>scrollY);
+  await page.locator('#review-jd-card').evaluate(el=>{el.scrollTop=300;});
+  assert.equal(await page.evaluate(()=>scrollY),scrollBefore,'scrolling the reference should not move the main document');
+  await page.locator('#review-jd-card [data-action=toggle-jd]').click();
+  await page.locator('[name=materialJD]').fill(jd+'\n能清晰总结工作记录。');
+  await page.locator('#review-jd-card [data-action=apply-review]').click();
+  assert.ok((await task()).jdCorrected.endsWith('能清晰总结工作记录。'));
+  assert.equal((await task()).resumeCorrected,initial.resumeCorrected);
+  await page.locator('#review-resume-card').evaluate(el=>el.scrollIntoView({block:'start'}));await ready();
+  assert.equal(await page.locator('[data-pdf-page]').innerText(),'第 2 / 2 页','PDF page is retained across reference switching');
+  await page.locator('.work-navigation [data-action=save]').click();
+  await page.reload();await open();await ready();
+  assert.equal((await task()).resumePdf.id,reference.id,'PDF is retained after save and reload');
+
+  // A legacy task may have only extracted text. Reattaching a PDF is reference-only.
+  const preserved=await task();
+  await page.evaluate(()=>{
+    const data=JSON.parse(localStorage.getItem('youju.resume.v1'));
+    delete data.tasks[0].resumePdf;delete data.bases[0].resumePdf;
+    data.tasks[0].experiences.find(e=>e.kind==='experience').text+='\n用户已经校对的真实说明。';
+    data.tasks[0].reviewDirty=true;data.tasks[0].revision=7;
+    localStorage.setItem('youju.resume.v1',JSON.stringify(data));
+  });
+  await page.reload();await open();
+  await page.waitForFunction(()=>document.querySelector('#review-pdf-card .pdf-preview-status')?.textContent.includes('尚未关联'));
+  const beforeAttach=await task();
+  await page.locator('#review-pdf-input').setInputFiles(pdfPath);await ready();
+  const afterAttach=await task();
+  for(const key of ['experiences','resumeOriginal','resumeCorrected','jdCorrected','revision','reviewDirty','suggestions','facts'])assert.deepEqual(afterAttach[key],beforeAttach[key],'reattaching must preserve '+key);
+  assert.notEqual(afterAttach.resumePdf.id,reference.id);
+  // Reject bad bytes without replacing a valid reference or any corrected input.
+  await page.locator('#review-pdf-input').setInputFiles({name:'invalid.pdf',mimeType:'application/pdf',buffer:Buffer.from('invalid')});
+  await page.locator('.floating-error').waitFor();
+  assert.equal((await task()).resumePdf.id,afterAttach.resumePdf.id);
+  await page.reload();await open();await ready();
+
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('[data-review-reference=jd]').click();
+  assert.equal(await page.locator('#review-jd-card').isVisible(),true);
+  await page.locator('[data-review-reference=resume]').click();await ready();
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await page.locator('#review-pdf-card').evaluate(el=>el.scrollIntoView({block:'start'}));
+  await page.screenshot({path:path.join(output,'review-reference-mobile.png')});
+  await page.setViewportSize({width:1920,height:1080});
+
+  await page.locator('[data-action=settings]').click();
+  const [download]=await Promise.all([page.waitForEvent('download'),page.locator('[data-action=export-data]').click()]);
+  const backup=JSON.parse(await readFile(await download.path(),'utf8'));
+  assert.equal(backup.pdfAttachments.length,1,'export each referenced original once');
+  assert.equal(hash(Buffer.from(backup.pdfAttachments[0].dataUrl.split(',')[1],'base64')),hash(pdfBytes));
+  page.once('dialog',dialog=>dialog.accept());await page.locator('[data-action=delete-all]').click();
+  assert.equal((await state()).tasks.length,0);
+  const remaining=await page.evaluate(async()=>{const {readPdfSource}=await import('/pdf-source.js');return !!(await readPdfSource(JSON.parse(localStorage.getItem('youju.resume.v1')).createInput?.resumePdf?.id||'none'));});
+  assert.equal(remaining,false);
+  assert.equal(await page.evaluate(async id=>{const {readPdfSource}=await import('/pdf-source.js');return !!(await readPdfSource(id));},afterAttach.resumePdf.id),false);
+  assert.deepEqual(remote,[],'PDF previews must not use external services');
+  assert.deepEqual(errors,[]);
+  await qa.pass(["两页合成PDF上传与渲染","翻页/缩放及JD参照","校对内容与PDF保存重开","无效文件保护","备份与隔离数据删除"]);
+  console.log('review-reference: passed');
+}catch(error){qa.error(error);await page.screenshot({path:path.join(output,'review-reference-failure.png'),fullPage:true});throw error;}
+finally{await qa.close();}

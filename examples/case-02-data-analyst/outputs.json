@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "sessionId": "SYN3-SHOWCASE-20261124-01",
+  "caseId": "case-02",
+  "caseDirectory": "case-02-data-analyst",
+  "synthetic": true,
+  "testType": "真实浏览器前端自动化；AI代理模拟用户，非真实用户内测",
+  "status": "端到端操作通过",
+  "version": {
+    "codeSHA": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "prompt": "precise-followup-v21",
+    "promptSHA256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+    "model": "deepseek-flash",
+    "returnedModel": "deepseek-flash",
+    "thinking": "disabled",
+    "temperature": 0.2,
+    "maxTokens": 4096,
+    "systemFingerprints": [
+      "bc19ba97cbe016479903222bb1578db6"
+    ]
+  },
+  "inputFiles": {
+    "resume.txt": "c0589ca1acf8f2e8426266dd8b4c08f5eb585e00b4fd198b5be8115b96189ede",
+    "job_description.txt": "3d358297c8791756438773dbaca96da1e36a4cde0f856e85f52b17aefece89ff",
+    "facts.json": "82a8392e5a0ede8797eb9259c3225d0876b31bc46a20d871cd9fea0814f5f51b",
+    "followup_answers.json": "0a580a05be4bee1c1e162fa6fcc70f6aa90c3c2801302fe1ba63ad8c50f81dc1",
+    "expected_behavior.md": "59b2eff6aa4ade4d7627089bc1da8c0e8ad3d7a17fab6d5104c6961e0dc1b872"
+  },
+  "taskId": "de229986-db8a-4463-ae01-ca52d59c32bb",
+  "initialModelInput": "仅resume.txt和job_description.txt；未提前发送facts/预设回答/期望行为",
+  "workflow": {
+    "parse": "完成，未人工修改解析",
+    "associate": "首次完成",
+    "followup": "补问运营/需求方沟通；预设事实无沟通对象及行为依据，选择跳过。未为通过流程编造回答。",
+    "questions": [
+      {
+        "id": "q_req_d6dbbc71151f_0_exp_48ddf31535d6_4",
+        "requirementId": "req_d6dbbc71151f_0",
+        "experienceId": "exp_48ddf31535d6_4",
+        "text": "结合「校园二手交易订单分析」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+        "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+        "status": "archived",
+        "answer": "",
+        "previousStatus": "pending"
+      },
+      {
+        "id": "q_req_38ca06f2c9a3_1_exp_153f183b582c_8",
+        "requirementId": "req_38ca06f2c9a3_1",
+        "experienceId": "exp_153f183b582c_8",
+        "text": "结合「技能与优势」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+        "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+        "status": "archived",
+        "answer": "",
+        "previousStatus": "pending"
+      },
+      {
+        "id": "q_req_6692f614d953_2_exp_48ddf31535d6_4",
+        "requirementId": "req_6692f614d953_2",
+        "experienceId": "exp_48ddf31535d6_4",
+        "text": "结合「校园二手交易订单分析」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+        "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+        "status": "archived",
+        "answer": "",
+        "previousStatus": "pending"
+      },
+      {
+        "id": "q_req_3389ed47f120_3_exp_48ddf31535d6_4",
+        "requirementId": "req_3389ed47f120_3",
+        "experienceId": "exp_48ddf31535d6_4",
+        "text": "在校园二手交易订单分析项目中，你本人是否与运营或需求方沟通数据需求？如有，请说明沟通对象、你提出的需求或结论，以及最终形成了什么可复用的分析结论。",
+        "purpose": "明确本人是否承担需求沟通及可复用结论产出，用于改写协作与结论表达字段。",
+        "status": "skipped",
+        "answer": "暂时跳过，使用现有事实。"
+      }
+    ],
+    "confirmedFacts": [],
+    "selectedExperienceIds": [
+      "exp_48ddf31535d6_4",
+      "exp_153f183b582c_8"
+    ],
+    "rewrite": "完成",
+    "save": "完成",
+    "reopen": {
+      "versionTextUnchanged": true,
+      "factsUnchanged": true,
+      "suggestionsUnchanged": true,
+      "savedTextVisible": true
+    }
+  },
+  "parsedUnits": [
+    {
+      "id": "exp_7f48792737ba_0",
+      "title": "唐予宁",
+      "kind": "context",
+      "text": "唐予宁",
+      "sourceText": "唐予宁",
+      "original": "唐予宁",
+      "start": 0,
+      "end": 3
+    },
+    {
+      "id": "exp_de9b0cd8ad64_1",
+      "title": "求职方向：数据分析实习",
+      "kind": "context",
+      "text": "求职方向：数据分析实习",
+      "sourceText": "求职方向：数据分析实习",
+      "original": "求职方向：数据分析实习",
+      "start": 4,
+      "end": 15
+    },
+    {
+      "id": "exp_82a104b913e6_2",
+      "title": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "kind": "context",
+      "text": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "sourceText": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "original": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "start": 16,
+      "end": 62
+    },
+    {
+      "id": "exp_5bb350d957f0_3",
+      "title": "教育背景",
+      "kind": "context",
+      "text": "教育背景\n2023.09—2027.06  华南某高校  应用统计学（本科在读）\nGPA：3.54/4.0；相关课程：统计推断、数据库基础、商业数据分析、Excel建模。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。\n课堂中完成抽样、均值比较和分组统计等分析练习，并以数据来源、筛选条件和统计口径解释图表结果。",
+      "sourceText": "教育背景\n2023.09—2027.06  华南某高校  应用统计学（本科在读）\nGPA：3.54/4.0；相关课程：统计推断、数据库基础、商业数据分析、Excel建模。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。\n课堂中完成抽样、均值比较和分组统计等分析练习，并以数据来源、筛选条件和统计口径解释图表结果。",
+      "original": "教育背景\n2023.09—2027.06  华南某高校  应用统计学（本科在读）\nGPA：3.54/4.0；相关课程：统计推断、数据库基础、商业数据分析、Excel建模。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。\n课堂中完成抽样、均值比较和分组统计等分析练习，并以数据来源、筛选条件和统计口径解释图表结果。",
+      "start": 63,
+      "end": 223
+    },
+    {
+      "id": "exp_48ddf31535d6_4",
+      "title": "项目经历",
+      "kind": "experience",
+      "text": "项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。",
+      "sourceText": "项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。",
+      "original": "项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。",
+      "start": 224,
+      "end": 540
+    },
+    {
+      "id": "exp_e59faa3a62c2_5",
+      "title": "2025.10—2026.01  校内餐饮客流观察  数据记录成员",
+      "kind": "experience",
+      "text": "2025.10—2026.01  校内餐饮客流观察  数据记录成员\n• 研究任务：围绕学生用餐高峰时段，通过连续4周的课余现场观察记录不同时间段排队状况。\n• 整理方法：按照预设时段整理观察表，使用Excel绘制折线图和简单对比表，讨论天气与周内时段对样本的影响。\n• 结果与限制：完成课程展示；样本来自校内观察，不代表餐饮品牌全部门店，也没有真实门店营业额数据。\n• 观察记录：制定统一的记录时间段，保存日期、时段和现场情况备注，观察结束后先检查漏记再做趋势展示。\n• 结果表达：将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+      "sourceText": "2025.10—2026.01  校内餐饮客流观察  数据记录成员\n• 研究任务：围绕学生用餐高峰时段，通过连续4周的课余现场观察记录不同时间段排队状况。\n• 整理方法：按照预设时段整理观察表，使用Excel绘制折线图和简单对比表，讨论天气与周内时段对样本的影响。\n• 结果与限制：完成课程展示；样本来自校内观察，不代表餐饮品牌全部门店，也没有真实门店营业额数据。\n• 观察记录：制定统一的记录时间段，保存日期、时段和现场情况备注，观察结束后先检查漏记再做趋势展示。\n• 结果表达：将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+      "original": "2025.10—2026.01  校内餐饮客流观察  数据记录成员\n• 研究任务：围绕学生用餐高峰时段，通过连续4周的课余现场观察记录不同时间段排队状况。\n• 整理方法：按照预设时段整理观察表，使用Excel绘制折线图和简单对比表，讨论天气与周内时段对样本的影响。\n• 结果与限制：完成课程展示；样本来自校内观察，不代表餐饮品牌全部门店，也没有真实门店营业额数据。\n• 观察记录：制定统一的记录时间段，保存日期、时段和现场情况备注，观察结束后先检查漏记再做趋势展示。\n• 结果表达：将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+      "start": 541,
+      "end": 828
+    },
+    {
+      "id": "exp_879602aec135_6",
+      "title": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员",
+      "kind": "experience",
+      "text": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员\n• 课程任务：根据课堂提供的匿名问卷样本，按年龄段、购买频次与主要商品类型制作交叉表，讨论样本结构差异。\n• 分析与展示：使用Excel和SPSS做描述统计、基础图表与问卷题目缺失检查，整理两页图表说明供课程汇报。\n• 结果边界：该案例不涉及真实品牌营销投放，问卷样本不能直接代表地区总体消费者。",
+      "sourceText": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员\n• 课程任务：根据课堂提供的匿名问卷样本，按年龄段、购买频次与主要商品类型制作交叉表，讨论样本结构差异。\n• 分析与展示：使用Excel和SPSS做描述统计、基础图表与问卷题目缺失检查，整理两页图表说明供课程汇报。\n• 结果边界：该案例不涉及真实品牌营销投放，问卷样本不能直接代表地区总体消费者。",
+      "original": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员\n• 课程任务：根据课堂提供的匿名问卷样本，按年龄段、购买频次与主要商品类型制作交叉表，讨论样本结构差异。\n• 分析与展示：使用Excel和SPSS做描述统计、基础图表与问卷题目缺失检查，整理两页图表说明供课程汇报。\n• 结果边界：该案例不涉及真实品牌营销投放，问卷样本不能直接代表地区总体消费者。",
+      "start": 829,
+      "end": 1015
+    },
+    {
+      "id": "exp_e78cf563bd9b_7_part1",
+      "title": "2024.09—2025.07  学院社团财务记录  干事",
+      "kind": "experience",
+      "text": "校园经历\n2024.09—2025.07  学院社团财务记录  干事\n• 职责：登记活动报销单、核对票据和预算分类，协助整理学期收支表，提醒负责人核实异常条目。\n• 记录规范：按活动项目与预算科目归档报销附件，将不完整票据单独标记，核实后再汇入学期台账。",
+      "sourceText": "校园经历\n2024.09—2025.07  学院社团财务记录  干事\n• 职责：登记活动报销单、核对票据和预算分类，协助整理学期收支表，提醒负责人核实异常条目。\n• 记录规范：按活动项目与预算科目归档报销附件，将不完整票据单独标记，核实后再汇入学期台账。",
+      "original": "校园经历\n2024.09—2025.07  学院社团财务记录  干事\n• 职责：登记活动报销单、核对票据和预算分类，协助整理学期收支表，提醒负责人核实异常条目。\n• 记录规范：按活动项目与预算科目归档报销附件，将不完整票据单独标记，核实后再汇入学期台账。",
+      "start": 1016,
+      "end": 1143
+    },
+    {
+      "id": "exp_ec66108a782a_7_part2",
+      "title": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者",
+      "kind": "experience",
+      "text": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者\n• 职责：与四名同学负责库存登记、物料分类和活动结束后的数量清点，汇总现场情况给活动负责人。\n• 工作交付：在清点表中记录入库、领用与剩余物料，向负责人说明数量不一致处及待核对来源。",
+      "sourceText": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者\n• 职责：与四名同学负责库存登记、物料分类和活动结束后的数量清点，汇总现场情况给活动负责人。\n• 工作交付：在清点表中记录入库、领用与剩余物料，向负责人说明数量不一致处及待核对来源。",
+      "original": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者\n• 职责：与四名同学负责库存登记、物料分类和活动结束后的数量清点，汇总现场情况给活动负责人。\n• 工作交付：在清点表中记录入库、领用与剩余物料，向负责人说明数量不一致处及待核对来源。",
+      "start": 1144,
+      "end": 1270
+    },
+    {
+      "id": "exp_153f183b582c_8",
+      "title": "技能与优势",
+      "kind": "context",
+      "text": "技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。",
+      "sourceText": "技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。",
+      "original": "技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。",
+      "start": 1271,
+      "end": 1481
+    }
+  ],
+  "requirements": [
+    {
+      "id": "req_d6dbbc71151f_0",
+      "text": "1. 协助整理日常业务数据，核对订单、商品、渠道等基础指标口径。",
+      "original": "1. 协助整理日常业务数据，核对订单、商品、渠道等基础指标口径。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_38ca06f2c9a3_1",
+      "text": "2. 使用Excel或SQL进行基础分析，输出日报、周报和专题图表。",
+      "original": "2. 使用Excel或SQL进行基础分析，输出日报、周报和专题图表。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "或（满足其中一项）"
+    },
+    {
+      "id": "req_6692f614d953_2",
+      "text": "3. 协助排查数据异常，整理问题说明并跟进核对结果。",
+      "original": "3. 协助排查数据异常，整理问题说明并跟进核对结果。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_3389ed47f120_3",
+      "text": "4. 与运营同事沟通数据需求，形成简洁、可复用的分析结论。",
+      "original": "4. 与运营同事沟通数据需求，形成简洁、可复用的分析结论。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_17e2fc831e08_4",
+      "text": "1. 统计学、经管、数学、计算机等专业在读，具备统计与表格分析基础。",
+      "original": "1. 统计学、经管、数学、计算机等专业在读，具备统计与表格分析基础。",
+      "category": "明确条件",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_3ae2401537c4_5",
+      "text": "2. 能熟练使用Excel，理解聚合统计、去重与指标定义；了解SQL基础查询。",
+      "original": "2. 能熟练使用Excel，理解聚合统计、去重与指标定义；了解SQL基础查询。",
+      "category": "明确条件",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_48f1ff4cac7d_6",
+      "text": "3. 对业务问题敏感，能解释分析结论的适用条件和局限。",
+      "original": "3. 对业务问题敏感，能解释分析结论的适用条件和局限。",
+      "category": "工作任务与能力",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_67b3ae7bd190_7",
+      "text": "4. 可连续实习3个月及以上。",
+      "original": "4. 可连续实习3个月及以上。",
+      "category": "明确条件",
+      "strength": "原文未强调强制",
+      "logic": "保留原文关系"
+    },
+    {
+      "id": "req_6f36afb7e2af_8",
+      "text": "5. 熟练Python、BI工具或真实业务实习经验优先，均非必备。",
+      "original": "5. 熟练Python、BI工具或真实业务实习经验优先，均非必备。",
+      "category": "加分项",
+      "strength": "优先／加分",
+      "logic": "或（满足其中一项）"
+    }
+  ],
+  "associations": [
+    {
+      "requirementId": "req_d6dbbc71151f_0",
+      "experienceId": "exp_48ddf31535d6_4",
+      "status": "已有明确证据",
+      "reason": "项目原文显示本人参与订单表格整理、分类统计，并对重复记录、取消订单和缺失字段做初步检查，涉及订单基础指标口径核对。",
+      "evidence": "参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_48ddf31535d6_4"
+      ],
+      "links": [
+        {
+          "requirementId": "req_d6dbbc71151f_0",
+          "experienceId": "exp_48ddf31535d6_4",
+          "status": "已有明确证据",
+          "reason": "项目原文显示本人参与订单表格整理、分类统计，并对重复记录、取消订单和缺失字段做初步检查，涉及订单基础指标口径核对。",
+          "evidence": "参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_38ca06f2c9a3_1",
+      "experienceId": "exp_48ddf31535d6_4",
+      "status": "已有明确证据",
+      "reason": "原文显示使用表格整理与分类统计并制作月度报告和可视化图表，满足Excel基础分析与报告图表输出；未提及SQL用于该项目，但要求为或关系。",
+      "evidence": "参与订单表格整理、分类统计和月度报告制作\n小组完成商品结构与交易时段分析，提交课程报告及可视化图表",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_48ddf31535d6_4"
+      ],
+      "links": [
+        {
+          "requirementId": "req_38ca06f2c9a3_1",
+          "experienceId": "exp_48ddf31535d6_4",
+          "status": "已有明确证据",
+          "reason": "原文显示使用表格整理与分类统计并制作月度报告和可视化图表，满足Excel基础分析与报告图表输出；未提及SQL用于该项目，但要求为或关系。",
+          "evidence": "参与订单表格整理、分类统计和月度报告制作\n小组完成商品结构与交易时段分析，提交课程报告及可视化图表",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_6692f614d953_2",
+      "experienceId": "exp_48ddf31535d6_4",
+      "status": "已有明确证据",
+      "reason": "原文显示对重复记录、取消订单和缺失字段进行初步检查，并将发现的表格问题整理为报告中的图表和说明，涉及异常排查与问题说明。",
+      "evidence": "对重复记录、取消订单和缺失字段进行初步检查\n将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_48ddf31535d6_4"
+      ],
+      "links": [
+        {
+          "requirementId": "req_6692f614d953_2",
+          "experienceId": "exp_48ddf31535d6_4",
+          "status": "已有明确证据",
+          "reason": "原文显示对重复记录、取消订单和缺失字段进行初步检查，并将发现的表格问题整理为报告中的图表和说明，涉及异常排查与问题说明。",
+          "evidence": "对重复记录、取消订单和缺失字段进行初步检查\n将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_3389ed47f120_3",
+      "experienceId": "exp_48ddf31535d6_4",
+      "status": "表达不足",
+      "reason": "原文有参加小组分析讨论并整理报告说明的协作线索，但未明确与运营同事沟通数据需求或形成可复用分析结论；该要求已跳过，不再补问。",
+      "evidence": "参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": true,
+      "missing": [],
+      "experienceIds": [
+        "exp_48ddf31535d6_4"
+      ],
+      "links": [
+        {
+          "requirementId": "req_3389ed47f120_3",
+          "experienceId": "exp_48ddf31535d6_4",
+          "status": "表达不足",
+          "reason": "原文有参加小组分析讨论并整理报告说明的协作线索，但未明确与运营同事沟通数据需求或形成可复用分析结论；该要求已跳过，不再补问。",
+          "evidence": "参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": true,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_17e2fc831e08_4",
+      "experienceId": "",
+      "status": "按已提供信息符合",
+      "reason": "教育背景显示应用统计学本科在读，相关课程包含统计推断、商业数据分析等，具备统计与表格分析基础。",
+      "evidence": "2023.09—2027.06  华南某高校  应用统计学（本科在读）\n相关课程：统计推断、数据库基础、商业数据分析、Excel建模。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [],
+      "links": []
+    },
+    {
+      "requirementId": "req_3ae2401537c4_5",
+      "experienceId": "",
+      "status": "按已提供信息符合",
+      "reason": "技能段显示熟悉Excel函数、筛选、数据透视表、基础图表，掌握SQL SELECT、WHERE、GROUP BY课程基础；教育背景也说明课堂练习SQL基础查询。",
+      "evidence": "数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [],
+      "links": []
+    },
+    {
+      "requirementId": "req_48f1ff4cac7d_6",
+      "experienceId": "exp_e59faa3a62c2_5",
+      "status": "已有明确证据",
+      "reason": "原文显示本人将工作日和周末样本分开描述，并强调现场排队仅能代表被观察时段，不能推断营业额或平台订单量，体现对分析结论适用条件和局限的解释。",
+      "evidence": "将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [
+        "exp_e59faa3a62c2_5"
+      ],
+      "links": [
+        {
+          "requirementId": "req_48f1ff4cac7d_6",
+          "experienceId": "exp_e59faa3a62c2_5",
+          "status": "已有明确证据",
+          "reason": "原文显示本人将工作日和周末样本分开描述，并强调现场排队仅能代表被观察时段，不能推断营业额或平台订单量，体现对分析结论适用条件和局限的解释。",
+          "evidence": "将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": false,
+          "missing": []
+        }
+      ]
+    },
+    {
+      "requirementId": "req_67b3ae7bd190_7",
+      "experienceId": "",
+      "status": "按已提供信息符合",
+      "reason": "条件来源显示可实习3—4个月，满足连续实习3个月及以上。",
+      "evidence": "可实习3—4个月",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": false,
+      "missing": [],
+      "experienceIds": [],
+      "links": []
+    },
+    {
+      "requirementId": "req_6f36afb7e2af_8",
+      "experienceId": "exp_153f183b582c_8",
+      "status": "尚未确认",
+      "reason": "技能段列出Excel、SPSS和SQL课程基础，未提及Python或BI工具；现有经历均为课程或校内活动，未显示真实业务实习经验。加分项均非必备，保持尚未确认。",
+      "evidence": "数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。",
+      "origin": "ai",
+      "conflict": false,
+      "needsClarification": true,
+      "missing": [],
+      "experienceIds": [
+        "exp_153f183b582c_8"
+      ],
+      "links": [
+        {
+          "requirementId": "req_6f36afb7e2af_8",
+          "experienceId": "exp_153f183b582c_8",
+          "status": "尚未确认",
+          "reason": "技能段列出Excel、SPSS和SQL课程基础，未提及Python或BI工具；现有经历均为课程或校内活动，未显示真实业务实习经验。加分项均非必备，保持尚未确认。",
+          "evidence": "数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。",
+          "origin": "ai",
+          "conflict": false,
+          "needsClarification": true,
+          "missing": []
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "experienceId": "exp_7f48792737ba_0",
+      "title": "唐予宁",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "唐予宁",
+      "T1": null,
+      "T2": "唐予宁",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_de9b0cd8ad64_1",
+      "title": "求职方向：数据分析实习",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "求职方向：数据分析实习",
+      "T1": null,
+      "T2": "求职方向：数据分析实习",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_82a104b913e6_2",
+      "title": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "T1": null,
+      "T2": "邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_5bb350d957f0_3",
+      "title": "教育背景",
+      "kind": "context",
+      "selectedForRewrite": false,
+      "T0": "教育背景\n2023.09—2027.06  华南某高校  应用统计学（本科在读）\nGPA：3.54/4.0；相关课程：统计推断、数据库基础、商业数据分析、Excel建模。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。\n课堂中完成抽样、均值比较和分组统计等分析练习，并以数据来源、筛选条件和统计口径解释图表结果。",
+      "T1": null,
+      "T2": "教育背景\n2023.09—2027.06  华南某高校  应用统计学（本科在读）\nGPA：3.54/4.0；相关课程：统计推断、数据库基础、商业数据分析、Excel建模。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。\n课堂中完成抽样、均值比较和分组统计等分析练习，并以数据来源、筛选条件和统计口径解释图表结果。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_48ddf31535d6_4",
+      "title": "项目经历",
+      "kind": "experience",
+      "selectedForRewrite": true,
+      "T0": "项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。",
+      "T1": "项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。",
+      "T2": "项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。",
+      "T1Status": "首次未经编辑的真实AI建议",
+      "T2Status": "AI代理核对后接受原建议",
+      "T1ToT2Edits": [],
+      "reason": "将原文已有的订单表格整理、分类统计、月度报告制作及异常状态初步检查前置，直接对应数据整理与异常排查要求；保留小组协作、课程报告产出及未投放、未测量GMV的边界，未新增沟通运营同事或跟进核对结果等无来源行为。",
+      "sourceIds": [
+        "exp_48ddf31535d6_4"
+      ],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_e59faa3a62c2_5",
+      "title": "2025.10—2026.01  校内餐饮客流观察  数据记录成员",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "2025.10—2026.01  校内餐饮客流观察  数据记录成员\n• 研究任务：围绕学生用餐高峰时段，通过连续4周的课余现场观察记录不同时间段排队状况。\n• 整理方法：按照预设时段整理观察表，使用Excel绘制折线图和简单对比表，讨论天气与周内时段对样本的影响。\n• 结果与限制：完成课程展示；样本来自校内观察，不代表餐饮品牌全部门店，也没有真实门店营业额数据。\n• 观察记录：制定统一的记录时间段，保存日期、时段和现场情况备注，观察结束后先检查漏记再做趋势展示。\n• 结果表达：将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+      "T1": null,
+      "T2": "2025.10—2026.01  校内餐饮客流观察  数据记录成员\n• 研究任务：围绕学生用餐高峰时段，通过连续4周的课余现场观察记录不同时间段排队状况。\n• 整理方法：按照预设时段整理观察表，使用Excel绘制折线图和简单对比表，讨论天气与周内时段对样本的影响。\n• 结果与限制：完成课程展示；样本来自校内观察，不代表餐饮品牌全部门店，也没有真实门店营业额数据。\n• 观察记录：制定统一的记录时间段，保存日期、时段和现场情况备注，观察结束后先检查漏记再做趋势展示。\n• 结果表达：将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_879602aec135_6",
+      "title": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员\n• 课程任务：根据课堂提供的匿名问卷样本，按年龄段、购买频次与主要商品类型制作交叉表，讨论样本结构差异。\n• 分析与展示：使用Excel和SPSS做描述统计、基础图表与问卷题目缺失检查，整理两页图表说明供课程汇报。\n• 结果边界：该案例不涉及真实品牌营销投放，问卷样本不能直接代表地区总体消费者。",
+      "T1": null,
+      "T2": "2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员\n• 课程任务：根据课堂提供的匿名问卷样本，按年龄段、购买频次与主要商品类型制作交叉表，讨论样本结构差异。\n• 分析与展示：使用Excel和SPSS做描述统计、基础图表与问卷题目缺失检查，整理两页图表说明供课程汇报。\n• 结果边界：该案例不涉及真实品牌营销投放，问卷样本不能直接代表地区总体消费者。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_e78cf563bd9b_7_part1",
+      "title": "2024.09—2025.07  学院社团财务记录  干事",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "校园经历\n2024.09—2025.07  学院社团财务记录  干事\n• 职责：登记活动报销单、核对票据和预算分类，协助整理学期收支表，提醒负责人核实异常条目。\n• 记录规范：按活动项目与预算科目归档报销附件，将不完整票据单独标记，核实后再汇入学期台账。",
+      "T1": null,
+      "T2": "校园经历\n2024.09—2025.07  学院社团财务记录  干事\n• 职责：登记活动报销单、核对票据和预算分类，协助整理学期收支表，提醒负责人核实异常条目。\n• 记录规范：按活动项目与预算科目归档报销附件，将不完整票据单独标记，核实后再汇入学期台账。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_ec66108a782a_7_part2",
+      "title": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者",
+      "kind": "experience",
+      "selectedForRewrite": false,
+      "T0": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者\n• 职责：与四名同学负责库存登记、物料分类和活动结束后的数量清点，汇总现场情况给活动负责人。\n• 工作交付：在清点表中记录入库、领用与剩余物料，向负责人说明数量不一致处及待核对来源。",
+      "T1": null,
+      "T2": "2025.04—2025.06  校园公益义卖活动  物资统计志愿者\n• 职责：与四名同学负责库存登记、物料分类和活动结束后的数量清点，汇总现场情况给活动负责人。\n• 工作交付：在清点表中记录入库、领用与剩余物料，向负责人说明数量不一致处及待核对来源。",
+      "T1Status": "未生成；未选中单元保留原文",
+      "T2Status": "未选中，保留原文",
+      "T1ToT2Edits": [],
+      "reason": null,
+      "sourceIds": [],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    },
+    {
+      "experienceId": "exp_153f183b582c_8",
+      "title": "技能与优势",
+      "kind": "context",
+      "selectedForRewrite": true,
+      "T0": "技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。",
+      "T1": "技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。",
+      "T2": "技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。",
+      "T1Status": "首次未经编辑的真实AI建议",
+      "T2Status": "AI代理核对后接受原建议",
+      "T1ToT2Edits": [],
+      "reason": "原文已按数据工具、指标口径意识、沟通表达和工作方式组织，与岗位对Excel、SQL基础及指标定义的要求直接对应，次序和重点适配，故保留原文。",
+      "sourceIds": [
+        "exp_153f183b582c_8"
+      ],
+      "reviewActor": "AI代理测试人员，非真人用户内测"
+    }
+  ],
+  "finalSavedVersion": {
+    "id": "02a06f01-84ea-4aa6-9ad4-1603484bd6f1",
+    "number": 1,
+    "text": "唐予宁\n求职方向：数据分析实习\n邮箱：candidate-b@example.com  实习安排：每周5天，可实习3—4个月\n教育背景\n2023.09—2027.06  华南某高校  应用统计学（本科在读）\nGPA：3.54/4.0；相关课程：统计推断、数据库基础、商业数据分析、Excel建模。\n曾在课堂练习SQL基础查询，未独立承担生产数据库工作。\n课堂中完成抽样、均值比较和分组统计等分析练习，并以数据来源、筛选条件和统计口径解释图表结果。\n项目经历\n2026.04—2026.07  校园二手交易订单分析  团队成员\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。\n2025.10—2026.01  校内餐饮客流观察  数据记录成员\n• 研究任务：围绕学生用餐高峰时段，通过连续4周的课余现场观察记录不同时间段排队状况。\n• 整理方法：按照预设时段整理观察表，使用Excel绘制折线图和简单对比表，讨论天气与周内时段对样本的影响。\n• 结果与限制：完成课程展示；样本来自校内观察，不代表餐饮品牌全部门店，也没有真实门店营业额数据。\n• 观察记录：制定统一的记录时间段，保存日期、时段和现场情况备注，观察结束后先检查漏记再做趋势展示。\n• 结果表达：将工作日和周末样本分开描述，强调现场排队仅能代表被观察时段，不能由此推断营业额或平台订单量。\n2025.03—2025.06  区域消费偏好统计课程设计  课程小组成员\n• 课程任务：根据课堂提供的匿名问卷样本，按年龄段、购买频次与主要商品类型制作交叉表，讨论样本结构差异。\n• 分析与展示：使用Excel和SPSS做描述统计、基础图表与问卷题目缺失检查，整理两页图表说明供课程汇报。\n• 结果边界：该案例不涉及真实品牌营销投放，问卷样本不能直接代表地区总体消费者。\n校园经历\n2024.09—2025.07  学院社团财务记录  干事\n• 职责：登记活动报销单、核对票据和预算分类，协助整理学期收支表，提醒负责人核实异常条目。\n• 记录规范：按活动项目与预算科目归档报销附件，将不完整票据单独标记，核实后再汇入学期台账。\n2025.04—2025.06  校园公益义卖活动  物资统计志愿者\n• 职责：与四名同学负责库存登记、物料分类和活动结束后的数量清点，汇总现场情况给活动负责人。\n• 工作交付：在清点表中记录入库、领用与剩余物料，向负责人说明数量不一致处及待核对来源。\n技能与优势\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。\n",
+    "textSHA256": "42b3470f106f2bd846c54112d01e6f2b1f9b249537f3a936eef182d23cf3124b",
+    "savedBy": "AI代理在网页确认保存",
+    "createdAt": "2026-11-24T06:01:14.759Z"
+  },
+  "factReview": {
+    "nature": "AI辅助核查，待人工复核；不等同正式人工评分",
+    "checks": [
+      {
+        "scope": "校园二手交易订单分析",
+        "check": "团队、课程样本及业务边界",
+        "source": "小组完成；课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升；未使用企业交易后台。",
+        "result": "T1保留原有语句，仅调整顺序，未加入860条、6类商品等未被本轮问到和确认的事实。"
+      },
+      {
+        "scope": "技能与优势",
+        "check": "工具与使用范围",
+        "source": "Excel、SPSS及SQL SELECT/WHERE/GROUP BY课程基础。",
+        "result": "整段保留原文，没有将SQL课堂知识写成生产数据库经验。"
+      }
+    ],
+    "formalHumanScore": null
+  },
+  "rawRewrite": {
+    "runId": "SYN3-SHOWCASE-20261124-01-08-case-02-rewrite",
+    "content": "{\"suggestions\":[{\"experienceId\":\"exp_48ddf31535d6_4\",\"text\":\"项目经历\\n2026.04—2026.07  校园二手交易订单分析  团队成员\\n• 分析工作：参与订单表格整理、分类统计和月度报告制作，对重复记录、取消订单和缺失字段进行初步检查。\\n• 工作方法：将订单按商品类别、日期和记录状态整理为表格；在汇总前单列异常状态，不把所有原始行直接当成有效交易。\\n• 协作过程：参加小组分析讨论，将分类统计、时间段变化和发现的表格问题整理为报告中的图表和说明，未使用企业交易后台。\\n• 项目结果：小组完成商品结构与交易时段分析，提交课程报告及可视化图表；未开展真实平台投放，也未测量GMV提升。\\n• 项目背景：以校内二手交易数据为样本，尝试了解不同商品类别与成交周期的变化，为课程运营分析报告提供依据。\",\"reason\":\"将原文已有的订单表格整理、分类统计、月度报告制作及异常状态初步检查前置，直接对应数据整理与异常排查要求；保留小组协作、课程报告产出及未投放、未测量GMV的边界，未新增沟通运营同事或跟进核对结果等无来源行为。\",\"sourceIds\":[\"exp_48ddf31535d6_4\"]},{\"experienceId\":\"exp_153f183b582c_8\",\"text\":\"技能与优势\\n• 数据工具：熟悉Excel函数、筛选、数据透视表、基础图表和SPSS；掌握SQL SELECT、WHERE、GROUP BY课程基础。\\n• 分析能力：具备基本指标口径意识，能区分去重、取消订单与有效订单，熟悉统计课程报告写作。\\n• 沟通与表达：有团队数据整理和资料汇总经历，能够在展示中解释数据限制；英语四级。\\n• 工作方式：能把原始表、清洗说明、统计图表和结论分开整理，避免将课程样本误当作真实经营成果。\",\"reason\":\"原文已按数据工具、指标口径意识、沟通表达和工作方式组织，与岗位对Excel、SQL基础及指标定义的要求直接对应，次序和重点适配，故保留原文。\",\"sourceIds\":[\"exp_153f183b582c_8\"]}]}",
+    "usage": {
+      "prompt_tokens": 2840,
+      "completion_tokens": 497,
+      "total_tokens": 3337,
+      "prompt_tokens_details": {
+        "cached_tokens": 2688
+      },
+      "prompt_cache_hit_tokens": 2688,
+      "prompt_cache_miss_tokens": 152
+    },
+    "requestSHA256": "d2ea514d8fc2aa6cf879b7d4a94935822cdcf6d212b873090f98257cf4cc6d98",
+    "responseSHA256": "a20e110b256f9034090a774e06c6d59c133a27a546f7ebdc38215a9a80116dc6"
+  },
+  "usage": {
+    "calls": 4,
+    "promptTokens": 13027,
+    "completionTokens": 3257,
+    "totalTokens": 16284,
+    "estimatedMicroCny": 52110,
+    "unknownUsageCalls": 0,
+    "providerResponseMs": 16209,
+    "price": {
+      "inputPerMillion": 2,
+      "outputPerMillion": 8,
+      "conservative": true,
+      "source": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/",
+      "checkedAt": "2026-11-24T05:38:33.615Z"
+    },
+    "actualBillCny": null
+  },
+  "interaction": {
+    "journalClickCount": 13,
+    "explicitModelConsentDialogs": 2,
+    "simulatedAnswers": 0,
+    "confirmedFacts": 0,
+    "skippedQuestions": 1,
+    "agentTextEdits": 0,
+    "actualHumanTextEdits": null,
+    "elapsedWallMs": 130816,
+    "timingNote": "自动化墙钟时间含代理核对和等待；click仅统计操作日志中的点击，不含fill/check、滚动等；不得当作真人操作数或人工耗时。"
+  },
+  "calls": [
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-05-case-02-parse",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-02",
+      "stage": "parse",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 10478,
+      "outputLimit": 4096,
+      "webId": 5,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 1887,
+        "completionTokens": 249,
+        "totalTokens": 2136,
+        "cacheHitTokens": 1664,
+        "cacheMissTokens": 223
+      },
+      "estimatedMicroCny": 5766,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 2024,
+      "requestSHA256": "852948e5bceed76af8f9daee8ab6872bd1e2ad26286cd8adea45e17f5996dc99",
+      "responseSHA256": "47a87d1a0ea4380592d3caa4ddfae182e04524dcbd0e9d519bb2eb6565793073",
+      "at": "2026-11-24T05:59:14.916Z"
+    },
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-06-case-02-analyze",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-02",
+      "stage": "analyze",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 19273,
+      "outputLimit": 4096,
+      "webId": 6,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 4082,
+        "completionTokens": 1290,
+        "totalTokens": 5372,
+        "cacheHitTokens": 2176,
+        "cacheMissTokens": 1906
+      },
+      "estimatedMicroCny": 18484,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 6175,
+      "requestSHA256": "c70bf14c557f176f9b9eb5bd199b7e08bad3ee6db3acd2deb718919f5aad1c7c",
+      "responseSHA256": "3431ee34b81cd9d1fec1b381edcac0c34d8d651582228dfae2f91bc64ff2c519",
+      "at": "2026-11-24T05:59:42.271Z"
+    },
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-07-case-02-analyze",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-02",
+      "stage": "analyze",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 19845,
+      "outputLimit": 4096,
+      "webId": 7,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 4218,
+        "completionTokens": 1221,
+        "totalTokens": 5439,
+        "cacheHitTokens": 3584,
+        "cacheMissTokens": 634
+      },
+      "estimatedMicroCny": 18204,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 5572,
+      "requestSHA256": "e30d987b00e3e2afcc415eefbd2173102e7400188fb7c600633f7e11ed6c4472",
+      "responseSHA256": "9962c516086ccdb53d691f605bb34f8bb4e51b8fb572145093912ab09bdb4ced",
+      "at": "2026-11-24T06:00:26.924Z"
+    },
+    {
+      "runId": "SYN3-SHOWCASE-20261124-01-08-case-02-rewrite",
+      "sessionId": "SYN3-SHOWCASE-20261124-01",
+      "caseId": "case-02",
+      "stage": "rewrite",
+      "codeCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+      "promptVersion": "precise-followup-v21",
+      "promptSha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d",
+      "inputAllowance": 15257,
+      "outputLimit": 4096,
+      "webId": 8,
+      "httpStatus": 200,
+      "usage": {
+        "promptTokens": 2840,
+        "completionTokens": 497,
+        "totalTokens": 3337,
+        "cacheHitTokens": 2688,
+        "cacheMissTokens": 152
+      },
+      "estimatedMicroCny": 9656,
+      "returnedModel": "deepseek-flash",
+      "systemFingerprint": "bc19ba97cbe016479903222bb1578db6",
+      "durationMs": 2438,
+      "requestSHA256": "d2ea514d8fc2aa6cf879b7d4a94935822cdcf6d212b873090f98257cf4cc6d98",
+      "responseSHA256": "a20e110b256f9034090a774e06c6d59c133a27a546f7ebdc38215a9a80116dc6",
+      "at": "2026-11-24T06:00:29.478Z"
+    }
+  ],
+  "evidence": {
+    "scope": "完整运行日志仅保存在本机；以下文件名及哈希供追溯，不随公开示例复制浏览器数据。",
+    "files": [
+      {
+        "name": "ui-007-case-02-start-state.json",
+        "sha256": "003687cfe848f2e4d354365b57b113092b33a83a20fa4251bd23745b8c59e2a8"
+      },
+      {
+        "name": "ui-013-case-02-reopen-state.json",
+        "sha256": "fa6920c39bb2b48b077a192c1640c7cb4cd32267192c287f15459b4a535d3cbe"
+      },
+      {
+        "name": "ui-010-case-02-generate-state.json",
+        "sha256": "8082206bc44cf770f7f4ac5f5d4c5e728c546e80b4b8305dc0df4d0e76622388"
+      },
+      {
+        "name": "ui-013-case-02-reopen-result.json",
+        "sha256": "87bda8a241a1bb374b41d8af390cf2e604f09927ca585b2e9b243477769c4c95"
+      },
+      {
+        "name": "ui-013-case-02-reopen.png",
+        "sha256": "e966982282c3664812040aad4eedad4e93b19ad519242ebc5f31edc2c8ef20ae"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-05-case-02-parse-request.json",
+        "sha256": "852948e5bceed76af8f9daee8ab6872bd1e2ad26286cd8adea45e17f5996dc99"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-05-case-02-parse-response.json",
+        "sha256": "47a87d1a0ea4380592d3caa4ddfae182e04524dcbd0e9d519bb2eb6565793073"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-06-case-02-analyze-request.json",
+        "sha256": "c70bf14c557f176f9b9eb5bd199b7e08bad3ee6db3acd2deb718919f5aad1c7c"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-06-case-02-analyze-response.json",
+        "sha256": "3431ee34b81cd9d1fec1b381edcac0c34d8d651582228dfae2f91bc64ff2c519"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-07-case-02-analyze-request.json",
+        "sha256": "e30d987b00e3e2afcc415eefbd2173102e7400188fb7c600633f7e11ed6c4472"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-07-case-02-analyze-response.json",
+        "sha256": "9962c516086ccdb53d691f605bb34f8bb4e51b8fb572145093912ab09bdb4ced"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-08-case-02-rewrite-request.json",
+        "sha256": "d2ea514d8fc2aa6cf879b7d4a94935822cdcf6d212b873090f98257cf4cc6d98"
+      },
+      {
+        "name": "SYN3-SHOWCASE-20261124-01-08-case-02-rewrite-response.json",
+        "sha256": "a20e110b256f9034090a774e06c6d59c133a27a546f7ebdc38215a9a80116dc6"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "AE-BC-0005",
+  "title": "通过Prompt约束修复跨经历证据引用",
+  "causeType": "模型输出及Prompt来源归属指引",
+  "before": "v7在图像标注质检的主关联中，混入独立技能段的证据，导致整份响应被严格来源校验拦截。",
+  "cause": "全局扫描多来源的提示未明确重申：能力要求的每条证据必须属于当前主关联经历。",
+  "fix": "v8在analyze提示中追加逐条来源归属检查；主关联只能引用本经历原文和同experienceId的已确认补充，明确条件的引用例外不得用于能力关联。",
+  "promptChange": "仅analyze内容追加规则，shared、parse、rewrite完全一致；模型加载路径切换到v8，来源校验器未放宽。",
+  "verification": "历史64项离线专项检查通过；0010一次真实定向复测恢复合法来源引用，仍保留冲突限定和无争议关联。",
+  "scope": "证明该次跨经历证据引用问题被纠正，不代表所有冲突、职责归属判断或未来调用均已正确。该次语义复核为AI辅助证据检查，不新增正式人工评分。",
+  "fixCommit": "4de7daa3ffbd6ddc640c5ab0dcbd8ae8a4a3bf5d",
+  "runs": [
+    "AE-CANDIDATE-P1-20261122-0010-01-analyze",
+    "AE-CANDIDATE-P1-20261122-0010-02-analyze"
+  ],
+  "sources": [
+    "S08",
+    "S09",
+    "S25",
+    "S26",
+    "S27",
+    "S28",
+    "S29",
+    "S30",
+    "S31",
+    "S32"
+  ],
+  "promptDiff": {
+    "from": "phase3-v7",
+    "to": "phase3-v8",
+    "sharedUnchanged": true,
+    "parseUnchanged": true,
+    "rewriteUnchanged": true,
+    "analyzeAdded": "evidence逐条执行来源归属检查：capability绑定experienceId后，每条引用的source.experienceId都必须等于这个experienceId；不能把另一段经历、技能或教育的证据混进主关联，即使内容看似相关。需要多个支持来源时，当前契约只返回一条主关联，选择最相关内容，仅引用该内容的原文及同experienceId的已确认补充；不能为凑全证据跨段拼接。condition的experienceId为空，可以引用条件来源，这个例外不能用于capability。全局扫描来源是为了识别冲突和避免遗漏，不改变每条capability的来源归属约束。同一事实存在未解决冲突时，其依赖的确定性判断使用尚未确认（condition用待确认），不能仅说表述不够详细；无争议的独立工作仍正常关联。"
+  },
+  "actualEvidenceBefore": [
+    {
+      "sourceId": "exp_f0c65625070d_2",
+      "quote": "两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。"
+    },
+    {
+      "sourceId": "exp_342177ea09a0_4",
+      "quote": "能够按规则核对记录，并标记需要再次确认的条目。"
+    }
+  ],
+  "actualEvidenceAfter": [
+    {
+      "sourceId": "exp_f0c65625070d_2",
+      "quote": "两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。"
+    }
+  ],
+  "boundExperienceId": "exp_f0c65625070d_2",
+  "rawResponseHashes": {
+    "before": "ea6851d313ae5ec444e612c25def49fc8892f0060e6cdf022a4c0a0a3114c895",
+    "after": "94aaa5359a883b81f009d6f08a5cd348b926f16f87e958d89f52b29b7a831549"
+  }
+}

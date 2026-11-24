@@ -1,0 +1,405 @@
+[
+  {
+    "caseId": "AE-CASE-0001",
+    "unitKey": "U01",
+    "experienceId": "exp_92bee9815428_2",
+    "title": "订单质量看板",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 2
+        }
+      ],
+      "total": 8,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0001-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0002",
+    "unitKey": "U01",
+    "experienceId": "exp_d7f2b84d61c0_2",
+    "title": "阅读工具需求整理",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 1
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 1
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 5,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0002-04-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0003",
+    "unitKey": "U01",
+    "experienceId": "exp_9153373dc529_2",
+    "title": "校内活动报名优化",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 7,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0003-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0003",
+    "unitKey": "U02",
+    "experienceId": "exp_7f9ec86b4d2f_3",
+    "title": "校园导览卡片",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 1
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 2
+        }
+      ],
+      "total": 7,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0003-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0004",
+    "unitKey": "U01",
+    "experienceId": "exp_9153373dc529_2",
+    "title": "校内活动报名优化",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 7,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0004-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0004",
+    "unitKey": "U02",
+    "experienceId": "exp_7f9ec86b4d2f_3",
+    "title": "校园导览卡片",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 1
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 2
+        }
+      ],
+      "total": 7,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0004-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0005",
+    "unitKey": "U01",
+    "experienceId": "exp_a83dc21172bc_2",
+    "title": "预约系统测试",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 2
+        }
+      ],
+      "total": 8,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0005-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0006",
+    "unitKey": "U01",
+    "experienceId": "exp_e2c6fecfba02_2",
+    "title": "仓储缺货记录整理",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 7,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0006-04-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0007",
+    "unitKey": "U01",
+    "experienceId": "exp_4a9532b5dd06_2",
+    "title": "门店经营资料整理",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 1
+        },
+        {
+          "name": "具体性",
+          "score": 1
+        },
+        {
+          "name": "清晰性",
+          "score": 1
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 4,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0007-04-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0008",
+    "unitKey": "U01",
+    "experienceId": "exp_1576c3774c6e_2",
+    "title": "社团工单整理",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 1
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 1
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 5,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0008-04-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0009",
+    "unitKey": "U01",
+    "experienceId": "exp_285c4c2a3131_2",
+    "title": "活动页复盘",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 7,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0009-03-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0010",
+    "unitKey": "U01",
+    "experienceId": "exp_f0c65625070d_2",
+    "title": "图像标注质检",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 1
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 1
+        },
+        {
+          "name": "简洁性",
+          "score": 1
+        }
+      ],
+      "total": 5,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0010-04-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  },
+  {
+    "caseId": "AE-CASE-0010",
+    "unitKey": "U02",
+    "experienceId": "exp_a59368ad49c7_3",
+    "title": "术语表维护",
+    "v21": {
+      "dimensions": [
+        {
+          "name": "岗位相关性",
+          "score": 2
+        },
+        {
+          "name": "具体性",
+          "score": 2
+        },
+        {
+          "name": "清晰性",
+          "score": 2
+        },
+        {
+          "name": "简洁性",
+          "score": 2
+        }
+      ],
+      "total": 8,
+      "fact": "passed",
+      "runId": "AE-PRECISE-v21-20261123-0010-04-rewrite"
+    },
+    "reviewLabel": "人工评分，经 AI 辅助复核后由负责人确认",
+    "independentBlindReview": false
+  }
+]

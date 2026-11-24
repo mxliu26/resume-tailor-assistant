@@ -1,0 +1,262 @@
+[
+  {
+    "id": "S01",
+    "title": "产品需求文档 PRD V0.1 原始提取文本",
+    "kind": "需求定义",
+    "sha256": "c8cf11687ee906e9472d7b6fba3a3d47a994995c577362e179015ccc2ce56ce3",
+    "publishedExcerpt": "../PRD.md"
+  },
+  {
+    "id": "S04",
+    "title": "v21 正式人工评分",
+    "kind": "历史人工评分",
+    "sha256": "dfc991a89ba6b4463bcdcf472c5885328e306d9092c9bc48d3c2b186fddbf681",
+    "publishedExcerpt": "unit-scores.json"
+  },
+  {
+    "id": "S05",
+    "title": "v21 正式确认与指标",
+    "kind": "人工确认",
+    "sha256": "aaaa2504abccb99b93c9e5dcc8bc16bd87a174a8fbf1119573d12895e6e52dd5"
+  },
+  {
+    "id": "S06",
+    "title": "v21 评测冻结记录",
+    "kind": "版本关联",
+    "sha256": "4b9659df19012379a4f056c1f20f8f81f737f6c25a28f627b9b863b260036c33"
+  },
+  {
+    "id": "S07",
+    "title": "v8 开发集完整回归汇总",
+    "kind": "流程回归",
+    "sha256": "c77cc59b232c52daa58d72116f93f245a031ef0b37ef61e5e56ec399e48db42c"
+  },
+  {
+    "id": "S08",
+    "title": "P1 修复 Bad Case 记录",
+    "kind": "问题与修改",
+    "sha256": "7ef40cead5248377ba3a9bb175515879f4ec946a598117df160f7cbb2fec6718",
+    "publishedExcerpt": "bad-case-records.json"
+  },
+  {
+    "id": "S09",
+    "title": "P1 修复及定向复测报告",
+    "kind": "专项验证",
+    "sha256": "181d32f30de0343279eb95afd0f8f74609b1b8bca854a63deff9021beec69804"
+  },
+  {
+    "id": "S10",
+    "title": "PDF 工具名空格误判修复及网页复测",
+    "kind": "匿名化问题依据",
+    "sha256": "4d475f689f33ad8ac524eb8f6cae6cf2f2a8ddfb085cc6d9bc0b09742b0a5d4f"
+  },
+  {
+    "id": "S11",
+    "title": "界面字体与阅读体验回归说明",
+    "kind": "截图来源",
+    "sha256": "c16d57a9629d880d0ffc85b1ed9a645814348446b64deea4ca519142752272e1"
+  },
+  {
+    "id": "S12",
+    "title": "对照与补问截图",
+    "kind": "虚构材料界面截图",
+    "sha256": "9601c5a755472a0557550fe6fa30a25af57973928ed2aa0b262b58e7708a39f1"
+  },
+  {
+    "id": "S13",
+    "title": "改写核对截图",
+    "kind": "虚构材料界面截图",
+    "sha256": "2372fdcba4591dab58c4a9d47afd1bd71be75cbde06a5bfbcdadd82f1e186bf4"
+  },
+  {
+    "id": "S14",
+    "title": "移动端截图",
+    "kind": "虚构材料界面截图",
+    "sha256": "467c76beaf5b6354d06812c7626536012249574e08e9c94c458d9ea3fd0e859d"
+  },
+  {
+    "id": "S15",
+    "title": "当前展示代码的后端入口",
+    "kind": "实际实现",
+    "sha256": "aaaaed8e7c36e78664cd50658c2670cda7c17a4718b6c35e8cf8835f4e99ab0a"
+  },
+  {
+    "id": "S16",
+    "title": "当前展示代码的材料管线",
+    "kind": "实际实现",
+    "sha256": "42af524d6a2599f2a183760ac3e3f36cd28f32a64088bbb76450c7b72a0454be"
+  },
+  {
+    "id": "S17",
+    "title": "当前展示代码的前端工作流",
+    "kind": "实际实现",
+    "sha256": "545af727da9b19a880f16257412149168928c409f1480a39c83ef568047fbfb6"
+  },
+  {
+    "id": "S18",
+    "title": "当前展示代码的领域规则",
+    "kind": "实际实现",
+    "sha256": "1cdbb41e224a360894f6561def9464b7e28552a63c8b8611d1349c0c44447690"
+  },
+  {
+    "id": "S19",
+    "title": "当前 v21 Prompt",
+    "kind": "固定 Prompt",
+    "sha256": "c4c7efb8d0e4d0a13c5c122d1b756023e777af4da971727f0343a9ebf58bc19d"
+  },
+  {
+    "id": "S20",
+    "title": "0003 同源简历社群运营输出",
+    "kind": "岗位定向示例",
+    "sha256": "c1e53c25b02edce9c8f247606c4da609b3bfef689de254a7ae2c9483438a16af"
+  },
+  {
+    "id": "S21",
+    "title": "0004 同源简历交互设计输出",
+    "kind": "岗位定向示例",
+    "sha256": "73c9139f55d896d33fffad506dfe311772da1d245edce6e5835f9d6a877a3bd6"
+  },
+  {
+    "id": "S22",
+    "title": "前端事实状态与编辑处理",
+    "kind": "实际实现",
+    "sha256": "84990a40257782f5f2c9dbd30ae3b860681ae9643c1057334c750f35d2300bb6"
+  },
+  {
+    "id": "S23",
+    "title": "PDF 本地存储与预览实现",
+    "kind": "实际实现",
+    "sha256": "2a019f90d4979702f3f17d5c1f9228a07a1cca33e6dc895032df5a72d3c90d28"
+  },
+  {
+    "id": "S24",
+    "title": "冻结的四维评分与事实门槛 AE-RUBRIC-v2",
+    "kind": "评价规则",
+    "sha256": "38e96cf0519f5460997f1d7c6fedfd65c3ca5aa4c67562b0e98f85d1b41eab4c"
+  },
+  {
+    "id": "S25",
+    "title": "历史 phase3-v7 Prompt",
+    "kind": "Prompt版本",
+    "sha256": "fb35c1f209f88370c65a66d753b8a82e5f6a5eb9082b7486cd209640110f84bc",
+    "publishedExcerpt": "prompt-fix-example.json"
+  },
+  {
+    "id": "S26",
+    "title": "历史 phase3-v8 Prompt",
+    "kind": "Prompt版本",
+    "sha256": "f8d79ee842db5d17ecb9d89ac5f633e2f78c221393a2e2ea6ba9bff024d9d8c3",
+    "publishedExcerpt": "prompt-fix-example.json"
+  },
+  {
+    "id": "S27",
+    "title": "v8历史专项离线测试记录",
+    "kind": "历史测试",
+    "sha256": "dbbb35feb2115c5bba757d33c0dbe7b1dd7d4b05df02dae87021247150378316"
+  },
+  {
+    "id": "S28",
+    "title": "P1候选迭代与版本记录",
+    "kind": "版本与改动",
+    "sha256": "d4c03d11f398767194a9ebef98170057b4571e6ba43ea7db7484a3211159d0dc"
+  },
+  {
+    "id": "S29",
+    "title": "v8的0010关联复测Run",
+    "kind": "实际模型复测",
+    "sha256": "4c6d73bcbcc1845c4194002be78d25b5734a8813d9bee024792119a251f40cc1"
+  },
+  {
+    "id": "S30",
+    "title": "v7的0010关联失败Run",
+    "kind": "实际模型失败",
+    "sha256": "524cbbbe3eba7fc57e6054e8b1ed92d799e66328555dc3c0cf43663a2d615ebd"
+  },
+  {
+    "id": "S31",
+    "title": "0010合成案例v7原始关联响应",
+    "kind": "合成材料原始输出",
+    "sha256": "ea6851d313ae5ec444e612c25def49fc8892f0060e6cdf022a4c0a0a3114c895",
+    "publishedExcerpt": "prompt-fix-example.json"
+  },
+  {
+    "id": "S32",
+    "title": "0010合成案例v8原始关联响应",
+    "kind": "合成材料原始输出",
+    "sha256": "94aaa5359a883b81f009d6f08a5cd348b926f16f87e958d89f52b29b7a831549",
+    "publishedExcerpt": "prompt-fix-example.json"
+  },
+  {
+    "id": "S33",
+    "title": "负责人确认的展示指标汇总",
+    "kind": "用户确认汇总",
+    "sha256": "28284290b64a8102546e25b8c378e48ed05890d0b0c82e0ae1a05b7419fdb597",
+    "originalSha256": "8f0ff30d3eedf0a4b84d9022d9a023931fcab6b82d318f6fc8f8b8102b88789d",
+    "publishedArtifact": "review-confirmation.json"
+  },
+  {
+    "id": "S34",
+    "title": "v6开发集实际流程运行汇总",
+    "kind": "流程结果，不用其预评分作为正式评分",
+    "sha256": "9cce6bb6eab86dcea863f7d4879699ad914decb72363ed62b62b3a30f3ed2b42"
+  },
+  {
+    "id": "S35",
+    "title": "第一阶段原测试报告与历史运行摘录",
+    "kind": "功能验收与历史测试",
+    "sourcePath": "docs/testing/phase1/TEST_REPORT.md",
+    "publishedExcerpt": "../testing/phase1/TEST_REPORT.md",
+    "sourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "sha256": "ae7dbf24bbc0bc2eebf1d83f3f3934569dd3569525cc4c976564d30f141c8186",
+    "hashScope": "Git文件内容"
+  },
+  {
+    "id": "S36",
+    "title": "第二阶段基础联调原测试报告",
+    "kind": "基础联调结论",
+    "sourcePath": "docs/testing/phase2/TEST_REPORT.md",
+    "publishedExcerpt": "../testing/phase2/TEST_REPORT.md",
+    "sourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "sha256": "b93f67107ee7b0f42709a8b109f989fa95d679cd2fb7ca67177e379fdb6a3bba",
+    "hashScope": "Git文件内容"
+  },
+  {
+    "id": "S37",
+    "title": "第二阶段CLOSEOUT_SUMMARY",
+    "kind": "历史调用与成本汇总",
+    "sourcePath": "docs/testing/phase2/CLOSEOUT_SUMMARY.json",
+    "publishedExcerpt": "../testing/phase2/TEST_REPORT.md",
+    "sourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "sha256": "3acf16ef19c15a329eac44f05edaae47959099a55ee39a27291df914c04dce3c",
+    "hashScope": "Git文件内容"
+  },
+  {
+    "id": "S38",
+    "title": "第二阶段CLOSEOUT_ACCEPTANCE",
+    "kind": "分步验收与离线重放",
+    "sourcePath": "docs/testing/phase2/CLOSEOUT_ACCEPTANCE.json",
+    "publishedExcerpt": "../testing/phase2/TEST_REPORT.md",
+    "sourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+    "sha256": "70c00dad097dfbe416c962abded7d2ca0b7b4b0258460e88804587ea598b08d7",
+    "hashScope": "Git文件内容"
+  },
+  {
+    "id": "S39",
+    "title": "v21完整回归原MEASUREMENTS",
+    "kind": "历史调用与批次记录；评分采用另行确认的人工结果",
+    "sourcePath": "docs/testing/phase3/evaluations/AE-PRECISE-v21-20261123/MEASUREMENTS.json",
+    "publishedExcerpt": "../testing/phase3/TEST_REPORT.md",
+    "productCommit": "ec6dff9908e5227af2354ff53d6e0d27c5866006",
+    "sha256": "1056a292efb892e4c9198de65b266a8019607ac492487e18433413e5e78f1d6c",
+    "hashScope": "历史记录文件字节"
+  },
+  {
+    "id": "S40",
+    "title": "负责人手工记录的v6与v21人工修正次数及计数规则",
+    "kind": "负责人提供的手工记录，非系统自动统计",
+    "publishedArtifact": "manual-corrections.json",
+    "sha256": "1c0664fced9fc44c6b5e2948038df100eca1f9397bacf9bca03b8583e7bac5eb",
+    "hashScope": "本次整理的结构化记录；不冒充原始操作日志哈希",
+    "sourceDescription": "本次对话提供的两版逐案例次数及计数规则图；未公开私人对话全文。"
+  }
+]

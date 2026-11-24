@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "58a25be1097a7902058a3c0a78415a2c90408cc5",
+  "promptVersion": "precise-followup-v21",
+  "files": [
+    {
+      "path": "qa/package.json",
+      "purpose": "网页回归的独立依赖与运行入口；不增加产品运行依赖。",
+      "sourcePath": null,
+      "sourceSHA256": null,
+      "bundledSHA256": "446f09ff90b67dffcf9f2a287b366166c2fe3b60e67f1aeb967a5abb8267e0bf",
+      "changes": []
+    },
+    {
+      "path": "qa/runtime.mjs",
+      "purpose": "启动随机端口的隔离服务与浏览器，阻断外网页面请求，记录请求、截图轨迹和代码哈希。",
+      "sourcePath": null,
+      "sourceSHA256": null,
+      "bundledSHA256": "95f83694cbbdfeb21f35f1ec1240ef474e1dd6bb8c51ddc5e608ae9b87932e68",
+      "changes": []
+    },
+    {
+      "path": "qa/comparison-feedback.mjs",
+      "purpose": "校对确认门槛；关联调整与答案/事实保留；长文编辑对齐；采用/编辑/拒绝/保留状态；移动端布局。",
+      "sourcePath": "qa/comparison-feedback.mjs",
+      "sourceSHA256": "f83b85562ab8379f9474ab88a3acee8f58fb5f76c65280d4c5d138de9d773de8",
+      "bundledSHA256": "dd3dcd18f74e6eb01cb8c310d90807336cad758dbe09b25958264b342053371c",
+      "changes": [
+        "改为隔离运行器，临时端口、新浏览器上下文及按运行分目录输出",
+        "原有业务断言保留；固定合成材料，未采用真实用户数据"
+      ]
+    },
+    {
+      "path": "qa/comparison-navigation.mjs",
+      "purpose": "主栏滚动与侧栏定位；反向导航与保存重绘；改写清单选择与展开；移动端横向导航。",
+      "sourcePath": "qa/comparison-navigation.mjs",
+      "sourceSHA256": "38f54b4b63c9f0d3d78f2728abed53fd239c1a363a70a0dc9afee4c7bb1a771d",
+      "bundledSHA256": "13d43a88721c1cd33f51a064d5bd92b11e410bc3566359e1243f1b2e28e76c6f",
+      "changes": [
+        "改为隔离运行器，临时端口、新浏览器上下文及按运行分目录输出",
+        "原有业务断言保留；固定合成材料，未采用真实用户数据",
+        "依据当前ui-polish.css的500/400字重及色彩层级，改为检查相对强调、is-current、唯一选中与可见性；不修改产品样式"
+      ]
+    },
+    {
+      "path": "qa/rewrite-feedback.mjs",
+      "purpose": "差异高亮与文本编辑；撤销与中文组合输入；编辑稿持久化；补问/事实定位与分经历草稿；新候选不覆盖当前稿。",
+      "sourcePath": "qa/rewrite-feedback.mjs",
+      "sourceSHA256": "f0d5c02f9ca349ca0f07763e1104439779db30132804d8bb7371bc5103d77e97",
+      "bundledSHA256": "793519ff995ab1479dd9215bd7fb9c4fb0da173810bed8a12c6d9e21592eabb4",
+      "changes": [
+        "改为隔离运行器，临时端口、新浏览器上下文及按运行分目录输出",
+        "原有业务断言保留；固定合成材料，未采用真实用户数据"
+      ]
+    },
+    {
+      "path": "qa/review-reference.mjs",
+      "purpose": "两页合成PDF上传与渲染；翻页/缩放及JD参照；校对内容与PDF保存重开；无效文件保护；备份与隔离数据删除。",
+      "sourcePath": "qa/review-reference.mjs",
+      "sourceSHA256": "4be960f21c1adef4df302893d23dee789bb89ed5444e98552d912e12fa052370",
+      "bundledSHA256": "9e6d1052cf11be2356f5525ab49141517c18ce1f2a337ebd19f161e6bf2c3991",
+      "changes": [
+        "改为隔离运行器，临时端口、新浏览器上下文及按运行分目录输出",
+        "原有业务断言保留；固定合成材料，未采用真实用户数据"
+      ]
+    },
+    {
+      "path": "qa/fixtures/materials.json",
+      "purpose": "本机协议流程的虚构简历、JD与触发后使用的回答。",
+      "sourcePath": "docs/testing/phase2/cases/AI-CASE-0002-v1.json",
+      "sourceSHA256": "396604c9075acfd2b84eccdda171650313a840f7ad07d626bb711a1bce66a036",
+      "bundledSHA256": "4b992e990cf80afff46d2fb6f81e69680947372d155638c2555680c6720950d0",
+      "changes": [
+        "只保留输入、模拟回答及来源编号，不引用内部评测目录或状态"
+      ]
+    },
+    {
+      "path": "qa/phase2-flow.mjs",
+      "purpose": "真实网页操作贯穿解析、补问、确认、改写与保存；AI上游为本机固定响应，非真实模型。",
+      "sourcePath": "qa/phase2-flow.mjs",
+      "sourceSHA256": "330b79ecb2c120cd3cf246fd813f53c4cf2bb846fc8a9a6ca12cc331a59d3c66",
+      "bundledSHA256": "fe565aed23639dfd742a2676cac986418c13164fded5ca4b0444ff437c7f104f",
+      "changes": [
+        "复用原有本机假上游及错误不覆盖检查",
+        "夹具改为包内合成材料，补充最终版本保存和刷新重开断言",
+        "统一隔离运行与证据输出"
+      ]
+    },
+    {
+      "path": "qa/run.mjs",
+      "purpose": "顺序执行5项网页场景；失败即停止，保留日志并明确未执行数量。",
+      "sourcePath": null,
+      "sourceSHA256": null,
+      "bundledSHA256": "dc0fa3c866dffa508523a11cf2f2bdf6b7fc49a4043585a926e9f279fa1b5dc9",
+      "changes": []
+    },
+    {
+      "path": "qa/README.md",
+      "purpose": "网页测试运行方法、5种场景、隔离方式与结果边界。",
+      "sourcePath": null,
+      "sourceSHA256": null,
+      "bundledSHA256": "a944bb54ba40eee48c79ce90f329f30b26eacde6038792d7def22dd1e93bd69d",
+      "changes": []
+    }
+  ]
+}

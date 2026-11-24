@@ -1,0 +1,137 @@
+{
+  "synthetic": true,
+  "testerOnly": true,
+  "inputProtocol": "本示例仅用resume.txt和job_description.txt；参考事实及预设答案不得提前发送给模型。实际提问后才按匹配主题回答和确认，没有依据则跳过/未知。",
+  "sourceFiles": {
+    "facts.json": "82a8392e5a0ede8797eb9259c3225d0876b31bc46a20d871cd9fea0814f5f51b",
+    "followup_answers.json": "0a580a05be4bee1c1e162fa6fcc70f6aa90c3c2801302fe1ba63ad8c50f81dc1"
+  },
+  "facts": {
+    "case_id": "case-02-data-analyst",
+    "synthetic": true,
+    "tester_only": true,
+    "initial_facts": [
+      {
+        "fact_id": "F01",
+        "scope": "orders",
+        "content": "整理订单表格、分类统计和月度报告；原文未写具体工具和订单规模。",
+        "visible_from": "initial_resume"
+      },
+      {
+        "fact_id": "F02",
+        "scope": "store",
+        "content": "4周现场观察，非真实门店运营数据。",
+        "visible_from": "initial_resume"
+      },
+      {
+        "fact_id": "F03",
+        "scope": "sql",
+        "content": "SQL仅为课堂基础练习。",
+        "visible_from": "initial_resume"
+      }
+    ],
+    "after_confirmation": [
+      {
+        "fact_id": "S01",
+        "scope": "orders",
+        "content": "本次订单分析使用Excel数据透视表，处理860条原始订单记录，其中取消或重复记录另列，不计入有效成交订单口径。",
+        "visible_from": "user_confirmation_only"
+      },
+      {
+        "fact_id": "S02",
+        "scope": "ownership",
+        "content": "本人负责清洗、分类汇总及部分图表，结论由4人团队共同讨论；没有担任队长。",
+        "visible_from": "user_confirmation_only"
+      },
+      {
+        "fact_id": "S03",
+        "scope": "delivery",
+        "content": "按6类商品做汇总，提交月度分析报告和图表。",
+        "visible_from": "user_confirmation_only"
+      }
+    ],
+    "negative_after_confirmation": [
+      "没有在项目中使用Python",
+      "没有真实平台的转化率或GMV提升数据",
+      "没有独立访问企业生产数据库"
+    ],
+    "still_unknown": [
+      "有效成交订单的最终数量（未提供准确值）",
+      "不同渠道销售增长是否显著"
+    ],
+    "confidence_note": "模拟用户陈述只代表案例内部设定，不代表现实真值或第三方核实。"
+  },
+  "presetAnswers": [
+    {
+      "topic": "工具与规模",
+      "possible_question": "项目用了什么工具？处理了多少条订单？",
+      "simulated_user_answer": "使用Excel数据透视表整理860条原始订单；取消或重复记录另列，不放进有效成交订单的统计口径。",
+      "suggested_action": "confirm",
+      "release_after": "user_is_asked_and_explicitly_confirms"
+    },
+    {
+      "topic": "本人贡献",
+      "possible_question": "你个人做了哪些分析，报告具体输出了什么？",
+      "simulated_user_answer": "我负责清洗和按6类商品汇总，制作部分图表；结论由4人团队共同讨论，我不是队长。",
+      "suggested_action": "confirm",
+      "release_after": "user_is_asked_and_explicitly_confirms"
+    },
+    {
+      "topic": "技能边界",
+      "possible_question": "有没有用Python、SQL查询生产数据，或者做过真实GMV提升实验？",
+      "simulated_user_answer": "项目没有用Python，也没有查询企业生产库，SQL只在课上练习；没有GMV提升实验。",
+      "suggested_action": "confirm",
+      "release_after": "user_is_asked_and_explicitly_confirms"
+    },
+    {
+      "topic": "准确成交量",
+      "possible_question": "860条中实际有效成交多少条？",
+      "simulated_user_answer": "现在没有准确的有效成交数量，先保留未知。",
+      "suggested_action": "unknown",
+      "release_after": "when_asked_only"
+    }
+  ],
+  "actualQuestions": [
+    {
+      "id": "q_req_d6dbbc71151f_0_exp_48ddf31535d6_4",
+      "requirementId": "req_d6dbbc71151f_0",
+      "experienceId": "exp_48ddf31535d6_4",
+      "text": "结合「校园二手交易订单分析」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+      "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    },
+    {
+      "id": "q_req_38ca06f2c9a3_1_exp_153f183b582c_8",
+      "requirementId": "req_38ca06f2c9a3_1",
+      "experienceId": "exp_153f183b582c_8",
+      "text": "结合「技能与优势」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+      "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    },
+    {
+      "id": "q_req_6692f614d953_2_exp_48ddf31535d6_4",
+      "requirementId": "req_6692f614d953_2",
+      "experienceId": "exp_48ddf31535d6_4",
+      "text": "结合「校园二手交易订单分析」，请补充一次实际的数据处理：你负责哪部分，采用了什么方法，输出了什么结果？",
+      "purpose": "只写真实信息；不确定可以稍后补充，不需要补造数字。",
+      "status": "archived",
+      "answer": "",
+      "previousStatus": "pending"
+    },
+    {
+      "id": "q_req_3389ed47f120_3_exp_48ddf31535d6_4",
+      "requirementId": "req_3389ed47f120_3",
+      "experienceId": "exp_48ddf31535d6_4",
+      "text": "在校园二手交易订单分析项目中，你本人是否与运营或需求方沟通数据需求？如有，请说明沟通对象、你提出的需求或结论，以及最终形成了什么可复用的分析结论。",
+      "purpose": "明确本人是否承担需求沟通及可复用结论产出，用于改写协作与结论表达字段。",
+      "status": "skipped",
+      "answer": "暂时跳过，使用现有事实。"
+    }
+  ],
+  "actualConfirmedFacts": [],
+  "actualAction": "补问运营/需求方沟通；预设事实无沟通对象及行为依据，选择跳过。未为通过流程编造回答。"
+}

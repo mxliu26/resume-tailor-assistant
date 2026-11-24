@@ -1,0 +1,380 @@
+{
+  "fixtures": [
+    {
+      "caseId": "AE-CASE-0006",
+      "task": {
+        "id": "AE-JOB-TARGET-v14-20261122-0006",
+        "revision": 1,
+        "experiences": [
+          {
+            "id": "exp_a1f555c64e57_0",
+            "title": "虚构候选人戊",
+            "kind": "context",
+            "text": "虚构候选人戊",
+            "sourceText": "虚构候选人戊",
+            "original": "虚构候选人戊",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "id": "exp_057574799c34_1",
+            "title": "教育背景",
+            "kind": "context",
+            "text": "教育背景\n2022.09—2026.06 虚构青潭学院 物流管理 本科毕业",
+            "sourceText": "教育背景\n2022.09—2026.06 虚构青潭学院 物流管理 本科毕业",
+            "original": "教育背景\n2022.09—2026.06 虚构青潭学院 物流管理 本科毕业",
+            "start": 7,
+            "end": 44
+          },
+          {
+            "id": "exp_e2c6fecfba02_2",
+            "title": "仓储缺货记录整理",
+            "kind": "experience",
+            "text": "仓储缺货记录整理\n2026.03—2026.04 课程实践 成员\n参与库存记录整理和缺货问题跟进，具体整理方法、个人产出尚未展开。\n课程作业同时出现“缺货条目数”和“缺货件数”，简历没有说明采用哪一口径。\n与同组同学讨论周报写法，保留了课程作业；不是企业正式仓储系统的工作记录。",
+            "sourceText": "仓储缺货记录整理\n2026.03—2026.04 课程实践 成员\n参与库存记录整理和缺货问题跟进，具体整理方法、个人产出尚未展开。\n课程作业同时出现“缺货条目数”和“缺货件数”，简历没有说明采用哪一口径。\n与同组同学讨论周报写法，保留了课程作业；不是企业正式仓储系统的工作记录。",
+            "original": "仓储缺货记录整理\n2026.03—2026.04 课程实践 成员\n参与库存记录整理和缺货问题跟进，具体整理方法、个人产出尚未展开。\n课程作业同时出现“缺货条目数”和“缺货件数”，简历没有说明采用哪一口径。\n与同组同学讨论周报写法，保留了课程作业；不是企业正式仓储系统的工作记录。",
+            "start": 45,
+            "end": 184
+          },
+          {
+            "id": "exp_2b36f827eb93_3",
+            "title": "技能与优势",
+            "kind": "context",
+            "text": "技能与优势\n会使用Excel筛选和基础函数，能够整理文字说明。",
+            "sourceText": "技能与优势\n会使用Excel筛选和基础函数，能够整理文字说明。",
+            "original": "技能与优势\n会使用Excel筛选和基础函数，能够整理文字说明。",
+            "start": 185,
+            "end": 216
+          },
+          {
+            "id": "exp_cb28ed1805d3_4",
+            "title": "到岗安排",
+            "kind": "context",
+            "text": "到岗安排\n可每周5天，持续3个月。",
+            "sourceText": "到岗安排\n可每周5天，持续3个月。",
+            "original": "到岗安排\n可每周5天，持续3个月。",
+            "start": 217,
+            "end": 234
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_b008ab6d345b_0",
+            "text": "整理库存与缺货记录，说明异常定位方法。",
+            "original": "整理库存与缺货记录，说明异常定位方法。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_cbd651b51367_1",
+            "text": "跟进问题并形成可交接的异常清单。",
+            "original": "跟进问题并形成可交接的异常清单。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_9bc565bc3faa_2",
+            "text": "熟悉Excel或其他表格工具。",
+            "original": "熟悉Excel或其他表格工具。",
+            "category": "工具或方法",
+            "strength": "原文未强调强制",
+            "logic": "或（满足其中一项）"
+          },
+          {
+            "id": "req_7c8db531a184_3",
+            "text": "要求能连续实习3个月。",
+            "original": "要求能连续实习3个月。",
+            "category": "明确条件",
+            "strength": "明确要求",
+            "logic": "保留原文关系"
+          }
+        ],
+        "warnings": [
+          "AI 解析仍需人工校对；原文未改写。",
+          "以下 JD 行被识别为标题，请核对是否漏掉要求：岗位：供应链运营实习生；岗位职责"
+        ],
+        "meta": {
+          "stage": "parse",
+          "promptVersion": "job-targeting-v14",
+          "promptSHA256": "fe82043625b6a2c493dcc13617ee047187412550698e0998aa710c5119a12dc2",
+          "requestedModel": "deepseek-flash",
+          "thinking": "disabled",
+          "returnedModel": "deepseek-flash",
+          "usage": {
+            "prompt_tokens": 805,
+            "completion_tokens": 135,
+            "total_tokens": 940,
+            "prompt_cache_hit_tokens": 640,
+            "prompt_cache_miss_tokens": 165
+          },
+          "durationMs": 1385,
+          "inputSHA256": "c7e34dcf7914bda1315911ac3e6a35139cd3b14d5effc282a4d3b9861c993e3c",
+          "outputSHA256": "eeab98ee33af7c8853936ad8295814b1b32d5ef3473550494f89225e15341394",
+          "restoredContextLines": []
+        },
+        "selected": [
+          "exp_e2c6fecfba02_2"
+        ],
+        "facts": [],
+        "questions": [],
+        "associations": [],
+        "suggestions": []
+      },
+      "data": {
+        "associations": [
+          {
+            "requirementId": "req_b008ab6d345b_0",
+            "experienceId": "exp_e2c6fecfba02_2",
+            "status": "表达不足",
+            "reason": "原文仅说明参与库存记录整理和缺货问题跟进，并明确具体整理方法、个人产出尚未展开；同时缺货条目数与缺货件数口径未说明，无法确认异常定位方法。",
+            "evidence": [
+              {
+                "sourceId": "exp_e2c6fecfba02_2",
+                "quote": "参与库存记录整理和缺货问题跟进，具体整理方法、个人产出尚未展开。"
+              },
+              {
+                "sourceId": "exp_e2c6fecfba02_2",
+                "quote": "课程作业同时出现“缺货条目数”和“缺货件数”，简历没有说明采用哪一口径。"
+              }
+            ]
+          },
+          {
+            "requirementId": "req_cbd651b51367_1",
+            "experienceId": "exp_e2c6fecfba02_2",
+            "status": "表达不足",
+            "reason": "原文提到参与缺货问题跟进，但未说明跟进方式及是否形成可交接的异常清单，个人产出尚未展开。",
+            "evidence": [
+              {
+                "sourceId": "exp_e2c6fecfba02_2",
+                "quote": "参与库存记录整理和缺货问题跟进，具体整理方法、个人产出尚未展开。"
+              }
+            ]
+          },
+          {
+            "requirementId": "req_9bc565bc3faa_2",
+            "experienceId": "exp_2b36f827eb93_3",
+            "status": "已有明确证据",
+            "reason": "原文明确会使用Excel筛选和基础函数，满足Excel或其他表格工具中Excel一项。",
+            "evidence": [
+              {
+                "sourceId": "exp_2b36f827eb93_3",
+                "quote": "会使用Excel筛选和基础函数，能够整理文字说明。"
+              }
+            ]
+          },
+          {
+            "requirementId": "req_7c8db531a184_3",
+            "experienceId": "",
+            "status": "按已提供信息符合",
+            "reason": "到岗安排原文明确可每周5天、持续3个月，符合连续实习3个月要求。",
+            "evidence": [
+              {
+                "sourceId": "exp_cb28ed1805d3_4",
+                "quote": "可每周5天，持续3个月。"
+              }
+            ]
+          }
+        ],
+        "questions": [
+          {
+            "requirementId": "req_b008ab6d345b_0",
+            "experienceId": "exp_e2c6fecfba02_2",
+            "text": "你在库存记录整理中具体采用了什么方法定位缺货异常？缺货条目数和缺货件数最终采用哪一口径？",
+            "purpose": "核实异常定位方法与统计口径"
+          },
+          {
+            "requirementId": "req_cbd651b51367_1",
+            "experienceId": "exp_e2c6fecfba02_2",
+            "text": "你如何跟进缺货问题，最终是否形成可交接的异常清单？清单包含哪些内容？",
+            "purpose": "核实跟进方式与可交接产出"
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "AE-CASE-0007",
+      "task": {
+        "id": "AE-JOB-TARGET-v14-20261122-0007",
+        "revision": 1,
+        "experiences": [
+          {
+            "id": "exp_b68f05414ecf_0",
+            "title": "虚构候选人己",
+            "kind": "context",
+            "text": "虚构候选人己",
+            "sourceText": "虚构候选人己",
+            "original": "虚构候选人己",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "id": "exp_a32db3056d0a_1",
+            "title": "教育背景",
+            "kind": "context",
+            "text": "教育背景\n2023.09—2027.06 虚构临湾学院 经济学 本科在读",
+            "sourceText": "教育背景\n2023.09—2027.06 虚构临湾学院 经济学 本科在读",
+            "original": "教育背景\n2023.09—2027.06 虚构临湾学院 经济学 本科在读",
+            "start": 7,
+            "end": 43
+          },
+          {
+            "id": "exp_4a9532b5dd06_2",
+            "title": "门店经营资料整理",
+            "kind": "experience",
+            "text": "门店经营资料整理\n2026.01—2026.02 课程小组 成员\n参与整理某虚构门店的经营资料，提交了一份小组报告。简历未写本人采用的方法和交付内容。\n记得材料包含门店提供的月度汇总表，但不记得具体指标和记录条数。附录销售额图由另一位同学绘制，本人没有核实图表计算过程。",
+            "sourceText": "门店经营资料整理\n2026.01—2026.02 课程小组 成员\n参与整理某虚构门店的经营资料，提交了一份小组报告。简历未写本人采用的方法和交付内容。\n记得材料包含门店提供的月度汇总表，但不记得具体指标和记录条数。附录销售额图由另一位同学绘制，本人没有核实图表计算过程。",
+            "original": "门店经营资料整理\n2026.01—2026.02 课程小组 成员\n参与整理某虚构门店的经营资料，提交了一份小组报告。简历未写本人采用的方法和交付内容。\n记得材料包含门店提供的月度汇总表，但不记得具体指标和记录条数。附录销售额图由另一位同学绘制，本人没有核实图表计算过程。",
+            "start": 44,
+            "end": 179
+          },
+          {
+            "id": "exp_ce20cef58f64_3",
+            "title": "技能与优势",
+            "kind": "context",
+            "text": "技能与优势\n能阅读Excel表格并整理文字资料，尚无可核实的独立建模项目。",
+            "sourceText": "技能与优势\n能阅读Excel表格并整理文字资料，尚无可核实的独立建模项目。",
+            "original": "技能与优势\n能阅读Excel表格并整理文字资料，尚无可核实的独立建模项目。",
+            "start": 180,
+            "end": 217
+          }
+        ],
+        "requirements": [
+          {
+            "id": "req_86a83f5a4c27_0",
+            "text": "用经营资料分析问题，说明本人采用的方法和结论依据。",
+            "original": "用经营资料分析问题，说明本人采用的方法和结论依据。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_021a14c9d5b5_1",
+            "text": "将分析过程整理成便于他人理解的报告。",
+            "original": "将分析过程整理成便于他人理解的报告。",
+            "category": "工作任务与能力",
+            "strength": "原文未强调强制",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_6f1eb0aa5363_2",
+            "text": "本科在读优先。",
+            "original": "本科在读优先。",
+            "category": "明确条件",
+            "strength": "优先／加分",
+            "logic": "保留原文关系"
+          },
+          {
+            "id": "req_b44b8fa095bf_3",
+            "text": "有统计建模项目经验加分。",
+            "original": "有统计建模项目经验加分。",
+            "category": "加分项",
+            "strength": "优先／加分",
+            "logic": "保留原文关系"
+          }
+        ],
+        "warnings": [
+          "AI 解析仍需人工校对；原文未改写。",
+          "以下 JD 行被识别为标题，请核对是否漏掉要求：岗位：商业分析实习生；岗位职责"
+        ],
+        "meta": {
+          "stage": "parse",
+          "promptVersion": "job-targeting-v14",
+          "promptSHA256": "fe82043625b6a2c493dcc13617ee047187412550698e0998aa710c5119a12dc2",
+          "requestedModel": "deepseek-flash",
+          "thinking": "disabled",
+          "returnedModel": "deepseek-flash",
+          "usage": {
+            "prompt_tokens": 764,
+            "completion_tokens": 119,
+            "total_tokens": 883,
+            "prompt_cache_hit_tokens": 512,
+            "prompt_cache_miss_tokens": 252
+          },
+          "durationMs": 1096,
+          "inputSHA256": "dae15db8b5f03bb490944cb65b970945973648b01e09d8d9661df23bbdc156a2",
+          "outputSHA256": "dcdeea609438c51963eaaa60c6a0ded7298010c9cc9e7979a1531f5f46271d99",
+          "restoredContextLines": []
+        },
+        "selected": [
+          "exp_4a9532b5dd06_2"
+        ],
+        "facts": [],
+        "questions": [],
+        "associations": [],
+        "suggestions": []
+      },
+      "data": {
+        "associations": [
+          {
+            "requirementId": "req_86a83f5a4c27_0",
+            "experienceId": "exp_4a9532b5dd06_2",
+            "status": "表达不足",
+            "reason": "原文仅说明参与整理门店经营资料并提交小组报告，未写本人采用的分析方法和结论依据；附录图表由他人绘制且本人未核实计算过程，不能视为本人分析成果",
+            "evidence": [
+              {
+                "sourceId": "exp_4a9532b5dd06_2",
+                "quote": "参与整理某虚构门店的经营资料，提交了一份小组报告。简历未写本人采用的方法和交付内容。"
+              },
+              {
+                "sourceId": "exp_4a9532b5dd06_2",
+                "quote": "附录销售额图由另一位同学绘制，本人没有核实图表计算过程。"
+              }
+            ]
+          },
+          {
+            "requirementId": "req_021a14c9d5b5_1",
+            "experienceId": "exp_4a9532b5dd06_2",
+            "status": "表达不足",
+            "reason": "原文只提到提交了一份小组报告，未说明报告由本人撰写或整理，也未说明报告内容与呈现方式，无法确认本人将分析过程整理成便于他人理解的报告",
+            "evidence": [
+              {
+                "sourceId": "exp_4a9532b5dd06_2",
+                "quote": "参与整理某虚构门店的经营资料，提交了一份小组报告。简历未写本人采用的方法和交付内容。"
+              }
+            ]
+          },
+          {
+            "requirementId": "req_6f1eb0aa5363_2",
+            "experienceId": "",
+            "status": "按已提供信息符合",
+            "reason": "原文明确为2023.09—2027.06经济学本科在读，符合本科在读优先条件",
+            "evidence": [
+              {
+                "sourceId": "exp_a32db3056d0a_1",
+                "quote": "2023.09—2027.06 虚构临湾学院 经济学 本科在读"
+              }
+            ]
+          },
+          {
+            "requirementId": "req_b44b8fa095bf_3",
+            "experienceId": "exp_ce20cef58f64_3",
+            "status": "相关但不等价",
+            "reason": "原文明确尚无可核实的独立建模项目，仅能阅读Excel表格并整理文字资料，与统计建模项目经验不等价",
+            "evidence": [
+              {
+                "sourceId": "exp_ce20cef58f64_3",
+                "quote": "能阅读Excel表格并整理文字资料，尚无可核实的独立建模项目。"
+              }
+            ]
+          }
+        ],
+        "questions": [
+          {
+            "requirementId": "req_86a83f5a4c27_0",
+            "experienceId": "exp_4a9532b5dd06_2",
+            "text": "在门店经营资料整理中，你本人具体采用了什么分析方法、依据哪些数据得出了什么结论？",
+            "purpose": "核实本人分析方法与结论依据"
+          },
+          {
+            "requirementId": "req_021a14c9d5b5_1",
+            "experienceId": "exp_4a9532b5dd06_2",
+            "text": "那份小组报告中，你本人负责撰写或整理了哪些部分？报告是如何组织以便他人理解的？",
+            "purpose": "核实本人报告整理工作与交付内容"
+          }
+        ]
+      }
+    }
+  ]
+}
