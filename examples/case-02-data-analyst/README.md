@@ -1,20 +1,20 @@
-# 数据分析实习 · 合成示例
+# Data Analyst Internship: Synthetic Example
 
-[原始简历](resume.txt) · [岗位JD](job_description.txt) · [测试者参考](tester_notes.json) · [完整运行结果](outputs.json) · [网页保存终稿](final_resume.txt)
+[Original resume](resume.txt) · [Job description](job_description.txt) · [Tester reference](tester_notes.json) · [Full run record](outputs.json) · [Saved final resume](final_resume.txt)
 
-## 本次实际操作
+## Recorded Browser Flow
 
-粘贴两份文本 → 创建任务并同意解析 → 核对经历与岗位要求 → 确认进入关联 → 跳过没有依据的补问 → 进入改写并同意生成 → 逐条接受 → 预览并确认保存 → 刷新 → 从“我的任务”重新打开 → 查看保存版本。
+Paste both texts → create a task and consent to parsing → review experiences and requirements → confirm matching → skip an unsupported follow-up → enter rewriting and consent to generation → accept each suggestion → preview and confirm saving → refresh → reopen from the task list → view the saved version.
 
-实际补问“是否与运营或需求方沟通数据需求”。预设材料未提供该事实，因此点击跳过，没有填入其他主题的隐藏答案。之后仅按当前事实生成建议。
+The actual follow-up asked whether the applicant communicated data needs with operations staff or requesters. The preset material did not support this fact, so the agent skipped the question without supplying hidden answers about other topics. Suggestions then used only the current facts.
 
-生成2条建议；本次AI代理核对后直接采用，没有人工改写模型初稿。原文T0、首次T1、保存T2及逐条来源分别保留在outputs.json。未选择改写的单元保持原文。刷新后版本文本、建议内容与事实状态均一致，保存文本可正常显示。
+The model generated two suggestions. After AI-agent review, both were adopted without editing the model's first draft. T0, first T1, saved T2, and individual sources remain in `outputs.json`. Unselected units retained their original text. After refresh, the saved version, suggestions, and factual states matched, and saved text displayed correctly.
 
-## 重点核对
+## Review Priorities
 
-- 团队、课程样本及业务边界：T1保留原有语句，仅调整顺序，未加入860条、6类商品等未被本轮问到和确认的事实。
-- 工具与使用范围：整段保留原文，没有将SQL课堂知识写成生产数据库经验。
+- **Team, coursework samples, and business scope:** T1 retained the original statements and changed only their order. It did not add the 860-record or six-product-category facts, which were not asked about and confirmed in this run.
+- **Tools and scope of use:** The original wording remained intact. Classroom SQL knowledge was not turned into production-database experience.
 
-本次结论为浏览器前端自动化操作完成、AI辅助事实核查待人工复核，不属于正式人工评分或真人内测。
+The recorded outcome is completion of browser automation, with AI-assisted factual checks pending human review. It is not a formal human rating or a real-user trial.
 
-代码来源：58a25be1097a7902058a3c0a78415a2c90408cc5；Prompt：precise-followup-v21；模型：deepseek-flash，关闭思考。Session：SYN3-SHOWCASE-20261124-01；本组4次调用，16284 Token，保守估算0.052110元。
+Runtime source: `58a25be1097a7902058a3c0a78415a2c90408cc5`. Prompt: `precise-followup-v21`. Model: `deepseek-flash`, thinking disabled. Session: `SYN3-SHOWCASE-20261124-01`. This case used 4 calls and 16,284 tokens, with a conservative estimated cost of CNY 0.052110.

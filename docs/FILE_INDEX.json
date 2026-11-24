@@ -11,1623 +11,1623 @@
   "files": [
     {
       "path": ".env.example",
-      "category": "根目录",
-      "purpose": "提供mock/live、端口、模型、超时与PDF提取配置示例；API密钥为空。"
+      "category": "Root files",
+      "purpose": "Example configuration for mock/live mode, ports, model, timeouts, and PDF extraction; the API key is blank."
     },
     {
       "path": ".gitignore",
-      "category": "根目录",
-      "purpose": "排除密钥、私人材料、用户数据和运行日志；仅放行指定展示截图。"
+      "category": "Root files",
+      "purpose": "Excludes secrets, private materials, user data, and runtime logs; allows only specified showcase images."
     },
     {
       "path": "CHANGELOG.md",
-      "category": "根目录",
-      "purpose": "按迭代主题记录主要产品改动、Prompt版本与研发来源SHA。"
+      "category": "Root files",
+      "purpose": "Major changes by iteration, prompt versions, and source SHAs from the development repository."
     },
     {
       "path": "README.md",
-      "category": "根目录",
-      "purpose": "GitHub首页入口：产品介绍、流程、截图、评测摘录、启动方法和文档导航。"
+      "category": "Root files",
+      "purpose": "Repository homepage: product, workflow, screenshots, evaluation highlights, setup, and documentation links."
     },
     {
       "path": "docs/BAD_CASES.md",
-      "category": "文档与展示材料",
-      "purpose": "到岗来源遗漏、无效补问、PDF工具名误判及Prompt修复跨经历引用。"
+      "category": "Documentation and showcase",
+      "purpose": "Four cases: omitted availability, invalid follow-ups, PDF tool-name matching, and a prompt fix for cross-experience citations."
     },
     {
       "path": "docs/EVALUATION_SUMMARY.md",
-      "category": "文档与展示材料",
-      "purpose": "历史流程、质量、事实口径及人工修正量的手工记录与计数规则。"
+      "category": "Documentation and showcase",
+      "purpose": "Historical workflow, quality, factual metrics, and owner-recorded manual corrections with counting rules."
     },
     {
       "path": "docs/FILE_INDEX.json",
-      "category": "文档与展示材料",
-      "purpose": "完整文件路径与用途索引，供后续维护和上传核对。"
+      "category": "Documentation and showcase",
+      "purpose": "Complete file paths, categories, and purposes for maintenance and upload checks."
     },
     {
       "path": "docs/PRD.md",
-      "category": "文档与展示材料",
-      "purpose": "产品需求摘要：用户、问题、范围、五步流程和事实约束。"
+      "category": "Documentation and showcase",
+      "purpose": "Product requirements summary: users, problems, scope, five-step flow, and factual constraints."
     },
     {
       "path": "docs/README.md",
-      "category": "文档与展示材料",
-      "purpose": "文档目录入口，说明每份展示材料的用途。"
+      "category": "Documentation and showcase",
+      "purpose": "Documentation entry point with the purpose of each showcase document."
     },
     {
       "path": "docs/REPOSITORY_GUIDE.md",
-      "category": "文档与展示材料",
-      "purpose": "人可阅读的目录说明和逐个自有文件用途。"
+      "category": "Documentation and showcase",
+      "purpose": "Readable directory guide and descriptions of every first-party file."
     },
     {
       "path": "docs/SCREENSHOTS.md",
-      "category": "文档与展示材料",
-      "purpose": "介绍GitHub首页长图、三张核心截图及合成材料、模拟模式来源。"
+      "category": "Documentation and showcase",
+      "purpose": "Homepage walkthrough, three core screenshots, and their synthetic/mock-mode provenance."
     },
     {
       "path": "docs/WORKFLOW.md",
-      "category": "文档与展示材料",
-      "purpose": "用户流程与AI工作流图，以及模型、程序和用户的责任分工。"
+      "category": "Documentation and showcase",
+      "purpose": "User and AI workflow diagrams and the responsibilities of the model, program, and user."
     },
     {
       "path": "docs/evidence/bad-case-records.json",
-      "category": "文档与展示材料",
-      "purpose": "四个典型问题的结构化根因、修复、验证范围与版本标识。"
+      "category": "Documentation and showcase",
+      "purpose": "Structured causes, fixes, verification scope, and version references for four representative issues."
     },
     {
       "path": "docs/evidence/manual-corrections.json",
-      "category": "文档与展示材料",
-      "purpose": "负责人提供的两版各10组人工修正次数、计数范围、计算及记录边界。"
+      "category": "Documentation and showcase",
+      "purpose": "Owner-supplied manual correction counts for 10 cases per version, counting scope, calculations, and evidence limits."
     },
     {
       "path": "docs/evidence/metrics.json",
-      "category": "文档与展示材料",
-      "purpose": "指标数值、分母、评分性质、版本及人工修正量手工统计。"
+      "category": "Documentation and showcase",
+      "purpose": "Metric values, denominators, rating status, versions, and manually recorded correction aggregates."
     },
     {
       "path": "docs/evidence/product-overview.json",
-      "category": "文档与展示材料",
-      "purpose": "首页展示长图的图片哈希、运行代码、截图来源及模拟操作检查。"
+      "category": "Documentation and showcase",
+      "purpose": "Walkthrough image hash, runtime source, capture provenance, and mock-interaction checks."
     },
     {
       "path": "docs/evidence/prompt-fix-example.json",
-      "category": "文档与展示材料",
-      "purpose": "v7→v8 Prompt增量及同一合成案例的实际引用前后片段。"
+      "category": "Documentation and showcase",
+      "purpose": "The v7-to-v8 prompt delta and actual before/after citations from the same synthetic case."
     },
     {
       "path": "docs/evidence/review-confirmation.json",
-      "category": "文档与展示材料",
-      "purpose": "负责人确认的v6/v21汇总与相对变化计算口径，无私人对话全文。"
+      "category": "Documentation and showcase",
+      "purpose": "Owner-confirmed v6/v21 aggregates and relative-change conventions, without private conversation transcripts."
     },
     {
       "path": "docs/evidence/source-index.json",
-      "category": "文档与展示材料",
-      "purpose": "来源名称、SHA-256与已公开节选的对应索引，不含本机绝对路径。"
+      "category": "Documentation and showcase",
+      "purpose": "Source titles, SHA-256 hashes, and public-excerpt references, without local absolute paths."
     },
     {
       "path": "docs/evidence/unit-scores.json",
-      "category": "文档与展示材料",
-      "purpose": "v21的13个经历单元四维正式评分、正文事实结论和Run ID。"
+      "category": "Documentation and showcase",
+      "purpose": "Formal four-dimension v21 ratings, rewrite-text factual verdicts, and Run IDs for 13 experience units."
     },
     {
       "path": "docs/figures/ai-workflow.mmd",
-      "category": "文档与展示材料",
-      "purpose": "AI工作流的可编辑Mermaid源文件。"
+      "category": "Documentation and showcase",
+      "purpose": "Editable Mermaid source for the AI workflow."
     },
     {
       "path": "docs/figures/ai-workflow.svg",
-      "category": "文档与展示材料",
-      "purpose": "可直接展示的AI任务、校验与事实确认工作流。"
+      "category": "Documentation and showcase",
+      "purpose": "Display-ready diagram of model tasks, validation, and fact confirmation."
     },
     {
       "path": "docs/figures/user-flow.mmd",
-      "category": "文档与展示材料",
-      "purpose": "五步用户流程图的可编辑Mermaid源文件。"
+      "category": "Documentation and showcase",
+      "purpose": "Editable Mermaid source for the five-step user flow."
     },
     {
       "path": "docs/figures/user-flow.svg",
-      "category": "文档与展示材料",
-      "purpose": "可直接展示的五步用户流程图。"
+      "category": "Documentation and showcase",
+      "purpose": "Display-ready diagram of the five-step user flow."
     },
     {
       "path": "docs/images/01-matching.jpg",
-      "category": "文档与展示材料",
-      "purpose": "虚构材料的桌面对照与补问页面截图。"
+      "category": "Documentation and showcase",
+      "purpose": "Desktop matching and follow-up screenshot using fictional material."
     },
     {
       "path": "docs/images/02-rewrite.jpg",
-      "category": "文档与展示材料",
-      "purpose": "虚构材料的原文、改写建议与差异核对截图。"
+      "category": "Documentation and showcase",
+      "purpose": "Original/suggestion comparison and difference-review screenshot using fictional material."
     },
     {
       "path": "docs/images/03-mobile.jpg",
-      "category": "文档与展示材料",
-      "purpose": "虚构材料的移动端页面截图。"
+      "category": "Documentation and showcase",
+      "purpose": "Mobile screenshot using fictional material."
     },
     {
       "path": "docs/images/product-overview.png",
-      "category": "文档与展示材料",
-      "purpose": "GitHub首页使用的四环节产品流程长图，合成材料、模拟模式界面实拍。"
+      "category": "Documentation and showcase",
+      "purpose": "Homepage walkthrough of four workflow sections, captured with synthetic materials in mock mode."
     },
     {
       "path": "docs/testing/README.md",
-      "purpose": "三个阶段测试摘要的总入口，并区分历史评测、当前离线测试与网页回归。",
-      "category": "阶段测试文档"
+      "purpose": "Index of three historical phase reports, distinguishing evaluation, current offline checks, and browser regression.",
+      "category": "Phase reports"
     },
     {
       "path": "docs/testing/phase1/TEST_REPORT.md",
-      "purpose": "本机Demo的四类功能验收、历史测试批次及精简证据说明。",
-      "category": "阶段测试文档"
+      "purpose": "Four local-demo acceptance areas, historical test batches, and concise evidence notes.",
+      "category": "Phase reports"
     },
     {
       "path": "docs/testing/phase2/TEST_REPORT.md",
-      "purpose": "三组合成案例的真实模型基础联调、版本、调用用量与验收依据。",
-      "category": "阶段测试文档"
+      "purpose": "Three-case real-model integration, versions, call usage, and acceptance evidence.",
+      "category": "Phase reports"
     },
     {
       "path": "docs/testing/phase3/TEST_REPORT.md",
-      "purpose": "固定开发集的v6/v21比较、正式人工评分、事实核查分母及回归调用记录。",
-      "category": "阶段测试文档"
+      "purpose": "Fixed development-set v6/v21 comparison, formal human ratings, factual-review denominators, and regression calls.",
+      "category": "Phase reports"
     },
     {
       "path": "examples/README.md",
-      "category": "合成求职示例",
-      "purpose": "两组已完成网页端到端操作的合成案例入口、使用协议和文件说明。"
+      "category": "Synthetic examples",
+      "purpose": "Two completed synthetic browser workflows, usage protocol, and file descriptions."
     },
     {
       "path": "examples/case-02-data-analyst/README.md",
-      "category": "合成求职示例",
-      "purpose": "本组合成示例的实际网页步骤、问答处理、保存验证及事实核查重点。"
+      "category": "Synthetic examples",
+      "purpose": "Observed browser steps, answer handling, save/reopen verification, and factual-review priorities."
     },
     {
       "path": "examples/case-02-data-analyst/final_resume.txt",
-      "category": "合成求职示例",
-      "purpose": "直接取自网页保存版本的完整合成简历终稿。"
+      "category": "Synthetic examples",
+      "purpose": "Complete synthetic resume retrieved directly from the saved browser version."
     },
     {
       "path": "examples/case-02-data-analyst/job_description.txt",
-      "category": "合成求职示例",
-      "purpose": "该组目标岗位JD原始文本；作为初始输入。"
+      "category": "Synthetic examples",
+      "purpose": "Original target JD text used as initial input."
     },
     {
       "path": "examples/case-02-data-analyst/outputs.json",
-      "category": "合成求职示例",
-      "purpose": "本次真实网页测试的解析、关联、T0/T1/T2、来源、确认状态、运行版本与用量。"
+      "category": "Synthetic examples",
+      "purpose": "Actual real-model browser run: parsing, associations, T0/T1/T2, sources, confirmation states, versions, and usage."
     },
     {
       "path": "examples/case-02-data-analyst/resume.txt",
-      "category": "合成求职示例",
-      "purpose": "该组合成简历原始文本；作为初始输入。"
+      "category": "Synthetic examples",
+      "purpose": "Original synthetic resume text used as initial input."
     },
     {
       "path": "examples/case-02-data-analyst/tester_notes.json",
-      "category": "合成求职示例",
-      "purpose": "测试者专用合成事实、预设回答和本次实际问答；不得预先输入模型。"
+      "category": "Synthetic examples",
+      "purpose": "Tester-only synthetic facts, preset answers, and actual questions/actions; not supplied to the model in advance."
     },
     {
       "path": "examples/case-03-algorithm-engineer/README.md",
-      "category": "合成求职示例",
-      "purpose": "本组合成示例的实际网页步骤、问答处理、保存验证及事实核查重点。"
+      "category": "Synthetic examples",
+      "purpose": "Observed browser steps, answer handling, save/reopen verification, and factual-review priorities."
     },
     {
       "path": "examples/case-03-algorithm-engineer/final_resume.txt",
-      "category": "合成求职示例",
-      "purpose": "直接取自网页保存版本的完整合成简历终稿。"
+      "category": "Synthetic examples",
+      "purpose": "Complete synthetic resume retrieved directly from the saved browser version."
     },
     {
       "path": "examples/case-03-algorithm-engineer/job_description.txt",
-      "category": "合成求职示例",
-      "purpose": "该组目标岗位JD原始文本；作为初始输入。"
+      "category": "Synthetic examples",
+      "purpose": "Original target JD text used as initial input."
     },
     {
       "path": "examples/case-03-algorithm-engineer/outputs.json",
-      "category": "合成求职示例",
-      "purpose": "本次真实网页测试的解析、关联、T0/T1/T2、来源、确认状态、运行版本与用量。"
+      "category": "Synthetic examples",
+      "purpose": "Actual real-model browser run: parsing, associations, T0/T1/T2, sources, confirmation states, versions, and usage."
     },
     {
       "path": "examples/case-03-algorithm-engineer/resume.txt",
-      "category": "合成求职示例",
-      "purpose": "该组合成简历原始文本；作为初始输入。"
+      "category": "Synthetic examples",
+      "purpose": "Original synthetic resume text used as initial input."
     },
     {
       "path": "examples/case-03-algorithm-engineer/tester_notes.json",
-      "category": "合成求职示例",
-      "purpose": "测试者专用合成事实、预设回答和本次实际问答；不得预先输入模型。"
+      "category": "Synthetic examples",
+      "purpose": "Tester-only synthetic facts, preset answers, and actual questions/actions; not supplied to the model in advance."
     },
     {
       "path": "lib/evidence-quote.mjs",
-      "category": "后端与Prompt",
-      "purpose": "匹配连续证据来源，对限定的PDF中文换行差异作等价处理。"
+      "category": "Backend and prompt",
+      "purpose": "Matches contiguous source evidence with narrowly defined equivalence for Chinese PDF line breaks."
     },
     {
       "path": "lib/factual-sources.mjs",
-      "category": "后端与Prompt",
-      "purpose": "提取可用于改写的事实内容并检查团队数值成果的归属边界。"
+      "category": "Backend and prompt",
+      "purpose": "Extracts eligible factual content and checks attribution of numerical team achievements."
     },
     {
       "path": "lib/material-pipeline.mjs",
-      "category": "后端与Prompt",
-      "purpose": "组装解析和关联上下文，处理材料脱敏、经历边界与来源检查。"
+      "category": "Backend and prompt",
+      "purpose": "Assembles parsing and matching context; handles de-identification, experience boundaries, and source checks."
     },
     {
       "path": "lib/model-client.mjs",
-      "category": "后端与Prompt",
-      "purpose": "加载v21 Prompt并调用OpenAI兼容API，处理超时、响应与调用错误。"
+      "category": "Backend and prompt",
+      "purpose": "Loads the v21 prompt, calls an OpenAI-compatible API, and handles timeouts, responses, and call errors."
     },
     {
       "path": "package.json",
-      "category": "根目录",
-      "purpose": "Node模块类型、运行环境要求及启动命令；保留原工程元数据。"
+      "category": "Root files",
+      "purpose": "Node module type, runtime requirements, and startup commands; retains the original project metadata."
     },
     {
       "path": "prompts/precise-followup-v21.json",
-      "category": "后端与Prompt",
-      "purpose": "shared、parse、analyze、rewrite四部分提示词；不含API密钥。"
+      "category": "Backend and prompt",
+      "purpose": "The shared, parse, analyze, and rewrite instructions; contains no API key."
     },
     {
       "path": "public/ai-state.js",
-      "category": "前端",
-      "purpose": "标识当前任务和关联快照，避免过期AI结果覆盖新的编辑。"
+      "category": "Frontend",
+      "purpose": "Identifies task and association snapshots so stale AI results cannot overwrite newer edits."
     },
     {
       "path": "public/analysis-model.js",
-      "category": "前端",
-      "purpose": "派生岗位要求判断、下一步建议和改写清单。"
+      "category": "Frontend",
+      "purpose": "Derives requirement judgments, next-step suggestions, and rewrite selection."
     },
     {
       "path": "public/app.js",
-      "category": "前端",
-      "purpose": "页面路由、操作事件、任务与版本存储以及后端请求编排。"
+      "category": "Frontend",
+      "purpose": "Page routing, actions, task/version storage, and backend request orchestration."
     },
     {
       "path": "public/comparison-navigation.js",
-      "category": "前端",
-      "purpose": "对照页面的要求导航与滚动定位。"
+      "category": "Frontend",
+      "purpose": "Requirement navigation and scroll positioning on the matching page."
     },
     {
       "path": "public/comparison-view.js",
-      "category": "前端",
-      "purpose": "渲染岗位匹配、经历依据、判断建议、补问和修改清单。"
+      "category": "Frontend",
+      "purpose": "Renders job matching, experience evidence, judgments, follow-ups, and rewrite selection."
     },
     {
       "path": "public/domain.js",
-      "category": "前端",
-      "purpose": "任务领域规则、材料与事实处理、最终稿组合，以及模拟模式的规则引擎。"
+      "category": "Frontend",
+      "purpose": "Task rules, material and fact handling, final-text assembly, and the mock-mode rule engine."
     },
     {
       "path": "public/followup-state.js",
-      "category": "前端",
-      "purpose": "处理补问答案的开始编辑、取消和提交，保留相关确认状态。"
+      "category": "Frontend",
+      "purpose": "Starts, cancels, and submits answer edits while retaining relevant confirmation states."
     },
     {
       "path": "public/index.html",
-      "category": "前端",
-      "purpose": "网页入口、应用挂载节点、样式与脚本加载。"
+      "category": "Frontend",
+      "purpose": "Page entry point, application mount, styles, and scripts."
     },
     {
       "path": "public/job-focus.js",
-      "category": "前端",
-      "purpose": "根据已核对关联形成岗位重点与经历推荐顺序，不创造新事实。"
+      "category": "Frontend",
+      "purpose": "Builds job emphasis and experience recommendations from reviewed associations without creating facts."
     },
     {
       "path": "public/material-units.js",
-      "category": "前端",
-      "purpose": "判断可处理的材料单元并保留原始章节标题。"
+      "category": "Frontend",
+      "purpose": "Identifies processable material units while preserving original section headings."
     },
     {
       "path": "public/pdf-source.js",
-      "category": "前端",
-      "purpose": "加载PDF.js、渲染PDF预览并在浏览器存储原件。"
+      "category": "Frontend",
+      "purpose": "Loads PDF.js, renders previews, and stores original PDFs in the browser."
     },
     {
       "path": "public/question-scope.js",
-      "category": "前端",
-      "purpose": "管理补问覆盖的岗位要求和回答状态，限制覆盖范围与事实归属。"
+      "category": "Frontend",
+      "purpose": "Manages requirement coverage and answer states, limiting question scope and fact attribution."
     },
     {
       "path": "public/review-presentation.js",
-      "category": "前端",
-      "purpose": "解析校对的显示分组、要求类别样式和文本差异呈现。"
+      "category": "Frontend",
+      "purpose": "Groups parsing-review content and displays requirement categories and text differences."
     },
     {
       "path": "public/review-reference.js",
-      "category": "前端",
-      "purpose": "解析校对时展示简历PDF或JD参考内容并保持定位。"
+      "category": "Frontend",
+      "purpose": "Displays the source resume PDF or JD during review and preserves navigation position."
     },
     {
       "path": "public/review-state.js",
-      "category": "前端",
-      "purpose": "处理校对草稿、变更检测、统一应用及重新确认规则。"
+      "category": "Frontend",
+      "purpose": "Manages review drafts, change detection, applying changes, and reconfirmation rules."
     },
     {
       "path": "public/review-view.js",
-      "category": "前端",
-      "purpose": "渲染材料校对页面与变更提示。"
+      "category": "Frontend",
+      "purpose": "Renders material-review pages and change notices."
     },
     {
       "path": "public/rewrite-editor.js",
-      "category": "前端",
-      "purpose": "显示原文、AI建议与用户编辑差异，维护编辑器交互。"
+      "category": "Frontend",
+      "purpose": "Shows original, suggestion, and user-edit differences and manages editor interactions."
     },
     {
       "path": "public/style.css",
-      "category": "前端",
-      "purpose": "全站基础布局、组件、排版和响应式样式。"
+      "category": "Frontend",
+      "purpose": "Base layouts, components, typography, and responsive styles."
     },
     {
       "path": "public/ui-polish.css",
-      "category": "前端",
-      "purpose": "奶油色视觉、字体层级、导航和核心页面的细节样式。"
+      "category": "Frontend",
+      "purpose": "Warm cream styling, typography hierarchy, navigation, and core-page refinements."
     },
     {
       "path": "public/unit-presentation.js",
-      "category": "前端",
-      "purpose": "为材料单元生成显示标题和辅助信息，不改写原始内容。"
+      "category": "Frontend",
+      "purpose": "Builds display titles and supporting labels without rewriting source content."
     },
     {
       "path": "public/vendor/pdfjs/LICENSE",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/NOTICE.md",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78ms-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/78ms-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/83pv-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/90ms-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/90ms-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/90msp-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/90msp-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/90pv-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/90pv-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Add-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Add-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Add-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Add-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-0.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-1.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-3.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-4.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-5.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-6.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-CNS1-UCS2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-0.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-1.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-3.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-4.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-5.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-GB1-UCS2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-0.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-1.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-3.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-4.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-5.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-6.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Japan1-UCS2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Korea1-0.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Korea1-1.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Korea1-2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Adobe-Korea1-UCS2.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/B5pc-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/B5pc-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/CNS-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/CNS-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/CNS1-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/CNS1-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/CNS2-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/CNS2-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/ETHK-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/ETHK-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/ETen-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/ETen-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/ETenms-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/ETenms-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Ext-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Ext-RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Ext-RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Ext-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GB-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GB-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GB-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GB-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBK-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBK-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBK2K-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBK2K-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBKp-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBKp-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBT-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBT-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBT-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBT-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBTpc-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBTpc-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBpc-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/GBpc-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKdla-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKdla-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKdlb-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKdlb-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKgccs-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKgccs-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKm314-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKm314-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKm471-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKm471-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKscs-B5-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/HKscs-B5-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Hankaku.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Hiragana.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSC-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSC-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSC-Johab-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSC-Johab-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSCms-UHC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSCms-UHC-HW-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSCms-UHC-HW-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSCms-UHC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSCpc-EUC-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/KSCpc-EUC-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Katakana.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/LICENSE",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/NWP-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/NWP-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/RKSJ-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/RKSJ-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/Roman.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UCS2-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UCS2-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UTF16-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UTF16-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UTF8-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniCNS-UTF8-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UCS2-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UCS2-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UTF16-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UTF16-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UTF8-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniGB-UTF8-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UCS2-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UCS2-HW-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UCS2-HW-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UCS2-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UTF16-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UTF16-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UTF8-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS-UTF8-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS2004-UTF16-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS2004-UTF16-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS2004-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS2004-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS2004-UTF8-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJIS2004-UTF8-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISPro-UCS2-HW-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISPro-UCS2-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISPro-UTF8-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISX0213-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISX0213-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISX02132004-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniJISX02132004-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UCS2-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UCS2-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UTF16-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UTF16-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UTF32-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UTF32-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UTF8-H.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/UniKS-UTF8-V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/V.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/cmaps/WP-Symbol.bcmap",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的字符映射文件，用于正确显示PDF文字。"
+      "category": "Third-party resources",
+      "purpose": "Character map used by PDF.js to display PDF text correctly."
     },
     {
       "path": "public/vendor/pdfjs/pdf.min.mjs",
-      "category": "第三方资源",
-      "purpose": "PDF.js浏览器端解析与渲染库。"
+      "category": "Third-party resources",
+      "purpose": "PDF.js browser parsing and rendering library."
     },
     {
       "path": "public/vendor/pdfjs/pdf.worker.min.mjs",
-      "category": "第三方资源",
-      "purpose": "PDF.js后台解析工作线程。"
+      "category": "Third-party resources",
+      "purpose": "PDF.js background parsing worker."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitDingbats.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitFixed.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitFixedBold.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitFixedBoldItalic.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitFixedItalic.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitSerif.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitSerifBold.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitSerifBoldItalic.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitSerifItalic.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/FoxitSymbol.pfb",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/LICENSE_FOXIT",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/LICENSE_LIBERATION",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/LiberationSans-Bold.ttf",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/LiberationSans-BoldItalic.ttf",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/LiberationSans-Italic.ttf",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/standard_fonts/LiberationSans-Regular.ttf",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的标准字体资源。"
+      "category": "Third-party resources",
+      "purpose": "Standard font resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/wasm/LICENSE_JBIG2",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/wasm/LICENSE_OPENJPEG",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/wasm/LICENSE_PDFJS_JBIG2",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/wasm/LICENSE_PDFJS_OPENJPEG",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/wasm/LICENSE_PDFJS_QCMS",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/wasm/LICENSE_QCMS",
-      "category": "第三方资源",
-      "purpose": "PDF.js或其字体、字符映射、解码组件的第三方许可证/声明，保留原文。"
+      "category": "Third-party resources",
+      "purpose": "Original third-party license or notice for PDF.js, fonts, character maps, or decoding components."
     },
     {
       "path": "public/vendor/pdfjs/wasm/jbig2.wasm",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的图像解码或色彩转换资源。"
+      "category": "Third-party resources",
+      "purpose": "Image-decoding or color-conversion resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/wasm/openjpeg.wasm",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的图像解码或色彩转换资源。"
+      "category": "Third-party resources",
+      "purpose": "Image-decoding or color-conversion resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/wasm/openjpeg_nowasm_fallback.js",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的图像解码或色彩转换资源。"
+      "category": "Third-party resources",
+      "purpose": "Image-decoding or color-conversion resource used by PDF.js."
     },
     {
       "path": "public/vendor/pdfjs/wasm/qcms_bg.wasm",
-      "category": "第三方资源",
-      "purpose": "PDF.js使用的图像解码或色彩转换资源。"
+      "category": "Third-party resources",
+      "purpose": "Image-decoding or color-conversion resource used by PDF.js."
     },
     {
       "path": "public/visual-assets.js",
-      "category": "前端",
-      "purpose": "统一线性图标及顶部、侧栏的小插画。"
+      "category": "Frontend",
+      "purpose": "Consistent line icons and small header/sidebar illustrations."
     },
     {
       "path": "qa/README.md",
-      "purpose": "网页测试运行方法、5种场景、隔离方式与结果边界。",
-      "category": "网页自动化回归"
+      "purpose": "Browser-test commands, five scenarios, isolation, and limits of the results.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/SOURCES.json",
-      "purpose": "现有网页测试的来源提交、原始和整理后的哈希以及适配说明。",
-      "category": "网页自动化回归"
+      "purpose": "Browser-script source commits, original/packaged hashes, and adaptation notes.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/VERIFICATION.md",
-      "purpose": "5项网页回归的实际结果、环境、证据哈希及测试范围说明。",
-      "category": "网页自动化回归"
+      "purpose": "Recorded outcomes, environment, evidence hashes, and scope for five browser scenarios.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/comparison-feedback.mjs",
-      "purpose": "校对确认门槛；关联调整与答案/事实保留；长文编辑对齐；采用/编辑/拒绝/保留状态；移动端布局。",
-      "category": "网页自动化回归"
+      "purpose": "Review-confirmation gates; association changes and answer/fact retention; long-text editing alignment; accept/edit/reject/keep states; mobile layout.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/comparison-navigation.mjs",
-      "purpose": "主栏滚动与侧栏定位；反向导航与保存重绘；改写清单选择与展开；移动端横向导航。",
-      "category": "网页自动化回归"
+      "purpose": "Main/sidebar scrolling, reverse navigation and redraw after saving, rewrite selection/expansion, and mobile horizontal navigation.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/fixtures/materials.json",
-      "purpose": "本机协议流程的虚构简历、JD与触发后使用的回答。",
-      "category": "网页自动化回归"
+      "purpose": "Fictional resume, JD, and answers used only after questions are triggered in the local protocol flow.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/package.json",
-      "purpose": "网页回归的独立依赖与运行入口；不增加产品运行依赖。",
-      "category": "网页自动化回归"
+      "purpose": "Separate browser-test dependencies and commands; does not add product runtime dependencies.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/phase2-flow.mjs",
-      "purpose": "真实网页操作贯穿解析、补问、确认、改写与保存；AI上游为本机固定响应，非真实模型。",
-      "category": "网页自动化回归"
+      "purpose": "Browser actions through parsing, questions, confirmation, rewriting, and saving against fixed local upstream responses, not a real model.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/review-reference.mjs",
-      "purpose": "两页合成PDF上传与渲染；翻页/缩放及JD参照；校对内容与PDF保存重开；无效文件保护；备份与隔离数据删除。",
-      "category": "网页自动化回归"
+      "purpose": "Two-page synthetic PDF upload/rendering, navigation/zoom, JD reference, review and PDF reopening, invalid-file protection, backup, and isolated deletion.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/rewrite-feedback.mjs",
-      "purpose": "差异高亮与文本编辑；撤销与中文组合输入；编辑稿持久化；补问/事实定位与分经历草稿；新候选不覆盖当前稿。",
-      "category": "网页自动化回归"
+      "purpose": "Difference highlighting, editing, undo, Chinese composition input, persistent per-experience drafts, question/fact navigation, and candidate-overwrite protection.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/run.mjs",
-      "purpose": "顺序执行5项网页场景；失败即停止，保留日志并明确未执行数量。",
-      "category": "网页自动化回归"
+      "purpose": "Runs five browser scenarios sequentially, stops on failure, and preserves logs and unexecuted counts.",
+      "category": "Browser QA"
     },
     {
       "path": "qa/runtime.mjs",
-      "purpose": "启动随机端口的隔离服务与浏览器，阻断外网页面请求，记录请求、截图轨迹和代码哈希。",
-      "category": "网页自动化回归"
+      "purpose": "Starts isolated services and browsers on random ports, blocks external page requests, and records requests, screenshots, traces, and code hashes.",
+      "category": "Browser QA"
     },
     {
       "path": "requirements.txt",
-      "category": "根目录",
-      "purpose": "PDF文字提取的Python依赖及版本。"
+      "category": "Root files",
+      "purpose": "Python dependencies and versions for PDF text extraction."
     },
     {
       "path": "scripts/pdf_extract.py",
-      "category": "后端与Prompt",
-      "purpose": "使用pypdf从PDF提取文本并以JSON返回结果。"
+      "category": "Backend and prompt",
+      "purpose": "Extracts PDF text with pypdf and returns JSON."
     },
     {
       "path": "server.mjs",
-      "category": "根目录",
-      "purpose": "本机HTTP服务、前端静态资源、PDF提取及AI解析/关联/改写接口和输出校验。"
+      "category": "Root files",
+      "purpose": "Local HTTP service, frontend assets, PDF extraction, AI parsing/matching/rewriting interfaces, and output validation."
     },
     {
       "path": "start-demo.cmd",
-      "category": "根目录",
-      "purpose": "Windows双击启动入口，转交PowerShell启动脚本。"
+      "category": "Root files",
+      "purpose": "Windows double-click launcher that delegates to the PowerShell startup script."
     },
     {
       "path": "start.ps1",
-      "category": "根目录",
-      "purpose": "查找并检查Node运行环境，然后启动本机服务。"
+      "category": "Root files",
+      "purpose": "Finds and checks Node, then starts the local service."
     },
     {
       "path": "tests/README.md",
-      "purpose": "离线测试运行方式、依赖、覆盖范围及结果解释。",
-      "category": "离线自动化测试"
+      "purpose": "Offline test commands, dependencies, coverage, and result interpretation.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/SOURCES.json",
-      "purpose": "每份测试与合成夹具的来源提交、源文件哈希、打包哈希及整理差异。",
-      "category": "离线自动化测试"
+      "purpose": "Source commits, original and packaged hashes, and packaging changes for tests and synthetic fixtures.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/VERIFICATION.md",
-      "purpose": "当前整理包336项离线检查的实际结果、环境与TAP日志哈希。",
-      "category": "离线自动化测试"
+      "purpose": "Recorded results, environment, and TAP-log hash for 336 offline checks.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/ai-pipeline.test.mjs",
-      "purpose": "解析原文覆盖、证据与补问校验、过期响应保护及模型客户端错误处理。",
-      "category": "离线自动化测试"
+      "purpose": "Original-text coverage, evidence and question validation, stale-response protection, and model-client errors.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/analysis-model.test.js",
-      "purpose": "岗位要求判断、关联证据和改写清单的派生规则。",
-      "category": "离线自动化测试"
+      "purpose": "Derived requirement judgments, association evidence, and rewrite selection.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/comparison-view.test.js",
-      "purpose": "岗位对照、补问表单、用户文本转义与展示。",
-      "category": "离线自动化测试"
+      "purpose": "Matching views, follow-up forms, user-text escaping, and rendering.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/condition-contract.test.mjs",
-      "purpose": "明确条件与能力证据状态分离，确定判断必须有对应证据。",
-      "category": "离线自动化测试"
+      "purpose": "Separate states for explicit conditions and capability evidence; definite judgments need matching evidence.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/domain.test.js",
-      "purpose": "材料拆分、事实冲突、模拟候选、最终稿组合与保存前检查。",
-      "category": "离线自动化测试"
+      "purpose": "Material segmentation, fact conflicts, mock suggestions, final-text assembly, and pre-save checks.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/education-condition.test.mjs",
-      "purpose": "学历分类与优先强度分离，混合要求不被机械重分类。",
-      "category": "离线自动化测试"
+      "purpose": "Separation of education categories from preference strength; no mechanical reclassification of mixed requirements.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/evidence-scope-retry.test.mjs",
-      "purpose": "跨经历证据仅纠错一次并完整重校验；JD标题与真实要求的边界。",
-      "category": "离线自动化测试"
+      "purpose": "One correction attempt for cross-experience evidence, full revalidation, and the boundary between JD titles and actual requirements.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/experience-boundaries.test.mjs",
-      "purpose": "独立经历拆分、来源ID与原文完整性，同项目多阶段不机械拆分。",
-      "category": "离线自动化测试"
+      "purpose": "Independent experience boundaries, source IDs, original-text integrity, and preservation of multiple phases within one project.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/factual-boundary.test.mjs",
-      "purpose": "团队成果、未上线及未访谈事实保护，非事实指令不作证据。",
-      "category": "离线自动化测试"
+      "purpose": "Team achievements, not-launched and no-interview facts, and exclusion of non-factual instructions from evidence.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/ai-bc-0006.json",
-      "purpose": "条件状态误用的合成请求与历史响应。",
-      "category": "离线自动化测试"
+      "purpose": "Synthetic request and historical response illustrating incorrect condition-state usage.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/ai-bc-0007-0008.json",
-      "purpose": "学历误分类、确认后重复补问的合成输入与状态。",
-      "category": "离线自动化测试"
+      "purpose": "Synthetic inputs and states for education misclassification and repeated questions after confirmation.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/ai-bc-0011.json",
-      "purpose": "把未提供误判为没有经历的合成任务与响应。",
-      "category": "离线自动化测试"
+      "purpose": "Synthetic task and response confusing missing evidence with no experience.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/factual-boundary.json",
-      "purpose": "团队成果、否定事实及非事实指令边界的虚构材料。",
-      "category": "离线自动化测试"
+      "purpose": "Fictional material for team achievements, negative facts, and non-factual instruction boundaries.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/job-targeting-v9.json",
-      "purpose": "同份合成简历匹配两个JD的历史固定响应与来源哈希；用于当前规则回放。",
-      "category": "离线自动化测试"
+      "purpose": "Historical fixed responses and source hashes for one synthetic resume against two JDs; used to replay current rules.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/parse-identity.json",
-      "purpose": "身份占位符与原文保真检查的虚构简历和JD。",
-      "category": "离线自动化测试"
+      "purpose": "Fictional resume and JD for identity-placeholder and original-text fidelity checks.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/precise-followup-v18-duplicate.json",
-      "purpose": "补问覆盖重复的合成任务与历史响应。",
-      "category": "离线自动化测试"
+      "purpose": "Synthetic task and historical response with duplicate question coverage.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/precise-followup-v18.json",
-      "purpose": "相近与不同补问缺口的合成任务和固定响应。",
-      "category": "离线自动化测试"
+      "purpose": "Synthetic tasks and fixed responses for related versus distinct factual gaps.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/fixtures/precise-followup-v20-rejections.json",
-      "purpose": "明确条件错误绑定与冲突经历补问的拒绝样本。",
-      "category": "离线自动化测试"
+      "purpose": "Rejection samples for invalid condition binding and questions on conflicting experiences.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/followup-state.test.js",
-      "purpose": "补问编辑、取消、替换、确认状态及事实与来源保留。",
-      "category": "离线自动化测试"
+      "purpose": "Answer editing, cancellation, replacement, confirmation, and preservation of facts and sources.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/job-targeting.test.mjs",
-      "purpose": "不同JD的来源和重点组装、推荐顺序、保留原文及事实边界。",
-      "category": "离线自动化测试"
+      "purpose": "Sources and emphasis for different JDs, recommendation order, keeping the original, and factual boundaries.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/manual-followup-payload.test.mjs",
-      "purpose": "手动关联及已回答状态向后端传递，旧响应不覆盖新修改。",
-      "category": "离线自动化测试"
+      "purpose": "Transmission of manual associations and answer states; old responses must not overwrite newer edits.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/none-authorization.test.mjs",
-      "purpose": "未提供、未知或跳过不等于未做过；否定授权限制到原配对。",
-      "category": "离线自动化测试"
+      "purpose": "Missing, unknown, or skipped information must not mean never done; negative claims stay within the original requirement/experience pair.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/parse-identity.test.mjs",
-      "purpose": "身份占位符与原文偏移保留，关键事实缺失仍拒绝。",
-      "category": "离线自动化测试"
+      "purpose": "Identity placeholders and original offsets; missing key facts still cause rejection.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/pdf-evidence-quote.test.mjs",
-      "purpose": "中文PDF换行等价匹配，不放宽数字、否定和来源归属。",
-      "category": "离线自动化测试"
+      "purpose": "Equivalent Chinese PDF line breaks without weakening number, negation, or source-attribution checks.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/pdf-tool-spacing.test.mjs",
-      "purpose": "MATLAB限定空格匹配，其他无来源工具和跨来源拼接仍拒绝。",
-      "category": "离线自动化测试"
+      "purpose": "Narrow MATLAB spacing equivalence; other unsupported tools and cross-source joins remain rejected.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/precise-followup.test.mjs",
-      "purpose": "v21补问契约、同经历缺口合并、草稿保护及确认范围。",
-      "category": "离线自动化测试"
+      "purpose": "The v21 follow-up contract, grouping related gaps within an experience, draft protection, and confirmation scope.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/resolved-questions.test.mjs",
-      "purpose": "已回答、未知、未做过、跳过及归档状态阻止重复补问。",
-      "category": "离线自动化测试"
+      "purpose": "Answered, unknown, not-done, skipped, and archived states prevent repeated questions.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/review-presentation.test.js",
-      "purpose": "校对页面分组、要求类别与文本变化显示。",
-      "category": "离线自动化测试"
+      "purpose": "Review-page grouping, requirement categories, and text-change presentation.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/review-state.test.js",
-      "purpose": "材料校对草稿、格式变化、事实确认和结果失效处理。",
-      "category": "离线自动化测试"
+      "purpose": "Material-review drafts, formatting changes, fact confirmation, and result invalidation.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/rewrite-editor.test.js",
-      "purpose": "原文、建议与手动编辑差异的呈现与文本保护。",
-      "category": "离线自动化测试"
+      "purpose": "Original/suggestion/manual-edit differences and text protection.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/role-attribution.test.js",
-      "purpose": "区分第三方负责人主导与本人主导，保留其他事实限制。",
-      "category": "离线自动化测试"
+      "purpose": "Leadership by another responsible person versus personal leadership, retaining other factual limits.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/server.test.mjs",
-      "purpose": "本机HTTP接口、授权、隐私、并发、错误响应及PDF提取与静态资源。",
-      "category": "离线自动化测试"
+      "purpose": "Local HTTP interfaces, authorization, privacy, concurrency, errors, PDF extraction, and static resources.",
+      "category": "Offline tests"
     },
     {
       "path": "tests/unit-presentation.test.js",
-      "purpose": "经历显示标题、日期、章节与正文保留。",
-      "category": "离线自动化测试"
+      "purpose": "Experience titles, dates, section labels, and body-text preservation.",
+      "category": "Offline tests"
     }
   ]
 }

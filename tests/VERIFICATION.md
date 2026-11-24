@@ -1,23 +1,25 @@
-# 整理后的离线验证
+# Offline Package Verification
 
-| 项目 | 记录 |
+| Item | Record |
 | --- | --- |
-| 产品代码来源 | 58a25be1097a7902058a3c0a78415a2c90408cc5 |
-| Prompt | precise-followup-v21，未修改 |
-| 测试文件 | 24个 |
-| 合成夹具 | 9份 |
-| 执行命令 | node --test --test-reporter=tap |
-| 总检查项 | 336 |
-| 通过 / 失败 | 336 / 0 |
-| 跳过 / 取消 / 待办 | 0 / 0 / 0 |
-| 框架报告耗时 | 2873.2067 ms，非真人操作耗时 |
-| 环境 | Windows，Node.js v24.22.3，Python 3.12.14，pypdf 6.21.4 |
-| 外部模型调用 / API费用 | 0次 / 0元 |
+| Product source commit | `58a25be1097a7902058a3c0a78415a2c90408cc5` |
+| Prompt | `precise-followup-v21`, unchanged |
+| Test files | 24 |
+| Synthetic fixtures | 9 |
+| Command | `node --test --test-reporter=tap` |
+| Total checks | 336 |
+| Passed / failed | 336 / 0 |
+| Skipped / cancelled / todo | 0 / 0 / 0 |
+| Runner-reported duration | 2873.2067 ms; not human operating time |
+| Environment | Windows, Node.js v24.22.3, Python 3.12.14, pypdf 6.21.4 |
+| External model calls / API cost | 0 / CNY 0 |
 
-测试在整理后的展示包根目录运行。PDF提取实际执行且通过，没有将缺依赖的检查记为跳过。HTTP测试连接随机端口的本机测试服务，模拟上游响应；不连接DeepSeek。
+The suite ran from the prepared showcase package root. PDF extraction actually ran and passed; missing dependencies were not classified as skips. HTTP checks used local test servers on random ports with simulated upstream responses, not DeepSeek.
 
-本次复用来源提交中的测试。仅做夹具位置调整、移除无依赖的内部元数据，以及剥离旧Prompt快照之间的历史差异对照；当前程序行为断言保留。逐文件来源及整理差异见[SOURCES.json](SOURCES.json)。
+Existing tests were reused from the source commit. Packaging adjusted fixture locations, removed unused internal metadata, and separated historical comparisons between old prompt snapshots. Current program-behavior assertions were retained. Per-file provenance and packaging changes are in [SOURCES.json](SOURCES.json).
 
-一次完整运行即全部通过，没有为获得通过结果删改失败断言或修改产品实现。运行前后产品代码、Prompt、示例和历史评分文件的SHA-256保持一致。
+The first full run passed. No failing assertions were deleted or altered, and no product implementation was changed to obtain passes. Product code, prompt, examples, and historical score files retained identical SHA-256 hashes before and after execution.
 
-完整TAP输出保留在本地整理工作记录中，不随公开目录放入运行日志；SHA-256：`b9fccf612d9823fc4e888e1f98d17f341356ebaca93a3b214ce737450491c401`。上述结果证明固定测试条件下的程序断言，不代表AI语义质量、网页端到端或真人使用效果。
+The full TAP output remains in the local preparation archive, outside the public package. SHA-256: `b9fccf612d9823fc4e888e1f98d17f341356ebaca93a3b214ce737450491c401`.
+
+These are the recorded checks from package preparation, not a new test run performed for the English translation. They establish program behavior under fixed conditions, not AI semantic quality, browser end-to-end success, or real-user outcomes.

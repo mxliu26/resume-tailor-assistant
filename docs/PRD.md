@@ -1,62 +1,62 @@
-# 简历定制助手 产品需求摘要
+# ResumeTailor: Product Requirements Summary
 
-简历定制助手面向已有基础简历和目标岗位的求职者，帮助用户从真实经历中选择相关内容、补齐必要事实，核对并保存岗位简历版本。核心交付物是用户确认后的修改稿。
+ResumeTailor helps job seekers who already have a resume and a target role select relevant experience, clarify necessary facts, and review and save a tailored version. The core deliverable is a revised draft confirmed by the user.
 
-## 用户与问题
+## Users and Problems
 
-优先服务准备实习或初级岗位的求职者，包括需要解释科研、课程和竞赛经历，以及同时申请多个相关岗位的人。产品围绕三个任务设计：看懂岗位需要什么、说清本人实际做过什么、核对 AI 是否改变了事实。
+The initial audience is applicants for internships and entry-level roles, including people explaining research, coursework, or competition projects and applying to several related roles. The product addresses three tasks: understand the job requirements, explain what the applicant actually did, and check whether AI changed the facts.
 
-这些场景来自原 PRD 的需求假设与后续案例验证，不写成已经完成的大规模用户调研结论。
+These scenarios come from the original PRD's assumptions and later case-based validation. They are not presented as findings from large-scale user research.
 
-## 目标与范围
+## Goals and Scope
 
-| 产品目标 | 对应设计 |
+| Goal | Design response |
 | --- | --- |
-| 找到岗位关联 | JD 要求与简历来源逐项对应，用户可调整关联与判断 |
-| 补齐必要信息 | 围绕职责、方法和产出补问，用户可确认、修改、跳过或保留未知 |
-| 形成可核对的表达 | 原文与建议并列，显示修改理由、事实依据和编辑差异 |
-| 保存不同岗位版本 | 任务、草稿和已确认版本分别保存，可复用已有素材 |
+| Find relevant experience | Match JD requirements to resume sources, with user-adjustable associations and judgments. |
+| Clarify necessary information | Ask about responsibilities, methods, and outputs; allow confirmation, editing, skipping, or an unknown state. |
+| Make wording reviewable | Compare original and suggested text, with explanations, factual sources, and edit differences. |
+| Keep versions for different roles | Save tasks, drafts, and confirmed versions separately, with reuse of existing material. |
 
-一次任务对应一份简历和一份 JD；输入为文本或可提取文字的 PDF，JD 使用文本。输出为可编辑、可复制、可保存的简历文本。扫描件 OCR、自动投递、录用概率预测和自动排版导出不属于本摘要的功能范围。
+A task pairs one resume with one JD. Resume input can be text or a PDF with extractable text; the JD is text. The output is editable, copyable, and savable resume text. Scanned-document OCR, automatic applications, hiring-probability predictions, and formatted document export are outside this summary's scope.
 
-## 五步核心流程
+## Five-Step Workflow
 
-| 页面 | 用户要完成的任务 | 主要操作 |
+| Page | User task | Main actions |
 | --- | --- | --- |
-| 材料输入 | 提供正确的简历与 JD | 粘贴文本、上传 PDF、新建任务 |
-| 解析校对 | 确认系统读对经历与岗位要求 | 查看原材料、纠正内容、确认校对 |
-| 对照与补问 | 看清关联、补齐影响表达的事实 | 调整关联、回答或跳过、确认事实、选择改写范围 |
-| 改写工作台 | 判断建议是否真实、合适 | 查看差异与依据、编辑、接受、拒绝或保留原文 |
-| 岗位版本 | 保存可继续使用的成果 | 确认保存、复制、重开或创建另一岗位任务 |
+| Material input | Provide the correct resume and JD | Paste text, upload a PDF, create a task. |
+| Parsing review | Confirm the experience and requirements were read correctly | Inspect source material, correct content, confirm review. |
+| Matching and follow-ups | Understand relevance and clarify facts that affect wording | Adjust associations, answer or skip, confirm facts, select rewrite scope. |
+| Rewrite workspace | Decide whether suggestions are factual and useful | Inspect differences and sources; edit, accept, reject, or keep the original. |
+| Role-specific version | Save a result for later use | Confirm saving, copy, reopen, or create a task for another role. |
 
-## 功能要求
+## Functional Requirements
 
-| 编号 | 功能 | 关键要求 |
+| ID | Area | Key requirements |
 | --- | --- | --- |
-| FR-01 | 材料与任务 | 保留原始输入；不同 JD 建立独立任务；输入失败时保留已填内容 |
-| FR-02 | 解析与校对 | 经历、日期与来源可核对；原文和校对内容分开；材料纠正后更新相关结果 |
-| FR-03 | 经历关联 | 区分岗位明确条件和能力证据；支持多来源关联；关联选择不等于确认事实 |
-| FR-04 | 补问与事实 | 问题应服务于改写；补充需用户确认；未知、未做过、跳过与冲突不转成肯定事实 |
-| FR-05 | 逐条改写 | 只使用本经历合格来源；保留职责、数字口径和否定限定；原文适合时允许保留 |
-| FR-06 | 保存与复用 | 保存草稿及岗位版本；重新打开保留内容与确认状态；来源变化后重新核对相关事实 |
-| FR-07 | 异常与隐私 | 模型失败不覆盖现有成果；提供手动重试和材料删除；密钥仅由本机后端读取 |
+| FR-01 | Materials and tasks | Preserve original input; create separate tasks for different JDs; retain entered content when input fails. |
+| FR-02 | Parsing and review | Make experiences, dates, and sources reviewable; separate originals from reviewed text; update affected results after corrections. |
+| FR-03 | Experience matching | Distinguish explicit job conditions from capability evidence; support multiple sources; selecting an association does not confirm a fact. |
+| FR-04 | Follow-ups and facts | Ask questions that support rewriting; require confirmation of additions; never convert unknown, not-done, skipped, or conflicting states into affirmative facts. |
+| FR-05 | Per-experience rewriting | Use only eligible sources for that experience; retain responsibilities, metric definitions, and negative qualifiers; allow suitable original text to remain. |
+| FR-06 | Saving and reuse | Save drafts and role-specific versions; preserve text and confirmation states on reopening; review affected facts again when sources change. |
+| FR-07 | Errors and privacy | Failed model calls must not overwrite existing work; support manual retry and material deletion; read keys only in the local backend. |
 
-## 必须保持的事实边界
+## Required Factual Boundaries
 
-1. 校对原文与已确认补充是改写依据；不能根据 JD 反推用户做过的事。
-2. “团队完成”不能自动变成“本人主导”，“未提供证据”不能直接变成“没有做过”。
-3. 数字要保留对象、单位和口径；存在冲突时不能仅凭单侧材料选定答案。
-4. 未选中的内容默认保留；用户可保留原文，不以修改数量衡量成功。
-5. 上游内容变化时，旧关联与建议需按当前材料重新核对，不能静默覆盖用户编辑。
+1. Reviewed original text and confirmed additions support rewriting. A JD cannot establish what the applicant has done.
+2. A team achievement must not become personal leadership. Missing evidence must not automatically become a claim that the applicant has never done something.
+3. Numbers must retain their subject, unit, and definition. Conflicting evidence must not be resolved by choosing one side without support.
+4. Unselected content is preserved by default. Users may keep the original; the number of edits is not a success metric.
+5. After upstream changes, existing associations and suggestions must be checked against the current materials. They must not silently overwrite user edits.
 
-这些是产品规则和校验目标，不表示模型每次生成都天然符合要求。
+These are product requirements and validation goals, not a claim that every model response automatically satisfies them.
 
-## 数据与责任分工
+## Data and Responsibilities
 
-用户负责核对材料、确认新增事实和决定最终采用的文本。模型负责解析、提出关联与补问、生成表达候选；程序负责结构、来源、状态及部分事实边界校验。任务与版本保存在浏览器本机，PDF 原件使用浏览器存储，后端读取本机配置后调用兼容 OpenAI API 的模型服务。
+The user reviews materials, confirms new facts, and selects the final wording. The model parses materials, proposes associations and follow-ups, and drafts suggestions. The program validates structure, sources, state, and selected factual boundaries. Tasks and versions are stored locally in the browser, with original PDFs in browser storage. The backend reads local configuration and calls an OpenAI-compatible model service.
 
-## 验证口径
+## Validation Criteria
 
-流程以“是否生成建议、能否核对和保存”分开检查；表达按岗位相关性、具体性、清晰性、简洁性各 0—2 分评价；事实一致性作为独立门槛。评分不能抵消事实错误，用户点击接受也不能单独证明建议正确。
+Suggestion generation, review, and saving are checked separately. Writing quality is rated for job relevance, specificity, clarity, and conciseness, each from 0 to 2. Factual consistency is an independent gate. Scores cannot offset factual errors, and clicking accept does not by itself prove a suggestion is correct.
 
-来源：S01、S15—S19、S22、S23，见[证据索引](evidence/source-index.json)。
+Sources: S01, S15–S19, S22, S23. See the [evidence index](evidence/source-index.json).

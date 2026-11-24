@@ -1,72 +1,77 @@
-# 四个典型 Bad Case 与修复思路
+# Four Representative Bad Cases and Their Fixes
 
-这些案例展示如何区分程序问题与模型输出问题，并通过对应证据验证修改。历史请求、模型响应和校验规则分别保留，不用人工改写响应获得“通过”。以下只陈述已经有专项验证支撑的修复范围。
+These cases show how program defects and model-output errors were distinguished and checked against evidence. Historical requests, responses, and validation rules are preserved separately; responses were not manually rewritten to manufacture passes. Claims below are limited to the scope supported by targeted verification.
 
-## 1. 已有到岗事实未传给模型
+Evidence excerpts are described in English for readability. The linked original Chinese records remain unchanged.
 
-**问题编号：AE-BC-0002；问题类型：程序上下文组装。**
+## 1. Existing Availability Facts Were Omitted from the Model Request
 
-| 环节 | 内容 |
+**Issue: AE-BC-0002 · Type: program context assembly**
+
+| Step | Finding |
 | --- | --- |
-| 发现问题 | 原文已有到岗安排，但分析请求只筛选可改写经历，遗漏了独立的基本信息来源。 |
-| 定位原因 | 把“用于核对条件的来源”与“可改写经历”共用同一筛选规则。 |
-| 最小修复 | 分离条件来源与经历来源；给出来源 ID 和用途，条件信息可以参与核对，但不会被当成可改写经历。 |
-| Prompt与程序区分 | 历史修复中v7同步提示检查条件来源；当前展示沿用v21，不在本次修改Prompt。 |
-| 验证结果 | 目标案例0006、0008重新关联时分别正确引用“可每周5天，持续3个月”和“每周可到岗3天，连续4个月”，不再重复索要这两项信息。 |
-| 结论范围 | 证明条件来源传递与目标样本核对恢复；不扩大为全部岗位判断正确。 |
+| Observed problem | Availability was already in the resume, but the analysis request selected only rewritable experiences and omitted a separate basic-information source. |
+| Cause | Sources for checking explicit conditions and sources for rewriting experiences shared the same filter. |
+| Minimal fix | Separate condition sources from experience sources and provide source IDs and purposes. Condition information can support checks without becoming a rewritable experience. |
+| Prompt vs. program | The historical v7 change also instructed the model to inspect condition sources. The showcase retains v21; this documentation change does not modify the prompt. |
+| Verification | In targeted re-analysis, cases 0006 and 0008 correctly cited availability of five days per week for three months and three days per week for four consecutive months, respectively. These two facts were no longer requested again. |
+| Scope of conclusion | Condition-source transmission and checks recovered for the target samples. This does not establish that every job-fit judgment is correct. |
 
-修复代码：de2a6a08348c65e3359f1058273f33f10ee7f69a。证据：S08、S09。
+Fix code: `de2a6a08348c65e3359f1058273f33f10ee7f69a`. Evidence: S08, S09.
 
-## 2. 无合法经历归属的补问阻塞整个关联结果
+## 2. Follow-Ups Without a Valid Experience Binding Blocked the Entire Result
 
-**问题编号：AE-BC-0001；问题类型：模型生成约束与请求契约。**
+**Issue: AE-BC-0001 · Type: model-generation constraints and request contract**
 
-| 环节 | 内容 |
+| Step | Finding |
 | --- | --- |
-| 发现问题 | 模型为明确条件或没有有效经历 ID 的要求生成补问，程序拒绝整份响应，无法继续改写。 |
-| 定位原因 | 模型生成问题时没有充分遵守允许的要求、经历与状态范围。 |
-| 最小修复 | 请求显式提供补问允许范围、状态和数量；Prompt先完成关联，再校对问题合法性。旧校验保持严格，不自动删除错误问题或替换来源 ID。 |
-| Prompt与程序区分 | 历史修复调整analyze Prompt；没有通过放宽响应校验“消除”报错。 |
-| 验证结果 | 0002、0006定向复测完成实际触发的补问及后续改写；确认、未做过、未知按冻结协议执行。随后v8同10组完整回归完成10/10，生成13个经历单元建议。 |
-| 结论范围 | 程序流程恢复与补问语义质量分别判断；10/10只指建议生成，不代表全部建议可无条件采用。 |
+| Observed problem | The model asked follow-ups for explicit conditions or requirements without an eligible experience ID. The program rejected the entire response, blocking rewriting. |
+| Cause | Question generation did not sufficiently respect the allowed requirements, experiences, and states. |
+| Minimal fix | Explicitly supply eligible follow-up scopes, states, and counts. Instruct the model to complete associations before checking question validity. Keep validation strict; do not silently delete invalid questions or replace source IDs. |
+| Prompt vs. program | The historical fix changed the `analyze` prompt. It did not remove the error by weakening response validation. |
+| Verification | Targeted runs for 0002 and 0006 completed the triggered follow-ups and subsequent rewriting, applying confirmed, not-done, and unknown states under the frozen protocol. The later full v8 regression generated suggestions for all 10 cases and 13 experience units. |
+| Scope of conclusion | Workflow recovery and the semantic quality of questions are judged separately. 10/10 means suggestion generation, not unconditional usability of every suggestion. |
 
-修复代码：de2a6a08348c65e3359f1058273f33f10ee7f69a；后续完整回归：a053e03b5f8fbb2277954f3c24a8b5cd96b64b83。证据：S07、S08、S09。
+Fix code: `de2a6a08348c65e3359f1058273f33f10ee7f69a`. Later full regression: `a053e03b5f8fbb2277954f3c24a8b5cd96b64b83`. Evidence: S07, S08, S09.
 
-## 3. PDF 排版空格让已有工具名被误判为新增
+## 3. PDF Spacing Made an Existing Tool Name Look Unsupported
 
-**问题编号：WEB-v21-BC-0004；问题类型：程序来源匹配。**
+**Issue: WEB-v21-BC-0004 · Type: program source matching**
 
-| 环节 | 内容 |
+| Step | Finding |
 | --- | --- |
-| 发现问题 | PDF提取把工具名保留为“MA TLAB”，模型写回“MATLAB”；连续字符串匹配失败，建议被拦截。 |
-| 定位原因 | 原文来源和模型规范写法之间存在已证实的排版空格差异，不是模型新增工具。 |
-| 最小修复 | 仅对已引用来源中的独立“MA TLAB”空格写法进行临时等价匹配，仍检查否定与来源归属；不去除任意空格、不跨行或跨来源拼接。 |
-| Prompt与程序区分 | v21 Prompt不变，原始材料和模型原始响应不改写。 |
-| 验证结果 | 25项相关离线检查通过；同一失败原响应3/3建议回放通过。原网页任务重新调用后生成3项建议，保存草稿、刷新重开后正文和来源一致。 |
-| 结论范围 | 网页验证覆盖建议与草稿持久化；没有代替用户确认采用或保存正式岗位版本。私人简历与完整响应不进入展示材料。 |
+| Observed problem | PDF extraction produced `MA TLAB`; the model returned `MATLAB`. Contiguous-string matching failed and blocked the suggestion. |
+| Cause | The source and normalized model wording differed by a verified layout space. The tool itself was not invented. |
+| Minimal fix | Treat only the standalone `MA TLAB` form in a cited source as equivalent during matching. Retain negative qualifiers and attribution checks. Do not remove arbitrary spaces or join text across lines or sources. |
+| Prompt vs. program | The v21 prompt, original material, and raw model response were unchanged. |
+| Verification | All 25 related offline checks passed. Replaying the same failed response accepted all three suggestions. A subsequent call from the original browser task generated three suggestions; the draft was saved, refreshed, and reopened with matching text and sources. |
+| Scope of conclusion | The browser check covered suggestions and draft persistence. It did not confirm adoption or save a final role-specific version on the user's behalf. Private resumes and full responses are excluded from showcase materials. |
 
-修复代码：0d1b96b。证据：S10。
+Fix code: `0d1b96b`. Evidence: S10.
 
-## 4. 通过 Prompt 约束修复跨经历证据引用
+## 4. A Prompt Constraint Corrected Cross-Experience Evidence Citations
 
-**问题编号：AE-BC-0005；问题类型：模型输出与 Prompt 来源归属指引；历史版本：v7 → v8。**
+**Issue: AE-BC-0005 · Type: model output and prompt guidance on source attribution · Historical versions: v7 → v8**
 
-| 环节 | 内容 |
+| Step | Finding |
 | --- | --- |
-| 原始错误 | 0010案例中，主关联绑定“图像标注质检”，却同时引用独立技能段“能够按规则核对记录，并标记需要再次确认的条目。”，原校验器以HTTP 422拒绝整份结果。 |
-| 根因判断 | Prompt要求全局检查多来源，却未充分重申主关联的证据归属边界；这条技能陈述虽存在于简历，仍不能当作该质检经历的具体证据。 |
-| Prompt修改 | v8追加：每条能力关联证据的source.experienceId必须等于当前experienceId；只引用该经历原文和同经历已确认补充；条件引用例外不适用于能力关联。 |
-| 改动范围 | 只在analyze提示中追加规则，shared、parse、rewrite保持一致；加载器指向v8。没有修改模型原始响应，也没有放宽事实来源校验。 |
-| 离线验证 | 历史专项记录64项通过、0失败、0跳过；错误跨源引用仍应被拦截。 |
-| 真实复测 | v8的一次0010关联复测，相关证据仅保留同经历的“两表对样本IMG-046判定相反，尚未复核，不能确认哪个结果正确。”，不再引用独立技能段，原来源校验通过。 |
-| 结论范围 | 本例验证的是证据归属修复；不能据此认定冲突判断、本人职责归属或全部后续调用都正确。此处采用历史AI辅助证据复核，不新增正式人工评分。 |
+| Original error | In case 0010, the primary association was bound to image annotation quality checks but cited a separate skills section about checking records against rules and flagging items for confirmation. The existing validator rejected the result with HTTP 422. |
+| Cause | The prompt required a global review of multiple sources without sufficiently restating the primary association's attribution boundary. Although the skills statement existed in the resume, it was not evidence for that specific quality-check experience. |
+| Prompt change | v8 added a rule that each capability-association citation's `source.experienceId` must equal the current `experienceId`. Only that experience's original text and confirmed additions are allowed. Exceptions for condition sources do not apply to capability associations. |
+| Change scope | Rules were appended only to `analyze`; `shared`, `parse`, and `rewrite` were unchanged, and the loader selected v8. Raw responses and factual-source validation were not modified. |
+| Offline verification | The historical targeted run recorded 64 passes, 0 failures, and 0 skips. Invalid cross-source citations remained rejectable. |
+| Real-model retest | A v8 analysis retest for 0010 cited only the same experience's evidence: the two tables disagreed on sample IMG-046, the discrepancy had not been reviewed, and neither result could be confirmed. It no longer cited the separate skills section, and existing source validation passed. |
+| Scope of conclusion | This verifies source attribution for the case, not correct conflict resolution, personal responsibility attribution, or every subsequent call. The evidence review was AI-assisted; no new formal human rating is introduced here. |
 
-修复提交：4de7daa3ffbd6ddc640c5ab0dcbd8ae8a4a3bf5d。失败Run：AE-CANDIDATE-P1-20261122-0010-01-analyze；复测Run：AE-CANDIDATE-P1-20261122-0010-02-analyze。
+Fix commit: `4de7daa3ffbd6ddc640c5ab0dcbd8ae8a4a3bf5d`.
 
-[查看实际证据片段与 Prompt 增量](evidence/prompt-fix-example.json)。来源S08、S09、S25—S32。本次仅整理历史案例，当前展示产品的v21 Prompt没有修改。
+- Failed run: `AE-CANDIDATE-P1-20261122-0010-01-analyze`
+- Retest run: `AE-CANDIDATE-P1-20261122-0010-02-analyze`
 
-## 形成的处理方法
+[Actual evidence excerpts and prompt delta](evidence/prompt-fix-example.json). Sources: S08, S09, S25–S32. This is a historical case summary; the showcase product's v21 prompt is unchanged.
 
-先判断失败来自输入、上下文、模型输出还是程序校验；复用原失败响应做离线复现；只修改根因所在位置；再进行必要的真实复测。校验保护与模型语义质量分开记录，局部通过不扩大成整体能力结论。
+## Working Method
 
-精简记录见[Bad Case 数据](evidence/bad-case-records.json)，来源名称及哈希见[证据索引](evidence/source-index.json)。
+Identify whether a failure originates in input, assembled context, model output, or program validation. Reproduce it offline with the original failed response, change the component responsible, and make only the real-model retests needed. Record validation behavior separately from semantic quality, and keep conclusions within the verified scope.
+
+See the [structured bad-case records](evidence/bad-case-records.json) and [source names and hashes](evidence/source-index.json).

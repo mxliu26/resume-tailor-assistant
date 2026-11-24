@@ -1,88 +1,88 @@
-# AI 效果评测摘要
+# AI Evaluation Summary
 
-在同一套10组固定合成开发案例中，简历建议成功生成比例由v6的8/10提升至v21的10/10，可评价经历单元由11个增加至13个。v21的13个经历单元经人工确认，改写质量平均得分为85÷13＝6.54/8；真实模型接入与评测基线v6约5.41/8，按本次负责人确认的汇总值计算，较基线提高约21%。正文事实准确性检查为13/13通过。
+Across the same 10 fixed synthetic development cases, resume suggestion generation increased from 8/10 in v6 to 10/10 in v21, and evaluable experience units increased from 11 to 13. The 13 v21 units received human-confirmed scores totaling 85, averaging 6.54/8. The real-model integration and evaluation baseline, v6, scored approximately 5.41/8 according to the aggregate confirmed by the project owner. Comparing these aggregate means gives an increase of approximately 21%. Factual accuracy checks on v21 rewrite text passed 13/13.
 
-另据负责人手工记录，同10组案例的单份简历人工修正量由平均3.8次降至2.0次，减少约47%；计数范围与逐例数据见下文。
+Separately, the project owner's manual records for the same 10 cases show average manual corrections per resume falling from 3.8 to 2.0, approximately 47% fewer. Counting rules and per-case values are below.
 
-## 数据范围与评分性质
+## Data Scope and Rating Status
 
-- 使用固定的v2开发集与AE-RUBRIC-v2规则。0003/0004为同一简历匹配不同JD，分别评价，但不是两个独立来源样本。
-- v21评分为“人工评分，经AI辅助复核后由负责人确认”，非独立盲评。v6约5.41采用负责人确认的汇总评分。
-- “约21%”按展示均值计算：(6.54－5.41)÷5.41≈20.9%。这是汇总均值的相对变化，不是逐经历单元的配对提升结论。
-- 本次未提供5.41对应的逐单元分数、总分及有效评分单元数，因此不反推明细；11个可评价输出单元也不自动作为该汇总分的评分分母。v21的评分分母明确为13个经历单元。
-- 模型为DeepSeek deepseek-flash，关闭思考。v6评测产品代码为ca08ce6；v21正式评分对应ec6dff9。展示代码58a25be仍使用v21 Prompt；本摘要是历史评测与本次人工更正的整理，不是当前代码的新评测。
+- The evaluation uses the fixed v2 development set and `AE-RUBRIC-v2`. Cases 0003/0004 pair the same resume with different JDs. They are scored separately but are not two independent source samples.
+- The v21 scores are **human ratings confirmed by the project owner after AI-assisted review, not an independent blind assessment**. The approximately 5.41 v6 mean is an owner-confirmed aggregate.
+- The approximately 21% figure uses the displayed means: `(6.54 - 5.41) / 5.41 ≈ 20.9%`. It is a relative change in aggregate means, not a paired improvement across experience units.
+- Unit-level v6 scores, their total, and the effective scoring denominator for 5.41 were not supplied with this correction. They are not reconstructed. The 11 evaluable v6 outputs are not automatically the denominator of that aggregate. The v21 scoring denominator is explicitly 13 experience units.
+- The model was DeepSeek `deepseek-flash`, with thinking disabled. v6 evaluation code: `ca08ce6`; v21 formal ratings: `ec6dff9`. Showcase runtime `58a25be` still uses the v21 prompt. This summary combines historical evaluation and owner-confirmed reporting corrections; it is not a new evaluation of the current runtime.
 
-## 核心指标
+## Core Metrics
 
-| 指标与口径 | v6 | v21 |
+| Metric and definition | v6 | v21 |
 | --- | --- | --- |
-| 简历建议成功生成比例：完成建议生成案例数 / 计划案例数 | 8/10＝80% | 10/10＝100% |
-| 可评价经历单元数：有可核查建议的经历单元 | 11个 | 13个 |
-| 改写质量平均得分：四维满分8分 | 约5.41/8，负责人本次确认的汇总；评分明细未提供 | 85/13＝6.54/8，13单元正式人工评分 |
-| 汇总均分的相对变化 | 比较起点 | 约增加1.13分；按汇总均值估算约提升21% |
-| 事实准确性检查：正文通过数 / 已完成正文核查数 | 未纳入本次比较 | 13/13＝100% |
-| 正文事实核查覆盖：已完成核查数 / 计划经历单元数 | 未提供逐单元核查明细 | 13/13 |
-| 流程阻塞、无法评价的经历单元 | 2 | 0 |
-| 单份简历人工修正量：人工修改总次数 / 已记录案例数 | 38/10＝3.8次 | 20/10＝2.0次，减少约47% |
+| Resume suggestion generation success rate: cases that generated suggestions / planned cases | 8/10 = 80% | 10/10 = 100% |
+| Evaluable experience units: units with reviewable suggestions | 11 | 13 |
+| Average rewrite quality score: four dimensions, maximum 8 | Approximately 5.41/8; owner-confirmed aggregate without unit-level scores | 85/13 = 6.54/8; formal human ratings for 13 units |
+| Relative change in aggregate mean | Comparison baseline | Approximately +1.13 points, or +21% based on aggregate means |
+| Factual accuracy checks: passing rewrite units / completed factual reviews | Not included in this comparison | 13/13 = 100% |
+| Rewrite-text factual review coverage: reviewed units / planned units | Unit-level review detail not supplied | 13/13 |
+| Blocked units that could not be evaluated | 2 | 0 |
+| Manual corrections per resume: total manual corrections / recorded cases | 38/10 = 3.8 | 20/10 = 2.0; approximately 47% fewer |
 
-事实通过只覆盖当次改写正文与允许来源的一致性，不代表上游解析、关联、补问或全部使用场景均正确。没有逐单元明细时，不生成配对比较或把缺失项记为0。
+A factual pass means the evaluated rewrite text was consistent with its allowed sources. It does not establish that every upstream parsing result, association, follow-up, or use case was correct. Missing unit-level data is not converted into a paired comparison or a zero score.
 
-## 四维8分规则
+## Four-Dimension, Eight-Point Rubric
 
-| 维度 | 0分 | 1分 | 2分 |
+| Dimension | 0 points | 1 point | 2 points |
 | --- | --- | --- | --- |
-| 岗位相关性 | 忽略关键内容或堆词 | 主要内容相关，仍有次要信息 | 取舍清楚、自然回应岗位 |
-| 具体性 | 空泛、难辨实际工作 | 有明确行为和有依据的方法或产出 | 职责、行动和产出具体适当 |
-| 清晰性 | 重要歧义、职责不明 | 基本清楚、需轻微调整 | 结构直接、容易理解 |
-| 简洁性 | 重复堆词或误删重要事实 | 基本精炼 | 事实完整且紧凑 |
+| Job relevance | Ignores important content or merely inserts keywords | Main content is relevant, with some secondary material | Makes clear choices and naturally addresses the role |
+| Specificity | Vague; actual work is difficult to identify | Describes a clear action and an evidenced method or output | Responsibilities, actions, and outputs are appropriately concrete |
+| Clarity | Material ambiguity or unclear responsibilities | Generally clear, with minor adjustments needed | Direct structure and easy to understand |
+| Conciseness | Repetitive wording or removal of important facts | Generally concise | Compact while retaining the necessary facts |
 
-按经历单元评分，事实核查另列。只有确实无法评价时才使用空值；阻塞和未评价不算事实通过，也不按0分混入均值。
+Scores apply to experience units; factual review is separate. Use a null score only when a unit genuinely cannot be evaluated. Blocked and unreviewed units do not count as factual passes and are not entered as zeroes in the average.
 
-## v21的13个经历单元正式评分
+## Formal v21 Ratings: 13 Experience Units
 
-四维顺序为“岗位相关性 / 具体性 / 清晰性 / 简洁性”。本表展示已确认的v21明细；v6仅展示负责人确认的汇总均分。
+Dimension order: **job relevance / specificity / clarity / conciseness**. The table contains the confirmed v21 ratings. For v6, only the owner-confirmed aggregate mean is reported. Experience titles below are English descriptions of the original Chinese records.
 
-| 案例 / 单元 | 经历 | v21四维 | v21总分 | v21正文事实 |
+| Case / unit | Experience | v21 dimensions | Total | Rewrite-text facts |
 | --- | --- | --- | --- | --- |
-| 0001/U01 | 订单质量看板 | 2 / 2 / 2 / 2 | 8 | 通过 |
-| 0002/U01 | 阅读工具需求整理 | 1 / 2 / 1 / 1 | 5 | 通过 |
-| 0003/U01 | 校内活动报名优化 | 2 / 2 / 2 / 1 | 7 | 通过 |
-| 0003/U02 | 校园导览卡片 | 1 / 2 / 2 / 2 | 7 | 通过 |
-| 0004/U01 | 校内活动报名优化 | 2 / 2 / 2 / 1 | 7 | 通过 |
-| 0004/U02 | 校园导览卡片 | 1 / 2 / 2 / 2 | 7 | 通过 |
-| 0005/U01 | 预约系统测试 | 2 / 2 / 2 / 2 | 8 | 通过 |
-| 0006/U01 | 仓储缺货记录整理 | 2 / 2 / 2 / 1 | 7 | 通过 |
-| 0007/U01 | 门店经营资料整理 | 1 / 1 / 1 / 1 | 4 | 通过 |
-| 0008/U01 | 社团工单整理 | 1 / 2 / 1 / 1 | 5 | 通过 |
-| 0009/U01 | 活动页复盘 | 2 / 2 / 2 / 1 | 7 | 通过 |
-| 0010/U01 | 图像标注质检 | 1 / 2 / 1 / 1 | 5 | 通过 |
-| 0010/U02 | 术语表维护 | 2 / 2 / 2 / 2 | 8 | 通过 |
+| 0001/U01 | Order quality dashboard | 2 / 2 / 2 / 2 | 8 | Pass |
+| 0002/U01 | Requirements organization for a reading tool | 1 / 2 / 1 / 1 | 5 | Pass |
+| 0003/U01 | Campus event registration improvements | 2 / 2 / 2 / 1 | 7 | Pass |
+| 0003/U02 | Campus guide cards | 1 / 2 / 2 / 2 | 7 | Pass |
+| 0004/U01 | Campus event registration improvements | 2 / 2 / 2 / 1 | 7 | Pass |
+| 0004/U02 | Campus guide cards | 1 / 2 / 2 / 2 | 7 | Pass |
+| 0005/U01 | Booking system testing | 2 / 2 / 2 / 2 | 8 | Pass |
+| 0006/U01 | Warehouse stockout records | 2 / 2 / 2 / 1 | 7 | Pass |
+| 0007/U01 | Store operations materials | 1 / 1 / 1 / 1 | 4 | Pass |
+| 0008/U01 | Student club ticket organization | 1 / 2 / 1 / 1 | 5 | Pass |
+| 0009/U01 | Event page review | 2 / 2 / 2 / 1 | 7 | Pass |
+| 0010/U01 | Image annotation quality checks | 1 / 2 / 1 / 1 | 5 | Pass |
+| 0010/U02 | Glossary maintenance | 2 / 2 / 2 / 2 | 8 | Pass |
 
-## 同一简历对不同JD的定向差异
+## Targeting Different JDs with the Same Resume
 
-0003面向社群运营，将重复咨询整理、置顶说明和与组织者核对前置；0004面向交互设计，将表单流程草图、Figma可点击原型和字段说明前置。两者都保留“由另一位同学开发、本人没有编写上线代码”“提醒功能只停留在讨论”“未记录报名转化率”等限定。
+Case 0003 targets community operations and leads with recurring inquiries, pinned guidance, and coordination with organizers. Case 0004 targets interaction design and leads with form-flow sketches, clickable Figma prototypes, and field descriptions. Both preserve the limits that another student implemented the software, the applicant did not write the production code, reminders remained a discussion, and registration conversion was not recorded.
 
-这展示了岗位重点的变化，不单凭排序或字数变化判定质量。两组U01的v21正式评分均为7/8；本摘要不提供缺少基线逐单元明细的配对评分。
+This shows a change in role-specific emphasis. Quality is not judged by word count or ordering alone. Both U01 units received formal v21 scores of 7/8. No paired score comparison is reported without the corresponding unit-level baseline detail.
 
-## 单份简历人工修正量
+## Manual Corrections per Resume
 
-定义：从基础简历输入到最后得到最终版，中间需要人工修正的次数。数据由负责人手工记录并在本次整理时提供，非系统自动统计，不使用AI代理操作次数替代人工次数。
+Definition: the number of manual corrections needed between initial resume input and the final version. The project owner recorded these counts manually and supplied them during documentation preparation. They are not system telemetry, and AI-agent actions are not substituted for human corrections.
 
-### 计数范围
+### Counting Scope
 
-| 产品环节 | 可能发生的人工操作 | 是否计入人工修正 |
+| Product step | Possible manual action | Included? |
 | --- | --- | --- |
-| 材料输入与解析校对 | 修正PDF提取错误，以及AI识别错误的项目名称、日期、职责 | 计入，归为解析修正 |
-| 岗位要求与经历关联 | 纠正不相关经历被判断为相关等关联或判断错误 | 计入，归为关联修正 |
-| 动态补问与事实确认 | 正常回答AI问题、补充真实经历 | 不计入，属于必要信息补充 |
-| AI改写与核对 | 纠正事实错误、遗漏信息、不准确措辞或表达不清 | 计入，归为改写修正 |
-| 最终版本编辑 | 进一步修改AI生成稿，使内容准确、清晰、符合岗位 | 计入；区分纠错与个人偏好调整 |
+| Material input and parsing review | Correct PDF extraction or misidentified project names, dates, and responsibilities | Yes: parsing correction |
+| Requirement-to-experience matching | Correct associations or judgments, such as an unrelated experience being treated as relevant | Yes: matching correction |
+| Follow-ups and fact confirmation | Answer normal model questions or provide additional true experience | No: necessary information gathering |
+| Rewrite review | Correct factual errors, omissions, inaccurate wording, or unclear expression | Yes: rewrite correction |
+| Final editing | Refine the generated draft for accuracy, clarity, and relevance | Yes; distinguish error correction from personal preference |
 
-### 逐例记录与计算
+### Per-Case Records and Calculation
 
-以下按负责人提供的固定10组案例顺序记录，不混入另五组合成案例，不额外推断具体运行批次。
+The sequence follows the 10 fixed cases as supplied by the owner. It excludes the separate five-case synthetic test set and does not infer an additional run-batch mapping.
 
-| 案例顺序 | v6人工修改次数 | v21人工修改次数 |
+| Case order | v6 manual corrections | v21 manual corrections |
 | --- | ---: | ---: |
 | 01 | 5 | 4 |
 | 02 | 3 | 1 |
@@ -94,20 +94,24 @@
 | 08 | 5 | 3 |
 | 09 | 4 | 2 |
 | 10 | 5 | 2 |
-| 合计 | 38 | 20 |
-| 均值（各10组） | 3.8 | 2.0 |
+| Total | 38 | 20 |
+| Mean, 10 cases each | 3.8 | 2.0 |
 
-单份简历平均减少1.8次；相对降幅＝(3.8－2.0)÷3.8×100%≈47.4%，对外简写为“减少约47%”。两版的统计分母均为10组已记录案例。
+The mean decreased by 1.8 corrections per resume. Relative reduction: `(3.8 - 2.0) / 3.8 × 100% ≈ 47.4%`, summarized as approximately 47% fewer corrections. Both denominators are 10 recorded cases.
 
-### 记录边界
+### Evidence Limits
 
-- 本次核对了数值及算术，未重新观察人工操作；负责人提供的记录和规则见[结构化记录](evidence/manual-corrections.json)，来源S40。
-- 未提供逐次修改日志、各环节细分和连续编辑同一问题的合并方式，不补造事件明细。最终编辑按规则计入，但现有汇总无法拆出纠错与个人偏好各占多少次。
-- 本指标独立于建议生成成功比例，不据此将v6阻塞项改记成功，也不补造缺失的T1/T2。
-- 次数减少不等于人工耗时降低或AI正文事实错误减少，不据此推算满意度。
+- Values and arithmetic were checked during documentation preparation; the human actions were not observed again. The supplied records and counting rules are in the [structured record](evidence/manual-corrections.json), source S40.
+- Per-edit logs, stage-level breakdowns, and a convention for merging consecutive edits to the same problem were not supplied. No event detail is reconstructed. Final edits are included, but the aggregate cannot separate corrections from personal preferences.
+- This metric is independent of suggestion generation success. It does not change blocked v6 results to successful runs or reconstruct missing T1/T2 text.
+- Fewer corrections do not establish lower human completion time, fewer factual errors in rewrite text, or higher satisfaction.
 
-## 补问及使用效果口径
+## Follow-Ups and Usage Metrics
 
-v21共7道实际补问，人工认可6道；实际回答仍为7次，未证明补问效率提升。本摘要不包含未执行的5组留出验证集，不混入另五组合成案例的不同版本结果。自动化运行时间、代理修改次数不能替代真人定制耗时或人工修正量；没有真人对照数据时，不填写节省率或满意度。
+v21 produced seven actual follow-up questions; six were accepted in human review. Users still supplied seven answers, so these counts do not establish improved follow-up efficiency. The five held-out validation cases were not run and are excluded. Results from other versions of the separate five-case synthetic test set are not mixed in.
 
-[v21正式评分摘录](evidence/unit-scores.json) · [指标汇总](evidence/metrics.json) · [负责人确认的评分口径](evidence/review-confirmation.json)。来源S01、S04—S07、S20、S21、S24、S33、S34、S40；统计分母、评分性质和版本来源分别保留。
+Automated runtime and AI-agent edit counts cannot stand in for real-user completion time or human correction counts. Without comparable human timing or satisfaction data, no time-saving rate or satisfaction score is reported.
+
+[Formal v21 score extract](evidence/unit-scores.json) · [Metric records](evidence/metrics.json) · [Owner-confirmed scoring conventions](evidence/review-confirmation.json)
+
+Sources: S01, S04–S07, S20, S21, S24, S33, S34, S40. Denominators, rating status, and version provenance remain separate.

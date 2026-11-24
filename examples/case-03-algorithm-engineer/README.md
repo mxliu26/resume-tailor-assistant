@@ -1,25 +1,25 @@
-# 计算机视觉算法实习 · 合成示例
+# Computer Vision Internship: Synthetic Example
 
-[原始简历](resume.txt) · [岗位JD](job_description.txt) · [测试者参考](tester_notes.json) · [完整运行结果](outputs.json) · [网页保存终稿](final_resume.txt)
+[Original resume](resume.txt) · [Job description](job_description.txt) · [Tester reference](tester_notes.json) · [Full run record](outputs.json) · [Saved final resume](final_resume.txt)
 
-## 本次实际操作
+## Recorded Browser Flow
 
-粘贴两份文本 → 创建任务并同意解析 → 核对经历与岗位要求 → 确认进入关联 → 填写预设答案并确认事实 → 进入改写并同意生成 → 逐条接受 → 预览并确认保存 → 刷新 → 从“我的任务”重新打开 → 查看保存版本。
+Paste both texts → create a task and consent to parsing → review experiences and requirements → confirm matching → provide a preset answer and confirm the facts → enter rewriting and consent to generation → accept the suggestion → preview and confirm saving → refresh → reopen from the task list → view the saved version.
 
-实际补问本人是否参与离线推理验证及整理报告/文档。填写并确认：
+The actual follow-up asked whether the applicant participated in offline inference validation and organized reports or documentation. The supplied and confirmed answer is translated below; the original remains in the run record:
 
-> 我负责标注清洗、训练参数记录和3组消融结果整理；主干网络结构改进是导师和另一位同学完成的。
+> I handled annotation cleaning, training-parameter records, and the organization of three sets of ablation results. My supervisor and another student made the backbone architecture improvements.
 
-该答案只确认已有设定中的本人职责，不表示已经参与离线推理验证；模型保留该项未说明状态。
+This answer confirms only the applicant's responsibilities defined in the synthetic case. It does not establish participation in offline inference validation; the model retained that item as unspecified.
 
-生成1条建议；本次AI代理核对后直接采用，没有人工改写模型初稿。原文T0、首次T1、保存T2及逐条来源分别保留在outputs.json。未选择改写的单元保持原文。刷新后版本文本、建议内容与事实状态均一致，保存文本可正常显示。
+The model generated one suggestion. After AI-agent review, it was adopted without editing the first draft. T0, first T1, saved T2, and sources remain in `outputs.json`. Unselected units retained their original text. After refresh, the saved version, suggestion, and factual states matched, and saved text displayed correctly.
 
-## 重点核对
+## Review Priorities
 
-- 团队指标及数字口径：T1保留团队、固定验证集与AP50，未写成本人独立提升或生产业务准确率。
-- 本人职责与已确认事实：网页回答后确认，再按同一经历来源整合；未追加本人负责网络结构改进。
-- 部署与未知能力：T1保留未部署，未补写TensorRT/ONNX部署、推理时延或本人参与离线推理验证。
+- **Team metrics and definitions:** T1 retained team attribution, the fixed validation set, and AP50. It did not claim independent personal improvement or production accuracy.
+- **Personal responsibilities and confirmed additions:** The browser answer was confirmed before integration under the same experience source. The applicant was not credited with the network architecture changes.
+- **Deployment and unknown capability:** T1 retained the not-deployed qualifier. It did not add TensorRT/ONNX deployment, inference latency, or personal participation in offline inference validation.
 
-本次结论为浏览器前端自动化操作完成、AI辅助事实核查待人工复核，不属于正式人工评分或真人内测。
+The recorded outcome is completion of browser automation, with AI-assisted factual checks pending human review. It is not a formal human rating or a real-user trial.
 
-代码来源：58a25be1097a7902058a3c0a78415a2c90408cc5；Prompt：precise-followup-v21；模型：deepseek-flash，关闭思考。Session：SYN3-SHOWCASE-20261124-01；本组4次调用，16684 Token，保守估算0.054812元。
+Runtime source: `58a25be1097a7902058a3c0a78415a2c90408cc5`. Prompt: `precise-followup-v21`. Model: `deepseek-flash`, thinking disabled. Session: `SYN3-SHOWCASE-20261124-01`. This case used 4 calls and 16,684 tokens, with a conservative estimated cost of CNY 0.054812.

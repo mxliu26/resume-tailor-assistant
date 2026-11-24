@@ -1,67 +1,69 @@
-# 第三阶段：AI效果评测与优化
+# Phase 3: AI Evaluation and Optimization
 
-使用固定合成开发集比较建议生成、表达质量与事实一致性。v21的10组案例均到达建议生成，13个经历单元取得正式人工评分；详细分数沿用已有归档，本次不新增评分。
+A fixed synthetic development set was used to compare suggestion generation, writing quality, and factual consistency. All 10 v21 cases reached suggestion generation, and 13 experience units received formal human ratings. This report retains the archived scores and introduces no new ratings.
 
-## 数据与方法
+## Data and Method
 
-| 项目 | 固定口径 |
+| Item | Fixed convention |
 | --- | --- |
-| 开发集 | 10组案例、13个经历单元；AE-DATASET-v2 |
-| 其他案例 | 5组留出案例不计入本报告，未执行 |
-| 评分规则 | AE-RUBRIC-v2；岗位相关性、具体性、清晰性、简洁性，各0—2分，总分8分 |
-| 事实核查 | 独立于表达评分；按经历单元检查数字、工具、职责、来源和必要限定 |
-| 模型 | DeepSeek `deepseek-flash`，关闭思考 |
-| 基线 | `ca08ce6`＋`phase2-v6`，对应`v0.2.0-eval-baseline` |
-| v21评测代码 | `ec6dff9`＋`precise-followup-v21` |
-| 当前展示代码 | `58a25be`＋`precise-followup-v21`，与历史评测版本分别记录 |
+| Development set | 10 cases, 13 experience units; `AE-DATASET-v2` |
+| Other cases | Five held-out cases were not executed and are excluded |
+| Scoring rules | `AE-RUBRIC-v2`; job relevance, specificity, clarity, and conciseness, each 0–2, totaling 8 |
+| Factual review | Separate from writing scores; check numbers, tools, responsibilities, sources, and necessary qualifiers per experience unit |
+| Model | DeepSeek `deepseek-flash`, thinking disabled |
+| Baseline | `ca08ce6` + `phase2-v6`, tagged `v0.2.0-eval-baseline` |
+| v21 evaluation code | `ec6dff9` + `precise-followup-v21` |
+| Current showcase runtime | `58a25be` + `precise-followup-v21`, identified separately from the historical evaluation |
 
-开始时只提供简历和JD；实际触发补问后才按固定模拟用户协议回答、确认或跳过。原始模型输出、程序采用结果、AI预评分及正式人工评分分别保留。
+Only the resume and JD were initially supplied. Answers, confirmation, or skipping followed the fixed simulated-user protocol only after questions were triggered. Raw model outputs, program-accepted results, AI preliminary scores, and formal human ratings remain separate.
 
-0003/0004使用同一份简历、不同JD，分别评分，属于同源材料家族。只对双方均可评价、且能对齐的经历单元计算配对差异；本次v6汇总没有逐单元明细，不生成配对提升结论。
+Cases 0003/0004 share one resume but use different JDs. They are scored separately and belong to the same source-material family. A paired difference requires aligned units that are evaluable in both versions. The current v6 aggregate lacks unit-level scores, so no paired improvement is calculated.
 
-## 已确认指标
+## Confirmed Metrics
 
-| 指标及分母 | v6 | v21 |
+| Metric and denominator | v6 | v21 |
 | --- | --- | --- |
-| 简历建议成功生成比例：完成建议生成案例数 / 计划案例数 | 8/10＝80% | 10/10＝100% |
-| 可评价经历单元数 | 11个 | 13个 |
-| 改写质量平均得分：四维总分 / 已评分经历单元数 | 约5.41/8，负责人确认的汇总值，评分分母明细未提供 | 85/13＝6.54/8，13个单元正式人工评分 |
-| 事实准确性检查：正文通过数 / 已完成正文核查数 | 本摘要不做基线事实率比较 | 13/13＝100% |
-| 正文事实核查覆盖：已完成核查数 / 计划单元数 | 本摘要不做基线覆盖比较 | 13/13＝100% |
-| 流程阻塞单元 | 2个 | 0个 |
-| 单份简历人工修正量：人工修改总次数 / 已记录案例数 | 38/10＝3.8次 | 20/10＝2.0次，减少约47%；负责人手工记录 |
+| Resume suggestion generation success rate: cases with suggestions / planned cases | 8/10 = 80% | 10/10 = 100% |
+| Evaluable experience units | 11 | 13 |
+| Average rewrite quality score: total four-dimension points / rated units | Approximately 5.41/8; owner-confirmed aggregate, detailed scoring denominator not supplied | 85/13 = 6.54/8; formal human ratings for 13 units |
+| Factual accuracy checks: passing rewrite units / completed reviews | No baseline factual-rate comparison in this report | 13/13 = 100% |
+| Rewrite-text review coverage: reviewed units / planned units | No baseline coverage comparison in this report | 13/13 = 100% |
+| Blocked experience units | 2 | 0 |
+| Manual corrections per resume: total corrections / recorded cases | 38/10 = 3.8 | 20/10 = 2.0, approximately 47% fewer; manually recorded by the owner |
 
-v21评分为**人工评分，经AI辅助复核后由负责人确认，非独立盲评**。采用负责人已确认的展示口径，按(6.54−5.41)÷5.41计算，汇总均分约提高21%；这是不同有效评分范围的汇总比较，不是逐单元配对提升。基线11个可评价输出也不自动作为5.41的评分分母。
+v21 scores are **human ratings confirmed by the project owner after AI-assisted review, not an independent blind assessment**. Using the owner-confirmed reporting convention, `(6.54 - 5.41) / 5.41` gives approximately 21% growth in aggregate means. The effective scoring populations differ; this is not a paired unit-level improvement. The 11 evaluable baseline outputs are not automatically the scoring denominator for 5.41.
 
-建议生成完成、正文事实通过、上游判断正确和最终可采用性是不同维度。正文13/13通过的结论仅覆盖当次允许来源与建议正文，不扩大为所有解析、关联或补问均正确。
+Suggestion generation, factual accuracy of rewrite text, correctness of upstream judgments, and final usability are different dimensions. The 13/13 factual pass covers the evaluated text against its allowed sources, not every parsing result, association, or question.
 
-## 评价与优化体现
+## What the Evaluation and Iterations Show
 
-- **流程与来源**：先处理补问绑定、有效事实遗漏和来源引用问题，使既定案例能继续到建议生成。各轮改动与代码SHA见[CHANGELOG](../../../CHANGELOG.md)。
-- **岗位定向**：0003面向社群运营，前置咨询整理、置顶说明及组织者跟进；0004面向交互设计，前置流程草图、Figma原型和字段说明。开发由他人完成、提醒功能仅讨论、未记录转化率等限定保留。
-- **评价可追溯**：13个单元分别保留experienceId、四维评分、正文事实结论和改写Run ID。详见[正式评分摘录](../../evidence/unit-scores.json)与[评测摘要](../../EVALUATION_SUMMARY.md)。
+- **Workflow and sources:** Repairs addressed question binding, omitted valid facts, and source citations so the planned cases could reach suggestion generation. Changes and source SHAs are in the [changelog](../../../CHANGELOG.md).
+- **Job targeting:** Case 0003 targets community operations and emphasizes inquiry organization, pinned guidance, and organizer follow-up. Case 0004 targets interaction design and emphasizes flow sketches, Figma prototypes, and field descriptions. Both retain the limits that another person implemented the software, reminders were only discussed, and conversion was not recorded.
+- **Traceable ratings:** Each of the 13 units retains its `experienceId`, dimension scores, rewrite-text factual verdict, and rewrite Run ID. See the [formal score extract](../../evidence/unit-scores.json) and [evaluation summary](../../EVALUATION_SUMMARY.md).
 
-补问独立统计：7道实际问题中人工认可6道，实际回答7次；不据补问数据单独宣称效率提升。新增人工修正量采用负责人提供的手工记录：从输入到最终版的10组案例，v6共38次、v21共20次。正常补问与必要事实补充不计入，最终编辑需区分纠错和个人偏好；详见[计数规则与逐例记录](../../EVALUATION_SUMMARY.md#单份简历人工修正量)。没有逐次日志，不补造环节细分；不改变已有模型流程结果。自动化耗时、代理修改次数和API响应时间不换算成人工耗时或用户满意度。
+Follow-ups are counted separately: six of seven actual questions were accepted in human review, with seven answers supplied. These figures alone do not establish an efficiency gain. The owner separately supplied manual correction counts for the 10 cases from input to final version: 38 in v6 and 20 in v21. Normal questions and necessary factual additions are excluded; final edits distinguish corrections from preferences. See the [counting rules and records](../../EVALUATION_SUMMARY.md#manual-corrections-per-resume).
 
-## v21完整回归的调用记录
+No per-edit logs were supplied, so stage-level detail is not reconstructed and model execution results are not changed. Automated runtime, agent edits, and API latency are not converted into human time or satisfaction.
 
-| 项目 | 本批记录 |
+## v21 Full-Regression Call Record
+
+| Item | This batch |
 | --- | --- |
-| 批次 | `AE-PRECISE-v21-20261123` |
-| 真实API调用 | 35次 |
-| 输入 / 输出 / 合计Token | 68,553 / 12,739 / 81,292 |
-| 当时保守费用估算 | 0.239018元 |
+| Batch | `AE-PRECISE-v21-20261123` |
+| Real API calls | 35 |
+| Input / output / total tokens | 68,553 / 12,739 / 81,292 |
+| Historical conservative cost estimate | CNY 0.239018 |
 
-该费用只对应v21的10组完整回归，不是全部历史迭代消费；专项与失败实验保留在原账本中。本次整理未调用API。费用沿用历史记录，不代表当前价格或实际账单。
+This cost covers only the full v21 regression on 10 cases, not all historical iterations. Targeted runs and failed experiments remain in the original ledger. Documentation preparation made no API calls. Historical estimates are not current prices or provider invoices.
 
-## 证据来源
+## Sources
 
-| 来源编号 | 支撑内容 |
+| Source IDs | Supports |
 | --- | --- |
-| S04、S05、S06 | v21正式人工评分、负责人确认、代码与案例冻结记录 |
-| S24 | 四维规则及独立事实核查门槛 |
-| S33、S34 | 本次负责人确认的展示评分口径；v6实际生成流程结果 |
-| S39 | v21完整回归调用、Token、费用及批次归属；其中原AI预评分不代替S04/S05人工结果 |
-| S40 | 负责人提供的两版各10组人工修正次数及计数范围；非系统自动统计 |
+| S04, S05, S06 | Formal v21 ratings, owner confirmation, and code/case freeze |
+| S24 | Four-dimension rubric and separate factual gate |
+| S33, S34 | Owner-confirmed reporting convention and actual v6 generation results |
+| S39 | Full v21 batch calls, tokens, costs, and attribution; its original AI preliminary scores do not replace the human results in S04/S05 |
+| S40 | Owner-supplied manual correction counts for 10 cases per version and their scope; not system telemetry |
 
-[证据索引](../../evidence/source-index.json) · [指标汇总](../../evidence/metrics.json) · [评分口径确认](../../evidence/review-confirmation.json) · [典型Bad Case](../../BAD_CASES.md)。
+[Evidence index](../../evidence/source-index.json) · [Metrics](../../evidence/metrics.json) · [Scoring confirmation](../../evidence/review-confirmation.json) · [Bad cases](../../BAD_CASES.md)

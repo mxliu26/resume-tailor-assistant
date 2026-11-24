@@ -1,202 +1,204 @@
-# 目录与文件说明
+# Repository and File Guide
 
-本说明帮助阅读者理解各目录和文件，也便于后续整理仓库首页。完整清单见[FILE_INDEX.json](FILE_INDEX.json)。
+This guide explains directory responsibilities and each first-party file. The complete inventory is in [FILE_INDEX.json](FILE_INDEX.json).
 
-## 目录职责
+## Directory Responsibilities
 
-| 目录 | GitHub目录介绍可用文案 |
+| Directory | Description |
 | --- | --- |
-| public/ | 前端界面、任务交互、核对编辑与浏览器本机存储。 |
-| public/vendor/pdfjs/ | 随产品提供的PDF预览依赖及原始第三方许可。 |
-| lib/ | 模型接口、材料解析、经历来源与事实校验。 |
-| prompts/ | 固定的v21解析、关联补问与逐条改写Prompt。 |
-| scripts/ | PDF文字提取等本机辅助脚本。 |
-| examples/ | 两组通过网页操作验证的合成材料、问答协议、AI初稿与保存版本。 |
-| tests/ | 当前v21程序规则的离线自动化测试、合成夹具及验证说明。 |
-| qa/ | 隔离浏览器网页回归，检查交互、编辑、PDF与保存恢复，不调用付费模型。 |
-| docs/ | 产品设计、流程图、截图、评测摘要和典型修复案例。 |
-| docs/figures/ | 用户流程与AI工作流的SVG和Mermaid源文件。 |
-| docs/images/ | 合成材料产品截图与流程展示长图。 |
-| docs/evidence/ | 评分口径、逐单元结果和典型案例的精简证据。 |
-| docs/testing/ | 本机Demo、真实模型联调及AI效果评测的三阶段精简报告与证据导航。 |
+| `public/` | Frontend pages, task interactions, review/editing, and browser-local storage. |
+| `public/vendor/pdfjs/` | Bundled PDF preview dependencies and original third-party licenses. |
+| `lib/` | Model interfaces, material parsing, experience sources, and factual validation. |
+| `prompts/` | Fixed v21 instructions for parsing, matching/follow-ups, and per-experience rewriting. |
+| `scripts/` | Local helpers such as PDF text extraction. |
+| `examples/` | Two synthetic cases with verified browser actions, answer protocols, first suggestions, and saved versions. |
+| `tests/` | Offline program checks, synthetic fixtures, and verification notes for the current v21 runtime. |
+| `qa/` | Isolated browser regression for interaction, editing, PDF handling, and save/restore, with no paid model calls. |
+| `docs/` | Product design, workflows, screenshots, evaluation, and representative fixes. |
+| `docs/figures/` | SVG diagrams and editable Mermaid sources for user and AI workflows. |
+| `docs/images/` | Synthetic-material screenshots and the product walkthrough. |
+| `docs/evidence/` | Concise evidence for scoring conventions, unit results, and selected cases. |
+| `docs/testing/` | Three concise phase reports and navigation to their evidence. |
 
-## 根目录
+English documentation explains the product. Runtime prompts, interface text, test fixtures, original model outputs, and evidence records retain their original language and content.
 
-| 文件 | 内容与用途 |
+## Root Files
+
+| File | Contents and purpose |
 | --- | --- |
-| [.env.example](../.env.example) | 提供mock/live、端口、模型、超时与PDF提取配置示例；API密钥为空。 |
-| [.gitignore](../.gitignore) | 排除密钥、私人材料、用户数据和运行日志；仅放行指定展示截图。 |
-| [CHANGELOG.md](../CHANGELOG.md) | 按迭代主题记录主要产品改动、Prompt版本与研发来源SHA。 |
-| [README.md](../README.md) | GitHub首页入口：产品介绍、流程、截图、评测摘录、启动方法和文档导航。 |
-| [package.json](../package.json) | Node模块类型、运行环境要求及启动命令；保留原工程元数据。 |
-| [requirements.txt](../requirements.txt) | PDF文字提取的Python依赖及版本。 |
-| [server.mjs](../server.mjs) | 本机HTTP服务、前端静态资源、PDF提取及AI解析/关联/改写接口和输出校验。 |
-| [start-demo.cmd](../start-demo.cmd) | Windows双击启动入口，转交PowerShell启动脚本。 |
-| [start.ps1](../start.ps1) | 查找并检查Node运行环境，然后启动本机服务。 |
+| [.env.example](../.env.example) | Example configuration for mock/live mode, ports, model, timeouts, and PDF extraction; the API key is blank. |
+| [.gitignore](../.gitignore) | Excludes secrets, private materials, user data, and runtime logs; allows only specified showcase images. |
+| [CHANGELOG.md](../CHANGELOG.md) | Major changes by iteration, prompt versions, and source SHAs from the development repository. |
+| [README.md](../README.md) | Repository homepage: product, workflow, screenshots, evaluation highlights, setup, and documentation links. |
+| [package.json](../package.json) | Node module type, runtime requirements, and startup commands; retains the original project metadata. |
+| [requirements.txt](../requirements.txt) | Python dependencies and versions for PDF text extraction. |
+| [server.mjs](../server.mjs) | Local HTTP service, frontend assets, PDF extraction, AI parsing/matching/rewriting interfaces, and output validation. |
+| [start-demo.cmd](../start-demo.cmd) | Windows double-click launcher that delegates to the PowerShell startup script. |
+| [start.ps1](../start.ps1) | Finds and checks Node, then starts the local service. |
 
-## 后端与Prompt
+## Backend and Prompt
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [lib/evidence-quote.mjs](../lib/evidence-quote.mjs) | 匹配连续证据来源，对限定的PDF中文换行差异作等价处理。 |
-| [lib/factual-sources.mjs](../lib/factual-sources.mjs) | 提取可用于改写的事实内容并检查团队数值成果的归属边界。 |
-| [lib/material-pipeline.mjs](../lib/material-pipeline.mjs) | 组装解析和关联上下文，处理材料脱敏、经历边界与来源检查。 |
-| [lib/model-client.mjs](../lib/model-client.mjs) | 加载v21 Prompt并调用OpenAI兼容API，处理超时、响应与调用错误。 |
-| [prompts/precise-followup-v21.json](../prompts/precise-followup-v21.json) | shared、parse、analyze、rewrite四部分提示词；不含API密钥。 |
-| [scripts/pdf_extract.py](../scripts/pdf_extract.py) | 使用pypdf从PDF提取文本并以JSON返回结果。 |
+| [lib/evidence-quote.mjs](../lib/evidence-quote.mjs) | Matches contiguous source evidence with narrowly defined equivalence for Chinese PDF line breaks. |
+| [lib/factual-sources.mjs](../lib/factual-sources.mjs) | Extracts eligible factual content and checks attribution of numerical team achievements. |
+| [lib/material-pipeline.mjs](../lib/material-pipeline.mjs) | Assembles parsing and matching context; handles de-identification, experience boundaries, and source checks. |
+| [lib/model-client.mjs](../lib/model-client.mjs) | Loads the v21 prompt, calls an OpenAI-compatible API, and handles timeouts, responses, and call errors. |
+| [prompts/precise-followup-v21.json](../prompts/precise-followup-v21.json) | The shared, parse, analyze, and rewrite instructions; contains no API key. |
+| [scripts/pdf_extract.py](../scripts/pdf_extract.py) | Extracts PDF text with pypdf and returns JSON. |
 
-## 前端自有文件
+## First-Party Frontend Files
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [public/ai-state.js](../public/ai-state.js) | 标识当前任务和关联快照，避免过期AI结果覆盖新的编辑。 |
-| [public/analysis-model.js](../public/analysis-model.js) | 派生岗位要求判断、下一步建议和改写清单。 |
-| [public/app.js](../public/app.js) | 页面路由、操作事件、任务与版本存储以及后端请求编排。 |
-| [public/comparison-navigation.js](../public/comparison-navigation.js) | 对照页面的要求导航与滚动定位。 |
-| [public/comparison-view.js](../public/comparison-view.js) | 渲染岗位匹配、经历依据、判断建议、补问和修改清单。 |
-| [public/domain.js](../public/domain.js) | 任务领域规则、材料与事实处理、最终稿组合，以及模拟模式的规则引擎。 |
-| [public/followup-state.js](../public/followup-state.js) | 处理补问答案的开始编辑、取消和提交，保留相关确认状态。 |
-| [public/index.html](../public/index.html) | 网页入口、应用挂载节点、样式与脚本加载。 |
-| [public/job-focus.js](../public/job-focus.js) | 根据已核对关联形成岗位重点与经历推荐顺序，不创造新事实。 |
-| [public/material-units.js](../public/material-units.js) | 判断可处理的材料单元并保留原始章节标题。 |
-| [public/pdf-source.js](../public/pdf-source.js) | 加载PDF.js、渲染PDF预览并在浏览器存储原件。 |
-| [public/question-scope.js](../public/question-scope.js) | 管理补问覆盖的岗位要求和回答状态，限制覆盖范围与事实归属。 |
-| [public/review-presentation.js](../public/review-presentation.js) | 解析校对的显示分组、要求类别样式和文本差异呈现。 |
-| [public/review-reference.js](../public/review-reference.js) | 解析校对时展示简历PDF或JD参考内容并保持定位。 |
-| [public/review-state.js](../public/review-state.js) | 处理校对草稿、变更检测、统一应用及重新确认规则。 |
-| [public/review-view.js](../public/review-view.js) | 渲染材料校对页面与变更提示。 |
-| [public/rewrite-editor.js](../public/rewrite-editor.js) | 显示原文、AI建议与用户编辑差异，维护编辑器交互。 |
-| [public/style.css](../public/style.css) | 全站基础布局、组件、排版和响应式样式。 |
-| [public/ui-polish.css](../public/ui-polish.css) | 奶油色视觉、字体层级、导航和核心页面的细节样式。 |
-| [public/unit-presentation.js](../public/unit-presentation.js) | 为材料单元生成显示标题和辅助信息，不改写原始内容。 |
-| [public/visual-assets.js](../public/visual-assets.js) | 统一线性图标及顶部、侧栏的小插画。 |
+| [public/ai-state.js](../public/ai-state.js) | Identifies task and association snapshots so stale AI results cannot overwrite newer edits. |
+| [public/analysis-model.js](../public/analysis-model.js) | Derives requirement judgments, next-step suggestions, and rewrite selection. |
+| [public/app.js](../public/app.js) | Page routing, actions, task/version storage, and backend request orchestration. |
+| [public/comparison-navigation.js](../public/comparison-navigation.js) | Requirement navigation and scroll positioning on the matching page. |
+| [public/comparison-view.js](../public/comparison-view.js) | Renders job matching, experience evidence, judgments, follow-ups, and rewrite selection. |
+| [public/domain.js](../public/domain.js) | Task rules, material and fact handling, final-text assembly, and the mock-mode rule engine. |
+| [public/followup-state.js](../public/followup-state.js) | Starts, cancels, and submits answer edits while retaining relevant confirmation states. |
+| [public/index.html](../public/index.html) | Page entry point, application mount, styles, and scripts. |
+| [public/job-focus.js](../public/job-focus.js) | Builds job emphasis and experience recommendations from reviewed associations without creating facts. |
+| [public/material-units.js](../public/material-units.js) | Identifies processable material units while preserving original section headings. |
+| [public/pdf-source.js](../public/pdf-source.js) | Loads PDF.js, renders previews, and stores original PDFs in the browser. |
+| [public/question-scope.js](../public/question-scope.js) | Manages requirement coverage and answer states, limiting question scope and fact attribution. |
+| [public/review-presentation.js](../public/review-presentation.js) | Groups parsing-review content and displays requirement categories and text differences. |
+| [public/review-reference.js](../public/review-reference.js) | Displays the source resume PDF or JD during review and preserves navigation position. |
+| [public/review-state.js](../public/review-state.js) | Manages review drafts, change detection, applying changes, and reconfirmation rules. |
+| [public/review-view.js](../public/review-view.js) | Renders material-review pages and change notices. |
+| [public/rewrite-editor.js](../public/rewrite-editor.js) | Shows original, suggestion, and user-edit differences and manages editor interactions. |
+| [public/style.css](../public/style.css) | Base layouts, components, typography, and responsive styles. |
+| [public/ui-polish.css](../public/ui-polish.css) | Warm cream styling, typography hierarchy, navigation, and core-page refinements. |
+| [public/unit-presentation.js](../public/unit-presentation.js) | Builds display titles and supporting labels without rewriting source content. |
+| [public/visual-assets.js](../public/visual-assets.js) | Consistent line icons and small header/sidebar illustrations. |
 
-## 展示材料与依据
+## Showcase Documents and Evidence
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [docs/BAD_CASES.md](BAD_CASES.md) | 到岗来源遗漏、无效补问、PDF工具名误判及Prompt修复跨经历引用。 |
-| [docs/EVALUATION_SUMMARY.md](EVALUATION_SUMMARY.md) | 历史流程、质量、事实口径及人工修正量的手工记录与计数规则。 |
-| [docs/FILE_INDEX.json](FILE_INDEX.json) | 完整文件路径与用途索引，供后续维护和上传核对。 |
-| [docs/PRD.md](PRD.md) | 产品需求摘要：用户、问题、范围、五步流程和事实约束。 |
-| [docs/README.md](README.md) | 文档目录入口，说明每份展示材料的用途。 |
-| [docs/REPOSITORY_GUIDE.md](REPOSITORY_GUIDE.md) | 人可阅读的目录说明和逐个自有文件用途。 |
-| [docs/SCREENSHOTS.md](SCREENSHOTS.md) | 介绍GitHub首页长图、三张核心截图及合成材料、模拟模式来源。 |
-| [docs/WORKFLOW.md](WORKFLOW.md) | 用户流程与AI工作流图，以及模型、程序和用户的责任分工。 |
-| [docs/evidence/bad-case-records.json](evidence/bad-case-records.json) | 四个典型问题的结构化根因、修复、验证范围与版本标识。 |
-| [docs/evidence/product-overview.json](evidence/product-overview.json) | 首页展示长图的图片哈希、运行代码、截图来源及模拟操作检查。 |
-| [docs/evidence/manual-corrections.json](evidence/manual-corrections.json) | 负责人提供的两版各10组人工修正次数、计数范围、计算及记录边界。 |
-| [docs/evidence/metrics.json](evidence/metrics.json) | 指标数值、分母、评分性质、版本及人工修正量手工统计。 |
-| [docs/evidence/prompt-fix-example.json](evidence/prompt-fix-example.json) | v7→v8 Prompt增量及同一合成案例的实际引用前后片段。 |
-| [docs/evidence/review-confirmation.json](evidence/review-confirmation.json) | 负责人确认的v6/v21汇总与相对变化计算口径，无私人对话全文。 |
-| [docs/evidence/source-index.json](evidence/source-index.json) | 来源名称、SHA-256与已公开节选的对应索引，不含本机绝对路径。 |
-| [docs/evidence/unit-scores.json](evidence/unit-scores.json) | v21的13个经历单元四维正式评分、正文事实结论和Run ID。 |
-| [docs/figures/ai-workflow.mmd](figures/ai-workflow.mmd) | AI工作流的可编辑Mermaid源文件。 |
-| [docs/figures/ai-workflow.svg](figures/ai-workflow.svg) | 可直接展示的AI任务、校验与事实确认工作流。 |
-| [docs/figures/user-flow.mmd](figures/user-flow.mmd) | 五步用户流程图的可编辑Mermaid源文件。 |
-| [docs/figures/user-flow.svg](figures/user-flow.svg) | 可直接展示的五步用户流程图。 |
-| [docs/images/product-overview.png](images/product-overview.png) | GitHub首页使用的四环节产品流程长图，合成材料、模拟模式界面实拍。 |
-| [docs/images/01-matching.jpg](images/01-matching.jpg) | 虚构材料的桌面对照与补问页面截图。 |
-| [docs/images/02-rewrite.jpg](images/02-rewrite.jpg) | 虚构材料的原文、改写建议与差异核对截图。 |
-| [docs/images/03-mobile.jpg](images/03-mobile.jpg) | 虚构材料的移动端页面截图。 |
+| [docs/BAD_CASES.md](BAD_CASES.md) | Four cases: omitted availability, invalid follow-ups, PDF tool-name matching, and a prompt fix for cross-experience citations. |
+| [docs/EVALUATION_SUMMARY.md](EVALUATION_SUMMARY.md) | Historical workflow, quality, factual metrics, and owner-recorded manual corrections with counting rules. |
+| [docs/FILE_INDEX.json](FILE_INDEX.json) | Complete file paths, categories, and purposes for maintenance and upload checks. |
+| [docs/PRD.md](PRD.md) | Product requirements summary: users, problems, scope, five-step flow, and factual constraints. |
+| [docs/README.md](README.md) | Documentation entry point with the purpose of each showcase document. |
+| [docs/REPOSITORY_GUIDE.md](REPOSITORY_GUIDE.md) | Readable directory guide and descriptions of every first-party file. |
+| [docs/SCREENSHOTS.md](SCREENSHOTS.md) | Homepage walkthrough, three core screenshots, and their synthetic/mock-mode provenance. |
+| [docs/WORKFLOW.md](WORKFLOW.md) | User and AI workflow diagrams and the responsibilities of the model, program, and user. |
+| [docs/evidence/bad-case-records.json](evidence/bad-case-records.json) | Structured causes, fixes, verification scope, and version references for four representative issues. |
+| [docs/evidence/manual-corrections.json](evidence/manual-corrections.json) | Owner-supplied manual correction counts for 10 cases per version, counting scope, calculations, and evidence limits. |
+| [docs/evidence/metrics.json](evidence/metrics.json) | Metric values, denominators, rating status, versions, and manually recorded correction aggregates. |
+| [docs/evidence/product-overview.json](evidence/product-overview.json) | Walkthrough image hash, runtime source, capture provenance, and mock-interaction checks. |
+| [docs/evidence/prompt-fix-example.json](evidence/prompt-fix-example.json) | The v7-to-v8 prompt delta and actual before/after citations from the same synthetic case. |
+| [docs/evidence/review-confirmation.json](evidence/review-confirmation.json) | Owner-confirmed v6/v21 aggregates and relative-change conventions, without private conversation transcripts. |
+| [docs/evidence/source-index.json](evidence/source-index.json) | Source titles, SHA-256 hashes, and public-excerpt references, without local absolute paths. |
+| [docs/evidence/unit-scores.json](evidence/unit-scores.json) | Formal four-dimension v21 ratings, rewrite-text factual verdicts, and Run IDs for 13 experience units. |
+| [docs/figures/ai-workflow.mmd](figures/ai-workflow.mmd) | Editable Mermaid source for the AI workflow. |
+| [docs/figures/ai-workflow.svg](figures/ai-workflow.svg) | Display-ready diagram of model tasks, validation, and fact confirmation. |
+| [docs/figures/user-flow.mmd](figures/user-flow.mmd) | Editable Mermaid source for the five-step user flow. |
+| [docs/figures/user-flow.svg](figures/user-flow.svg) | Display-ready diagram of the five-step user flow. |
+| [docs/images/01-matching.jpg](images/01-matching.jpg) | Desktop matching and follow-up screenshot using fictional material. |
+| [docs/images/02-rewrite.jpg](images/02-rewrite.jpg) | Original/suggestion comparison and difference-review screenshot using fictional material. |
+| [docs/images/03-mobile.jpg](images/03-mobile.jpg) | Mobile screenshot using fictional material. |
+| [docs/images/product-overview.png](images/product-overview.png) | Homepage walkthrough of four workflow sections, captured with synthetic materials in mock mode. |
 
-## 合成求职示例
+## Synthetic Examples
 
-仅包含本轮已完成保存、刷新和重开的case-02与case-03；原始失败日志和浏览器资料保留在内部测试目录，不加入公开示例。
+Only cases 02 and 03, which completed saving, refresh, and reopening in the recorded run, are included. Original failed runs and browser data remain in the internal test archive.
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [examples/README.md](../examples/README.md) | 两组已完成网页端到端操作的合成案例入口、使用协议和文件说明。 |
-| [examples/case-02-data-analyst/resume.txt](../examples/case-02-data-analyst/resume.txt) | 该组合成简历原始文本；作为初始输入。 |
-| [examples/case-02-data-analyst/job_description.txt](../examples/case-02-data-analyst/job_description.txt) | 该组目标岗位JD原始文本；作为初始输入。 |
-| [examples/case-02-data-analyst/tester_notes.json](../examples/case-02-data-analyst/tester_notes.json) | 测试者专用合成事实、预设回答和本次实际问答；不得预先输入模型。 |
-| [examples/case-02-data-analyst/outputs.json](../examples/case-02-data-analyst/outputs.json) | 本次真实网页测试的解析、关联、T0/T1/T2、来源、确认状态、运行版本与用量。 |
-| [examples/case-02-data-analyst/final_resume.txt](../examples/case-02-data-analyst/final_resume.txt) | 直接取自网页保存版本的完整合成简历终稿。 |
-| [examples/case-02-data-analyst/README.md](../examples/case-02-data-analyst/README.md) | 本组合成示例的实际网页步骤、问答处理、保存验证及事实核查重点。 |
-| [examples/case-03-algorithm-engineer/resume.txt](../examples/case-03-algorithm-engineer/resume.txt) | 该组合成简历原始文本；作为初始输入。 |
-| [examples/case-03-algorithm-engineer/job_description.txt](../examples/case-03-algorithm-engineer/job_description.txt) | 该组目标岗位JD原始文本；作为初始输入。 |
-| [examples/case-03-algorithm-engineer/tester_notes.json](../examples/case-03-algorithm-engineer/tester_notes.json) | 测试者专用合成事实、预设回答和本次实际问答；不得预先输入模型。 |
-| [examples/case-03-algorithm-engineer/outputs.json](../examples/case-03-algorithm-engineer/outputs.json) | 本次真实网页测试的解析、关联、T0/T1/T2、来源、确认状态、运行版本与用量。 |
-| [examples/case-03-algorithm-engineer/final_resume.txt](../examples/case-03-algorithm-engineer/final_resume.txt) | 直接取自网页保存版本的完整合成简历终稿。 |
-| [examples/case-03-algorithm-engineer/README.md](../examples/case-03-algorithm-engineer/README.md) | 本组合成示例的实际网页步骤、问答处理、保存验证及事实核查重点。 |
+| [examples/README.md](../examples/README.md) | Two completed synthetic browser workflows, usage protocol, and file descriptions. |
+| [examples/case-02-data-analyst/README.md](../examples/case-02-data-analyst/README.md) | Observed browser steps, answer handling, save/reopen verification, and factual-review priorities. |
+| [examples/case-02-data-analyst/final_resume.txt](../examples/case-02-data-analyst/final_resume.txt) | Complete synthetic resume retrieved directly from the saved browser version. |
+| [examples/case-02-data-analyst/job_description.txt](../examples/case-02-data-analyst/job_description.txt) | Original target JD text used as initial input. |
+| [examples/case-02-data-analyst/outputs.json](../examples/case-02-data-analyst/outputs.json) | Actual real-model browser run: parsing, associations, T0/T1/T2, sources, confirmation states, versions, and usage. |
+| [examples/case-02-data-analyst/resume.txt](../examples/case-02-data-analyst/resume.txt) | Original synthetic resume text used as initial input. |
+| [examples/case-02-data-analyst/tester_notes.json](../examples/case-02-data-analyst/tester_notes.json) | Tester-only synthetic facts, preset answers, and actual questions/actions; not supplied to the model in advance. |
+| [examples/case-03-algorithm-engineer/README.md](../examples/case-03-algorithm-engineer/README.md) | Observed browser steps, answer handling, save/reopen verification, and factual-review priorities. |
+| [examples/case-03-algorithm-engineer/final_resume.txt](../examples/case-03-algorithm-engineer/final_resume.txt) | Complete synthetic resume retrieved directly from the saved browser version. |
+| [examples/case-03-algorithm-engineer/job_description.txt](../examples/case-03-algorithm-engineer/job_description.txt) | Original target JD text used as initial input. |
+| [examples/case-03-algorithm-engineer/outputs.json](../examples/case-03-algorithm-engineer/outputs.json) | Actual real-model browser run: parsing, associations, T0/T1/T2, sources, confirmation states, versions, and usage. |
+| [examples/case-03-algorithm-engineer/resume.txt](../examples/case-03-algorithm-engineer/resume.txt) | Original synthetic resume text used as initial input. |
+| [examples/case-03-algorithm-engineer/tester_notes.json](../examples/case-03-algorithm-engineer/tester_notes.json) | Tester-only synthetic facts, preset answers, and actual questions/actions; not supplied to the model in advance. |
 
-## 离线自动化测试
+## Offline Automated Tests
 
-使用Node内置测试框架，运行入口为npm test。模型响应固定或由测试构造；接口测试仅使用本机临时服务。全部测试来自当前代码对应的研发提交，历史快照差异检查与内部批次工具按范围单独保留在原研发仓库。
+Run with `npm test` using Node's built-in runner. Responses are fixed or constructed; interface checks use temporary local services. These tests originate from the current runtime's development source. Historical snapshot comparisons and internal batch tooling remain separately in the development repository.
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [tests/README.md](../tests/README.md) | 离线测试运行方式、依赖、覆盖范围及结果解释。 |
-| [tests/SOURCES.json](../tests/SOURCES.json) | 每份测试与合成夹具的来源提交、源文件哈希、打包哈希及整理差异。 |
-| [tests/VERIFICATION.md](../tests/VERIFICATION.md) | 当前整理包336项离线检查的实际结果、环境与TAP日志哈希。 |
-| [tests/ai-pipeline.test.mjs](../tests/ai-pipeline.test.mjs) | 解析原文覆盖、证据与补问校验、过期响应保护及模型客户端错误处理。 |
-| [tests/analysis-model.test.js](../tests/analysis-model.test.js) | 岗位要求判断、关联证据和改写清单的派生规则。 |
-| [tests/comparison-view.test.js](../tests/comparison-view.test.js) | 岗位对照、补问表单、用户文本转义与展示。 |
-| [tests/domain.test.js](../tests/domain.test.js) | 材料拆分、事实冲突、模拟候选、最终稿组合与保存前检查。 |
-| [tests/education-condition.test.mjs](../tests/education-condition.test.mjs) | 学历分类与优先强度分离，混合要求不被机械重分类。 |
-| [tests/evidence-scope-retry.test.mjs](../tests/evidence-scope-retry.test.mjs) | 跨经历证据仅纠错一次并完整重校验；JD标题与真实要求的边界。 |
-| [tests/experience-boundaries.test.mjs](../tests/experience-boundaries.test.mjs) | 独立经历拆分、来源ID与原文完整性，同项目多阶段不机械拆分。 |
-| [tests/followup-state.test.js](../tests/followup-state.test.js) | 补问编辑、取消、替换、确认状态及事实与来源保留。 |
-| [tests/manual-followup-payload.test.mjs](../tests/manual-followup-payload.test.mjs) | 手动关联及已回答状态向后端传递，旧响应不覆盖新修改。 |
-| [tests/pdf-evidence-quote.test.mjs](../tests/pdf-evidence-quote.test.mjs) | 中文PDF换行等价匹配，不放宽数字、否定和来源归属。 |
-| [tests/pdf-tool-spacing.test.mjs](../tests/pdf-tool-spacing.test.mjs) | MATLAB限定空格匹配，其他无来源工具和跨来源拼接仍拒绝。 |
-| [tests/review-presentation.test.js](../tests/review-presentation.test.js) | 校对页面分组、要求类别与文本变化显示。 |
-| [tests/review-state.test.js](../tests/review-state.test.js) | 材料校对草稿、格式变化、事实确认和结果失效处理。 |
-| [tests/rewrite-editor.test.js](../tests/rewrite-editor.test.js) | 原文、建议与手动编辑差异的呈现与文本保护。 |
-| [tests/role-attribution.test.js](../tests/role-attribution.test.js) | 区分第三方负责人主导与本人主导，保留其他事实限制。 |
-| [tests/server.test.mjs](../tests/server.test.mjs) | 本机HTTP接口、授权、隐私、并发、错误响应及PDF提取与静态资源。 |
-| [tests/unit-presentation.test.js](../tests/unit-presentation.test.js) | 经历显示标题、日期、章节与正文保留。 |
-| [tests/condition-contract.test.mjs](../tests/condition-contract.test.mjs) | 明确条件与能力证据状态分离，确定判断必须有对应证据。 |
-| [tests/none-authorization.test.mjs](../tests/none-authorization.test.mjs) | 未提供、未知或跳过不等于未做过；否定授权限制到原配对。 |
-| [tests/resolved-questions.test.mjs](../tests/resolved-questions.test.mjs) | 已回答、未知、未做过、跳过及归档状态阻止重复补问。 |
-| [tests/parse-identity.test.mjs](../tests/parse-identity.test.mjs) | 身份占位符与原文偏移保留，关键事实缺失仍拒绝。 |
-| [tests/factual-boundary.test.mjs](../tests/factual-boundary.test.mjs) | 团队成果、未上线及未访谈事实保护，非事实指令不作证据。 |
-| [tests/precise-followup.test.mjs](../tests/precise-followup.test.mjs) | v21补问契约、同经历缺口合并、草稿保护及确认范围。 |
-| [tests/job-targeting.test.mjs](../tests/job-targeting.test.mjs) | 不同JD的来源和重点组装、推荐顺序、保留原文及事实边界。 |
-| [tests/fixtures/ai-bc-0006.json](../tests/fixtures/ai-bc-0006.json) | 条件状态误用的合成请求与历史响应。 |
-| [tests/fixtures/ai-bc-0007-0008.json](../tests/fixtures/ai-bc-0007-0008.json) | 学历误分类、确认后重复补问的合成输入与状态。 |
-| [tests/fixtures/ai-bc-0011.json](../tests/fixtures/ai-bc-0011.json) | 把未提供误判为没有经历的合成任务与响应。 |
-| [tests/fixtures/precise-followup-v18-duplicate.json](../tests/fixtures/precise-followup-v18-duplicate.json) | 补问覆盖重复的合成任务与历史响应。 |
-| [tests/fixtures/precise-followup-v18.json](../tests/fixtures/precise-followup-v18.json) | 相近与不同补问缺口的合成任务和固定响应。 |
-| [tests/fixtures/precise-followup-v20-rejections.json](../tests/fixtures/precise-followup-v20-rejections.json) | 明确条件错误绑定与冲突经历补问的拒绝样本。 |
-| [tests/fixtures/job-targeting-v9.json](../tests/fixtures/job-targeting-v9.json) | 同份合成简历匹配两个JD的历史固定响应与来源哈希；用于当前规则回放。 |
-| [tests/fixtures/parse-identity.json](../tests/fixtures/parse-identity.json) | 身份占位符与原文保真检查的虚构简历和JD。 |
-| [tests/fixtures/factual-boundary.json](../tests/fixtures/factual-boundary.json) | 团队成果、否定事实及非事实指令边界的虚构材料。 |
+| [tests/README.md](../tests/README.md) | Offline test commands, dependencies, coverage, and result interpretation. |
+| [tests/SOURCES.json](../tests/SOURCES.json) | Source commits, original and packaged hashes, and packaging changes for tests and synthetic fixtures. |
+| [tests/VERIFICATION.md](../tests/VERIFICATION.md) | Recorded results, environment, and TAP-log hash for 336 offline checks. |
+| [tests/ai-pipeline.test.mjs](../tests/ai-pipeline.test.mjs) | Original-text coverage, evidence and question validation, stale-response protection, and model-client errors. |
+| [tests/analysis-model.test.js](../tests/analysis-model.test.js) | Derived requirement judgments, association evidence, and rewrite selection. |
+| [tests/comparison-view.test.js](../tests/comparison-view.test.js) | Matching views, follow-up forms, user-text escaping, and rendering. |
+| [tests/condition-contract.test.mjs](../tests/condition-contract.test.mjs) | Separate states for explicit conditions and capability evidence; definite judgments need matching evidence. |
+| [tests/domain.test.js](../tests/domain.test.js) | Material segmentation, fact conflicts, mock suggestions, final-text assembly, and pre-save checks. |
+| [tests/education-condition.test.mjs](../tests/education-condition.test.mjs) | Separation of education categories from preference strength; no mechanical reclassification of mixed requirements. |
+| [tests/evidence-scope-retry.test.mjs](../tests/evidence-scope-retry.test.mjs) | One correction attempt for cross-experience evidence, full revalidation, and the boundary between JD titles and actual requirements. |
+| [tests/experience-boundaries.test.mjs](../tests/experience-boundaries.test.mjs) | Independent experience boundaries, source IDs, original-text integrity, and preservation of multiple phases within one project. |
+| [tests/factual-boundary.test.mjs](../tests/factual-boundary.test.mjs) | Team achievements, not-launched and no-interview facts, and exclusion of non-factual instructions from evidence. |
+| [tests/fixtures/ai-bc-0006.json](../tests/fixtures/ai-bc-0006.json) | Synthetic request and historical response illustrating incorrect condition-state usage. |
+| [tests/fixtures/ai-bc-0007-0008.json](../tests/fixtures/ai-bc-0007-0008.json) | Synthetic inputs and states for education misclassification and repeated questions after confirmation. |
+| [tests/fixtures/ai-bc-0011.json](../tests/fixtures/ai-bc-0011.json) | Synthetic task and response confusing missing evidence with no experience. |
+| [tests/fixtures/factual-boundary.json](../tests/fixtures/factual-boundary.json) | Fictional material for team achievements, negative facts, and non-factual instruction boundaries. |
+| [tests/fixtures/job-targeting-v9.json](../tests/fixtures/job-targeting-v9.json) | Historical fixed responses and source hashes for one synthetic resume against two JDs; used to replay current rules. |
+| [tests/fixtures/parse-identity.json](../tests/fixtures/parse-identity.json) | Fictional resume and JD for identity-placeholder and original-text fidelity checks. |
+| [tests/fixtures/precise-followup-v18-duplicate.json](../tests/fixtures/precise-followup-v18-duplicate.json) | Synthetic task and historical response with duplicate question coverage. |
+| [tests/fixtures/precise-followup-v18.json](../tests/fixtures/precise-followup-v18.json) | Synthetic tasks and fixed responses for related versus distinct factual gaps. |
+| [tests/fixtures/precise-followup-v20-rejections.json](../tests/fixtures/precise-followup-v20-rejections.json) | Rejection samples for invalid condition binding and questions on conflicting experiences. |
+| [tests/followup-state.test.js](../tests/followup-state.test.js) | Answer editing, cancellation, replacement, confirmation, and preservation of facts and sources. |
+| [tests/job-targeting.test.mjs](../tests/job-targeting.test.mjs) | Sources and emphasis for different JDs, recommendation order, keeping the original, and factual boundaries. |
+| [tests/manual-followup-payload.test.mjs](../tests/manual-followup-payload.test.mjs) | Transmission of manual associations and answer states; old responses must not overwrite newer edits. |
+| [tests/none-authorization.test.mjs](../tests/none-authorization.test.mjs) | Missing, unknown, or skipped information must not mean never done; negative claims stay within the original requirement/experience pair. |
+| [tests/parse-identity.test.mjs](../tests/parse-identity.test.mjs) | Identity placeholders and original offsets; missing key facts still cause rejection. |
+| [tests/pdf-evidence-quote.test.mjs](../tests/pdf-evidence-quote.test.mjs) | Equivalent Chinese PDF line breaks without weakening number, negation, or source-attribution checks. |
+| [tests/pdf-tool-spacing.test.mjs](../tests/pdf-tool-spacing.test.mjs) | Narrow MATLAB spacing equivalence; other unsupported tools and cross-source joins remain rejected. |
+| [tests/precise-followup.test.mjs](../tests/precise-followup.test.mjs) | The v21 follow-up contract, grouping related gaps within an experience, draft protection, and confirmation scope. |
+| [tests/resolved-questions.test.mjs](../tests/resolved-questions.test.mjs) | Answered, unknown, not-done, skipped, and archived states prevent repeated questions. |
+| [tests/review-presentation.test.js](../tests/review-presentation.test.js) | Review-page grouping, requirement categories, and text-change presentation. |
+| [tests/review-state.test.js](../tests/review-state.test.js) | Material-review drafts, formatting changes, fact confirmation, and result invalidation. |
+| [tests/rewrite-editor.test.js](../tests/rewrite-editor.test.js) | Original/suggestion/manual-edit differences and text protection. |
+| [tests/role-attribution.test.js](../tests/role-attribution.test.js) | Leadership by another responsible person versus personal leadership, retaining other factual limits. |
+| [tests/server.test.mjs](../tests/server.test.mjs) | Local HTTP interfaces, authorization, privacy, concurrency, errors, PDF extraction, and static resources. |
+| [tests/unit-presentation.test.js](../tests/unit-presentation.test.js) | Experience titles, dates, section labels, and body-text preservation. |
 
-## 网页回归工具
+## Browser Regression Tooling
 
-与tests/互补，在真实浏览器中检查页面操作。4项使用Mock，1项以Live协议连接本机固定响应；均不使用真实模型。qa/output/及依赖目录由.gitignore排除，不属于公开文件清单。
+These checks complement `tests/` with actual browser actions. Four scenarios use mock mode; one uses the Live protocol against fixed local responses. None calls a real model. `qa/output/` and installed dependencies are excluded by `.gitignore`.
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [qa/package.json](../qa/package.json) | 网页回归的独立依赖与运行入口；不增加产品运行依赖。 |
-| [qa/runtime.mjs](../qa/runtime.mjs) | 启动随机端口的隔离服务与浏览器，阻断外网页面请求，记录请求、截图轨迹和代码哈希。 |
-| [qa/comparison-feedback.mjs](../qa/comparison-feedback.mjs) | 校对确认门槛；关联调整与答案/事实保留；长文编辑对齐；采用/编辑/拒绝/保留状态；移动端布局。 |
-| [qa/comparison-navigation.mjs](../qa/comparison-navigation.mjs) | 主栏滚动与侧栏定位；反向导航与保存重绘；改写清单选择与展开；移动端横向导航。 |
-| [qa/rewrite-feedback.mjs](../qa/rewrite-feedback.mjs) | 差异高亮与文本编辑；撤销与中文组合输入；编辑稿持久化；补问/事实定位与分经历草稿；新候选不覆盖当前稿。 |
-| [qa/review-reference.mjs](../qa/review-reference.mjs) | 两页合成PDF上传与渲染；翻页/缩放及JD参照；校对内容与PDF保存重开；无效文件保护；备份与隔离数据删除。 |
-| [qa/fixtures/materials.json](../qa/fixtures/materials.json) | 本机协议流程的虚构简历、JD与触发后使用的回答。 |
-| [qa/phase2-flow.mjs](../qa/phase2-flow.mjs) | 真实网页操作贯穿解析、补问、确认、改写与保存；AI上游为本机固定响应，非真实模型。 |
-| [qa/run.mjs](../qa/run.mjs) | 顺序执行5项网页场景；失败即停止，保留日志并明确未执行数量。 |
-| [qa/README.md](../qa/README.md) | 网页测试运行方法、5种场景、隔离方式与结果边界。 |
-| [qa/SOURCES.json](../qa/SOURCES.json) | 现有网页测试的来源提交、原始和整理后的哈希以及适配说明。 |
-| [qa/VERIFICATION.md](../qa/VERIFICATION.md) | 5项网页回归的实际结果、环境、证据哈希及测试范围说明。 |
+| [qa/README.md](../qa/README.md) | Browser-test commands, five scenarios, isolation, and limits of the results. |
+| [qa/SOURCES.json](../qa/SOURCES.json) | Browser-script source commits, original/packaged hashes, and adaptation notes. |
+| [qa/VERIFICATION.md](../qa/VERIFICATION.md) | Recorded outcomes, environment, evidence hashes, and scope for five browser scenarios. |
+| [qa/comparison-feedback.mjs](../qa/comparison-feedback.mjs) | Review-confirmation gates; association changes and answer/fact retention; long-text editing alignment; accept/edit/reject/keep states; mobile layout. |
+| [qa/comparison-navigation.mjs](../qa/comparison-navigation.mjs) | Main/sidebar scrolling, reverse navigation and redraw after saving, rewrite selection/expansion, and mobile horizontal navigation. |
+| [qa/fixtures/materials.json](../qa/fixtures/materials.json) | Fictional resume, JD, and answers used only after questions are triggered in the local protocol flow. |
+| [qa/package.json](../qa/package.json) | Separate browser-test dependencies and commands; does not add product runtime dependencies. |
+| [qa/phase2-flow.mjs](../qa/phase2-flow.mjs) | Browser actions through parsing, questions, confirmation, rewriting, and saving against fixed local upstream responses, not a real model. |
+| [qa/review-reference.mjs](../qa/review-reference.mjs) | Two-page synthetic PDF upload/rendering, navigation/zoom, JD reference, review and PDF reopening, invalid-file protection, backup, and isolated deletion. |
+| [qa/rewrite-feedback.mjs](../qa/rewrite-feedback.mjs) | Difference highlighting, editing, undo, Chinese composition input, persistent per-experience drafts, question/fact navigation, and candidate-overwrite protection. |
+| [qa/run.mjs](../qa/run.mjs) | Runs five browser scenarios sequentially, stops on failure, and preserves logs and unexecuted counts. |
+| [qa/runtime.mjs](../qa/runtime.mjs) | Starts isolated services and browsers on random ports, blocks external page requests, and records requests, screenshots, traces, and code hashes. |
 
-## 阶段测试文档
+## Phase Test Documentation
 
-归档历史结果，分别标注测试范围、代码与评分性质。完整历史原件保留在研发档案中；此处提供面向仓库读者的精简摘要。
+Historical results retain their test scope, code versions, and rating status. Complete originals remain in the development archive; these are concise summaries for repository readers.
 
-| 文件 | 内容与用途 |
+| File | Contents and purpose |
 | --- | --- |
-| [docs/testing/phase1/TEST_REPORT.md](testing/phase1/TEST_REPORT.md) | 本机Demo的四类功能验收、历史测试批次及精简证据说明。 |
-| [docs/testing/phase2/TEST_REPORT.md](testing/phase2/TEST_REPORT.md) | 三组合成案例的真实模型基础联调、版本、调用用量与验收依据。 |
-| [docs/testing/phase3/TEST_REPORT.md](testing/phase3/TEST_REPORT.md) | 固定开发集的v6/v21比较、正式人工评分、事实核查分母及回归调用记录。 |
-| [docs/testing/README.md](testing/README.md) | 三个阶段测试摘要的总入口，并区分历史评测、当前离线测试与网页回归。 |
+| [docs/testing/README.md](testing/README.md) | Index of three historical phase reports, distinguishing evaluation, current offline checks, and browser regression. |
+| [docs/testing/phase1/TEST_REPORT.md](testing/phase1/TEST_REPORT.md) | Four local-demo acceptance areas, historical test batches, and concise evidence notes. |
+| [docs/testing/phase2/TEST_REPORT.md](testing/phase2/TEST_REPORT.md) | Three-case real-model integration, versions, call usage, and acceptance evidence. |
+| [docs/testing/phase3/TEST_REPORT.md](testing/phase3/TEST_REPORT.md) | Fixed development-set v6/v21 comparison, formal human ratings, factual-review denominators, and regression calls. |
 
-## PDF.js第三方文件
+## Third-Party PDF.js Files
 
-public/vendor/pdfjs/共199个原始资源文件，按用途分为核心解析库与Worker、字符映射、标准字体、WebAssembly解码资源及许可证。每个具体文件均列在FILE_INDEX.json；此处按功能归类，避免逐页重复列出字体和字符映射名称。
+`public/vendor/pdfjs/` contains 199 original resources: the parsing library and worker, character maps, standard fonts, WebAssembly decoding resources, and licenses. Every file is listed in `FILE_INDEX.json`; this guide groups them by purpose rather than repeating all font and character-map names.
 
-## 更新约定
+## Maintenance
 
-增删文件时同步更新本说明与FILE_INDEX.json；代码或Prompt改动通过Git提交和CHANGELOG记录。原始材料、用户任务、密钥、完整运行日志及内部审核页面不属于本目录的公开内容。
+Update this guide and `FILE_INDEX.json` when adding or removing files. Record code and prompt changes through Git commits and the changelog. Private source materials, user tasks, keys, full runtime logs, and internal review pages are excluded from the public package. Published synthetic examples and selected evidence extracts are identified explicitly.

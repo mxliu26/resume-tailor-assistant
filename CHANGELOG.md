@@ -1,65 +1,71 @@
-# 迭代记录
+# Changelog
 
-本文件按实际开发记录整理主要改动。Prompt版本用于定位提示词，Git SHA用于定位研发源码；这些记录不等同于正式Release或新建的历史提交。
+This file summarizes changes from the development records. Prompt versions identify instructions; Git SHAs identify source code in the original development repository. These entries do not represent formal Releases or newly created historical commits.
 
-## 人工修正量记录与计数口径
+## English Documentation
 
-- 录入负责人手工记录的固定10组案例：v6共38次、平均3.8次，v21共20次、平均2.0次，减少约47%。
-- 按提供规则区分解析、关联、改写及最终编辑；正常补问与必要事实补充不计入，最终编辑区分纠错与个人偏好。
-- 新增独立证据记录，保留先前评分确认及历史运行结果；未提供的逐次日志与分类明细不补造，不将次数换算成人工耗时。本次仅更新展示文档，无新增模型调用。
+- Translated the repository's 20 Markdown documents, workflow diagrams, and file descriptions into English.
+- Preserved metric definitions, rating status, version references, and the limits of each result. The interface, prompt, synthetic inputs, original outputs, and evidence records remain unchanged.
+- Updated document anchors and the file index. This is a documentation change, with no new model calls or product changes.
 
-## 阶段测试文档整理
+## Manual Correction Records and Counting Rules
 
-- 汇总本机Demo、真实模型基础联调和固定开发集效果评测，加入docs/testing总入口及三份精简报告。
-- 分开标注历史测试代码、当前展示代码、实际运行结果与人工评分；保留负责人确认的展示统计口径。
-- 为新增历史摘要登记来源SHA-256，更新文档链接和文件用途索引。本次仅整理文档，无新增模型调用或产品修改。
+- Added the project owner's manual records for the same 10 fixed cases: v6 totaled 38 corrections, averaging 3.8; v21 totaled 20, averaging 2.0, approximately 47% fewer.
+- Distinguished parsing, matching, rewrite review, and final editing. Normal follow-up answers and necessary factual additions are excluded; final editing distinguishes corrections from personal preferences.
+- Added a separate evidence record while preserving earlier score confirmations and runs. Missing event logs and category breakdowns were not reconstructed, and counts were not converted into human time. No new model calls were made.
 
-## 网页回归工具整理
+## Phase Test Documentation
 
-- 复用58a25be中的5份网页脚本，补齐独立依赖、随机端口服务与临时浏览器上下文，移除旧端口和内部资料路径依赖。
-- 保留校对、补问、关联、编辑、PDF及移动端检查；补充完整版本保存和刷新重开检查。按现版字体层级适配历史视觉断言。
-- 5项场景全部完成验证。仅使用模拟模式及本机固定响应，付费模型调用0次；来源与实际执行记录见qa/SOURCES.json和qa/VERIFICATION.md。产品代码及v21 Prompt未改。
+- Summarized the local demo, real-model integration, and fixed development-set evaluation in a testing index and three concise reports.
+- Identified historical test code, current showcase code, observed execution results, and human ratings separately, retaining the owner-confirmed reporting conventions.
+- Registered source SHA-256 hashes for the historical summaries and updated links and the file index. Documentation only; no new calls or product changes.
 
-## 离线回归测试整理
+## Browser Regression Tooling
 
-- 从当前运行代码来源58a25be筛选24个已有测试文件及9份合成夹具，覆盖解析、来源、补问状态、岗位定向、校对编辑和本机接口。
-- 移除对未打包内部评测工具、资料目录和历史Prompt快照的依赖，保留当前程序行为断言；逐文件来源与改动记录在tests/SOURCES.json。
-- 在展示包中离线运行336项检查，全部通过，无跳过、无外部模型调用。产品代码及v21 Prompt不变。
+- Reused five browser scripts from `58a25be`, adding separate dependencies, random local ports, and temporary browser contexts. Removed dependencies on old ports and internal material paths.
+- Retained review, follow-up, matching, editing, PDF, and mobile checks; added final-version saving and refresh/reopen checks. Adapted historical visual assertions to the current typography.
+- Verified all five scenarios with mock mode or fixed local responses. Paid model calls: 0. See `qa/SOURCES.json` and `qa/VERIFICATION.md`. Product code and the v21 prompt were unchanged.
 
-## 运行与展示文件整理
+## Offline Regression Test Packaging
 
-- 以58a25be的运行代码和precise-followup-v21 Prompt整理本地运行包。
-- 加入产品需求摘要、用户与AI流程图、虚构材料截图、评测摘要及四个典型Bad Case。
-- 完善启动指南、目录说明与逐文件索引。展示统计采用负责人确认的汇总口径；原始测试记录保留。
+- Selected 24 existing test files and nine synthetic fixtures from runtime source `58a25be`, covering parsing, sources, follow-up state, job targeting, review/editing, and local interfaces.
+- Removed dependencies on internal evaluation tools, material directories, and historical prompt snapshots not included in this package. Retained assertions for current behavior; per-file provenance and changes are in `tests/SOURCES.json`.
+- Ran 336 offline checks in the showcase package: all passed, with no skips or external model calls. Product code and the v21 prompt were unchanged.
 
-## 页面阅读与解析边界
+## Runtime and Showcase Packaging
 
-- 统一暖白与鼠尾草绿的视觉语言、字体层级和核心页面阅读布局。关联提交：b5535bc、3dbbfde。
-- 为跨经历引用提供限定证据范围的单次纠错路径，重新执行完整校验；识别独立JD标题并保留正文要求。关联提交：d231d8c。
-- 区分负责人主导与本人主导，保持职责归属边界。关联提交：b2bbc7d。
-- 细化明确的独立经历边界，保留原文和来源ID，避免把同项目不同工作阶段机械拆分。关联提交：58a25be。
+- Packaged the runtime from `58a25be` with `precise-followup-v21`.
+- Added a PRD summary, user and AI workflow diagrams, synthetic-material screenshots, an evaluation summary, and four representative bad cases.
+- Completed startup instructions, the repository guide, and the file index. Public statistics use owner-confirmed aggregates; original test records remain preserved.
 
-## Prompt v21与网页核对
+## Page Readability and Parsing Boundaries
 
-- 将已有明确条件、回答状态和冲突边界纳入补问规划，减少对已覆盖事实的重复索要。评测代码：ec6dff9。
-- 原10组开发集生成建议10/10，13个经历单元正式评分85/13＝6.54/8，正文事实核查13/13。评价范围见评测摘要。
-- 修复PDF提取中MA TLAB与MATLAB的来源匹配误判，保留其他事实校验。关联提交：0d1b96b。
-- 改善岗位对照、补问与改写核对页面的操作呈现。关联提交：6af670c。
+- Unified the warm cream and sage palette, typography, and core-page reading layout. Related commits: `b5535bc`, `3dbbfde`.
+- Added one correction attempt for cross-experience citations, supplying the allowed evidence scope and rerunning full validation. Recognized standalone JD titles without discarding actual requirements. Commit: `d231d8c`.
+- Distinguished leadership by another responsible person from the applicant's own leadership. Commit: `b2bbc7d`.
+- Refined clearly independent experience boundaries while preserving original text and source IDs; avoided mechanically splitting phases of the same project. Commit: `58a25be`.
 
-## Prompt v14岗位定向
+## Prompt v21 and Browser Review
 
-- 按不同JD调整经历表达重点，同时保留数字口径、未知状态和本人职责限定。
-- 0003/0004同源简历对不同岗位的定向表达获得负责人认可。评测代码：ab83a07。
+- Incorporated explicit requirements, answer states, and conflict boundaries into follow-up planning to reduce requests for already covered facts. Evaluation code: `ec6dff9`.
+- All 10 original development cases generated suggestions. The 13 experience units received formal human ratings totaling 85, averaging 6.54/8; rewrite-text factual checks passed 13/13. See the evaluation summary for scope.
+- Fixed a source-matching false positive between PDF-extracted `MA TLAB` and `MATLAB`, retaining other factual checks. Commit: `0d1b96b`.
+- Improved the presentation of matching, follow-ups, and rewrite review. Commit: `6af670c`.
 
-## Prompt v8流程与来源修复
+## Prompt v14: Job Targeting
 
-- 将到岗等条件来源与可改写经历分开，避免有效上下文遗漏。
-- 约束无效补问和主关联的证据归属，保留严格响应校验。改动提交：de2a6a0、4de7daa。
-- 原10组开发集建议生成由v6的8/10恢复为10/10，可评价经历单元由11增至13。完整回归代码：a053e03。
+- Adjusted emphasis for different JDs while retaining metric definitions, unknown states, and limits on personal responsibility.
+- The project owner accepted the targeting differences between cases 0003/0004, which use the same resume for different roles. Evaluation code: `ab83a07`.
 
-## Prompt v6真实模型基线
+## Prompt v8: Workflow and Source Handling
 
-- 接入OpenAI兼容接口，保留模拟模式，打通解析、关联、事实确认与逐条改写。
-- 建立结构、来源、异常和过期结果保护，完成三组合成材料基础联调。基线代码：ca08ce6。
+- Separated sources for eligibility conditions, such as availability, from rewritable experience units to prevent valid context from being omitted.
+- Constrained invalid follow-ups and evidence attribution for primary associations while retaining strict response validation. Commits: `de2a6a0`, `4de7daa`.
+- On the same 10 development cases, suggestion generation recovered from v6's 8/10 to 10/10, and evaluable units increased from 11 to 13. Full regression code: `a053e03`.
 
-上述SHA为原研发仓库的来源标识。详细效果与统计口径见[评测摘要](docs/EVALUATION_SUMMARY.md)，修复证据节选见[典型Bad Case](docs/BAD_CASES.md)。
+## Prompt v6: Real-Model Baseline
+
+- Integrated an OpenAI-compatible API while retaining mock mode, connecting parsing, matching, fact confirmation, and per-experience rewriting.
+- Added structure, source, error, and stale-result protection. Completed basic integration acceptance with three synthetic cases. Baseline code: `ca08ce6`.
+
+These SHAs identify sources in the original development repository. See the [evaluation summary](docs/EVALUATION_SUMMARY.md) for results and definitions, and [bad cases](docs/BAD_CASES.md) for selected repair evidence.

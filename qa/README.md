@@ -1,10 +1,10 @@
-# 网页回归 QA
+# Browser Regression QA
 
-本目录检查浏览器里的真实点击、输入、页面状态和本机保存。与[tests/](../tests/README.md)的程序规则测试互补。这里不评估DeepSeek的改写质量，也不计作真人内测。
+This directory checks actual browser clicks, input, page state, and local saving. It complements the program-rule tests in [tests/](../tests/README.md). It does not evaluate DeepSeek's writing quality and is not a real-user trial.
 
-## 运行
+## Run
 
-需要Node.js 20.12以上。首次在项目根目录安装独立测试依赖和浏览器：
+Use Node.js 20.12 or later. From the project root, install the separate test dependencies and browser on first use:
 
 ```powershell
 npm --prefix qa install
@@ -12,39 +12,39 @@ npm --prefix qa exec -- playwright install chromium
 npm --prefix qa test
 ```
 
-安装依赖需要网络，但运行不需要API密钥，不发送付费模型请求。不需要先启动产品服务。PDF场景还需要Python和pypdf，见[requirements.txt](../requirements.txt)；无法提取PDF会如实失败，不自动跳过。
+Installation needs network access; running the tests needs no API key and sends no paid model requests. The product service does not need to be started beforehand. PDF scenarios also require Python and pypdf; see [requirements.txt](../requirements.txt). Extraction failures are reported rather than skipped.
 
-已有Chrome或Edge可用时，可替代下载浏览器：
+To use an existing Chrome or Edge installation instead of downloading a browser:
 
 ```powershell
-$env:QA_BROWSER_CHANNEL = 'chrome' # 也可使用 msedge
+$env:QA_BROWSER_CHANNEL = 'chrome' # Or use msedge
 npm --prefix qa test
 ```
 
-单独运行某场景：
+Run one scenario:
 
 ```powershell
 node qa/run.mjs phase2-flow
 ```
 
-QA_HEADED=1可显示自动化浏览器；QA_BROWSER_PATH可指定浏览器可执行文件；QA_PLAYWRIGHT可指定已经安装的playwright/index.mjs。这些都是本机可选环境变量，不写入产品配置。
+Set `QA_HEADED=1` to display the automated browser. `QA_BROWSER_PATH` selects a browser executable, and `QA_PLAYWRIGHT` selects an installed `playwright/index.mjs`. These are optional local environment variables, not changes to product configuration.
 
-## 检查范围
+## Scope
 
-| 脚本 | 检查内容 | 材料/模型 |
+| Script | Checks | Materials / model |
 | --- | --- | --- |
-| comparison-feedback.mjs | 校对确认、手动关联、补问答案和事实保留、改写采用与状态恢复 | 合成文本；Mock |
-| comparison-navigation.mjs | 滚动定位、侧栏高亮、改写清单展开/选择、窄屏布局 | 合成文本；Mock |
-| rewrite-feedback.mjs | 编辑高亮、撤销、中文输入、草稿、补问定位、新候选保护 | 在隔离存储中构造中间态；Mock，非完整端到端 |
-| review-reference.mjs | 合成PDF上传/预览、JD切换、保存重开、备份与删除 | 本机生成两页虚构PDF；Mock；含旧任务中间态检查 |
-| phase2-flow.mjs | 输入→解析→关联→补问→确认→改写→最终保存→刷新重开；失败不覆盖已有稿 | Live接口协议＋本机固定上游响应；非DeepSeek调用 |
+| `comparison-feedback.mjs` | Review confirmation, manual associations, preservation of answers/facts, suggestion adoption, and state recovery | Synthetic text; mock mode |
+| `comparison-navigation.mjs` | Scroll navigation, sidebar highlighting, rewrite selection/expansion, and narrow layouts | Synthetic text; mock mode |
+| `rewrite-feedback.mjs` | Edit highlighting, undo, Chinese input, drafts, question navigation, and protection from new candidates | Constructed intermediate state in isolated storage; mock mode, not a complete end-to-end run |
+| `review-reference.mjs` | Synthetic PDF upload/preview, JD switching, saving/reopening, backup, and deletion | Locally generated two-page fictional PDF; mock mode; includes old-task intermediate-state checks |
+| `phase2-flow.mjs` | Input → parsing → matching → questions → confirmation → rewriting → final saving → refresh/reopen; failures preserve existing drafts | Live interface protocol with fixed local upstream responses, not DeepSeek calls |
 
-## 隔离与证据
+## Isolation and Evidence
 
-- 每个场景使用随机本机端口、新的临时浏览器上下文；不连接已有服务，不读取或清空个人浏览器数据。删除检查仅作用于该场景自己的合成数据。
-- 服务的模型地址、模式和假密钥由QA显式固定，不使用产品.env中的真实接口。Live协议场景只允许127.0.0.1固定响应上游；浏览器外网请求被拦截。
-- 当前v21 Prompt、事实校验和业务代码原样执行，不改模型输出使断言通过。固定上游仅用于可复现的接口/前端状态检查。
-- 每次结果放在qa/output/独立运行编号/，包含summary.json、各场景report.json、请求状态、截图、trace.zip及隔离任务快照。该目录和node_modules已被.gitignore排除，不随仓库上传。
-- 失败立即保留截图、错误及运行日志；后续未执行场景单独列出。不能把一次场景通过理解为模型质量或所有功能验收通过。
+- Each scenario uses random local ports and a new temporary browser context. It does not connect to existing services or read/clear personal browser data. Deletion tests affect only that scenario's synthetic data.
+- QA explicitly fixes the model address, mode, and fake key, without using the real endpoint in the product's `.env`. The Live-protocol scenario permits only a fixed-response upstream on `127.0.0.1`; external browser requests are blocked.
+- Current v21 prompt loading, factual validation, and product code execute unchanged. Responses are not edited to obtain passes. The fixed upstream makes interface and frontend-state checks reproducible.
+- Each run writes to `qa/output/<run-id>/`, including `summary.json`, per-scenario `report.json`, request status, screenshots, `trace.zip`, and isolated task snapshots. This directory and `node_modules` are excluded by `.gitignore`.
+- Failures preserve screenshots, errors, and logs immediately. Unexecuted scenarios are listed separately. Passing a scenario does not establish model quality or acceptance of every feature.
 
-脚本来源与整理说明见[SOURCES.json](SOURCES.json)，本次实际执行记录见[VERIFICATION.md](VERIFICATION.md)。
+See [SOURCES.json](SOURCES.json) for provenance and packaging changes, and [VERIFICATION.md](VERIFICATION.md) for the recorded execution. Original synthetic fixtures and source records retain their original language.

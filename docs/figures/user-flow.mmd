@@ -1,11 +1,11 @@
 flowchart LR
-  materialInput["材料输入：简历与 JD"] --> parseReview["解析校对：核对并确认"]
-  parseReview --> evidenceMatch["对照与补问：经历与要求关联"]
-  evidenceMatch --> needsFacts{"是否需要补充事实"}
-  needsFacts -->|"无需补充"| chooseRewrite["选择改写内容"]
-  needsFacts -->|"需要补充"| followupAnswer["回答、修改、未知或跳过"]
-  followupAnswer --> factConfirm["核对补充事实及确认状态"]
+  materialInput["Add materials: resume and JD"] --> parseReview["Review parsing: correct and confirm"]
+  parseReview --> evidenceMatch["Match experience to job requirements"]
+  evidenceMatch --> needsFacts{"Additional facts needed?"}
+  needsFacts -->|"No"| chooseRewrite["Select content to rewrite"]
+  needsFacts -->|"Yes"| followupAnswer["Answer, edit, leave unknown, or skip"]
+  followupAnswer --> factConfirm["Review additions and confirmation states"]
   factConfirm --> chooseRewrite
-  chooseRewrite --> rewriteReview["改写核对：编辑、采用或保留原文"]
-  rewriteReview --> saveVersion["确认保存岗位版本"]
-  saveVersion --> reopenTask["重开、复制或复用素材"]
+  chooseRewrite --> rewriteReview["Review rewrite: edit, accept, or keep original"]
+  rewriteReview --> saveVersion["Confirm and save role-specific version"]
+  saveVersion --> reopenTask["Reopen, copy, or reuse material"]

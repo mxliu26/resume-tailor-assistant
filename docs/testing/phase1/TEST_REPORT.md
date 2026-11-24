@@ -1,50 +1,50 @@
-# 第一阶段：本机 Demo 测试
+# Phase 1: Local Demo Testing
 
-第一阶段验证“材料输入 → 解析校对 → 对照与补问 → 改写核对 → 保存岗位版本”的基本流程。负责人已确认四类核心功能通过。该阶段主要使用本地规则和模拟响应，结论属于功能与交互验证。
+Phase 1 checked the basic path from material input through parsing review, matching and follow-ups, rewrite review, and saved role-specific versions. The project owner accepted four core functional areas. This phase primarily used local rules and mock responses; its conclusions concern functionality and interaction.
 
-## 版本与方法
+## Version and Method
 
-| 项目 | 记录 |
+| Item | Record |
 | --- | --- |
-| 历史基线标签 | `v0.1.0-demo` |
-| 标签对应Git提交 | `6dd64d095c02b761ebb74b2b4b7ff4374d1c3b5f` |
-| 环境 | Windows本机、Node.js、浏览器本地存储；桌面和390px窄屏检查 |
-| 材料与接口 | 虚构材料、双页中文测试PDF；Live协议专项连接本机固定响应服务 |
-| 证据形式 | 历史运行输出、网页操作记录、更新说明及负责人验收 |
+| Historical baseline tag | `v0.1.0-demo` |
+| Tagged commit | `6dd64d095c02b761ebb74b2b4b7ff4374d1c3b5f` |
+| Environment | Local Windows, Node.js, browser storage; desktop and 390 px narrow-screen checks |
+| Materials and interfaces | Synthetic materials and a two-page Chinese test PDF; Live-protocol checks connected to fixed local responses |
+| Evidence | Historical execution output, browser action records, update notes, and owner acceptance |
 
-该标签用于保存阶段基线，不代表此前每轮开发都有独立Git提交。阶段内的多轮测试结果按各自运行记录引用。
+The tag preserves the phase baseline. It does not imply a separate Git commit for every earlier development round. Test batches retain their own run references.
 
-## 已验收范围
+## Accepted Scope
 
-| 功能范围 | 检查重点 | 历史依据 |
+| Functional area | Checks | Historical evidence |
 | --- | --- | --- |
-| 页面、按钮、上传与跳转 | 文本/PDF输入、校对参照、错误可见性、桌面和窄屏布局 | ACCEPT-01；RUN-07～RUN-13 |
-| 任务创建、保存、重新打开与删除 | 保存恢复、岗位版本、本机备份及材料清理 | ACCEPT-01；RUN-07/08、RUN-12及早期浏览器记录 |
-| 补问、确认、拒绝与返回修改 | 答案可编辑、事实确认、采用/拒绝/保留原文、编辑稿保护 | ACCEPT-01；RUN-04、RUN-07/08、RUN-11 |
-| 上游材料变化后的状态处理 | 区分格式与事实变化；相关结果标记待更新 | ACCEPT-01；RUN-01、RUN-12 |
+| Pages, buttons, uploads, and navigation | Text/PDF input, review references, visible errors, desktop and narrow layouts | ACCEPT-01; RUN-07–RUN-13 |
+| Task creation, saving, reopening, and deletion | Save/restore, role-specific versions, local backup, and material cleanup | ACCEPT-01; RUN-07/08, RUN-12, and earlier browser records |
+| Follow-ups, confirmation, rejection, and returning to edit | Editable answers, fact confirmation, accept/reject/keep actions, and draft protection | ACCEPT-01; RUN-04, RUN-07/08, RUN-11 |
+| State handling after upstream changes | Distinguish formatting from factual changes; flag affected results for update | ACCEPT-01; RUN-01, RUN-12 |
 
-以上为4类功能验收范围，不能解读为仅执行4个自动化用例。
+These are four acceptance areas, not a claim that only four automated test cases were executed.
 
-## 历史测试与问题统计
+## Historical Test and Issue Counts
 
-| 项目 | 数量与口径 |
+| Item | Count and definition |
 | --- | --- |
-| 去重问题 | 36项：功能缺陷21、环境问题1、功能缺口4、体验问题10 |
-| 迭代记录 | 首版1条＋后续13批，共14条；不等于14次发布或Git提交 |
-| 最后可追溯的全套自动测试 | RUN-08：149/149通过 |
-| 后续PDF相关专项 | RUN-12：38/38及19/19通过，合计57项专项断言 |
+| Deduplicated issues | 36: 21 functional defects, 1 environment issue, 4 functional gaps, and 10 usability issues |
+| Iteration entries | One initial entry plus 13 later batches, totaling 14; not 14 releases or Git commits |
+| Last traceable full automated suite | RUN-08: 149/149 passed |
+| Later PDF checks | RUN-12: 38/38 and 19/19 passed, totaling 57 targeted assertions |
 
-多批自动测试存在大量重叠，149和57不相加为独立覆盖量。36项是问题台账的去重统计，包含体验和环境问题，不称为“修复36个代码Bug”。本报告摘录功能验收与已执行证据，不推定每条历史问题都具有独立复测记录。
+The batches overlap substantially, so 149 and 57 are not added as independent coverage. The 36 deduplicated issues include usability and environment concerns; they are not described as 36 repaired code bugs. This report summarizes acceptance and recorded execution without assuming every historical issue has a separate retest.
 
-## 代表性验证
+## Representative Checks
 
-- **格式与事实变化分开处理**：调整换行、空白或列表样式时保留身份及确认状态；修改数字、职责或JD内容时重新核对。
-- **补问跟随关联变化**：调整经历关联后更新待答问题，保留已填写答案、草稿和事实归属。
-- **改写可核对、可恢复**：显示建议与手动编辑差异，检查中文输入、撤销、接受状态以及刷新后的恢复。
-- **PDF可对照**：检查双页PDF提取、原页预览、翻页缩放及保存重开。
+- **Separate formatting and factual changes:** Preserve identity and confirmation states after line-break, whitespace, or list-format edits; require review after changes to numbers, responsibilities, or JD content.
+- **Update questions with associations:** Refresh pending follow-ups after association changes while preserving answers, drafts, and fact attribution.
+- **Keep rewrites reviewable and recoverable:** Show suggestion and manual-edit differences; check Chinese input, undo, acceptance state, and recovery after refresh.
+- **Review PDFs alongside extracted text:** Check two-page extraction, original-page preview, navigation, zoom, saving, and reopening.
 
-## 证据与结论范围
+## Evidence and Limits
 
-本摘要来自历史第一阶段报告，来源编号**S35**，可在[证据索引](../../evidence/source-index.json)核对标题、来源提交和SHA-256。ACCEPT-01及RUN编号均沿用该原报告。
+This summary is based on the original Phase 1 report, source **S35**. Its title, source commit, and SHA-256 are in the [evidence index](../../evidence/source-index.json). ACCEPT-01 and RUN identifiers retain their original meanings.
 
-本阶段证明指定本机流程的可用性；真实模型基础联调见[第二阶段](../phase2/TEST_REPORT.md)。当前展示代码的离线结果另见[tests验证记录](../../../tests/VERIFICATION.md)，不将后续测试数量改记为第一阶段成果。
+This phase supports usability of the specified local workflow. Real-model integration is covered in [Phase 2](../phase2/TEST_REPORT.md). Current showcase checks are reported separately in [offline verification](../../../tests/VERIFICATION.md); later counts are not reassigned to Phase 1.

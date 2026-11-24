@@ -1,33 +1,33 @@
-# 阶段测试记录
+# Phase Test Reports
 
-本目录汇总已有测试与人工审核证据，说明产品如何从本机 Demo 进入真实模型联调，再进行固定案例评测。每个阶段使用当时的代码与测试范围，历史结果保留原有归属。
+This directory summarizes existing tests and human review, from the local demo through real-model integration and fixed-case evaluation. Each phase retains its original code version, test scope, and result attribution.
 
-| 阶段 | 目标与方法 | 已有结果 | 详细记录 |
+| Phase | Goal and method | Recorded results | Details |
 | --- | --- | --- | --- |
-| 第一阶段：本机 Demo | 本地规则与模拟响应；检查五步流程、任务保存、确认状态和页面交互 | 负责人确认四类核心功能；历史最后一轮全套自动测试为149/149 | [第一阶段测试报告](phase1/TEST_REPORT.md) |
-| 第二阶段：真实模型基础联调 | 3组合成材料；DeepSeek真实调用、必要补问与事实确认、严格输出校验 | 3组既定案例完成基础联调验收；有效步骤、专项复测与离线重放分别留证 | [第二阶段测试报告](phase2/TEST_REPORT.md) |
-| 第三阶段：AI效果评测与优化 | 固定10组开发案例、13个经历单元；四维评分和独立事实核查 | 建议生成由v6的8/10到v21的10/10；v21正式人工评分85/13＝6.54/8 | [第三阶段测试报告](phase3/TEST_REPORT.md) |
+| Phase 1: local demo | Local rules and mock responses; check the five-step flow, saving, confirmation states, and interactions | Owner acceptance of four core functional areas; the last traceable full automated run passed 149/149 | [Phase 1](phase1/TEST_REPORT.md) |
+| Phase 2: real-model integration | Three synthetic cases; real DeepSeek calls, necessary follow-ups, fact confirmation, and strict output validation | All three planned cases completed basic integration acceptance, using separately recorded valid steps, targeted retests, and offline replays | [Phase 2](phase2/TEST_REPORT.md) |
+| Phase 3: AI evaluation and optimization | Ten fixed development cases and 13 experience units; four-dimension ratings and independent factual checks | Suggestion generation increased from v6's 8/10 to v21's 10/10; formal v21 human ratings totaled 85/13 = 6.54/8 | [Phase 3](phase3/TEST_REPORT.md) |
 
-## 如何阅读证据
+## Reading the Evidence
 
-- **功能运行结果**：说明某次代码在指定输入和操作下是否完成流程。
-- **AI辅助初评**：提供评分建议和事实核查依据，须与人工确认分开。
-- **正式人工评分**：v21使用“人工评分，经AI辅助复核后由负责人确认”，非独立盲评。
-- **历史来源**：报告通过来源编号关联[证据索引](../evidence/source-index.json)，保留来源标题与SHA-256。公开目录提供摘要和合成证据摘录；完整运行原件保存在原研发档案中。
+- **Execution results** establish what a particular code version completed with specified inputs and actions.
+- **AI-assisted preliminary ratings** supply score suggestions and factual review evidence; they remain separate from human confirmation.
+- **Formal human ratings** for v21 were confirmed by the project owner after AI-assisted review, not through an independent blind assessment.
+- **Historical sources** are linked by ID to the [evidence index](../evidence/source-index.json), with source titles and SHA-256 hashes. The public package contains summaries and synthetic excerpts; complete originals remain in the development archive.
 
-简历建议成功生成比例按案例统计；改写质量平均得分按经历单元统计；事实准确性检查以已完成核查的单元为分母。阻塞、未评价和未执行分别列明，不能算作通过或按0分混入均值。
+Suggestion generation is measured per case; rewrite quality is scored per experience unit; factual accuracy uses completed unit-level factual reviews as its denominator. Blocked, unreviewed, and unexecuted items are identified separately. They do not count as passes or enter averages as zeroes.
 
-## 当前展示包的验证入口
+## Current Showcase Verification
 
-当前展示运行代码为`58a25be`，Prompt为`precise-followup-v21`；v21的历史正式评分对应`ec6dff9`，两者分别标注。
+The current runtime is `58a25be` with `precise-followup-v21`. Historical formal v21 ratings correspond to `ec6dff9`; these references remain distinct.
 
-| 入口 | 用途 |
+| Entry | Purpose |
 | --- | --- |
-| [tests/](../../tests/README.md) · [验证记录](../../tests/VERIFICATION.md) | 当前展示包336项离线程序检查，无外部模型调用 |
-| [qa/](../../qa/README.md) · [验证记录](../../qa/VERIFICATION.md) | 5项隔离浏览器回归；使用Mock或本机固定上游响应 |
-| [examples/](../../examples/README.md) | 两组已完成真实模型网页流程的合成材料、初稿与保存结果 |
-| [AI评测摘要](../EVALUATION_SUMMARY.md) | 已确认的指标、13个单元评分及解释口径 |
-| [典型Bad Case](../BAD_CASES.md) | 精选问题、根因、修复与验证证据 |
-| [CHANGELOG](../../CHANGELOG.md) | 主要迭代、Prompt版本及代码来源 |
+| [tests/](../../tests/README.md) · [Verification](../../tests/VERIFICATION.md) | 336 offline program checks on the showcase package, with no external model calls |
+| [qa/](../../qa/README.md) · [Verification](../../qa/VERIFICATION.md) | Five isolated browser scenarios using mock mode or fixed local upstream responses |
+| [examples/](../../examples/README.md) | Two synthetic cases with real-model browser workflows, first suggestions, and saved text |
+| [Evaluation summary](../EVALUATION_SUMMARY.md) | Confirmed metrics, 13 unit scores, and reporting conventions |
+| [Bad cases](../BAD_CASES.md) | Selected problems, causes, changes, and verification |
+| [Changelog](../../CHANGELOG.md) | Main iterations, prompt versions, and source commits |
 
-阶段结果、当前程序检查和浏览器回归分别记录，测试数量不跨批次累加。本次整理只归档文档，新增API调用为0；自动化耗时和代理修改次数不作为真人使用指标。
+Phase results, current program checks, and browser QA are reported separately; counts are not added across batches. Documentation preparation made 0 new API calls. Automated runtime and agent edits are not treated as real-user metrics.

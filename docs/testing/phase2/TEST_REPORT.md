@@ -1,55 +1,55 @@
-# 第二阶段：真实模型基础联调
+# Phase 2: Real-Model Integration
 
-三组既定合成案例完成基础联调验收，覆盖正常流程、信息不足和事实边界。验收采用“有效历史步骤＋专项真实复测＋当前校验离线重放”，不是同一版本的浏览器端到端全程重跑。
+Three planned synthetic cases completed basic integration acceptance, covering a normal flow, insufficient information, and factual boundaries. Acceptance combined valid historical steps, targeted real-model retests, and offline replay through the current validators. It was not a full browser rerun of every case on one code version.
 
-## 版本与调用配置
+## Versions and Configuration
 
-| 项目 | 记录 |
+| Item | Record |
 | --- | --- |
-| 服务商与模型 | DeepSeek，`deepseek-flash` |
-| 思考与生成设置 | thinking disabled；temperature 0.2；max_tokens 4096 |
-| 收尾Prompt | `phase2-v6` |
-| 收尾离线验收代码 | `ba8ec9435dac4235d913f4eb4a8c702fb30eb71b` |
-| 后续评测基线 | `v0.2.0-eval-baseline` → `ca08ce659696d133fef9a950b65ea4ac4bf95a67` |
+| Provider and model | DeepSeek, `deepseek-flash` |
+| Generation settings | Thinking disabled; temperature 0.2; max_tokens 4096 |
+| Closeout prompt | `phase2-v6` |
+| Closeout offline acceptance code | `ba8ec9435dac4235d913f4eb4a8c702fb30eb71b` |
+| Subsequent evaluation baseline | `v0.2.0-eval-baseline` → `ca08ce659696d133fef9a950b65ea4ac4bf95a67` |
 
-历史步骤各自保留Run ID及实际代码版本；不统一改记为收尾版本。模型响应返回的是服务商别名，记录中不把它当成不可变权重快照。
+Each historical step retains its Run ID and actual code version; results are not relabeled as closeout-version runs. The response model name is a provider alias, not an immutable model-weight snapshot.
 
-## 案例结果
+## Case Results
 
-| 案例 | 场景 | 已验证行为 |
+| Case | Scenario | Verified behavior |
 | --- | --- | --- |
-| AI-CASE-0001 | 正常流程 | 解析、关联及改写有效；已有事实不强制补问，保留组员身份、数字和未上线限定 |
-| AI-CASE-0002 | 信息不足 | 必要补问与学历条件区分；答案先待确认、后确认；确认后关联与改写，以及跳过/未知分支有真实响应证据 |
-| AI-CASE-0003 | 事实边界 | 独立经历与来源保留；已有协作不重复追问；团队百分比、否定事实和未上线原型边界保留；非事实指令不进入建议 |
+| AI-CASE-0001 | Normal flow | Valid parsing, association, and rewriting; no forced questions when facts were sufficient; preserved team-member status, numbers, and the not-launched qualifier. |
+| AI-CASE-0002 | Insufficient information | Distinguished necessary questions from education conditions; answers moved from pending to confirmed; real-response evidence covered post-confirmation association and rewriting, plus skipped/unknown branches. |
+| AI-CASE-0003 | Factual boundaries | Preserved separate experiences and sources; avoided repeating an already covered collaboration question; retained team percentages, negative facts, and prototype deployment limits; excluded non-factual instructions from suggestions. |
 
-三组均为虚构材料。程序校验、测试中的模拟确认和实际模型响应分别留证，不将模拟操作称为真人用户验收。
+All three cases are fictional. Program checks, simulated user confirmation, and actual model responses have separate evidence. Simulated actions are not described as real-user acceptance.
 
-## 验证与修复依据
+## Verification and Repair Evidence
 
-- 基于真实响应和离线复现，处理身份占位符遗漏、明确条件与能力状态混淆、重复补问及事实来源问题。
-- 历史去重台账记录12项Bad Case，原收尾报告按各自专项范围关闭；不是对所有输入的正确性保证。
-- 收尾离线验收重放11份已评价真实响应，核验35处原件哈希，并独立检查未确认事实仍被拒绝。
-- 各步骤保留原始请求/响应、Run ID、代码SHA、模型及Prompt关联。原件继续保存在原研发档案，本目录提供精简证据索引。
+- Real responses and offline reproductions guided fixes for omitted identity placeholders, confusion between conditions and capability states, repeated follow-ups, and source handling.
+- The historical ledger contains 12 deduplicated bad cases, closed within their respective targeted scopes in the original closeout report. This is not a correctness guarantee for all inputs.
+- Closeout offline acceptance replayed 11 evaluated real responses, checked 35 source hashes, and separately verified rejection of unconfirmed facts.
+- Original requests/responses, Run IDs, code SHAs, models, and prompt versions remain linked. Full originals stay in the development archive; this directory provides a concise source index.
 
-## 历史调用与费用
+## Historical Calls and Cost
 
-| 项目 | 记录 |
+| Item | Record |
 | --- | --- |
-| 有完整用量的调用 | 18次，包含联调过程中的失败与复测 |
-| 输入 / 输出Token | 14,907 / 4,379 |
-| 总Token | 19,286 |
-| 有用量部分估算费用 | 0.064846元 |
-| 另存的早期HTTP 402尝试 | 1次，用量和实际扣费未知，保留0.038114元预算预留 |
-| 全阶段请求尝试 | 19次；估算费用加未知预留为0.102960元 |
+| Calls with complete usage | 18, including integration failures and retests |
+| Input / output tokens | 14,907 / 4,379 |
+| Total tokens | 19,286 |
+| Estimated cost for known usage | CNY 0.064846 |
+| Earlier HTTP 402 attempt, recorded separately | 1; usage and actual charge unknown, with CNY 0.038114 reserved |
+| Total request attempts | 19; estimate plus unknown-usage reserve: CNY 0.102960 |
 
-费用沿用当时每百万输入2元、输出8元的保守估算，缓存命中不重复计Token。这是历史估算及预算预留，不是供应商账单或当前价格，也不是本次文档整理新增消费。
+The historical conservative estimate used CNY 2 per million input tokens and CNY 8 per million output tokens, without double-counting cache-hit tokens. These are historical estimates and budget reservations, not provider invoices, current prices, or spending from documentation preparation.
 
-## 证据索引
+## Evidence Index
 
-| 来源 | 支撑内容 |
+| Source | Supports |
 | --- | --- |
-| S36：第二阶段原测试报告 | 三案例结论、12项问题闭环及验证方式 |
-| S37：CLOSEOUT_SUMMARY | 18次有用量调用、19次历史尝试、Token和费用分项 |
-| S38：CLOSEOUT_ACCEPTANCE | 11份真实响应重放、35处哈希、未确认事实拒绝检查及Run ID |
+| S36: original Phase 2 report | Three case conclusions, closure of 12 issues, and validation method |
+| S37: CLOSEOUT_SUMMARY | 18 calls with usage, 19 attempts, token counts, and cost breakdown |
+| S38: CLOSEOUT_ACCEPTANCE | Replay of 11 real responses, 35 hashes, unconfirmed-fact rejection, and Run IDs |
 
-来源标题、Git出处及SHA-256见[证据索引](../../evidence/source-index.json)。表达质量比较由[第三阶段](../phase3/TEST_REPORT.md)承担；当前可复用的网页操作检查见[qa/](../../../qa/README.md)。
+See the [evidence index](../../evidence/source-index.json) for source titles, commits, and SHA-256 hashes. Writing-quality comparison is covered in [Phase 3](../phase3/TEST_REPORT.md); reusable browser checks are in [qa/](../../../qa/README.md).

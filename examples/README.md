@@ -1,29 +1,31 @@
-# 可体验的合成求职示例
+# Synthetic Job-Seeking Examples
 
-这里提供两组已完成真实网页操作验证的虚构材料。使用固定v21代码，经真实DeepSeek生成建议，并完成网页核对、保存、刷新和重新打开；操作由AI代理自动化执行，不是真实用户内测。
+These two fictional cases completed browser-based verification with the fixed v21 runtime and real DeepSeek suggestions, including review, saving, refresh, and reopening. An AI agent automated the interactions; this was not a real-user trial.
 
-| 示例 | 重点 | 本次操作结果 |
+| Example | Focus | Recorded outcome |
 | --- | --- | --- |
-| [case-02 数据分析](case-02-data-analyst/README.md) | 无事实依据时跳过补问，调整表达顺序 | 保存及刷新重开通过 |
-| [case-03 算法实习](case-03-algorithm-engineer/README.md) | 确认本人职责，保留团队指标与部署边界 | 保存及刷新重开通过 |
+| [Case 02: data analysis](case-02-data-analyst/README.md) | Skip a question without supporting facts; adjust presentation order | Saved and reopened after refresh |
+| [Case 03: algorithm engineering](case-03-algorithm-engineer/README.md) | Confirm personal responsibilities while preserving team metrics and deployment limits | Saved and reopened after refresh |
 
-## 使用方法
+## Try an Example
 
-1. 按项目[启动说明](../README.md#快速启动)运行网页。真实模型模式需在本机配置自己的API密钥，调用会产生费用。
-2. 只将resume.txt和job_description.txt粘贴到“新建岗位任务”，核对后进入对照。
-3. 实际出现补问后，才按tester_notes.json提供对应的合成回答；无依据就跳过或保留未知，不将全部参考答案预先粘贴给模型。
-4. 核对原文、AI建议、事实来源并选择接受、编辑或保留；保存后刷新，从任务列表重新打开确认。
+1. Start the webpage using the [quick start](../README.md#quick-start). Real-model mode requires your own local API key and incurs charges.
+2. Paste only `resume.txt` and `job_description.txt` into a new task, then review the materials before matching.
+3. Consult `tester_notes.json` only when a relevant follow-up is actually asked. Use the corresponding synthetic answer; skip or retain an unknown state when unsupported. Do not provide all hidden answers to the model at the start.
+4. Review original text, suggestions, and sources; accept, edit, or keep the text. Save, refresh, and reopen the task to verify the result.
 
-## 文件说明
+## Files
 
-| 文件 | 内容 |
+| File | Contents |
 | --- | --- |
-| resume.txt / job_description.txt | 本轮使用的原始合成简历和JD，未改写输入 |
-| tester_notes.json | 测试者专用事实、预设回答及实际操作说明；不作为初始模型输入 |
-| outputs.json | 实际解析、关联、补问、确认、逐单元T0/T1/T2、事实核查依据、版本及调用记录 |
-| final_resume.txt | 从网页保存版本取出的完整文本 |
-| README.md | 本组复现方法、实际流程与重点核对项 |
+| `resume.txt` / `job_description.txt` | Original synthetic inputs used in the run, without rewriting the input material |
+| `tester_notes.json` | Tester-only facts, preset answers, and actual actions; not initial model input |
+| `outputs.json` | Actual parsing, associations, questions, confirmations, per-unit T0/T1/T2, factual-review evidence, versions, and calls |
+| `final_resume.txt` | Complete text retrieved from the version saved in the webpage |
+| `README.md` | Reproduction steps, observed flow, and review priorities for the case |
 
-T0为解析保留的原文片段（只统一换行）；T1为首次未经编辑的模型建议；T2为本次代理核对后在网页保存的文本。未选中单元的T1为null，最终保留原文。两组均未编辑T1，T2采用原建议；该记录不能当作人工修正量或质量提升统计。
+T0 is the original segment retained by parsing, with line endings normalized. T1 is the first unedited model suggestion. T2 is the text saved in the webpage after agent review. Unselected units have T1 set to null and retain their original text. Neither example edited T1; T2 adopted the suggestions. These runs do not measure human correction counts or quality improvement.
 
-版本：58a25be1097a7902058a3c0a78415a2c90408cc5 / precise-followup-v21 / deepseek-flash（关闭思考）。示例中的事实检查为AI辅助核查、待人工复核；流程通过不代表每一项上游判断均准确。模型输出具有变化性，记录用于展示这次实际运行，不保证以后输出逐字相同。
+Version: `58a25be1097a7902058a3c0a78415a2c90408cc5` / `precise-followup-v21` / `deepseek-flash`, thinking disabled. Factual checks are AI-assisted and pending human review. Workflow completion does not establish that every upstream judgment was correct. Model outputs can vary; these records document the actual runs without promising identical future text.
+
+Inputs, answers, original outputs, and saved resumes remain in Chinese. English case descriptions explain the records without replacing them.

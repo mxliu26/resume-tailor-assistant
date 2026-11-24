@@ -1,34 +1,36 @@
-# 产品展示长图与核心页面截图
+# Product Walkthrough and Screenshots
 
-以下截图来自现有界面回归，使用内置虚构材料和模拟模式。仅展示页面布局与交互，不作为真实模型效果或用户内测证据。截图未改字、未替换模型输出；未采用包含私人简历的页面。
+These images show the existing interface with built-in synthetic materials in mock mode. They illustrate layout and interaction, not real-model performance or a real-user trial. Text and model output were not replaced in the screenshots, and pages containing private resumes were excluded.
 
-## GitHub首页展示长图
+The interface remains in Chinese, matching the initial target audience. English captions explain the screens without altering the original captures.
 
-![简历定制助手完整操作流程](images/product-overview.png)
+## GitHub Homepage Walkthrough
 
-长图按材料输入、岗位匹配与事实确认、改写核对、保存岗位版本四个环节组织。它来自当前v21前端的独立模拟环境，使用内置虚构简历与JD；补问回答也为虚构演示材料。页面文本没有在截图中改写，原始截图仅作裁切、等比缩放和排版，说明标题置于截图外。
+![ResumeTailor workflow from input to a saved version](images/product-overview.png)
 
-- 规格：1440 × 5461px，PNG，约1.33MB。
-- 运行代码来源：58a25be1097a7902058a3c0a78415a2c90408cc5；Prompt文件仍为precise-followup-v21；实际截图运行模式为mock，没有调用DeepSeek。
-- 已通过界面完成事实确认、生成模拟建议、接受或保留原文、保存独立版本；刷新重开后核对文本与事实状态一致。
-- 图片与制作依据见[长图来源记录](evidence/product-overview.json)。原有三张截图继续保留。
+The image presents four parts: material input, job matching and fact confirmation, rewrite review, and saving a role-specific version. It was captured in an isolated mock environment running the current v21 frontend, using the built-in synthetic resume and JD. Follow-up answers were also fictional demonstration material. The source captures were only cropped, proportionally resized, and arranged; explanatory headings were placed outside the screenshots.
 
-## 对照与补问
+- Format: 1440 × 5461 px, PNG, approximately 1.33 MB.
+- Runtime source: `58a25be1097a7902058a3c0a78415a2c90408cc5`; prompt file: `precise-followup-v21`. Capture mode was `mock`, with no DeepSeek calls.
+- The interface was used to confirm facts, generate mock suggestions, accept or keep text, and save a separate version. Text and factual states were checked after refresh and reopening.
+- Image hashes and capture details are in the [walkthrough source record](evidence/product-overview.json). The three earlier screenshots are retained.
 
-![对照与补问桌面页面](images/01-matching.jpg)
+## Matching and Follow-Ups
 
-岗位要求、经历依据与判断建议分组呈现，右侧保留要求导航；用户可以调整关联及补问。重点展示“为什么相关”与“依据在哪里”。
+![Desktop matching and follow-up page](images/01-matching.jpg)
 
-## 改写核对
+Job requirements, experience evidence, and suggested judgments are grouped separately, with requirement navigation on the right. Users can adjust associations and follow-ups. The screen makes relevance and its supporting sources visible.
 
-![原文与改写建议并列核对](images/02-rewrite.jpg)
+## Rewrite Review
 
-原文与建议并列，保留修改差异、事实依据及用户编辑反馈，支持按条决定采用或保留。
+![Original text and rewrite suggestions side by side](images/02-rewrite.jpg)
 
-## 移动端阅读
+Original and suggested text appear side by side, with differences, factual sources, and user-edit feedback. Users decide what to accept or keep for each item.
 
-![移动端要求索引与对照入口](images/03-mobile.jpg)
+## Mobile Reading
 
-窄屏将岗位要求导航横向排列，保留流程、事实及修改清单入口。
+![Mobile requirement navigation and matching view](images/03-mobile.jpg)
 
-本组截图对应字体与阅读体验精修后的前端。来源 S11—S14，原始图片哈希见[证据索引](evidence/source-index.json)。
+On narrow screens, requirement navigation becomes horizontal while workflow, facts, and the rewrite selection remain accessible.
+
+These screenshots show the frontend after the typography and readability refinements. Sources: S11–S14. Original image hashes are in the [evidence index](evidence/source-index.json).
